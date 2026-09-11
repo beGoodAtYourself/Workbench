@@ -1,0 +1,31 @@
+{
+  "phase": "memory",
+  "started": "2026-09-11T06:55:12.956Z",
+  "pid": 47640,
+  "sha256": "8228957c7ceb96bdacf8870b82536c516006958ac9d9fae5e9f52545fd4b2719",
+  "instrumentation": "WebView2 CDP on localhost:9223; SHIYE_PROFILE=1; full descendant process counters",
+  "measurements": [
+    {
+      "name": "single-edit",
+      "round": 1,
+      "p95MiB": 165.79,
+      "budget": 200,
+      "pass": true
+    },
+    {
+      "name": "single-preview",
+      "round": 1,
+      "p95MiB": 161.93,
+      "budget": 200,
+      "pass": true
+    },
+    {
+      "name": "dual-edit",
+      "round": 1,
+      "p95MiB": 179.15,
+      "budget": 260,
+      "pass": true
+    }
+  ],
+  "checks": []
+}

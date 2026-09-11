@@ -1,0 +1,16 @@
+{
+  "phase": "install",
+  "started": "2026-09-11T06:54:41.753Z",
+  "pid": 37428,
+  "sha256": "cf2e81f6f34786a719a2db94d6aae66a5658fae92ccda62c6782240659510126",
+  "instrumentation": "WebView2 CDP on localhost:9223; SHIYE_PROFILE=1; full descendant process counters",
+  "measurements": [],
+  "checks": [
+    {
+      "name": "Installed executable launches from installation directory, saves with external networking blocked, exits, reopens persisted session and recycles its fixture",
+      "pass": true
+    }
+  ],
+  "restartedPid": 22968,
+  "completed": "2026-09-11T06:54:45.005Z"
+}

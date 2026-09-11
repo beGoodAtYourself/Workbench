@@ -1,0 +1,16 @@
+import {chromium,expect} from '@playwright/test';
+import {readFile,writeFile} from 'node:fs/promises';
+const browser=await chromium.connectOverCDP('http://127.0.0.1:9223');
+const page=browser.contexts()[0].pages()[0];
+const invoke=(command,args={})=>page.evaluate(([c,a])=>window.__TAURI_INTERNALS__.invoke(c,a),[command,args]);
+const config=await invoke('get_settings');
+expect(config.root).toBe('D:\\lxWorkspace\\.qa\\smoke-notes');
+expect(config.session.panes.map(p=>p.path)).toEqual(['B.md','C.md']);
+const a=await readFile('.qa/smoke-notes/A.md','utf8');
+expect(a).toContain('[B](B.md)');expect(a).toContain('中文输入验收通过。');
+const result={date:new Date().toISOString(),source:'Physical mouse/keyboard via Computer Use, with local file and Tauri state assertions',passed:['Native tree B dragged into A inserts [B](B.md) at the drop position','Chinese keyboard input and Ctrl+S persisted to A.md','Preview opens the newly generated link as A | B','Right B -> C rotates to B | C with only two panes','Native close button hides the main window','After idle unload, Ctrl+Alt+Space from Notepad recreates the window with B | C'],restoredPaths:config.session.panes.map(p=>p.path),visible:await invoke('plugin:window|is_visible',{label:'main'})};
+await writeFile('docs/verification/raw/desktop-smoke.json',JSON.stringify(result,null,2));
+if(result.visible)await page.screenshot({path:'docs/verification/native-split.png'});
+console.log(JSON.stringify(result));
+if(process.argv.includes('--exit'))await invoke('exit_app').catch(()=>{});
+process.exit(0);

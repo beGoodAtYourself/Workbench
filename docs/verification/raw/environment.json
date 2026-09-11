@@ -1,0 +1,12 @@
+{
+  "date": "2026-09-11T14:53:07.4337112+08:00",
+  "os": "Microsoft Windows 11 专业版",
+  "version": "10.0.26200",
+  "architecture": "64 位",
+  "cpu": "13th Gen Intel(R) Core(TM) i5-13500H",
+  "memoryGiB": 15.62,
+  "webview2": "152.0.4191.66",
+  "node": "v24.18.0",
+  "rust": "rustc 1.98.0 (88d9e12ae 2026-08-18)",
+  "buildSha256": "8228957C7CEB96BDACF8870B82536C516006958AC9D9FAE5E9F52545FD4B2719"
+}

@@ -1,0 +1,17 @@
+{
+  "date": "2026-09-11T06:54:38.428Z",
+  "source": "Physical mouse/keyboard via Computer Use, with local file and Tauri state assertions",
+  "passed": [
+    "Native tree B dragged into A inserts [B](B.md) at the drop position",
+    "Chinese keyboard input and Ctrl+S persisted to A.md",
+    "Preview opens the newly generated link as A | B",
+    "Right B -> C rotates to B | C with only two panes",
+    "Native close button hides the main window",
+    "After idle unload, Ctrl+Alt+Space from Notepad recreates the window with B | C"
+  ],
+  "restoredPaths": [
+    "B.md",
+    "C.md"
+  ],
+  "visible": true
+}

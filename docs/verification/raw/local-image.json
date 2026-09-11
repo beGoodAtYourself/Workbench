@@ -1,0 +1,253 @@
+﻿{
+    "appPid":  47200,
+    "sampleCount":  5,
+    "p95MiB":  295.63,
+    "peakMiB":  295.63,
+    "samples":  [
+                    {
+                        "timestamp":  "2026-09-11T06:41:31.5075058Z",
+                        "privateWorkingSet":  309993472,
+                        "privateBytes":  393490432,
+                        "processes":  [
+                                          {
+                                              "IDProcess":  33056,
+                                              "Name":  "msedgewebview2#25",
+                                              "WorkingSetPrivate":  37761024,
+                                              "PrivateBytes":  49152000
+                                          },
+                                          {
+                                              "IDProcess":  52148,
+                                              "Name":  "msedgewebview2#26",
+                                              "WorkingSetPrivate":  2195456,
+                                              "PrivateBytes":  3555328
+                                          },
+                                          {
+                                              "IDProcess":  43588,
+                                              "Name":  "msedgewebview2#27",
+                                              "WorkingSetPrivate":  96587776,
+                                              "PrivateBytes":  127217664
+                                          },
+                                          {
+                                              "IDProcess":  50940,
+                                              "Name":  "msedgewebview2#28",
+                                              "WorkingSetPrivate":  6836224,
+                                              "PrivateBytes":  12754944
+                                          },
+                                          {
+                                              "IDProcess":  49604,
+                                              "Name":  "msedgewebview2#29",
+                                              "WorkingSetPrivate":  3604480,
+                                              "PrivateBytes":  9068544
+                                          },
+                                          {
+                                              "IDProcess":  47724,
+                                              "Name":  "msedgewebview2#30",
+                                              "WorkingSetPrivate":  158662656,
+                                              "PrivateBytes":  185651200
+                                          },
+                                          {
+                                              "IDProcess":  47200,
+                                              "Name":  "shiye",
+                                              "WorkingSetPrivate":  4345856,
+                                              "PrivateBytes":  6090752
+                                          }
+                                      ]
+                    },
+                    {
+                        "timestamp":  "2026-09-11T06:41:35.1888107Z",
+                        "privateWorkingSet":  308211712,
+                        "privateBytes":  391159808,
+                        "processes":  [
+                                          {
+                                              "IDProcess":  33056,
+                                              "Name":  "msedgewebview2#25",
+                                              "WorkingSetPrivate":  36392960,
+                                              "PrivateBytes":  47849472
+                                          },
+                                          {
+                                              "IDProcess":  52148,
+                                              "Name":  "msedgewebview2#26",
+                                              "WorkingSetPrivate":  2179072,
+                                              "PrivateBytes":  3538944
+                                          },
+                                          {
+                                              "IDProcess":  43588,
+                                              "Name":  "msedgewebview2#27",
+                                              "WorkingSetPrivate":  96206848,
+                                              "PrivateBytes":  126222336
+                                          },
+                                          {
+                                              "IDProcess":  50940,
+                                              "Name":  "msedgewebview2#28",
+                                              "WorkingSetPrivate":  6819840,
+                                              "PrivateBytes":  12738560
+                                          },
+                                          {
+                                              "IDProcess":  49604,
+                                              "Name":  "msedgewebview2#29",
+                                              "WorkingSetPrivate":  3604480,
+                                              "PrivateBytes":  9068544
+                                          },
+                                          {
+                                              "IDProcess":  47724,
+                                              "Name":  "msedgewebview2#30",
+                                              "WorkingSetPrivate":  158662656,
+                                              "PrivateBytes":  185651200
+                                          },
+                                          {
+                                              "IDProcess":  47200,
+                                              "Name":  "shiye",
+                                              "WorkingSetPrivate":  4345856,
+                                              "PrivateBytes":  6090752
+                                          }
+                                      ]
+                    },
+                    {
+                        "timestamp":  "2026-09-11T06:41:38.4466103Z",
+                        "privateWorkingSet":  290906112,
+                        "privateBytes":  373657600,
+                        "processes":  [
+                                          {
+                                              "IDProcess":  33056,
+                                              "Name":  "msedgewebview2#25",
+                                              "WorkingSetPrivate":  37294080,
+                                              "PrivateBytes":  48709632
+                                          },
+                                          {
+                                              "IDProcess":  52148,
+                                              "Name":  "msedgewebview2#26",
+                                              "WorkingSetPrivate":  2179072,
+                                              "PrivateBytes":  3538944
+                                          },
+                                          {
+                                              "IDProcess":  43588,
+                                              "Name":  "msedgewebview2#27",
+                                              "WorkingSetPrivate":  78016512,
+                                              "PrivateBytes":  107888640
+                                          },
+                                          {
+                                              "IDProcess":  50940,
+                                              "Name":  "msedgewebview2#28",
+                                              "WorkingSetPrivate":  6819840,
+                                              "PrivateBytes":  12738560
+                                          },
+                                          {
+                                              "IDProcess":  49604,
+                                              "Name":  "msedgewebview2#29",
+                                              "WorkingSetPrivate":  3604480,
+                                              "PrivateBytes":  9068544
+                                          },
+                                          {
+                                              "IDProcess":  47724,
+                                              "Name":  "msedgewebview2#30",
+                                              "WorkingSetPrivate":  158662656,
+                                              "PrivateBytes":  185651200
+                                          },
+                                          {
+                                              "IDProcess":  47200,
+                                              "Name":  "shiye",
+                                              "WorkingSetPrivate":  4329472,
+                                              "PrivateBytes":  6062080
+                                          }
+                                      ]
+                    },
+                    {
+                        "timestamp":  "2026-09-11T06:41:41.8053184Z",
+                        "privateWorkingSet":  290672640,
+                        "privateBytes":  373309440,
+                        "processes":  [
+                                          {
+                                              "IDProcess":  33056,
+                                              "Name":  "msedgewebview2#25",
+                                              "WorkingSetPrivate":  37388288,
+                                              "PrivateBytes":  48812032
+                                          },
+                                          {
+                                              "IDProcess":  52148,
+                                              "Name":  "msedgewebview2#26",
+                                              "WorkingSetPrivate":  2179072,
+                                              "PrivateBytes":  3538944
+                                          },
+                                          {
+                                              "IDProcess":  43588,
+                                              "Name":  "msedgewebview2#27",
+                                              "WorkingSetPrivate":  77688832,
+                                              "PrivateBytes":  107438080
+                                          },
+                                          {
+                                              "IDProcess":  50940,
+                                              "Name":  "msedgewebview2#28",
+                                              "WorkingSetPrivate":  6819840,
+                                              "PrivateBytes":  12738560
+                                          },
+                                          {
+                                              "IDProcess":  49604,
+                                              "Name":  "msedgewebview2#29",
+                                              "WorkingSetPrivate":  3604480,
+                                              "PrivateBytes":  9068544
+                                          },
+                                          {
+                                              "IDProcess":  47724,
+                                              "Name":  "msedgewebview2#30",
+                                              "WorkingSetPrivate":  158662656,
+                                              "PrivateBytes":  185651200
+                                          },
+                                          {
+                                              "IDProcess":  47200,
+                                              "Name":  "shiye",
+                                              "WorkingSetPrivate":  4329472,
+                                              "PrivateBytes":  6062080
+                                          }
+                                      ]
+                    },
+                    {
+                        "timestamp":  "2026-09-11T06:41:45.1648864Z",
+                        "privateWorkingSet":  289583104,
+                        "privateBytes":  372109312,
+                        "processes":  [
+                                          {
+                                              "IDProcess":  33056,
+                                              "Name":  "msedgewebview2#25",
+                                              "WorkingSetPrivate":  36483072,
+                                              "PrivateBytes":  47906816
+                                          },
+                                          {
+                                              "IDProcess":  52148,
+                                              "Name":  "msedgewebview2#26",
+                                              "WorkingSetPrivate":  2179072,
+                                              "PrivateBytes":  3538944
+                                          },
+                                          {
+                                              "IDProcess":  43588,
+                                              "Name":  "msedgewebview2#27",
+                                              "WorkingSetPrivate":  77504512,
+                                              "PrivateBytes":  107143168
+                                          },
+                                          {
+                                              "IDProcess":  50940,
+                                              "Name":  "msedgewebview2#28",
+                                              "WorkingSetPrivate":  6819840,
+                                              "PrivateBytes":  12738560
+                                          },
+                                          {
+                                              "IDProcess":  49604,
+                                              "Name":  "msedgewebview2#29",
+                                              "WorkingSetPrivate":  3604480,
+                                              "PrivateBytes":  9068544
+                                          },
+                                          {
+                                              "IDProcess":  47724,
+                                              "Name":  "msedgewebview2#30",
+                                              "WorkingSetPrivate":  158662656,
+                                              "PrivateBytes":  185651200
+                                          },
+                                          {
+                                              "IDProcess":  47200,
+                                              "Name":  "shiye",
+                                              "WorkingSetPrivate":  4329472,
+                                              "PrivateBytes":  6062080
+                                          }
+                                      ]
+                    }
+                ]
+}

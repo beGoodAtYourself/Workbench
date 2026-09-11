@@ -1,0 +1,400 @@
+{
+    "method":  "PDH Process counters + Toolhelp descendant PID snapshot",
+    "appPid":  26132,
+    "sampleCount":  30,
+    "p95MiB":  4.54,
+    "peakMiB":  4.54,
+    "meanIntervalSeconds":  1.0651447344827587,
+    "samples":  [
+                    {
+                        "timestamp":  "2026-09-11T07:05:58.0111474Z",
+                        "privateWorkingSet":  4755456,
+                        "privateBytes":  6492160,
+                        "processes":  [
+                                          {
+                                              "IDProcess":  26132,
+                                              "Name":  "shiye",
+                                              "WorkingSetPrivate":  4755456,
+                                              "PrivateBytes":  6492160
+                                          }
+                                      ]
+                    },
+                    {
+                        "timestamp":  "2026-09-11T07:05:59.0567828Z",
+                        "privateWorkingSet":  4755456,
+                        "privateBytes":  6492160,
+                        "processes":  [
+                                          {
+                                              "IDProcess":  26132,
+                                              "Name":  "shiye",
+                                              "WorkingSetPrivate":  4755456,
+                                              "PrivateBytes":  6492160
+                                          }
+                                      ]
+                    },
+                    {
+                        "timestamp":  "2026-09-11T07:06:00.1208155Z",
+                        "privateWorkingSet":  4755456,
+                        "privateBytes":  6492160,
+                        "processes":  [
+                                          {
+                                              "IDProcess":  26132,
+                                              "Name":  "shiye",
+                                              "WorkingSetPrivate":  4755456,
+                                              "PrivateBytes":  6492160
+                                          }
+                                      ]
+                    },
+                    {
+                        "timestamp":  "2026-09-11T07:06:01.1844652Z",
+                        "privateWorkingSet":  4755456,
+                        "privateBytes":  6492160,
+                        "processes":  [
+                                          {
+                                              "IDProcess":  26132,
+                                              "Name":  "shiye",
+                                              "WorkingSetPrivate":  4755456,
+                                              "PrivateBytes":  6492160
+                                          }
+                                      ]
+                    },
+                    {
+                        "timestamp":  "2026-09-11T07:06:02.2469159Z",
+                        "privateWorkingSet":  4755456,
+                        "privateBytes":  6492160,
+                        "processes":  [
+                                          {
+                                              "IDProcess":  26132,
+                                              "Name":  "shiye",
+                                              "WorkingSetPrivate":  4755456,
+                                              "PrivateBytes":  6492160
+                                          }
+                                      ]
+                    },
+                    {
+                        "timestamp":  "2026-09-11T07:06:03.3037203Z",
+                        "privateWorkingSet":  4755456,
+                        "privateBytes":  6492160,
+                        "processes":  [
+                                          {
+                                              "IDProcess":  26132,
+                                              "Name":  "shiye",
+                                              "WorkingSetPrivate":  4755456,
+                                              "PrivateBytes":  6492160
+                                          }
+                                      ]
+                    },
+                    {
+                        "timestamp":  "2026-09-11T07:06:04.3638509Z",
+                        "privateWorkingSet":  4755456,
+                        "privateBytes":  6492160,
+                        "processes":  [
+                                          {
+                                              "IDProcess":  26132,
+                                              "Name":  "shiye",
+                                              "WorkingSetPrivate":  4755456,
+                                              "PrivateBytes":  6492160
+                                          }
+                                      ]
+                    },
+                    {
+                        "timestamp":  "2026-09-11T07:06:05.4227316Z",
+                        "privateWorkingSet":  4755456,
+                        "privateBytes":  6492160,
+                        "processes":  [
+                                          {
+                                              "IDProcess":  26132,
+                                              "Name":  "shiye",
+                                              "WorkingSetPrivate":  4755456,
+                                              "PrivateBytes":  6492160
+                                          }
+                                      ]
+                    },
+                    {
+                        "timestamp":  "2026-09-11T07:06:06.4747700Z",
+                        "privateWorkingSet":  4755456,
+                        "privateBytes":  6492160,
+                        "processes":  [
+                                          {
+                                              "IDProcess":  26132,
+                                              "Name":  "shiye",
+                                              "WorkingSetPrivate":  4755456,
+                                              "PrivateBytes":  6492160
+                                          }
+                                      ]
+                    },
+                    {
+                        "timestamp":  "2026-09-11T07:06:07.5343839Z",
+                        "privateWorkingSet":  4755456,
+                        "privateBytes":  6492160,
+                        "processes":  [
+                                          {
+                                              "IDProcess":  26132,
+                                              "Name":  "shiye",
+                                              "WorkingSetPrivate":  4755456,
+                                              "PrivateBytes":  6492160
+                                          }
+                                      ]
+                    },
+                    {
+                        "timestamp":  "2026-09-11T07:06:08.5838041Z",
+                        "privateWorkingSet":  4755456,
+                        "privateBytes":  6492160,
+                        "processes":  [
+                                          {
+                                              "IDProcess":  26132,
+                                              "Name":  "shiye",
+                                              "WorkingSetPrivate":  4755456,
+                                              "PrivateBytes":  6492160
+                                          }
+                                      ]
+                    },
+                    {
+                        "timestamp":  "2026-09-11T07:06:09.6386331Z",
+                        "privateWorkingSet":  4755456,
+                        "privateBytes":  6492160,
+                        "processes":  [
+                                          {
+                                              "IDProcess":  26132,
+                                              "Name":  "shiye",
+                                              "WorkingSetPrivate":  4755456,
+                                              "PrivateBytes":  6492160
+                                          }
+                                      ]
+                    },
+                    {
+                        "timestamp":  "2026-09-11T07:06:10.6956298Z",
+                        "privateWorkingSet":  4755456,
+                        "privateBytes":  6492160,
+                        "processes":  [
+                                          {
+                                              "IDProcess":  26132,
+                                              "Name":  "shiye",
+                                              "WorkingSetPrivate":  4755456,
+                                              "PrivateBytes":  6492160
+                                          }
+                                      ]
+                    },
+                    {
+                        "timestamp":  "2026-09-11T07:06:11.7388149Z",
+                        "privateWorkingSet":  4755456,
+                        "privateBytes":  6492160,
+                        "processes":  [
+                                          {
+                                              "IDProcess":  26132,
+                                              "Name":  "shiye",
+                                              "WorkingSetPrivate":  4755456,
+                                              "PrivateBytes":  6492160
+                                          }
+                                      ]
+                    },
+                    {
+                        "timestamp":  "2026-09-11T07:06:12.7954822Z",
+                        "privateWorkingSet":  4755456,
+                        "privateBytes":  6492160,
+                        "processes":  [
+                                          {
+                                              "IDProcess":  26132,
+                                              "Name":  "shiye",
+                                              "WorkingSetPrivate":  4755456,
+                                              "PrivateBytes":  6492160
+                                          }
+                                      ]
+                    },
+                    {
+                        "timestamp":  "2026-09-11T07:06:13.8459248Z",
+                        "privateWorkingSet":  4755456,
+                        "privateBytes":  6492160,
+                        "processes":  [
+                                          {
+                                              "IDProcess":  26132,
+                                              "Name":  "shiye",
+                                              "WorkingSetPrivate":  4755456,
+                                              "PrivateBytes":  6492160
+                                          }
+                                      ]
+                    },
+                    {
+                        "timestamp":  "2026-09-11T07:06:14.9077560Z",
+                        "privateWorkingSet":  4755456,
+                        "privateBytes":  6492160,
+                        "processes":  [
+                                          {
+                                              "IDProcess":  26132,
+                                              "Name":  "shiye",
+                                              "WorkingSetPrivate":  4755456,
+                                              "PrivateBytes":  6492160
+                                          }
+                                      ]
+                    },
+                    {
+                        "timestamp":  "2026-09-11T07:06:15.9661029Z",
+                        "privateWorkingSet":  4755456,
+                        "privateBytes":  6492160,
+                        "processes":  [
+                                          {
+                                              "IDProcess":  26132,
+                                              "Name":  "shiye",
+                                              "WorkingSetPrivate":  4755456,
+                                              "PrivateBytes":  6492160
+                                          }
+                                      ]
+                    },
+                    {
+                        "timestamp":  "2026-09-11T07:06:17.0160526Z",
+                        "privateWorkingSet":  4755456,
+                        "privateBytes":  6492160,
+                        "processes":  [
+                                          {
+                                              "IDProcess":  26132,
+                                              "Name":  "shiye",
+                                              "WorkingSetPrivate":  4755456,
+                                              "PrivateBytes":  6492160
+                                          }
+                                      ]
+                    },
+                    {
+                        "timestamp":  "2026-09-11T07:06:18.0796642Z",
+                        "privateWorkingSet":  4755456,
+                        "privateBytes":  6492160,
+                        "processes":  [
+                                          {
+                                              "IDProcess":  26132,
+                                              "Name":  "shiye",
+                                              "WorkingSetPrivate":  4755456,
+                                              "PrivateBytes":  6492160
+                                          }
+                                      ]
+                    },
+                    {
+                        "timestamp":  "2026-09-11T07:06:19.1371328Z",
+                        "privateWorkingSet":  4755456,
+                        "privateBytes":  6492160,
+                        "processes":  [
+                                          {
+                                              "IDProcess":  26132,
+                                              "Name":  "shiye",
+                                              "WorkingSetPrivate":  4755456,
+                                              "PrivateBytes":  6492160
+                                          }
+                                      ]
+                    },
+                    {
+                        "timestamp":  "2026-09-11T07:06:20.2008931Z",
+                        "privateWorkingSet":  4755456,
+                        "privateBytes":  6492160,
+                        "processes":  [
+                                          {
+                                              "IDProcess":  26132,
+                                              "Name":  "shiye",
+                                              "WorkingSetPrivate":  4755456,
+                                              "PrivateBytes":  6492160
+                                          }
+                                      ]
+                    },
+                    {
+                        "timestamp":  "2026-09-11T07:06:21.2607735Z",
+                        "privateWorkingSet":  4755456,
+                        "privateBytes":  6492160,
+                        "processes":  [
+                                          {
+                                              "IDProcess":  26132,
+                                              "Name":  "shiye",
+                                              "WorkingSetPrivate":  4755456,
+                                              "PrivateBytes":  6492160
+                                          }
+                                      ]
+                    },
+                    {
+                        "timestamp":  "2026-09-11T07:06:22.3695281Z",
+                        "privateWorkingSet":  4755456,
+                        "privateBytes":  6492160,
+                        "processes":  [
+                                          {
+                                              "IDProcess":  26132,
+                                              "Name":  "shiye",
+                                              "WorkingSetPrivate":  4755456,
+                                              "PrivateBytes":  6492160
+                                          }
+                                      ]
+                    },
+                    {
+                        "timestamp":  "2026-09-11T07:06:23.4448570Z",
+                        "privateWorkingSet":  4755456,
+                        "privateBytes":  6492160,
+                        "processes":  [
+                                          {
+                                              "IDProcess":  26132,
+                                              "Name":  "shiye",
+                                              "WorkingSetPrivate":  4755456,
+                                              "PrivateBytes":  6492160
+                                          }
+                                      ]
+                    },
+                    {
+                        "timestamp":  "2026-09-11T07:06:24.5368304Z",
+                        "privateWorkingSet":  4755456,
+                        "privateBytes":  6492160,
+                        "processes":  [
+                                          {
+                                              "IDProcess":  26132,
+                                              "Name":  "shiye",
+                                              "WorkingSetPrivate":  4755456,
+                                              "PrivateBytes":  6492160
+                                          }
+                                      ]
+                    },
+                    {
+                        "timestamp":  "2026-09-11T07:06:25.6250861Z",
+                        "privateWorkingSet":  4755456,
+                        "privateBytes":  6492160,
+                        "processes":  [
+                                          {
+                                              "IDProcess":  26132,
+                                              "Name":  "shiye",
+                                              "WorkingSetPrivate":  4755456,
+                                              "PrivateBytes":  6492160
+                                          }
+                                      ]
+                    },
+                    {
+                        "timestamp":  "2026-09-11T07:06:26.7254846Z",
+                        "privateWorkingSet":  4755456,
+                        "privateBytes":  6492160,
+                        "processes":  [
+                                          {
+                                              "IDProcess":  26132,
+                                              "Name":  "shiye",
+                                              "WorkingSetPrivate":  4755456,
+                                              "PrivateBytes":  6492160
+                                          }
+                                      ]
+                    },
+                    {
+                        "timestamp":  "2026-09-11T07:06:27.8055696Z",
+                        "privateWorkingSet":  4755456,
+                        "privateBytes":  6492160,
+                        "processes":  [
+                                          {
+                                              "IDProcess":  26132,
+                                              "Name":  "shiye",
+                                              "WorkingSetPrivate":  4755456,
+                                              "PrivateBytes":  6492160
+                                          }
+                                      ]
+                    },
+                    {
+                        "timestamp":  "2026-09-11T07:06:28.9003447Z",
+                        "privateWorkingSet":  4755456,
+                        "privateBytes":  6492160,
+                        "processes":  [
+                                          {
+                                              "IDProcess":  26132,
+                                              "Name":  "shiye",
+                                              "WorkingSetPrivate":  4755456,
+                                              "PrivateBytes":  6492160
+                                          }
+                                      ]
+                    }
+                ]
+}

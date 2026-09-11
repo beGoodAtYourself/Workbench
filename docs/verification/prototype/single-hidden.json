@@ -1,0 +1,138 @@
+{
+  "appPid": 29992,
+  "sampleCount": 10,
+  "p95MiB": 3.7,
+  "peakMiB": 3.7,
+  "samples": [
+    {
+      "timestamp": "2026-09-11T03:33:15.7230974Z",
+      "privateWorkingSet": 3878912.0,
+      "privateBytes": 6705152.0,
+      "processes": [
+        {
+          "IDProcess": 29992,
+          "Name": "shiye",
+          "WorkingSetPrivate": 3878912,
+          "PrivateBytes": 6705152
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-09-11T03:33:18.5985056Z",
+      "privateWorkingSet": 3878912.0,
+      "privateBytes": 6705152.0,
+      "processes": [
+        {
+          "IDProcess": 29992,
+          "Name": "shiye",
+          "WorkingSetPrivate": 3878912,
+          "PrivateBytes": 6705152
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-09-11T03:33:21.4672353Z",
+      "privateWorkingSet": 3878912.0,
+      "privateBytes": 6705152.0,
+      "processes": [
+        {
+          "IDProcess": 29992,
+          "Name": "shiye",
+          "WorkingSetPrivate": 3878912,
+          "PrivateBytes": 6705152
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-09-11T03:33:24.2303309Z",
+      "privateWorkingSet": 3878912.0,
+      "privateBytes": 6705152.0,
+      "processes": [
+        {
+          "IDProcess": 29992,
+          "Name": "shiye",
+          "WorkingSetPrivate": 3878912,
+          "PrivateBytes": 6705152
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-09-11T03:33:27.2031145Z",
+      "privateWorkingSet": 3878912.0,
+      "privateBytes": 6705152.0,
+      "processes": [
+        {
+          "IDProcess": 29992,
+          "Name": "shiye",
+          "WorkingSetPrivate": 3878912,
+          "PrivateBytes": 6705152
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-09-11T03:33:30.0673980Z",
+      "privateWorkingSet": 3878912.0,
+      "privateBytes": 6705152.0,
+      "processes": [
+        {
+          "IDProcess": 29992,
+          "Name": "shiye",
+          "WorkingSetPrivate": 3878912,
+          "PrivateBytes": 6705152
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-09-11T03:33:32.7437970Z",
+      "privateWorkingSet": 3878912.0,
+      "privateBytes": 6705152.0,
+      "processes": [
+        {
+          "IDProcess": 29992,
+          "Name": "shiye",
+          "WorkingSetPrivate": 3878912,
+          "PrivateBytes": 6705152
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-09-11T03:33:35.2204306Z",
+      "privateWorkingSet": 3878912.0,
+      "privateBytes": 6705152.0,
+      "processes": [
+        {
+          "IDProcess": 29992,
+          "Name": "shiye",
+          "WorkingSetPrivate": 3878912,
+          "PrivateBytes": 6705152
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-09-11T03:33:38.1847400Z",
+      "privateWorkingSet": 3878912.0,
+      "privateBytes": 6705152.0,
+      "processes": [
+        {
+          "IDProcess": 29992,
+          "Name": "shiye",
+          "WorkingSetPrivate": 3878912,
+          "PrivateBytes": 6705152
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-09-11T03:33:41.2374846Z",
+      "privateWorkingSet": 3878912.0,
+      "privateBytes": 6705152.0,
+      "processes": [
+        {
+          "IDProcess": 29992,
+          "Name": "shiye",
+          "WorkingSetPrivate": 3878912,
+          "PrivateBytes": 6705152
+        }
+      ]
+    }
+  ]
+}

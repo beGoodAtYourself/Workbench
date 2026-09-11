@@ -1,0 +1,104 @@
+{
+  "phase": "memory",
+  "status": "incomplete-deferred-by-user",
+  "recordedAt": "2026-09-11T15:19:08+08:00",
+  "reason": "用户要求先归档，其他测试后续进行；仅汇总已经存在的记录，没有继续执行测试。",
+  "appPid": 26132,
+  "sha256": "8228957c7ceb96bdacf8870b82536c516006958ac9d9fae5e9f52545fd4b2719",
+  "instrumentation": "PDH Process counters + Toolhelp descendant PID snapshot; WebView2 CDP; SHIYE_PROFILE=1",
+  "expectedGroups": 15,
+  "completedGroups": 9,
+  "acceptancePassed": null,
+  "measurements": [
+    {
+      "name": "dual-edit",
+      "round": 1,
+      "file": "dual-edit-1.json",
+      "sampleCount": 30,
+      "p95MiB": 185.75,
+      "peakMiB": 185.81,
+      "meanIntervalSeconds": 1.0628094344827583
+    },
+    {
+      "name": "dual-edit",
+      "round": 2,
+      "file": "dual-edit-2.json",
+      "sampleCount": 30,
+      "p95MiB": 179.43,
+      "peakMiB": 179.44,
+      "meanIntervalSeconds": 1.0809054103448275
+    },
+    {
+      "name": "dual-preview",
+      "round": 1,
+      "file": "dual-preview-1.json",
+      "sampleCount": 30,
+      "p95MiB": 182.1,
+      "peakMiB": 182.1,
+      "meanIntervalSeconds": 1.0616292586206895
+    },
+    {
+      "name": "dual-preview",
+      "round": 2,
+      "file": "dual-preview-2.json",
+      "sampleCount": 30,
+      "p95MiB": 186.49,
+      "peakMiB": 188.07,
+      "meanIntervalSeconds": 1.0514907999999998
+    },
+    {
+      "name": "hidden",
+      "round": 1,
+      "file": "hidden-1.json",
+      "sampleCount": 30,
+      "p95MiB": 4.54,
+      "peakMiB": 4.54,
+      "meanIntervalSeconds": 1.0651447344827587
+    },
+    {
+      "name": "single-edit",
+      "round": 1,
+      "file": "single-edit-1.json",
+      "sampleCount": 30,
+      "p95MiB": 174.5,
+      "peakMiB": 174.71,
+      "meanIntervalSeconds": 1.060239872413793
+    },
+    {
+      "name": "single-edit",
+      "round": 2,
+      "file": "single-edit-2.json",
+      "sampleCount": 30,
+      "p95MiB": 181.49,
+      "peakMiB": 181.85,
+      "meanIntervalSeconds": 1.062960813793103
+    },
+    {
+      "name": "single-preview",
+      "round": 1,
+      "file": "single-preview-1.json",
+      "sampleCount": 30,
+      "p95MiB": 174.2,
+      "peakMiB": 174.2,
+      "meanIntervalSeconds": 1.0560575137931032
+    },
+    {
+      "name": "single-preview",
+      "round": 2,
+      "file": "single-preview-2.json",
+      "sampleCount": 30,
+      "p95MiB": 169.46,
+      "peakMiB": 169.49,
+      "meanIntervalSeconds": 1.0544193275862068
+    }
+  ],
+  "missing": [
+    "hidden-2",
+    "single-edit-3",
+    "single-preview-3",
+    "dual-edit-3",
+    "dual-preview-3",
+    "hidden-3"
+  ],
+  "note": "每组 30 个样本，实际平均间隔见各记录；三轮、唤起延迟及循环保留内存验收尚未完成。"
+}

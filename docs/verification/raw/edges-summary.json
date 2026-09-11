@@ -1,0 +1,66 @@
+{
+  "phase": "edges",
+  "started": "2026-09-11T06:40:30.078Z",
+  "pid": 47200,
+  "measurements": [],
+  "checks": [
+    {
+      "name": "invalid root preserves configured workspace",
+      "pass": true
+    },
+    {
+      "name": "native hotkey conflict preserves previous shortcut",
+      "pass": true
+    },
+    {
+      "name": "Windows clipboard listener displays current text",
+      "pass": true
+    },
+    {
+      "name": "large Unicode clipboard bounded to 1 MiB without broken characters",
+      "pass": true
+    },
+    {
+      "name": "non-text and empty clipboard replace previous text",
+      "pass": true
+    },
+    {
+      "name": "busy clipboard reports failure",
+      "pass": true
+    },
+    {
+      "name": "leaving clipboard releases displayed snapshot",
+      "pass": true
+    },
+    {
+      "name": "Chinese edit save and reload use actual local file",
+      "pass": true
+    },
+    {
+      "name": "conflict blocks hide and preserves local buffer plus external file",
+      "pass": true
+    },
+    {
+      "name": "conflict save-copy preserves both versions",
+      "pass": true
+    },
+    {
+      "name": "large-file cancel leaves layout intact",
+      "pass": true
+    },
+    {
+      "name": "large long-line note loads completely after explicit continuation",
+      "pass": true
+    },
+    {
+      "name": "exact 2 MiB note uses a bounded editor DOM",
+      "pass": true
+    },
+    {
+      "name": "local image renders while remote image remains a placeholder",
+      "pass": true
+    }
+  ],
+  "completed": "2026-09-11T06:41:46.452Z",
+  "sha256": "c06e1f62fee734cc30674fa77e636a7c05378acb0d5bfbb3a0db133c26305db3"
+}
