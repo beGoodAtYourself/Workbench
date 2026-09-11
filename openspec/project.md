@@ -10,6 +10,7 @@
 - 用户已确认：首版支持 Windows。
 - 本次变更 `add-local-personal-workbench` 已于 2026-09-11 按用户要求提前归档，核心实现与已有验证保留；尚未完成的测试交由用户后续进行，见 [待验收清单](../docs/verification/deferred-tests.md)。
 - 归档记录位于 [提案](archive/2026-09-11-add-local-personal-workbench/proposal.md) 与 [任务清单](archive/2026-09-11-add-local-personal-workbench/tasks.md)，当前无实施中的变更。
+- 2026-09-11 完成并归档 [fix-sibling-folder-creation](archive/2026-09-11-fix-sibling-folder-creation/proposal.md)：补齐返回根目录和新建同级文件夹入口，FILE-02 与说明已同步，27 项前端单元测试、9 项界面回归、9 项 Rust 测试及静态检查通过；Windows 修复版已打包。该独立修复记录在归档时按实际工作补录，首版延期验收状态保持不变。
 - 增量规格使用 `specs/*_delta.md` 格式；本次六份增量已合并至 `openspec/specs/`，作为后续需求依据。归档不表示全部验收通过，性能目标仍待完整验证。
 
 ## 已明确的产品要求

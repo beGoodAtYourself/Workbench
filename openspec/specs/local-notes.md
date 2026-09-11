@@ -2,6 +2,8 @@
 
 **来源：** [add-local-personal-workbench](../archive/2026-09-11-add-local-personal-workbench/proposal.md)
 
+**后续修复：** [fix-sibling-folder-creation](../archive/2026-09-11-fix-sibling-folder-creation/proposal.md)，2026-09-11 补充 FILE-02 返回根目录与新建同级文件夹场景；本修复的验证结果见 [归档验证记录](../archive/2026-09-11-fix-sibling-folder-creation/verification.md)。
+
 **状态：** 2026-09-11 合并为正式规格；按用户要求提前归档，剩余验证见 [待验收清单](../../docs/verification/deferred-tests.md)。以下要求是后续验收依据，不表示全部场景已经通过。
 
 ## Requirements
@@ -33,6 +35,12 @@
 - GIVEN 同目录已有同名项目，或输入 Windows 非法文件名。
 - WHEN 用户提交新建或重命名。
 - THEN 不覆盖已有项目、不更新为虚假成功状态，并提示可修正的原因。
+
+#### Scenario: 返回根目录或新建同级文件夹
+- GIVEN 用户已选中或刚创建一个文件夹。
+- WHEN 点击笔记库名称或文件树空白处后新建，或从文件夹右键菜单／更多文件操作中选择“新建同级文件夹”。
+- THEN 返回根目录的新建操作在笔记库顶层创建项目；同级新建操作在所选文件夹的父目录创建文件夹，根目录和嵌套目录均适用。菜单明确区分“新建子文件夹”和“新建同级文件夹”，创建弹窗显示保存位置。
+- AND 文件树空白处的右键菜单以根目录为目标，重命名和回收站操作不可用；返回根目录保留已打开笔记。
 
 ### Requirement: FILE-03 重命名与回收站
 

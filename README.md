@@ -14,10 +14,12 @@
 
 本次变更已按用户要求提前归档，正式规格位于 `openspec/specs/`。已完成检查见 [验收记录](docs/verification/README.md)，剩余项目见 [待验收清单](docs/verification/deferred-tests.md)；[归档任务清单](openspec/archive/2026-09-11-add-local-personal-workbench/tasks.md) 保留未完成标记，性能预算尚未完成整体验收。
 
+2026-09-11 的[同级文件夹修复](openspec/archive/2026-09-11-fix-sibling-folder-creation/proposal.md)已完成归档。为保留运行中的旧版，本次[修复版程序](src-tauri/target/folder-fix/release/shiye.exe)和[安装包](src-tauri/target/folder-fix/release/bundle/nsis/拾页_0.1.0_x64-setup.exe)单独保存在 `src-tauri/target/folder-fix/`；通过“设置 → 退出拾页”结束旧版后再使用。后续不设置 `CARGO_TARGET_DIR` 的常规构建仍输出到上方默认路径。
+
 ## 开始记录
 
 1. 打开拾页，点击“选择笔记文件夹”，选择一个已有目录或新建的空目录。
-2. 左侧展示文件夹和 `.md` 文件。选中文件夹后，新建操作会在其中创建项目；选中文件时，会在同级目录创建。
+2. 左侧展示文件夹和 `.md` 文件。选中文件夹后，新建操作会在其中创建项目；选中文件时，会在同级目录创建。要建立并列文件夹，可右键文件夹或点击“更多文件操作”，选择“新建同级文件夹”。点击左上方笔记库名称或文件树空白处可返回根目录，再新建顶层文件夹；更换笔记库仍使用“选择笔记文件夹”按钮。
 3. 点击笔记，在当前活动窗格打开。已有笔记默认显示，新建笔记默认编辑。
 4. 每个窗格右上角可以独立切换“显示”和“编辑”。停止输入 500 ms 后自动保存，也可以按 `Ctrl+S`。
 
