@@ -1,5 +1,57 @@
-import {test,expect} from '@playwright/test';
+import {test,expect,type Page} from '@playwright/test';
 test.beforeEach(async({page})=>{await page.goto('/');await expect(page.locator('.note-pane')).toHaveCount(1);});
+async function createFolder(page:Page,name:string,location:string){
+ await page.locator('#new-folder').click();
+ await expect(page.locator('dialog')).toContainText('保存位置：'+location);
+ await page.getByLabel('名称',{exact:true}).fill(name);
+ await page.getByRole('button',{name:'创建文件夹',exact:true}).click();
+}
+test('selecting the workspace root or tree background creates separate top-level folders',async({page})=>{
+ await createFolder(page,'项目一','笔记根目录');
+ await expect(page.locator('.tree-row[title="项目一"]')).toHaveAttribute('aria-selected','true');
+ await page.locator('#workspace-name').click();
+ await expect(page.locator('#workspace-name')).toHaveAttribute('aria-pressed','true');
+ await expect(page.locator('.tree-row[aria-selected="true"]')).toHaveCount(0);
+ await createFolder(page,'项目二','笔记根目录');
+ const tree=page.locator('#tree'),bounds=await tree.boundingBox();
+ await tree.click({position:{x:20,y:bounds!.height-8}});
+ await createFolder(page,'项目三','笔记根目录');
+ for(const name of ['项目一','项目二','项目三'])await expect(page.locator('.tree-row[title="'+name+'"]')).toBeVisible();
+ await expect(page.locator('.note-pane')).toHaveCount(1);
+});
+test('folder menus create siblings at the root and inside a parent while the toolbar creates children',async({page})=>{
+ await createFolder(page,'父目录','笔记根目录');
+ await createFolder(page,'子目录一','父目录');
+ await expect(page.locator('.tree-row[title="父目录/子目录一"]')).toBeVisible();
+ await page.locator('.tree-row[title="父目录/子目录一"]').click({button:'right'});
+ await page.getByRole('button',{name:'新建同级文件夹',exact:true}).click();
+ await expect(page.locator('dialog')).toContainText('保存位置：父目录');
+ await page.getByLabel('名称',{exact:true}).fill('子目录二');
+ await page.getByRole('button',{name:'创建文件夹',exact:true}).click();
+ await expect(page.locator('.tree-row[title="父目录/子目录二"]')).toBeVisible();
+ await page.locator('.tree-row[title="父目录"]').click({button:'right'});
+ await page.getByRole('button',{name:'新建同级文件夹',exact:true}).click();
+ await expect(page.locator('dialog')).toContainText('保存位置：笔记根目录');
+ await page.getByLabel('名称',{exact:true}).fill('另一个父目录');
+ await page.getByRole('button',{name:'创建文件夹',exact:true}).click();
+ await expect(page.locator('.tree-row[title="另一个父目录"]')).toBeVisible();
+ await expect(page.locator('.tree-row[title="父目录/子目录一"]')).toBeVisible();
+});
+test('the tree background menu targets the root and disables operations on the previous selection',async({page})=>{
+ await createFolder(page,'已有目录','笔记根目录');
+ const tree=page.locator('#tree'),bounds=await tree.boundingBox();
+ await tree.click({button:'right',position:{x:20,y:bounds!.height-8}});
+ const menu=page.locator('.context-menu');
+ await expect(menu.getByRole('button',{name:'重命名',exact:true})).toBeDisabled();
+ await expect(menu.getByRole('button',{name:'移至回收站',exact:true})).toBeDisabled();
+ const menuBounds=await menu.boundingBox();
+ expect(menuBounds!.y+menuBounds!.height).toBeLessThanOrEqual(page.viewportSize()!.height);
+ await menu.getByRole('button',{name:'新建文件夹',exact:true}).click();
+ await expect(page.locator('dialog')).toContainText('保存位置：笔记根目录');
+ await page.getByLabel('名称',{exact:true}).fill('并列目录');
+ await page.getByRole('button',{name:'创建文件夹',exact:true}).click();
+ await expect(page.locator('.tree-row[title="并列目录"]')).toBeVisible();
+});
 test('renders the workbench and rotates A B C without a third pane',async({page})=>{
  await expect(page.getByRole('heading',{name:'给思绪一个落脚点'})).toBeVisible();
  await page.locator('.article').getByRole('link',{name:'使用指南'}).click();

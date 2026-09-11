@@ -58,7 +58,7 @@ async function main(){
   document.getElementById('nav-notes')!.classList.toggle('selected',module==='notes');
   document.getElementById('nav-clipboard')!.classList.toggle('selected',module==='clipboard');
   document.querySelector('.sidebar')!.classList.toggle('muted-sidebar',module==='clipboard');
-  const name=document.getElementById('workspace-name')!;name.textContent=settings.root?basename(settings.root.replaceAll('\\','/')):'选择笔记文件夹';name.title=settings.root||'选择一个文件夹，开始记录';
+  const name=document.getElementById('workspace-name')!;name.textContent=settings.root?basename(settings.root.replaceAll('\\','/')):'选择笔记文件夹';name.title=settings.root?settings.root+'\n点击返回笔记根目录':'选择一个文件夹，开始记录';name.setAttribute('aria-label',settings.root?'返回笔记根目录':'选择笔记文件夹');
   document.getElementById('root-status')!.textContent=settings.root?'本地文件夹 · 已连接':'尚未选择笔记文件夹';
   document.getElementById('breadcrumb')!.textContent=module==='notes'?'我的笔记':'剪贴板';
   document.querySelector('.reading-hint')!.classList.toggle('invisible',module!=='notes');
@@ -72,12 +72,14 @@ async function main(){
  }
  function renderTree(){
   if(dragging)return;
+  const rootSelected=!!settings.root&&!selected,workspaceName=document.getElementById('workspace-name')!;
+  workspaceName.classList.toggle('active',rootSelected);workspaceName.setAttribute('aria-pressed',String(rootSelected));
   const space=document.getElementById('tree-space')!;space.style.height=Math.max(rows.length*34,64)+'px';
   if(!settings.root){space.innerHTML='<p class="tree-empty">你的笔记，存放在你选择的文件夹里。</p>';return;}
   if(!rows.length){space.innerHTML='<p class="tree-empty">文件夹还是空的<br>新建一篇笔记，开始记录。</p>';return;}
   const start=Math.max(0,Math.floor(tree.scrollTop/34)-6),end=Math.min(rows.length,start+Math.ceil(tree.clientHeight/34)+14);
   space.innerHTML=rows.slice(start,end).map((entry,i)=>{
-   const active=selected?key(selected.path)===key(entry.path):model.panes.some(d=>key(d.path)===key(entry.path));
+   const active=selected!==null&&key(selected.path)===key(entry.path);
    return '<div class="tree-row'+(active?' active':'')+'" role="treeitem" aria-selected="'+active+'"'+(entry.kind==='folder'?' aria-expanded="'+expanded.has(entry.path)+'"':'')+' data-row="'+(start+i)+'" tabindex="-1" draggable="false" style="top:'+((start+i)*34)+'px;padding-left:'+(12+entry.depth*16)+'px" title="'+escape(entry.path)+'"><span class="tree-chevron '+(expanded.has(entry.path)?'expanded':'')+'">'+(entry.kind==='folder'?icon('chevron'):'')+'</span><span class="tree-file-icon '+entry.kind+'">'+icon(entry.kind==='folder'?'folder':'note')+'</span><span class="tree-label">'+escape(entry.name.replace(/\.md$/i,''))+'</span>'+(entry.kind==='note'?'<span class="file-extension">md</span>':'')+'</div>';
   }).join('');
  }
@@ -93,7 +95,8 @@ async function main(){
  tree.addEventListener('scroll',renderTree,{passive:true});
  new ResizeObserver(renderTree).observe(tree);
  function rowAt(target:EventTarget|null){const row=(target as Element|null)?.closest<HTMLElement>('[data-row]');return row?rows[Number(row.dataset.row)]:undefined;}
- tree.addEventListener('click',event=>{if(suppressTreeClick){suppressTreeClick=false;event.preventDefault();return;}const entry=rowAt(event.target);if(!entry)return;selected=entry;renderTree();task(async()=>{
+ function selectRoot(){selected=null;document.querySelector('.context-menu')?.remove();renderTree();}
+ tree.addEventListener('click',event=>{if(suppressTreeClick){suppressTreeClick=false;event.preventDefault();return;}const entry=rowAt(event.target);if(!entry){selectRoot();return;}selected=entry;renderTree();task(async()=>{
   if(entry.kind==='folder'){
    if(expanded.has(entry.path)){expanded.delete(entry.path);for(const p of [...directories.keys()])if(belongs(p,entry.path))directories.delete(p);for(const p of [...expanded])if(belongs(p,entry.path))expanded.delete(p);}
    else{if(expanded.size>=300){notify('已展开较多文件夹，请先折叠部分目录。');return;}const entries=await repo.list(entry.path);expanded.add(entry.path);directories.set(entry.path,entries);}flatten();checkpoint();
@@ -109,7 +112,7 @@ async function main(){
   dragging=null;ghost.hidden=true;if(tree.hasPointerCapture(event.pointerId))tree.releasePointerCapture(event.pointerId);if(current.moved){renderTree();setTimeout(()=>{suppressTreeClick=false;},0);}
  }
  window.addEventListener('pointerup',event=>finishDrag(event));window.addEventListener('pointercancel',event=>finishDrag(event,true));
- tree.addEventListener('contextmenu',event=>{event.preventDefault();const entry=rowAt(event.target);if(entry){selected=entry;renderTree();showMenu(event.clientX,event.clientY);}});
+ tree.addEventListener('contextmenu',event=>{event.preventDefault();selected=rowAt(event.target)??null;renderTree();showMenu(event.clientX,event.clientY);});
  tree.addEventListener('keydown',event=>{if(event.key==='F2'){event.preventDefault();task(rename);}if(event.key==='Delete'){event.preventDefault();task(recycle);}});
  function active(doc:Document){model.active=model.panes.indexOf(doc);updateStatus();}
  function updateStatus(){
@@ -187,9 +190,9 @@ async function main(){
   });
  }
  function selectedParent(){return selected?.kind==='folder'?selected.path:selected?parent(selected.path):'';}
- async function create(folder:boolean){
+ async function create(folder:boolean,inFolder?:string){
   if(!settings.root){await chooseRoot();if(!settings.root)return;}
-  const inFolder=selectedParent();const name=await ask(folder?'新建文件夹':'新建笔记','保存位置：'+(inFolder||'笔记根目录'),folder?'新建文件夹':'未命名笔记',folder?'创建文件夹':'创建笔记');if(!name)return;
+  inFolder??=selectedParent();const name=await ask(folder?'新建文件夹':'新建笔记','保存位置：'+(inFolder||'笔记根目录'),folder?'新建文件夹':'未命名笔记',folder?'创建文件夹':'创建笔记');if(!name)return;
   const path=await repo.create(inFolder,name,folder);if(inFolder)expanded.add(inFolder);
   selected={path,name:basename(path),kind:folder?'folder':'note'};await refreshTree();
   if(!folder){if(module!=='notes')await switchModule('notes');await model.select(path,'edit');}else{expanded.add(path);directories.set(path,[]);flatten();}
@@ -207,8 +210,10 @@ async function main(){
   await freeze(async()=>{await model.flushAll();await repo.recycle(target.path);model.remove(target.path);for(const p of [...expanded])if(belongs(p,target.path))expanded.delete(p);selected=null;directories.clear();await refreshTree();checkpoint();});
  }
  function showMenu(x:number,y:number){
-  document.querySelector('.context-menu')?.remove();const menu=document.createElement('div');menu.className='context-menu';menu.style.left=Math.min(x,window.innerWidth-190)+'px';menu.style.top=Math.min(y,window.innerHeight-180)+'px';menu.innerHTML='<button data-action="note">新建笔记</button><button data-action="folder">新建文件夹</button><hr><button data-action="rename">重命名</button><button data-action="delete" class="danger">移至回收站</button>';document.body.append(menu);
-  menu.addEventListener('click',event=>{const action=(event.target as HTMLElement).dataset.action;menu.remove();if(action==='note')task(()=>create(false));if(action==='folder')task(()=>create(true));if(action==='rename')task(rename);if(action==='delete')task(recycle);});
+  const target=selected;
+  document.querySelector('.context-menu')?.remove();const menu=document.createElement('div');menu.className='context-menu';menu.innerHTML='<button data-action="note">新建笔记</button><button data-action="folder">'+(target?.kind==='folder'?'新建子文件夹':'新建文件夹')+'</button>'+(target?.kind==='folder'?'<button data-action="sibling-folder">新建同级文件夹</button>':'')+'<hr><button data-action="rename"'+(!target?' disabled':'')+'>重命名</button><button data-action="delete" class="danger"'+(!target?' disabled':'')+'>移至回收站</button>';document.body.append(menu);
+  menu.style.left=Math.max(4,Math.min(x,window.innerWidth-menu.offsetWidth-4))+'px';menu.style.top=Math.max(4,Math.min(y,window.innerHeight-menu.offsetHeight-4))+'px';
+  menu.addEventListener('click',event=>{const action=(event.target as HTMLElement).dataset.action;menu.remove();if(action==='note')task(()=>create(false));if(action==='folder')task(()=>create(true));if(action==='sibling-folder'&&target)task(()=>create(true,parent(target.path)));if(action==='rename')task(rename);if(action==='delete')task(recycle);});
   setTimeout(()=>document.addEventListener('pointerdown',event=>{if(!menu.contains(event.target as Node))menu.remove();},{once:true}),0);
  }
  async function readClipboard(){
@@ -266,7 +271,8 @@ async function main(){
  }
  document.getElementById('nav-notes')!.onclick=()=>task(()=>switchModule('notes'));
  document.getElementById('nav-clipboard')!.onclick=()=>task(()=>switchModule('clipboard'));
- for(const id of ['choose-root','workspace-name'])document.getElementById(id)!.onclick=()=>task(chooseRoot);
+ document.getElementById('choose-root')!.onclick=()=>task(chooseRoot);
+ document.getElementById('workspace-name')!.onclick=()=>{if(settings.root)selectRoot();else task(chooseRoot);};
  document.getElementById('new-note')!.onclick=()=>task(()=>create(false));
  document.getElementById('new-folder')!.onclick=()=>task(()=>create(true));
  document.getElementById('refresh')!.onclick=()=>task(async()=>{await refreshTree();await model.refresh();});
