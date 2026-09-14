@@ -2,25 +2,30 @@ import {EditorState,StateEffect,type Extension} from '@codemirror/state';
 import {EditorView,keymap,lineNumbers,drawSelection,highlightActiveLine,highlightActiveLineGutter} from '@codemirror/view';
 import {defaultKeymap,history,historyKeymap,indentWithTab} from '@codemirror/commands';
 import {markdown} from '@codemirror/lang-markdown';
-import {syntaxTree,syntaxHighlighting,defaultHighlightStyle} from '@codemirror/language';
+import {syntaxTree,syntaxHighlighting} from '@codemirror/language';
 import {Lexer} from 'marked';
 import {makeLink,basename} from './paths';
 import type {Document} from './model';
+import {codeDescriptions,tokenHighlighter} from './code-languages';
+import {formatTransaction,type FormatAction,type FormatOptions} from './formatting';
+import {formatToolbar} from './format-toolbar';
 const memory=new WeakMap<Document,EditorState>();
 const metrics=new WeakMap<Document,{changes:number;bytes:number}>();
 export function editor(parent:HTMLElement,doc:Document,edit:(text:string)=>void,link:(href:string)=>void,save:()=>void,focus:()=>void){
  let disposed=false;
+ let updateToolbar=()=>{};
  const meter=metrics.get(doc)??{changes:0,bytes:0};metrics.set(doc,meter);
  function extensions():Extension[]{
   return [
    lineNumbers(),drawSelection(),highlightActiveLine(),highlightActiveLineGutter(),history({minDepth:100}),
-   markdown(),syntaxHighlighting(defaultHighlightStyle),EditorView.lineWrapping,
+   markdown({codeLanguages:codeDescriptions}),syntaxHighlighting(tokenHighlighter),EditorView.lineWrapping,
    EditorView.contentAttributes.of({'aria-label':basename(doc.path)+' 编辑器',spellcheck:'true'}),
-   keymap.of([{key:'Mod-s',run:()=>{save();return true;}},...defaultKeymap,...historyKeymap,indentWithTab]),
+   keymap.of([{key:'Mod-s',run:()=>{save();return true;}},{key:'Mod-b',run:()=>format('bold')},{key:'Mod-i',run:()=>format('italic')},...defaultKeymap,...historyKeymap,indentWithTab]),
    EditorView.updateListener.of(update=>{
     doc.cursor=update.state.selection.main.head;memory.set(doc,update.state);
+    if(update.docChanged||update.selectionSet)updateToolbar();
     if(update.docChanged){edit(update.state.doc.toString());meter.changes++;update.changes.iterChanges((_a,_b,_c,_d,inserted)=>{meter.bytes+=inserted.length;});
-     if(meter.changes>=200||meter.bytes>4*1024*1024){meter.changes=0;meter.bytes=0;queueMicrotask(()=>{if(!disposed){const next=state(view.state.doc.toString(),view.state.selection.main.head);view.setState(next);memory.set(doc,next);}});}
+     if(meter.changes>=200||meter.bytes>4*1024*1024){meter.changes=0;meter.bytes=0;queueMicrotask(()=>{if(!disposed){const next=state(view.state.doc.toString(),view.state.selection.main.head);view.setState(next);memory.set(doc,next);updateToolbar();}});}
     }
    }),
    EditorView.domEventHandlers({
@@ -47,9 +52,16 @@ export function editor(parent:HTMLElement,doc:Document,edit:(text:string)=>void,
  const cached=memory.get(doc);
  const restored=cached&&cached.doc.toString()===doc.text?cached.update({effects:StateEffect.reconfigure.of(extensions())}).state:state(doc.text);
  const view=new EditorView({parent,state:restored});
+ function format(action:FormatAction,options?:FormatOptions){
+  if(disposed)return false;
+  const transaction=formatTransaction(view.state,action,options);
+  if(transaction)view.dispatch(transaction);
+  view.focus();return true;
+ }
+ const toolbar=formatToolbar(parent,view,format);updateToolbar=toolbar.update;
  requestAnimationFrame(()=>{if(!disposed)view.scrollDOM.scrollTop=doc.scroll;});
- return {view,
+ return {view,format,
  insertLink(target:string,x:number,y:number){const pos=view.posAtCoords({x,y})??view.state.doc.length,text=makeLink(doc.path,target);view.dispatch({changes:{from:pos,insert:text},selection:{anchor:pos+text.length}});view.focus();},
  goTo(position:number){view.dispatch({selection:{anchor:position},effects:EditorView.scrollIntoView(position,{y:'start'})});view.focus();},
- destroy(){disposed=true;doc.cursor=view.state.selection.main.head;doc.scroll=view.scrollDOM.scrollTop;memory.set(doc,view.state);view.destroy();}};
+ destroy(){disposed=true;toolbar.destroy();doc.cursor=view.state.selection.main.head;doc.scroll=view.scrollDOM.scrollTop;memory.set(doc,view.state);view.destroy();}};
 }

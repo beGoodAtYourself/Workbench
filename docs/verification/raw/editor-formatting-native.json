@@ -1,0 +1,71 @@
+{
+  "date": "2026-09-11T09:13:01.103Z",
+  "executable": "D:\\lxWorkspace\\src-tauri\\target\\editor-improvements\\release\\shiye.exe",
+  "sha256": "62a467cd51187ecdd0883c793c193b37fa82453521938f4f24a9203570392293",
+  "assets": {
+    "assets/clike-B9uivgTg.js": "362289d801a4f7b5abb548e9220660731b08cf3e00989bb8462ebed73bf28e96",
+    "assets/code-languages-BuJU-vVs.js": "dd9cc734a0f9f996c14a700023b4dc284a422f8c4be59c7d1ff5b8902c388034",
+    "assets/core-BEOw45JP.js": "ce1a9e1aa11d35b33569adfaed564e5f21120d27335edcf8415394a497c04a8d",
+    "assets/demo-6yoeNmLw.js": "fa6f67d922aa722331c481057eb3ed7dda9d04ae128ea132a19cf497b86bb3a0",
+    "assets/editor-uwgszuJL.js": "cfa45b88cec0d402e9d68b29b9aa9292673b84175813d449878a2c25042bddf7",
+    "assets/event-Gip4rtXm.js": "b8e37f04ff5b51d8ac237ce58d676fd8a12302cc987c45b37888a1919972ba9c",
+    "assets/index-B-GBbXd6.js": "298e9ef50e832765d4b61596f01a8ebfcefd5597d9ab1e73a28b7343980f8809",
+    "assets/index-BDYg4vv1.js": "00ccc4573000b18b206df6c4012abf72af56b89c8ceceb9f8bec25c5c866edde",
+    "assets/index-BFu36QRX.js": "a2874a62c30a7b9bc570370bff950557caf62cd76ff31d9ae39af91f44105964",
+    "assets/index-BcOlCGgo.js": "8865d262052b432e509b1c6d108cd503bb074032ed8c3b7ef0a86f58c2a7facf",
+    "assets/index-BndVWATo.js": "9cfe7b8607dbaf9eb057979fb069574cfd82cd38277c3d33d7b6f3f1a2e31bbe",
+    "assets/index-Bv2kMZnG.js": "9feb9fa40ed7d12b5d68f8cd6202823e6e431d47e5fb6126367f1e1e3aa5083f",
+    "assets/index-By3_QGIp.js": "cdfa33aefb13e995ccf238872084b370ff1854f320472da6b541ab3853d0f070",
+    "assets/index-C-R4zPax.js": "d2ea23582a9e6d6a7d5ca288f10677db44b255fa6ae0aec8ac5773743cbf425c",
+    "assets/index-CHufoWpn.js": "ac8c3bb733edd9d2d5fba1cbec29fc787561d6252db0be336b38d06fd3918561",
+    "assets/index-CU_haXI-.js": "bef121e587d33676b2c96a74bf6b51dddf34df4333f4ee7a770a7934d8969e4e",
+    "assets/index-C_uEj-kl.js": "dc3f8e3ec270c01bde8566c163b1be8ab6479e9041d19e5bc905dc6473ebf9d3",
+    "assets/index-CfBCaQOA.js": "75133c054f56fa4ec8f7f511c4daa584cbfd0ebc12d0577d9b9b0c88510816e0",
+    "assets/index-CfP8CGi_.css": "4efea58a80b8c4c47a3995ec3fd2ea368d36568337df65beb6dbfd446fbaee8c",
+    "assets/index-CqDlDAjo.js": "769ff10e5663228b57c7baf184c587652f1d890b0d80d6a6f3af0a8574d3645c",
+    "assets/index-DXR2GUKt.js": "cde889dfafa6c23a2ed2b697c6abf59311cff297e84002815e1337a5172ac369",
+    "assets/index-XEyo1UKY.js": "5d5ac92c9e0056f9e42a19355204b42b75b75a178e1a5ebf6c7836cf08321607",
+    "assets/powershell-CFHJl5sT.js": "5eef7d073bc36b86d7cfd0804c38c091931f20dadc61b176ca2d70ce6bb488d2",
+    "assets/shell-CjFT_Tl9.js": "b4da8a11db1127e003f10a94ff707474af1392051c41f1e0ef78152e9bd0ea95",
+    "index.html": "81575a69d96a0fdb5979a072503861a4c5a942a9f3dd2d748d16d0f9e4bd3313"
+  },
+  "configuration": "Production code/assets with isolated identifier local.shiye.workbench.editorqa; SHIYE_DATA_DIR fixture; WebView2 CDP automation, not physical input.",
+  "data": "D:\\lxWorkspace\\.qa\\editor-native-1789117981089",
+  "checks": [
+    {
+      "name": "Toolbar focus, heading then bold, single-step undo/redo, visible selection and real BOM/CRLF file save",
+      "pass": true
+    },
+    {
+      "name": "Preview retains ordinary line breaks and formatted heading",
+      "pass": true
+    },
+    {
+      "name": "Independent selections and wrapping toolbars in two native panes",
+      "pass": true
+    },
+    {
+      "name": "All 18 language choices highlight in native editing and preview using packaged local chunks",
+      "pass": true
+    },
+    {
+      "name": "Native code-language dialog creates safe fences and updates existing code blocks",
+      "pass": true
+    },
+    {
+      "name": "Native exit/restart restores saved file and editor session",
+      "pass": true
+    },
+    {
+      "name": "No external network requests for highlighting",
+      "pass": true
+    }
+  ],
+  "screenshots": [
+    "editor-formatting-native-selection.png",
+    "editor-formatting-native-split.png",
+    "editor-formatting-native-code.png"
+  ],
+  "pid": 49988,
+  "status": "passed"
+}

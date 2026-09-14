@@ -1,0 +1,20 @@
+export const codeSamples:Record<string,string>={
+ javascript:'const message = "hello"; // sample',
+ typescript:'const count: number = 42;',
+ jsx:'const view = <button title="ok">Hello</button>;',
+ tsx:'const view: JSX.Element = <button>Hi</button>;',
+ python:'def greet(name):\n    return "hello"',
+ java:'public class Hello { String name = "world"; }',
+ c:'int main(void) { return 42; }',
+ cpp:'class Hello { public: int value = 42; };',
+ csharp:'public class Hello { string name = "world"; }',
+ go:'package main\nfunc main() { println("hello") }',
+ rust:'fn main() { let value = 42; }',
+ html:'<button title="hello">World</button>',
+ css:'.card { color: red; width: 10px; }',
+ json:'{"hello": true, "count": 42}',
+ sql:'SELECT name FROM people WHERE id = 42;',
+ shell:'if true; then echo "hello"; fi',
+ powershell:'$name = "hello"\nif ($true) { Write-Output $name }',
+ yaml:'title: "hello"\ncount: 42'
+};

@@ -8,3 +8,36 @@
 .drag-ghost{position:fixed;z-index:80;pointer-events:none;background:#3c614a;color:#fff;padding:8px 12px;border-radius:6px;font-size:11px;box-shadow:0 5px 18px #18351e2b}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 .clipboard-pages{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 24px;border-top:1px solid var(--line);color:var(--muted);font-size:12px}.clipboard-pages[hidden]{display:none}
+/* Editor formatting and shared code colors. Line overlays must stay transparent
+   because CodeMirror draws selections below the text. */
+.cm-activeLine{background:rgba(170,194,142,.16)!important}
+.cm-selectionBackground{background:#e0e7da!important}
+.cm-focused .cm-selectionBackground{background:#bcd6a5!important}
+.article ::selection{background:#bcd6a5;color:#20321e}
+.format-toolbar{display:flex;flex-wrap:wrap;align-items:center;gap:4px;padding:8px 18px;border-bottom:1px solid var(--line);background:#f8faf4;flex-shrink:0}
+.format-toolbar button,.format-toolbar select{height:27px;padding:3px 7px;font-size:11px;border:1px solid #dfe6d6;border-radius:4px;background:#fff;color:#536747}
+.format-toolbar button:hover{background:#e6efd9;border-color:#c4d4b6}
+.format-toolbar button:disabled{opacity:.4;cursor:default}
+.format-toolbar select{max-width:110px;font-family:inherit;cursor:pointer}
+.format-toolbar select:focus-visible,.formatting-dialog select:focus-visible{outline:2px solid #77966f;outline-offset:2px}
+.format-toolbar button[aria-label^="加粗"]{font-weight:700}
+.format-toolbar button[aria-label^="斜体"]{font-style:italic}
+.split .format-toolbar{padding:7px 10px}
+.formatting-dialog .field-label{display:flex;flex-direction:column;gap:8px;margin:14px 0}
+.formatting-dialog select,.formatting-dialog input{width:100%;padding:10px 12px;border:1px solid #dbe3d2;border-radius:5px;background:#fff;color:#344331;font:13px "Segoe UI","Microsoft YaHei",sans-serif}
+.code-note{display:block;font-size:10px;color:#879279;margin-top:18px}
+:is(.cm-content,.article pre) .tok-keyword{color:#7446a3}
+:is(.cm-content,.article pre) .tok-string,:is(.cm-content,.article pre) .tok-string2{color:#297647}
+:is(.cm-content,.article pre) .tok-comment{color:#75806c;font-style:italic}
+:is(.cm-content,.article pre) .tok-number,:is(.cm-content,.article pre) .tok-bool,:is(.cm-content,.article pre) .tok-atom{color:#a05029}
+:is(.cm-content,.article pre) .tok-typeName,:is(.cm-content,.article pre) .tok-className,:is(.cm-content,.article pre) .tok-namespace{color:#226c85}
+:is(.cm-content,.article pre) .tok-propertyName,:is(.cm-content,.article pre) .tok-labelName{color:#895d20}
+:is(.cm-content,.article pre) .tok-definition,:is(.cm-content,.article pre) .tok-variableName2{color:#2b6496}
+:is(.cm-content,.article pre) .tok-operator,:is(.cm-content,.article pre) .tok-punctuation{color:#56604f}
+:is(.cm-content,.article pre) .tok-meta{color:#8e4774}
+:is(.cm-content,.article pre) .tok-invalid{color:#b23332;text-decoration:underline wavy}
+.cm-content .tok-heading{color:#385c32;font-weight:700}
+.cm-content .tok-strong{font-weight:700}
+.cm-content .tok-emphasis{font-style:italic}
+.cm-content .tok-link,.cm-content .tok-url{color:#447930;text-decoration:underline}
+.cm-content .tok-strikethrough{text-decoration:line-through}

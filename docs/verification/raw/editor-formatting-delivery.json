@@ -1,0 +1,26 @@
+{
+  "date": "2026-09-11T09:18:27.568Z",
+  "status": "passed",
+  "identifier": "local.shiye.workbench",
+  "typeCheck": "passed",
+  "unitTests": 69,
+  "e2eTests": 17,
+  "nativeChecks": 7,
+  "nativeIdentity": "local.shiye.workbench.editorqa",
+  "frontendAssetCount": 25,
+  "frontendAssetsIdenticalToNative": true,
+  "binaries": [
+    {
+      "path": "src-tauri/target/editor-improvements/release/shiye.exe",
+      "bytes": 6211584,
+      "sha256": "59ad0b41e8bfa7ce57b03e2a84f1b275d899eb5992704a37a6525a336594acc4",
+      "modified": "2026-09-11T09:18:10.805Z"
+    },
+    {
+      "path": "src-tauri/target/editor-improvements/release/bundle/nsis/拾页_0.1.0_x64-setup.exe",
+      "bytes": 2132790,
+      "sha256": "ea52afc02455306b7617ffebdf7e083773fd960ed94f7e8ce19ea029e30dc789",
+      "modified": "2026-09-11T09:18:10.767Z"
+    }
+  ]
+}
