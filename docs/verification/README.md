@@ -2,6 +2,10 @@
 
 首版状态：2026-09-11 按用户要求提前归档。已完成检查与部分性能证据保留；剩余验收见 [待验收清单](deferred-tests.md)，继续按原计划延期。
 
+## 编辑器高亮与便捷排版
+
+2026-09-11 的 `improve-editor-formatting` 已通过类型检查、69 项单元测试和 17 项界面回归；隔离应用标识的 Windows WebView2 实机验收通过 7 组检查，含 18 个语言选项的编辑/显示着色、真实 BOM/CRLF 文件保存和退出重开。2026-09-14 归档复核通过上述前端自动化、生产构建、9 项 Rust 测试及 Clippy，并核对原交付哈希。详见[本次验证记录](../../openspec/archive/2026-09-14-improve-editor-formatting/verification.md)与[原生报告](raw/editor-formatting-native.json)。原有延期的完整性能与安装兼容性验收仍按原记录处理。
+
 ## 同级文件夹修复
 
 2026-09-11 的 `fix-sibling-folder-creation` 已通过归档前复核：27 项前端单元测试、9 项界面回归、9 项 Rust 文件测试，以及类型检查和 Clippy。前端生产构建及 Windows 发布程序／NSIS 安装包在修复实施期间生成，详见[独立验证记录](../../openspec/archive/2026-09-11-fix-sibling-folder-creation/verification.md)，包含新增用例、实际构建路径及 SHA-256。本次没有新增原生手工操作、安装／升级流程或性能验收；下文保留首版历史证据。

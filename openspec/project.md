@@ -9,9 +9,10 @@
 - 2026-09-11 创建提案时，工作区为空，没有已有应用代码、技术栈、测试命令或正式规格。
 - 用户已确认：首版支持 Windows。
 - 本次变更 `add-local-personal-workbench` 已于 2026-09-11 按用户要求提前归档，核心实现与已有验证保留；尚未完成的测试交由用户后续进行，见 [待验收清单](../docs/verification/deferred-tests.md)。
-- 归档记录位于 [提案](archive/2026-09-11-add-local-personal-workbench/proposal.md) 与 [任务清单](archive/2026-09-11-add-local-personal-workbench/tasks.md)，当前无实施中的变更。
+- 首版归档记录位于 [提案](archive/2026-09-11-add-local-personal-workbench/proposal.md) 与 [任务清单](archive/2026-09-11-add-local-personal-workbench/tasks.md)，后续变更见下方记录。
 - 2026-09-11 完成并归档 [fix-sibling-folder-creation](archive/2026-09-11-fix-sibling-folder-creation/proposal.md)：补齐返回根目录和新建同级文件夹入口，FILE-02 与说明已同步，27 项前端单元测试、9 项界面回归、9 项 Rust 测试及静态检查通过；Windows 修复版已打包。该独立修复记录在归档时按实际工作补录，首版延期验收状态保持不变。
-- 增量规格使用 `specs/*_delta.md` 格式；本次六份增量已合并至 `openspec/specs/`，作为后续需求依据。归档不表示全部验收通过，性能目标仍待完整验证。
+- 2026-09-11 完成 [improve-editor-formatting](archive/2026-09-14-improve-editor-formatting/proposal.md)，2026-09-14 复核并归档：修复选区遮挡，新增格式工具栏、代码语言着色及显示模式保留换行；69 项单元测试、17 项界面回归、类型检查和 7 组隔离 WebView2 实机检查通过，正式程序与 NSIS 安装包已独立生成。归档复核通过前端自动化、生产构建、9 项 Rust 测试及 Clippy，原产物哈希核对一致。两份增量已合并至正式规格，任务和[验证记录](archive/2026-09-14-improve-editor-formatting/verification.md)保存在归档目录。
+- 增量规格使用 `specs/*_delta.md` 格式；首版六份增量及后续变更均已合并至 `openspec/specs/`，作为后续需求依据，当前无活动变更。本次编辑器改进已验收，首版历史性能等延期项目仍待完整验证。
 
 ## 已明确的产品要求
 

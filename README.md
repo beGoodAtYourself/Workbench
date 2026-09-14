@@ -6,15 +6,17 @@
 
 当前构建平台为 **Windows 11 x64**。Windows 10、ARM64 和其他系统未完成兼容性验收。
 
-- 已编译程序：`src-tauri/target/release/shiye.exe`，双击运行。
-- 安装包：`src-tauri/target/release/bundle/nsis/拾页_0.1.0_x64-setup.exe`。
+- 最新编辑器改进版程序：`src-tauri/target/editor-improvements/release/shiye.exe`，双击运行。
+- 最新安装包：`src-tauri/target/editor-improvements/release/bundle/nsis/拾页_0.1.0_x64-setup.exe`。
 - 将安装包发送给其他人，对方双击安装即可，无需 Node.js 或 Rust。
 - 程序需要 Microsoft Edge WebView2 Runtime。安装包会检测运行环境，缺少时联网下载安装；已安装运行环境后，笔记功能可离线使用。此安装包不是包含 WebView2 的完全离线安装包。
 - 安装在当前用户范围。当前构建未配置代码签名。
 
 本次变更已按用户要求提前归档，正式规格位于 `openspec/specs/`。已完成检查见 [验收记录](docs/verification/README.md)，剩余项目见 [待验收清单](docs/verification/deferred-tests.md)；[归档任务清单](openspec/archive/2026-09-11-add-local-personal-workbench/tasks.md) 保留未完成标记，性能预算尚未完成整体验收。
 
-2026-09-11 的[同级文件夹修复](openspec/archive/2026-09-11-fix-sibling-folder-creation/proposal.md)已完成归档。为保留运行中的旧版，本次[修复版程序](src-tauri/target/folder-fix/release/shiye.exe)和[安装包](src-tauri/target/folder-fix/release/bundle/nsis/拾页_0.1.0_x64-setup.exe)单独保存在 `src-tauri/target/folder-fix/`；通过“设置 → 退出拾页”结束旧版后再使用。后续不设置 `CARGO_TARGET_DIR` 的常规构建仍输出到上方默认路径。
+2026-09-11 的[同级文件夹修复](openspec/archive/2026-09-11-fix-sibling-folder-creation/proposal.md)已完成归档。此前的[修复版程序](src-tauri/target/folder-fix/release/shiye.exe)和[安装包](src-tauri/target/folder-fix/release/bundle/nsis/拾页_0.1.0_x64-setup.exe)保存在 `src-tauri/target/folder-fix/`，供回溯使用。
+
+2026-09-11 的[编辑器高亮与便捷排版改进](openspec/archive/2026-09-14-improve-editor-formatting/proposal.md)修复选区底色、增加格式工具栏与代码语法颜色，并让显示模式保留普通换行，已于 2026-09-14 合并规格并归档。新版独立输出到 `src-tauri/target/editor-improvements/`，常规构建仍输出到 `src-tauri/target/release/`。使用新版前，请通过“设置 → 退出拾页”结束正在运行的旧版；单实例机制会将第二次启动转交给已运行的程序。验证详情见[本次记录](openspec/archive/2026-09-14-improve-editor-formatting/verification.md)。
 
 ## 开始记录
 
@@ -24,6 +26,16 @@
 4. 每个窗格右上角可以独立切换“显示”和“编辑”。停止输入 500 ms 后自动保存，也可以按 `Ctrl+S`。
 
 左侧“更多文件操作”、右键菜单、`F2` 和 `Delete` 提供重命名及移至回收站操作。删除需要确认，失败不会改为永久删除。**重命名不会自动修改其他笔记中的链接**，需要自行修复引用。
+
+## 不用记 Markdown 语法也能排版
+
+编辑模式的格式工具栏提供正文、一级至三级标题、加粗、斜体、列表、任务、引用、行内代码、代码块、链接和撤销／重做。选中文字后点按钮即可生成 Markdown；标题、列表和引用处理当前行或选中行，再次应用相同格式会取消。没有选中文字时，行内格式插入可直接替换的占位文字。每次格式操作可以一步撤销，并照常自动保存；加粗和斜体也可用 `Ctrl+B`、`Ctrl+I`。
+
+从 TXT 复制文字后直接粘贴即可。显示模式现在保留段落内的单次换行，空行仍用于分段；这也会改变已有笔记里手动折行段落的显示，但不会因此改写文件。需要标题或列表时用工具栏设置，应用不会自动猜测文字结构。
+
+选中代码后点击“代码块”，选择语言并应用。支持 JavaScript、TypeScript、JSX、TSX、Python、Java、C、C++、C#、Go、Rust、HTML、CSS、JSON、SQL、Shell、PowerShell 和 YAML，以及 `js`、`ts`、`py`、`bash`、`ps1` 等常见标记。编辑和显示使用同一套语法配色；光标在已有代码块中时，该按钮改为修改语言，其他文字格式按钮暂不可用。
+
+代码块默认“纯文本”；未标明、不支持或加载失败的语言保持完整纯文本。预览中的单块代码超过 100,000 个 UTF-16 字符时显示“大代码块 · 按纯文本显示”，不会截断内容。语言模块随安装包提供，使用时无需联网。
 
 ## 随时调出
 
