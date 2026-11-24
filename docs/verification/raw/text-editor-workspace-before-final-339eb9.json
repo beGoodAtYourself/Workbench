@@ -1,0 +1,207 @@
+{
+  "startedAt": "2026-10-16T03:43:13.320Z",
+  "source": "D:\\lxWorkspace\\src-tauri\\target\\text-editor\\qa\\shiye-text-qa.exe",
+  "sha256": "ed4f6bb2968f032e8c9bf59597fcf763859a24c775210deedc8e479ba46ad488",
+  "executable": "D:\\lxWorkspace\\.qa\\text-workspace-native-1792122193305\\app\\shiye-text-qa.exe",
+  "data": "D:\\lxWorkspace\\.qa\\text-workspace-native-1792122193305",
+  "fixtures": "D:\\lxWorkspace\\.qa\\text-workspace-native-1792122193305\\files",
+  "port": 20601,
+  "scope": "Isolated textqa release WebView2; real visible controls and dedicated search workers; only synthetic files. QA queue selects exact fixture files then runs the normal text-open command. No mock file writes or fabricated folder-picker result.",
+  "checks": [
+    {
+      "name": "Opening an already-owned note through normal text-open activates its notes owner without another text buffer",
+      "pass": true
+    },
+    {
+      "name": "Closing the note owner allows text ownership; a notes-tree click reactivates that same dirty text buffer without saving its original",
+      "pass": true
+    },
+    {
+      "name": "The host rejects ancestor rename, cross-folder move and recycle while text owns a descendant; source bytes and paths remain intact",
+      "pass": true
+    },
+    {
+      "name": "The actual notes-tree same-parent ordering menu remains usable while a text descendant is open",
+      "pass": true
+    },
+    {
+      "name": "A partial multi-open failure keeps valid XML/JSON documents, reports invalid UTF-8, and creates no bad-file tab or authorization",
+      "pass": true,
+      "details": {
+        "openedNames": [
+          "共享.md",
+          "code.xml",
+          "config.json"
+        ],
+        "invalidFileSha256": "eddf68639913a3cb8331cdfe7f87559e0beccf2c289c0d90ac4d89b3204004f8",
+        "grants": 3
+      }
+    },
+    {
+      "name": "Release JSON and XML languages are selected by extension and visibly colored using local bundled script resources",
+      "pass": true,
+      "details": {
+        "scriptRequests": [
+          "http://tauri.localhost/assets/index-uMh8NBLA.js",
+          "http://tauri.localhost/assets/core-BEOw45JP.js",
+          "http://tauri.localhost/assets/event-Gip4rtXm.js",
+          "http://tauri.localhost/assets/text-workspace-Mow-4ADR.js",
+          "http://tauri.localhost/assets/code-languages-ByxczVpF.js",
+          "http://tauri.localhost/assets/editor-base-CBV3BNrY.js",
+          "http://tauri.localhost/assets/index-BARQWIQY.js",
+          "http://tauri.localhost/assets/index-CWa-u0C2.js",
+          "http://tauri.localhost/assets/index-B0pSQLcz.js",
+          "http://tauri.localhost/assets/index-NMMR6wPb.js",
+          "http://tauri.localhost/assets/index-BRSVk6Qh.js",
+          "http://tauri.localhost/assets/index-qaMJep0b.js",
+          "http://tauri.localhost/assets/index-DHxs_bKP.js",
+          "http://tauri.localhost/assets/xml-BQQZnNBQ.js"
+        ]
+      }
+    },
+    {
+      "name": "A real catastrophic regex worker times out while the release UI stays usable and accepts subsequent text input",
+      "pass": true
+    },
+    {
+      "name": "Closing active search terminates its real dedicated worker and prevents late task UI from blocking further editing",
+      "pass": true,
+      "details": {
+        "releaseMs": 2973.8477000000003
+      }
+    },
+    {
+      "name": "Twelve native tabs and two distinct visible editors retain all buffers; a thirteenth tab is rejected without eviction or source-file writes",
+      "pass": true,
+      "details": {
+        "documentIds": [
+          "text-7df4-18dee5a44a2f6ce8-4",
+          "text-7df4-18dee5a47bc9de78-a",
+          "text-7df4-18dee5a47c64c780-d",
+          "2be9fe4a-b00c-4831-9122-a7226f899195",
+          "49bc85de-d46e-4b12-b9c5-c47373aa02de",
+          "8dbb2d17-6b88-4a6d-b159-2e86978daed2",
+          "9da6f3c8-3e8a-4734-9fdb-031bf4ab80c6",
+          "59e8b49b-f287-47f7-8de8-28cc2a48d12f",
+          "b4562f45-d622-4f1b-b03c-be79a0515fa4",
+          "cc821552-f7c0-40f4-9d87-38d41935ad3b",
+          "651589b3-b203-4fac-bea8-eae2ebba6f85",
+          "594ba816-8594-4713-a73d-e65656328263"
+        ],
+        "bodySha256": {
+          "text-7df4-18dee5a44a2f6ce8-4": "f9694a4260039edc56465b73f5a86a084d74ffaf02d5f2a078db2f863ba2e43c",
+          "text-7df4-18dee5a47bc9de78-a": "cb4d0367aa3b46388363f67161aa94bd4e6c7b661e704912ea1c249d60be44f1",
+          "text-7df4-18dee5a47c64c780-d": "6258a1f6873a1b60634eb874263cdfe0279dccb7b6149c5ee95a637440dbdfc1",
+          "2be9fe4a-b00c-4831-9122-a7226f899195": "dcef48646bf8eccf9d3c47df2a2847959621f7f5fe486fc69cc6e21553202622",
+          "49bc85de-d46e-4b12-b9c5-c47373aa02de": "4dc7de0790c07b70f104a910940910fa386f79bcabba15cc17fe869d30707584",
+          "8dbb2d17-6b88-4a6d-b159-2e86978daed2": "1c77806f2cc6256e1e7499c26ab6ab1710fb913df780c41580ac2f530b6edf1f",
+          "9da6f3c8-3e8a-4734-9fdb-031bf4ab80c6": "de5497c0662060009178901ab8a84df95bdddfea2fe84813c3997cb5042320d4",
+          "59e8b49b-f287-47f7-8de8-28cc2a48d12f": "c1a3856cd72f0441d487222b3227e84cdf5a8277aca2667f7b39e4b3791824fb",
+          "b4562f45-d622-4f1b-b03c-be79a0515fa4": "e92b32c9bb6d8b544279815e4827c25c69ddff12063d7889d7d69c75c9c7cdff",
+          "cc821552-f7c0-40f4-9d87-38d41935ad3b": "6525f5bbae33e9166aa07aa0324c3badf5b871b6ea0b6c124df501fce56da81b",
+          "651589b3-b203-4fac-bea8-eae2ebba6f85": "79adae8494a03b38cddabb3a23f521d442364df84cfd83c7a7d4a34edff1cbc3",
+          "594ba816-8594-4713-a73d-e65656328263": "602270dae5d7f190dcaaa36bad71ddf277b165d6f94edc1c02904513698c3ec8"
+        },
+        "visibleIds": [
+          "text-7df4-18dee5a44a2f6ce8-4",
+          "text-7df4-18dee5a47bc9de78-a"
+        ]
+      }
+    },
+    {
+      "name": "A human-operated native notes-directory picker changes the library while all twelve text IDs/bodies survive and a dirty buffer remains editable",
+      "pass": true,
+      "details": {
+        "fromRoot": "D:\\lxWorkspace\\.qa\\text-workspace-native-1792122193305\\files",
+        "toRoot": "D:\\lxWorkspace\\.qa\\text-workspace-native-1792122193305\\更换后的独立笔记库",
+        "documentIds": [
+          "text-7df4-18dee5a44a2f6ce8-4",
+          "text-7df4-18dee5a47bc9de78-a",
+          "text-7df4-18dee5a47c64c780-d",
+          "2be9fe4a-b00c-4831-9122-a7226f899195",
+          "49bc85de-d46e-4b12-b9c5-c47373aa02de",
+          "8dbb2d17-6b88-4a6d-b159-2e86978daed2",
+          "9da6f3c8-3e8a-4734-9fdb-031bf4ab80c6",
+          "59e8b49b-f287-47f7-8de8-28cc2a48d12f",
+          "b4562f45-d622-4f1b-b03c-be79a0515fa4",
+          "cc821552-f7c0-40f4-9d87-38d41935ad3b",
+          "651589b3-b203-4fac-bea8-eae2ebba6f85",
+          "594ba816-8594-4713-a73d-e65656328263"
+        ],
+        "bodySha256": {
+          "text-7df4-18dee5a44a2f6ce8-4": "f9694a4260039edc56465b73f5a86a084d74ffaf02d5f2a078db2f863ba2e43c",
+          "text-7df4-18dee5a47bc9de78-a": "cb4d0367aa3b46388363f67161aa94bd4e6c7b661e704912ea1c249d60be44f1",
+          "text-7df4-18dee5a47c64c780-d": "6258a1f6873a1b60634eb874263cdfe0279dccb7b6149c5ee95a637440dbdfc1",
+          "2be9fe4a-b00c-4831-9122-a7226f899195": "dcef48646bf8eccf9d3c47df2a2847959621f7f5fe486fc69cc6e21553202622",
+          "49bc85de-d46e-4b12-b9c5-c47373aa02de": "4dc7de0790c07b70f104a910940910fa386f79bcabba15cc17fe869d30707584",
+          "8dbb2d17-6b88-4a6d-b159-2e86978daed2": "1c77806f2cc6256e1e7499c26ab6ab1710fb913df780c41580ac2f530b6edf1f",
+          "9da6f3c8-3e8a-4734-9fdb-031bf4ab80c6": "de5497c0662060009178901ab8a84df95bdddfea2fe84813c3997cb5042320d4",
+          "59e8b49b-f287-47f7-8de8-28cc2a48d12f": "c1a3856cd72f0441d487222b3227e84cdf5a8277aca2667f7b39e4b3791824fb",
+          "b4562f45-d622-4f1b-b03c-be79a0515fa4": "e92b32c9bb6d8b544279815e4827c25c69ddff12063d7889d7d69c75c9c7cdff",
+          "cc821552-f7c0-40f4-9d87-38d41935ad3b": "6525f5bbae33e9166aa07aa0324c3badf5b871b6ea0b6c124df501fce56da81b",
+          "651589b3-b203-4fac-bea8-eae2ebba6f85": "79adae8494a03b38cddabb3a23f521d442364df84cfd83c7a7d4a34edff1cbc3",
+          "594ba816-8594-4713-a73d-e65656328263": "602270dae5d7f190dcaaa36bad71ddf277b165d6f94edc1c02904513698c3ec8"
+        },
+        "continuedDocumentId": "text-7df4-18dee5a44a2f6ce8-4",
+        "continuedBodySha256": "0708ea4944408810c688ac89411d61d6034df7d2ed5dd0abda44c865490d7bde"
+      }
+    }
+  ],
+  "pendingChecks": [],
+  "pageErrors": [],
+  "workerEvents": [
+    {
+      "event": "created",
+      "url": "http://tauri.localhost/assets/text-search.worker-DdK7sHSX.js",
+      "at": "2026-10-16T03:43:18.781Z"
+    },
+    {
+      "event": "closed",
+      "url": "http://tauri.localhost/assets/text-search.worker-DdK7sHSX.js",
+      "at": "2026-10-16T03:43:22.285Z"
+    },
+    {
+      "event": "created",
+      "url": "http://tauri.localhost/assets/text-search.worker-DdK7sHSX.js",
+      "at": "2026-10-16T03:43:22.441Z"
+    },
+    {
+      "event": "closed",
+      "url": "http://tauri.localhost/assets/text-search.worker-DdK7sHSX.js",
+      "at": "2026-10-16T03:43:22.447Z"
+    },
+    {
+      "event": "created",
+      "url": "http://tauri.localhost/assets/text-search.worker-DdK7sHSX.js",
+      "at": "2026-10-16T03:43:22.669Z"
+    },
+    {
+      "event": "closed",
+      "url": "http://tauri.localhost/assets/text-search.worker-DdK7sHSX.js",
+      "at": "2026-10-16T03:43:24.744Z"
+    }
+  ],
+  "resourceRequests": [
+    "http://tauri.localhost/assets/index-uMh8NBLA.js",
+    "http://tauri.localhost/assets/core-BEOw45JP.js",
+    "http://tauri.localhost/assets/event-Gip4rtXm.js",
+    "http://tauri.localhost/assets/text-workspace-Mow-4ADR.js",
+    "http://tauri.localhost/assets/code-languages-ByxczVpF.js",
+    "http://tauri.localhost/assets/editor-base-CBV3BNrY.js",
+    "http://tauri.localhost/assets/index-BARQWIQY.js",
+    "http://tauri.localhost/assets/index-CWa-u0C2.js",
+    "http://tauri.localhost/assets/index-B0pSQLcz.js",
+    "http://tauri.localhost/assets/index-NMMR6wPb.js",
+    "http://tauri.localhost/assets/index-BRSVk6Qh.js",
+    "http://tauri.localhost/assets/index-qaMJep0b.js",
+    "http://tauri.localhost/assets/index-DHxs_bKP.js",
+    "http://tauri.localhost/assets/xml-BQQZnNBQ.js",
+    "http://tauri.localhost/assets/text-search.worker-DdK7sHSX.js",
+    "http://tauri.localhost/assets/text-search.worker-DdK7sHSX.js",
+    "http://tauri.localhost/assets/text-search.worker-DdK7sHSX.js",
+    "http://tauri.localhost/assets/index-CU_haXI-.js"
+  ],
+  "ownerPid": 32244,
+  "status": "passed",
+  "completedAt": "2026-10-16T03:44:42.015Z"
+}

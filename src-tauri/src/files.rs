@@ -8,7 +8,7 @@ use std::{
 };
 
 pub type Result<T> = std::result::Result<T, Fault>;
-#[derive(Debug, Clone, Serialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct Fault {
     pub code: String,
     pub message: String,
@@ -52,6 +52,23 @@ pub struct Workspace {
 }
 pub fn version(bytes: &[u8]) -> String {
     format!("{:x}", Sha256::digest(bytes))
+}
+pub fn movable_kind(path: &Path) -> Result<&'static str> {
+    let metadata = fs::metadata(path)?;
+    if metadata.is_dir() {
+        Ok("folder")
+    } else if metadata.is_file()
+        && path
+            .file_name()
+            .is_some_and(|name| name.to_string_lossy().to_lowercase().ends_with(".md"))
+    {
+        Ok("note")
+    } else {
+        Err(Fault::new(
+            "type",
+            "只能排序或移动真实文件夹与 Markdown（.md）笔记。",
+        ))
+    }
 }
 pub fn validate_name(name: &str) -> Result<()> {
     let base = name.split('.').next().unwrap_or("").to_uppercase();
@@ -279,6 +296,36 @@ impl Workspace {
         fs::rename(&source, &target)?;
         Ok(self.rel(&target))
     }
+    pub fn move_folder(&self, path: &str, parent: &str, anchor: Option<&str>) -> Result<String> {
+        let source = self.resolve(path)?;
+        let destination = self.resolve(parent)?;
+        if source == self.root {
+            return Err(Fault::new("boundary", "不能移动笔记根目录。"));
+        }
+        let kind = movable_kind(&source)?;
+        if !destination.is_dir() || destination.starts_with(&source) {
+            return Err(Fault::new("boundary", "不能移入自身、后代或无效目录。"));
+        }
+        if let Some(anchor) = anchor {
+            let full = self.resolve(anchor)?;
+            if movable_kind(&full).ok() != Some(kind)
+                || full.parent() != Some(destination.as_path())
+            {
+                return Err(Fault::new(
+                    "order",
+                    "插入目标必须是同级的同类项目，请重新选择位置。",
+                ));
+            }
+        }
+        if source.parent() == Some(destination.as_path()) {
+            return Ok(self.rel(&source));
+        }
+        let target = destination.join(source.file_name().unwrap());
+        // MoveFileExW with flags=0 rejects an existing target at the actual rename, including
+        // a file or directory created after validation. Never enable replacement or copy/delete fallback.
+        move_directory_no_replace(&source, &target)?;
+        Ok(self.rel(&target))
+    }
     pub fn recycle(&self, path: &str) -> Result<()> {
         if path.is_empty() {
             return Err(Fault::new("boundary", "不能删除笔记根目录。"));
@@ -321,6 +368,19 @@ impl Workspace {
             base64::engine::general_purpose::STANDARD.encode(data)
         ))
     }
+}
+
+fn move_directory_no_replace(source: &Path, target: &Path) -> Result<()> {
+    use std::os::windows::ffi::OsStrExt;
+    let source: Vec<u16> = source.as_os_str().encode_wide().chain(Some(0)).collect();
+    let target: Vec<u16> = target.as_os_str().encode_wide().chain(Some(0)).collect();
+    if unsafe {
+        windows_sys::Win32::Storage::FileSystem::MoveFileExW(source.as_ptr(), target.as_ptr(), 0)
+    } == 0
+    {
+        return Err(std::io::Error::last_os_error().into());
+    }
+    Ok(())
 }
 
 #[cfg(test)]
@@ -476,5 +536,151 @@ mod tests {
             .starts_with("data:image/png;base64,"));
         fs::write(&png, vec![0u8; 4 * 1024 * 1024 + 1]).unwrap();
         assert_eq!(ws.image("image.png").unwrap_err().code, "image-size");
+    }
+
+    #[test]
+    fn folder_move_rejects_collision_at_commit_without_replacing_empty_directory() {
+        let (_dir, ws) = setup();
+        ws.create("", "source", true).unwrap();
+        ws.create("", "target", true).unwrap();
+        let source = ws.resolve("source").unwrap();
+        let target = ws.resolve("target").unwrap().join("source");
+        fs::write(source.join("payload.bin"), [0, 255, 12]).unwrap();
+        assert!(!target.exists());
+        // Another process creates an empty target after prevalidation, before the actual syscall.
+        fs::create_dir(&target).unwrap();
+        assert!(move_directory_no_replace(&source, &target).is_err());
+        assert!(target.is_dir());
+        assert!(fs::read_dir(&target).unwrap().next().is_none());
+        assert_eq!(fs::read(source.join("payload.bin")).unwrap(), [0, 255, 12]);
+    }
+
+    #[test]
+    fn folder_move_revalidates_anchor_and_rejects_junction_source_or_target() {
+        let (_dir, ws) = setup();
+        ws.create("", "source", true).unwrap();
+        ws.create("", "target", true).unwrap();
+        ws.create("target", "anchor", true).unwrap();
+        let anchor = ws.resolve("target/anchor").unwrap();
+        fs::rename(&anchor, ws.root.join("anchor")).unwrap();
+        assert!(ws
+            .move_folder("source", "target", Some("target/anchor"))
+            .is_err());
+        assert!(ws.move_folder("source", "target", Some("anchor")).is_err());
+        let outside = tempfile::tempdir().unwrap();
+        let link = ws.root.join("junction");
+        let output = std::process::Command::new("cmd.exe")
+            .args(["/C", "mklink", "/J"])
+            .arg(&link)
+            .arg(outside.path())
+            .output()
+            .unwrap();
+        assert!(output.status.success());
+        assert_eq!(
+            ws.move_folder("junction", "target", None).unwrap_err().code,
+            "boundary"
+        );
+        assert_eq!(
+            ws.move_folder("source", "junction", None).unwrap_err().code,
+            "boundary"
+        );
+        fs::remove_dir(&link).unwrap();
+        assert!(ws.resolve("source").is_ok());
+        assert!(fs::read_dir(outside.path()).unwrap().next().is_none());
+    }
+
+    #[test]
+    fn folder_move_with_locked_content_does_not_copy_or_delete() {
+        use std::os::windows::fs::OpenOptionsExt;
+        let (_dir, ws) = setup();
+        ws.create("", "source", true).unwrap();
+        ws.create("", "target", true).unwrap();
+        let payload = ws.resolve("source").unwrap().join("locked.bin");
+        fs::write(&payload, b"retain exact bytes").unwrap();
+        let lock = fs::OpenOptions::new()
+            .read(true)
+            .share_mode(0)
+            .open(&payload)
+            .unwrap();
+        assert!(ws.move_folder("source", "target", None).is_err());
+        assert!(ws.resolve("source").is_ok());
+        assert!(ws.resolve("target/source").is_err());
+        drop(lock);
+        assert_eq!(fs::read(payload).unwrap(), b"retain exact bytes");
+    }
+
+    #[test]
+    fn note_move_rejects_file_collision_at_commit_and_locked_source_without_overwrite() {
+        use std::os::windows::fs::OpenOptionsExt;
+        let (_dir, ws) = setup();
+        ws.create("", "target", true).unwrap();
+        let note = ws.create("", "note.md", false).unwrap();
+        let source = ws.resolve(&note).unwrap();
+        let target = ws.resolve("target").unwrap().join("note.md");
+        fs::write(&source, b"source\r\n").unwrap();
+        assert!(!target.exists());
+        fs::write(&target, b"created by another process").unwrap();
+        assert!(move_directory_no_replace(&source, &target).is_err());
+        assert_eq!(fs::read(&source).unwrap(), b"source\r\n");
+        assert_eq!(fs::read(&target).unwrap(), b"created by another process");
+        fs::remove_file(&target).unwrap();
+        let lock = fs::OpenOptions::new()
+            .read(true)
+            .share_mode(0)
+            .open(&source)
+            .unwrap();
+        assert!(ws.move_folder(&note, "target", None).is_err());
+        assert!(!target.exists());
+        drop(lock);
+        assert_eq!(fs::read(&source).unwrap(), b"source\r\n");
+        assert_eq!(
+            ws.move_folder(&note, "target", None).unwrap(),
+            "target/note.md"
+        );
+        assert!(!source.exists());
+        assert_eq!(fs::read(target).unwrap(), b"source\r\n");
+    }
+
+    #[test]
+    fn note_move_revalidates_same_kind_anchor_and_rejects_non_markdown_sources() {
+        let (_dir, ws) = setup();
+        ws.create("", "target", true).unwrap();
+        ws.create("", "source.md", false).unwrap();
+        ws.create("target", "folder", true).unwrap();
+        ws.create("target", "anchor.md", false).unwrap();
+        assert_eq!(
+            ws.move_folder("source.md", "target", Some("target/folder"))
+                .unwrap_err()
+                .code,
+            "order"
+        );
+        let anchor = ws.resolve("target/anchor.md").unwrap();
+        fs::rename(&anchor, ws.root.join("anchor.md")).unwrap();
+        assert_eq!(
+            ws.move_folder("source.md", "target", Some("target/anchor.md"))
+                .unwrap_err()
+                .code,
+            "missing"
+        );
+        assert_eq!(
+            ws.move_folder("source.md", "target", Some("anchor.md"))
+                .unwrap_err()
+                .code,
+            "order"
+        );
+        fs::write(ws.root.join("other.txt"), b"not markdown").unwrap();
+        assert_eq!(
+            ws.move_folder("other.txt", "target", None)
+                .unwrap_err()
+                .code,
+            "type"
+        );
+        assert!(ws.resolve("source.md").is_ok());
+        assert!(ws.resolve("target/source.md").is_err());
+        let dot_note = ws.create("", ".md", false).unwrap();
+        assert_eq!(
+            ws.move_folder(&dot_note, "target", None).unwrap(),
+            "target/.md"
+        );
     }
 }

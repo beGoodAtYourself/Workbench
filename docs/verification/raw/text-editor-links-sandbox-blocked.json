@@ -1,0 +1,21 @@
+{
+  "startedAt": "2026-10-16T04:36:53.028Z",
+  "source": "D:\\lxWorkspace\\src-tauri\\target\\text-editor\\qa\\shiye-text-qa.exe",
+  "sha256": "339eb9dc3cfe1e817f84fae91d7c4756be827fca4313e3d729c674939ee462a5",
+  "executable": "D:\\lxWorkspace\\.qa\\text-links-native-1792125413018\\app\\shiye-text-qa.exe",
+  "data": "D:\\lxWorkspace\\.qa\\text-links-native-1792125413018",
+  "fixtures": "D:\\lxWorkspace\\.qa\\text-links-native-1792125413018\\files",
+  "notes": "D:\\lxWorkspace\\.qa\\text-links-native-1792125413018\\files\\notes",
+  "port": 16440,
+  "scope": "Isolated textqa release WebView2 with synthetic A/B/C notes and authorized synthetic outside/non-Markdown files. Normal Open uses the double-gated fixture queue; links use real preview and editor mouse gestures. No production source changes, user notes, clipboard or Run-key modifications.",
+  "checks": [],
+  "pageErrors": [],
+  "ownerPid": 31284,
+  "status": "failed",
+  "error": "Error: Cannot attach to the isolated WebView2: Error: browserType.connectOverCDP: connect ECONNREFUSED 127.0.0.1:16440\nCall log:\n\u001b[2m  - <ws preparing> retrieving websocket url from http://127.0.0.1:16440\u001b[22m\n\n    at connect (file:///D:/lxWorkspace/scripts/text-links-native.mjs:43:8)\n    at async file:///D:/lxWorkspace/scripts/text-links-native.mjs:56:258",
+  "normalExitError": "TypeError: Cannot read properties of undefined (reading 'evaluate')",
+  "cleanupError": "Error: taskkill.exe failed (1): ����: �ܾ�����\r\r\n",
+  "ownerExited": false,
+  "ownerExitCode": null,
+  "completedAt": "2026-10-16T04:37:10.033Z"
+}

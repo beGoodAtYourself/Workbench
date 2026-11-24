@@ -1,0 +1,65 @@
+{
+  "date": "2026-09-14T03:56:24.506Z",
+  "executable": "D:\\lxWorkspace\\src-tauri\\target\\folder-moves\\qa\\shiye.exe",
+  "sha256": "405c4b52bc21b978faa1a845b80a2d943efa2509cabb2a3f0b2ae957e131e75a",
+  "data": "D:\\lxWorkspace\\.qa\\folder-idle-1789358184500",
+  "configuration": "Isolated folderqa application, fresh note fixture and real 60-second hidden idle timer. WebView2 CDP observes page closure; a second application launch wakes the existing host. No profile_unload call; no memory or wake-performance claim.",
+  "checks": [
+    {
+      "name": "Sorted folders and moved document restore at B/A/doc.md before hiding",
+      "pass": true
+    },
+    {
+      "name": "The real hidden idle timer closes WebView2 while the same owning host stays alive",
+      "pass": true
+    },
+    {
+      "name": "A second launch wakes the existing host and restores folder order and the new-path session with identical file bytes",
+      "pass": true
+    }
+  ],
+  "fileSha256Before": "94a740320b991e2e559fa4d35c98f4c7deb81033c714aa7c0866dd31163fcd24",
+  "ownerPid": 42336,
+  "orderBefore": {
+    "": [
+      "C",
+      "B"
+    ],
+    "B": [
+      "B/A"
+    ]
+  },
+  "hideStartedAt": "2026-09-14T03:56:26.319Z",
+  "hideClickCompletedAfterMs": 32.08399999999983,
+  "webviewClosedAt": "2026-09-14T03:57:26.377Z",
+  "hiddenUntilPageCloseMs": 60057.5091,
+  "persistedSession": {
+    "module": "notes",
+    "panes": [
+      {
+        "path": "B/A/doc.md",
+        "mode": "edit",
+        "cursor": 7,
+        "scroll": 0
+      }
+    ],
+    "expanded": [
+      "B",
+      "B/A"
+    ]
+  },
+  "wakeLauncherPid": 32916,
+  "ownerPidAfterWake": 42336,
+  "orderAfter": {
+    "": [
+      "C",
+      "B"
+    ],
+    "B": [
+      "B/A"
+    ]
+  },
+  "fileSha256After": "94a740320b991e2e559fa4d35c98f4c7deb81033c714aa7c0866dd31163fcd24",
+  "status": "passed",
+  "completedAt": "2026-09-14T03:57:26.912Z"
+}

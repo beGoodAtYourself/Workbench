@@ -1,0 +1,151 @@
+{
+  "acceptance": false,
+  "kind": "headless-component-allocation",
+  "label": "before-rebind-20261023",
+  "startedAt": "2026-10-23T05:47:15.280Z",
+  "notice": "Real text model/workspace/editor with an in-memory synthetic repository; no native bridge, private-process-memory acceptance or disk recovery claim. Forced GC is diagnostic only.",
+  "sourceHashes": {
+    "src/text-editor.ts": "c2921e833bfad0abca07e911e6ae72dbdbf1ef11bf978e96227b9107c8873f98",
+    "src/text-workspace.ts": "55d9f8d816c50c0e203f929c05163dbe92c7844fc714c81dfd4f339997efd19c",
+    "src/text-model.ts": "1cb9a53b56860965a49b950dcb902c39ecbac0be52cc40e78ac3a9091852ea22",
+    "src/text-search-client.ts": "e30f632cf1248027839c7dfd671283fee0b4f435af5ab0a5ba86bda9269fc6b0"
+  },
+  "scenes": [
+    {
+      "mode": "switch",
+      "cycles": 100,
+      "warmup": 10,
+      "before": {
+        "heap": {
+          "usedSize": 7827160,
+          "totalSize": 11481088,
+          "embedderHeapUsedSize": 12414928,
+          "backingStorageSize": 1835157
+        },
+        "dom": {
+          "documents": 5,
+          "nodes": 1734,
+          "jsEventListeners": 346
+        },
+        "counts": {
+          "editors": 2,
+          "workers": 0,
+          "searchForms": 0
+        }
+      },
+      "after": {
+        "heap": {
+          "usedSize": 6659788,
+          "totalSize": 16986112,
+          "embedderHeapUsedSize": 3965728,
+          "backingStorageSize": 1834031
+        },
+        "dom": {
+          "documents": 2,
+          "nodes": 1460,
+          "jsEventListeners": 306
+        },
+        "counts": {
+          "editors": 4,
+          "workers": 0,
+          "searchForms": 0
+        }
+      },
+      "afterGc": {
+        "heap": {
+          "usedSize": 5926816,
+          "totalSize": 6762496,
+          "embedderHeapUsedSize": 2369880,
+          "backingStorageSize": 1833120
+        },
+        "dom": {
+          "documents": 2,
+          "nodes": 1016,
+          "jsEventListeners": 201
+        },
+        "counts": {
+          "editors": 4,
+          "workers": 0,
+          "searchForms": 0
+        }
+      },
+      "allocations": {
+        "editors": 2,
+        "workers": 0,
+        "searchForms": 0
+      },
+      "fixtureUnchanged": true,
+      "pageErrors": []
+    },
+    {
+      "mode": "search",
+      "cycles": 100,
+      "warmup": 10,
+      "before": {
+        "heap": {
+          "usedSize": 10510896,
+          "totalSize": 18034688,
+          "embedderHeapUsedSize": 20350400,
+          "backingStorageSize": 1833999
+        },
+        "dom": {
+          "documents": 5,
+          "nodes": 3036,
+          "jsEventListeners": 348
+        },
+        "counts": {
+          "editors": 1,
+          "workers": 10,
+          "searchForms": 10
+        }
+      },
+      "after": {
+        "heap": {
+          "usedSize": 7334572,
+          "totalSize": 41103360,
+          "embedderHeapUsedSize": 4043776,
+          "backingStorageSize": 1837348
+        },
+        "dom": {
+          "documents": 2,
+          "nodes": 1473,
+          "jsEventListeners": 226
+        },
+        "counts": {
+          "editors": 2,
+          "workers": 110,
+          "searchForms": 110
+        }
+      },
+      "afterGc": {
+        "heap": {
+          "usedSize": 6523524,
+          "totalSize": 7811072,
+          "embedderHeapUsedSize": 2693624,
+          "backingStorageSize": 1836854
+        },
+        "dom": {
+          "documents": 2,
+          "nodes": 1187,
+          "jsEventListeners": 204
+        },
+        "counts": {
+          "editors": 2,
+          "workers": 110,
+          "searchForms": 110
+        }
+      },
+      "allocations": {
+        "editors": 1,
+        "workers": 100,
+        "searchForms": 100
+      },
+      "fixtureUnchanged": true,
+      "pageErrors": []
+    }
+  ],
+  "browserVersion": "155.0.4283.62",
+  "status": "diagnostic-failed",
+  "error": "locator.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('body > .text-workspace').getByRole('button', { name: '双视图', exact: true })\u001b[22m\n\n    at dual (D:\\lxWorkspace\\scripts\\text-component-allocation.mjs:44:102)\n    at async cycle (D:\\lxWorkspace\\scripts\\text-component-allocation.mjs:49:42)\n    at async file:///D:/lxWorkspace/scripts/text-component-allocation.mjs:53:24",
+  "completedAt": "2026-10-23T05:48:10.618Z"
+}

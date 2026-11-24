@@ -1,0 +1,65 @@
+{
+  "startedAt": "2026-10-26T10:34:19.538Z",
+  "source": "D:\\lxWorkspace\\src-tauri\\target\\text-editor\\qa\\shiye-text-qa.exe",
+  "sha256": "8d0066c1b881538985f1b5a347a92b2dfd876e6793814b5cc76ccc6cd877172f",
+  "executable": "D:\\lxWorkspace\\.qa\\text-shell-native-1793010859529\\app\\shiye-text-qa.exe",
+  "data": "D:\\lxWorkspace\\.qa\\text-shell-native-1793010859529",
+  "fixtures": "D:\\lxWorkspace\\.qa\\text-shell-native-1793010859529\\files",
+  "port": 37012,
+  "nativeInputSkipped": true,
+  "scope": "Isolated textqa release WebView2 and synthetic notes/drafts. Native hotkey/floating input is explicitly skipped because of recorded Sky tool restrictions; only module switches, settings saves and normal exit are exercised. No raw Win32 input injection, autostart changes, personal notes or system clipboard reads.",
+  "checks": [
+    {
+      "name": "Text and notes module switches mount only their active editors (two and one); the never-opened clipboard DOM remains empty",
+      "pass": true,
+      "details": {
+        "textEditors": 2,
+        "noteEditors": 1,
+        "clipboardOpened": false
+      }
+    },
+    {
+      "name": "Real settings saves update floating/shortcut preferences and restore the exact bindings used for Sky handshakes",
+      "pass": true,
+      "details": {
+        "interim": {
+          "shortcut": "Control+Shift+F11",
+          "floating": false
+        },
+        "active": {
+          "shortcut": "Control+Alt+F10",
+          "floating": true
+        }
+      }
+    },
+    {
+      "name": "Settings Exit ends the isolated floating/shortcut owner normally; that owned process no longer exists",
+      "pass": true,
+      "details": {
+        "ownerPid": 16100,
+        "exitCode": 0
+      }
+    }
+  ],
+  "skippedChecks": [
+    {
+      "name": "Live system clipboard entry, listener pause and DOM disposal after leaving clipboard",
+      "reason": "Intentionally not opened because the native module would read the personal system clipboard. Only its unused DOM is checked empty; browser-demo regressions and source review cover the separate listener/disposal paths."
+    },
+    {
+      "name": "A real global shortcut wakes the hidden owner and preserves both complete dirty drafts",
+      "reason": "Explicit --skip-native-input: the previous Sky input did not complete; selecting the neutral Calculator target then failed with Computer Use app approval timed out. No actual global-key input is confirmed. The failed attempt is retained as text-editor-shell-sky-timeout-339eb9.json."
+    },
+    {
+      "name": "A real click on the owned floating window wakes the hidden owner and preserves both complete dirty drafts",
+      "reason": "Explicit --skip-native-input: Sky list_apps/list_windows did not expose the native tool/no-activate floating window. The supported API has no include-tool-window option or desktop-coordinate input. No Window is fabricated and no click is claimed."
+    }
+  ],
+  "pageErrors": [],
+  "ownerPid": 16100,
+  "normalExit": true,
+  "status": "partial",
+  "ownerExited": true,
+  "ownerExitCode": 0,
+  "completedAt": "2026-10-26T10:34:24.194Z"
+}

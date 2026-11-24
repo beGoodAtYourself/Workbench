@@ -1,0 +1,49 @@
+{
+  "recordedAt": "2026-10-26T06:00:44.021Z",
+  "candidate": "docs/verification/raw/text-editor-candidate-styles-20261026.json",
+  "sourceHashes": {
+    "src/main.ts": "cbb532ce960c50c4aa390b9b69cf6fa136bd3dac01feb7c6668b8d12be6d098d",
+    "src/text-editor.ts": "9c1840a553857dc5e66984699348ad57d47831f92bdce8f624a319efc4dadf76",
+    "src/text-workspace.ts": "57cf9bbf48b3b2a95582d8c0082d1dceaeb969f89c597c606c6a95added2b012",
+    "src/text-model.ts": "1cb9a53b56860965a49b950dcb902c39ecbac0be52cc40e78ac3a9091852ea22",
+    "src/text-search-client.ts": "e30f632cf1248027839c7dfd671283fee0b4f435af5ab0a5ba86bda9269fc6b0"
+  },
+  "harnessHashes": {
+    "scripts/text-native-smoke.mjs": "7bc71b4cb3931fa30ec7216628700b3904dfc4c7bc696497c377cee36bf05b21",
+    "scripts/text-editor-native.mjs": "359843c74e9c0536e3e0a5a6c7f65edb613b9d780e3b52ea6fa7146936a66b06",
+    "scripts/text-links-native.mjs": "f7afd36c674a68a11412d1647203bd9032475dc7082b8a92ade424f68e534b41",
+    "scripts/text-recovery-native.mjs": "622edb56931ccfe0b0e7f43584913c53b5d52cf2dc7f685202d57af15ec48f7c",
+    "scripts/text-workspace-native.mjs": "ae724c6f7ad259faff99b61590e9b619dc167c807ad559ddb67d17e44222c9fc",
+    "scripts/text-shell-native.mjs": "f46fb709d6df6071a6d2272253352efd51d4479f47f13e714e26b65ca2e6b66a",
+    "scripts/text-native-performance.mjs": "64b5df633759f164896c2921306287247203d6bdf2dbd772f4829275177c977e",
+    "scripts/text-memory-probe.ps1": "0137e59589a85d1222e44efcc92972132f15fada7d53c30deaa12f39b050fb3e",
+    "scripts/text-native-config.json": "a21916e19bf4bababb9eeec649507d678487c3db3aa134b61155bea1c28e7c8b",
+    "scripts/text-component-allocation.mjs": "8fe89ddfe384c1d5656298d5cde79d2a2e5e9c154971a3d428110059ab04fc95",
+    "scripts/text-delivery.mjs": "abc86be9523c2d585c9d563ac520c72efea1e382d2c779255c47556f4f04f8c6"
+  },
+  "checks": {
+    "typescript": "passed",
+    "unitTests": 244,
+    "fullHeadlessE2E": 103,
+    "focusedLifecycleE2E": 11,
+    "buildQa": "passed",
+    "buildFormalNsis": "passed",
+    "diagnosticSyntax": "passed",
+    "backend": "unchanged; previous 80 Rust tests and Clippy retained, not rerun"
+  },
+  "redGreen": {
+    "beforeStyleWrites": 400,
+    "afterStyleWrites": 0,
+    "rounds": 100,
+    "views": 2,
+    "pausedInputRejected": true,
+    "parserDetached": true
+  },
+  "sourceFilesChanged": [
+    "src/text-editor.ts",
+    "tests/e2e/text-lifecycle.spec.ts"
+  ],
+  "nativeExecuted": false,
+  "nativeProtocolUnchanged": true,
+  "budgetGrowthMiB": 20
+}

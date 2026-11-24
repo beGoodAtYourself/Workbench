@@ -3,8 +3,14 @@ import {codeSamples} from '../fixtures/code-samples';
 
 test.beforeEach(async({page})=>{await page.goto('/');await page.getByRole('button',{name:'编辑模式',exact:true}).click();});
 const source=(editor:Locator)=>editor.locator('.cm-line').allTextContents().then(lines=>lines.join('\n'));
-async function selectFirstLine(editor:Locator){await editor.click();await editor.press('Control+Home');await editor.press('Shift+End');}
+// Keyboard selection needs focus; a wrapped content element can extend beyond its clipped scroll viewport.
+async function selectFirstLine(editor:Locator){await editor.focus();await editor.press('Control+Home');await editor.press('Shift+End');}
 async function preview(page:Page){await page.getByRole('button',{name:'显示模式',exact:true}).click();return page.locator('.article');}
+async function closeFormattingDialog(page:Page,label:'取消'|'应用'){
+ await page.getByRole('button',{name:label,exact:true}).click();
+ // Wait for the close event that restores the selection and applies the format.
+ await expect(page.locator('.formatting-dialog')).toHaveCount(0);
+}
 
 test('toolbar preserves selection, creates blocks, toggles formats and saves with undo',async({page})=>{
  const editor=page.locator('.cm-content');await editor.fill('标题文字\n第一项\n第二项');await selectFirstLine(editor);
@@ -21,15 +27,15 @@ test('toolbar preserves selection, creates blocks, toggles formats and saves wit
 
 test('link and language dialogs apply to the original range and cancellation keeps it',async({page})=>{
  const editor=page.locator('.cm-content');await editor.fill('链接文字\n第二行');await selectFirstLine(editor);
- await page.getByRole('button',{name:'插入链接',exact:true}).click();await page.getByRole('button',{name:'取消',exact:true}).click();
+ await page.getByRole('button',{name:'插入链接',exact:true}).click();await closeFormattingDialog(page,'取消');
  expect(await source(editor)).toBe('链接文字\n第二行');await editor.pressSequentially('替换文字');expect(await source(editor)).toBe('替换文字\n第二行');
- await selectFirstLine(editor);await page.getByRole('button',{name:'插入链接',exact:true}).click();await page.getByLabel('链接地址').fill('使用指南.md');await page.getByRole('button',{name:'应用',exact:true}).click();
+ await selectFirstLine(editor);await page.getByRole('button',{name:'插入链接',exact:true}).click();await page.getByLabel('链接地址').fill('使用指南.md');await closeFormattingDialog(page,'应用');
  expect(await source(editor)).toContain('[替换文字](<使用指南.md>)');
  await editor.fill('const answer = "```";');await selectFirstLine(editor);await page.getByRole('button',{name:'代码块与语言',exact:true}).click();
- await expect(page.getByLabel('代码语言')).toHaveValue('');await page.getByLabel('代码语言').selectOption('javascript');await page.getByRole('button',{name:'应用',exact:true}).click();
+ await expect(page.getByLabel('代码语言')).toHaveValue('');await page.getByLabel('代码语言').selectOption('javascript');await closeFormattingDialog(page,'应用');
  expect(await source(editor)).toBe('````javascript\nconst answer = "```";\n````');
  await page.getByRole('button',{name:'代码块与语言',exact:true}).click();await expect(page.getByLabel('代码语言')).toHaveValue('javascript');
- await page.getByLabel('代码语言').selectOption('typescript');await page.getByRole('button',{name:'应用',exact:true}).click();
+ await page.getByLabel('代码语言').selectOption('typescript');await closeFormattingDialog(page,'应用');
  expect(await source(editor)).toBe('````typescript\nconst answer = "```";\n````');await editor.press('Control+z');expect(await source(editor)).toContain('````javascript');
 });
 
@@ -38,7 +44,9 @@ test('TXT paste keeps line breaks and paragraphs without altering the source',as
  await editor.evaluate(element=>{const data=new DataTransfer();data.setData('text/plain','第一行\r\n第二行\r\n\r\n另一个段落');element.dispatchEvent(new ClipboardEvent('paste',{clipboardData:data,bubbles:true,cancelable:true}));});
  expect(await source(editor)).toBe('第一行\n第二行\n\n另一个段落');
  const article=await preview(page);await expect(article.locator('p')).toHaveCount(2);await expect(article.locator('p').first().locator('br')).toHaveCount(1);
- await page.getByRole('button',{name:'编辑模式',exact:true}).click();expect(await source(editor)).toBe('第一行\n第二行\n\n另一个段落');
+ await page.getByRole('button',{name:'编辑模式',exact:true}).click();
+ // The editor module mounts asynchronously after the mode button's click handler.
+ await expect(editor).toBeVisible();await expect.poll(()=>source(editor)).toBe('第一行\n第二行\n\n另一个段落');
 });
 
 test('all supported languages have visible code colors in edit and preview modes',async({page})=>{

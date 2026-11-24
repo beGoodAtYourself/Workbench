@@ -1,0 +1,73 @@
+{
+  "date": "2026-11-16",
+  "scheduledLocalTime": "12:30 Asia/Singapore",
+  "status": "blocked-desktop-approval",
+  "desktopToolError": "Computer Use app approval timed out",
+  "nativeInputPerformed": false,
+  "sourceChangesMade": false,
+  "originalLog": {
+    "bytes": 99323,
+    "sha256": "76e4271152311e656d48f30b5ca8d54655eb311b88ea0d72d62bd0cd2c22ee6b",
+    "unchanged": true
+  },
+  "session": {
+    "module": "notes",
+    "textGeneration": 834,
+    "targetLogEncoding": "gbk",
+    "targetLogLength": 98629,
+    "revision": 0,
+    "savedRevision": 0,
+    "error": null
+  },
+  "sessionEvidenceDirectory": "D:\\lxWorkspace\\.qa\\log-open-retest-20261116-1230",
+  "backups": [
+    {
+      "file": "settings.json",
+      "bytes": 445,
+      "sha256": "bd354ec4c33e68eae84a6b00f49028df1f651910d3ca15bba4c21af17bca5d8e"
+    },
+    {
+      "file": "text-recovery\\241dc294c16c4901299f184c38765d86cee9f588a06730d23277f89ba3672c04.txt",
+      "bytes": 98633,
+      "sha256": "241dc294c16c4901299f184c38765d86cee9f588a06730d23277f89ba3672c04"
+    },
+    {
+      "file": "text-recovery\\annotations.json",
+      "bytes": 99,
+      "sha256": "e578418267ce38cd9e1eae22e54f5e47c75068d014fb9c9d638ef31d1217c737"
+    },
+    {
+      "file": "text-recovery\\grants.json",
+      "bytes": 296,
+      "sha256": "489e0b90c40429d86ad7a800f8453e0602c435e195745ee9701319e2e7ae7313"
+    },
+    {
+      "file": "text-recovery\\manifest.json",
+      "bytes": 828,
+      "sha256": "d0ea31ceb7df030ad562671027c690fb8fb41023593e07f9228c49dce87d6043"
+    }
+  ],
+  "installed": {
+    "path": "D:\\拾页\\shiye.exe",
+    "sha256": "0e1d071f5d7a0bee1cb05427bd767366e25e8aedb67fc87d41478b66de7aa115",
+    "bytes": 7275520
+  },
+  "delivery": {
+    "path": "D:\\lxWorkspace\\src-tauri\\target\\text-open-drop\\release\\shiye.exe",
+    "sha256": "7c1c3bc9bfdd09baf62b9d656feb8edcec6fb7716e2d958b806593952a8f3c80",
+    "bytes": 7275520
+  },
+  "binaryComparison": {
+    "differingBytes": 3,
+    "offsetStart": 7012927,
+    "offsetEndExclusive": 7012930,
+    "scope": "Tauri bundle-type marker; all other bytes identical"
+  },
+  "notCompleted": [
+    "原会话故障准确复现",
+    "修复版相同步骤复测",
+    "实际操作系统文件拖放验收"
+  ],
+  "requiredAction": "用户在电脑旁完成桌面控制的应用授权后继续原生实测。",
+  "oneTimeAutomation": "delete after recording this attempt; do not repeat automatically"
+}

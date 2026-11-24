@@ -1,0 +1,265 @@
+{
+  "recordedAt": "2026-10-26T04:25:32.158Z",
+  "sha256": "fb766acf83893347b4511e8ec5089e534d64d6edbdcad6558371e88dac842f19",
+  "status": "budget-failed",
+  "acceptance": {
+    "complete": true,
+    "passed": false,
+    "effectiveMemoryIds": [
+      "1:single:1:0",
+      "1:dual:1:0",
+      "1:full:1:0",
+      "1:hidden-unloaded:1:0",
+      "2:single:1:0",
+      "2:dual:1:0",
+      "2:full:1:0",
+      "2:hidden-unloaded:1:0",
+      "3:single:1:0",
+      "3:dual:1:0",
+      "3:full:1:0",
+      "3:hidden-unloaded:1:0"
+    ],
+    "effectiveLoopIds": [
+      "loops:1:1",
+      "loops:2:1",
+      "loops:3:1"
+    ]
+  },
+  "startedAt": "2026-10-26T04:04:33.368Z",
+  "completedAt": "2026-10-26T04:25:01.419Z",
+  "environment": {
+    "platform": "win32",
+    "release": "10.0.26200",
+    "architecture": "x64",
+    "cpus": 16,
+    "cpu": "13th Gen Intel(R) Core(TM) i5-13500H",
+    "totalMemoryBytes": 33954172928,
+    "node": "v24.18.0"
+  },
+  "browserVersion": "155.0.4283.62",
+  "memory": [
+    {
+      "name": "single",
+      "round": 1,
+      "workingSetP95MiB": 98.66796875,
+      "privateBytesP95MiB": 182.58984375,
+      "pass": true
+    },
+    {
+      "name": "dual",
+      "round": 1,
+      "workingSetP95MiB": 111.23828125,
+      "privateBytesP95MiB": 200.1875,
+      "pass": true
+    },
+    {
+      "name": "full",
+      "round": 1,
+      "workingSetP95MiB": 142.63671875,
+      "privateBytesP95MiB": 232.14453125,
+      "pass": true
+    },
+    {
+      "name": "hidden-unloaded",
+      "round": 1,
+      "workingSetP95MiB": 4.1796875,
+      "privateBytesP95MiB": 6.81640625,
+      "pass": true
+    },
+    {
+      "name": "single",
+      "round": 2,
+      "workingSetP95MiB": 99.87109375,
+      "privateBytesP95MiB": 181.98046875,
+      "pass": true
+    },
+    {
+      "name": "dual",
+      "round": 2,
+      "workingSetP95MiB": 111.2421875,
+      "privateBytesP95MiB": 198.15234375,
+      "pass": true
+    },
+    {
+      "name": "full",
+      "round": 2,
+      "workingSetP95MiB": 142.5625,
+      "privateBytesP95MiB": 231.96875,
+      "pass": true
+    },
+    {
+      "name": "hidden-unloaded",
+      "round": 2,
+      "workingSetP95MiB": 4.3046875,
+      "privateBytesP95MiB": 6.05078125,
+      "pass": true
+    },
+    {
+      "name": "single",
+      "round": 3,
+      "workingSetP95MiB": 99.71484375,
+      "privateBytesP95MiB": 184.29296875,
+      "pass": true
+    },
+    {
+      "name": "dual",
+      "round": 3,
+      "workingSetP95MiB": 111.12109375,
+      "privateBytesP95MiB": 201.28125,
+      "pass": true
+    },
+    {
+      "name": "full",
+      "round": 3,
+      "workingSetP95MiB": 144.00390625,
+      "privateBytesP95MiB": 236.63671875,
+      "pass": true
+    },
+    {
+      "name": "hidden-unloaded",
+      "round": 3,
+      "workingSetP95MiB": 4.47265625,
+      "privateBytesP95MiB": 7.01953125,
+      "pass": true
+    }
+  ],
+  "wake": [
+    {
+      "name": "retained",
+      "count": 30,
+      "nativeP95Ms": 89.07669999999999,
+      "launcherP95Ms": 152.07779999997,
+      "pass": true
+    },
+    {
+      "name": "unloaded",
+      "count": 30,
+      "nativeP95Ms": 527.1925,
+      "launcherP95Ms": 613.187600000063,
+      "pass": true
+    }
+  ],
+  "loops": [
+    {
+      "round": 1,
+      "workingSetGrowthMiB": 19.88671875,
+      "privateBytesGrowthMiB": 20.1796875,
+      "pass": false
+    },
+    {
+      "round": 2,
+      "workingSetGrowthMiB": 19.69921875,
+      "privateBytesGrowthMiB": 19.09765625,
+      "pass": true
+    },
+    {
+      "round": 3,
+      "workingSetGrowthMiB": 16.9921875,
+      "privateBytesGrowthMiB": 17.3984375,
+      "pass": true
+    }
+  ],
+  "stress": [
+    {
+      "totalUtf16Units": 16777216,
+      "singleFileBytes": 16776512,
+      "boundaryRejected": true,
+      "inLimitEditAndSave": true,
+      "unloadedAndRecovered": true,
+      "workingSetP95MiB": 338.25,
+      "privateBytesP95MiB": 446.31640625
+    }
+  ],
+  "adoptedValidMemoryFrames": 545,
+  "adoptedTotalMemoryFrames": 545,
+  "normalScenePeakWorkingSetMiB": 144.0703125,
+  "coverageRetries": 0,
+  "instrumentationFailures": 0,
+  "fixtureIntegrityFailures": 0,
+  "nativeSuites": {
+    "native": {
+      "checks": 24,
+      "status": "passed",
+      "sha256": "fb766acf83893347b4511e8ec5089e534d64d6edbdcad6558371e88dac842f19",
+      "startedAt": "2026-10-26T04:01:50.428Z",
+      "completedAt": "2026-10-26T04:03:01.991Z",
+      "pendingChecks": []
+    },
+    "editing": {
+      "checks": 6,
+      "status": "passed",
+      "sha256": "fb766acf83893347b4511e8ec5089e534d64d6edbdcad6558371e88dac842f19",
+      "startedAt": "2026-10-26T04:03:11.157Z",
+      "completedAt": "2026-10-26T04:03:19.010Z",
+      "pendingChecks": []
+    },
+    "links": {
+      "checks": 7,
+      "status": "passed",
+      "sha256": "fb766acf83893347b4511e8ec5089e534d64d6edbdcad6558371e88dac842f19",
+      "startedAt": "2026-10-26T04:03:19.341Z",
+      "completedAt": "2026-10-26T04:03:27.686Z",
+      "pendingChecks": []
+    },
+    "recovery": {
+      "checks": 7,
+      "status": "passed",
+      "sha256": "fb766acf83893347b4511e8ec5089e534d64d6edbdcad6558371e88dac842f19",
+      "startedAt": "2026-10-26T04:03:28.002Z",
+      "completedAt": "2026-10-26T04:03:48.558Z",
+      "pendingChecks": []
+    },
+    "workspace": {
+      "checks": 9,
+      "status": "partial",
+      "sha256": "fb766acf83893347b4511e8ec5089e534d64d6edbdcad6558371e88dac842f19",
+      "startedAt": "2026-10-26T04:03:48.875Z",
+      "completedAt": "2026-10-26T04:04:04.827Z",
+      "pendingChecks": [
+        {
+          "name": "Change notes library through the actual native directory picker while keeping text tabs",
+          "reason": "Run with --native-root-picker to pause for a human-operated Windows folder picker. Without that flag, this harness does not fabricate a result or substitute direct set_workspace IPC for UI coverage."
+        }
+      ]
+    },
+    "shell": {
+      "checks": 3,
+      "status": "partial",
+      "sha256": "fb766acf83893347b4511e8ec5089e534d64d6edbdcad6558371e88dac842f19",
+      "startedAt": "2026-10-26T04:04:05.151Z",
+      "completedAt": "2026-10-26T04:04:09.672Z",
+      "pendingChecks": [
+        {
+          "name": "Live system clipboard entry, listener pause and DOM disposal after leaving clipboard",
+          "reason": "Intentionally not opened because the native module would read the personal system clipboard. Only its unused DOM is checked empty; browser-demo regressions and source review cover the separate listener/disposal paths."
+        },
+        {
+          "name": "A real global shortcut wakes the hidden owner and preserves both complete dirty drafts",
+          "reason": "Explicit --skip-native-input: the previous Sky input did not complete; selecting the neutral Calculator target then failed with Computer Use app approval timed out. No actual global-key input is confirmed. The failed attempt is retained as text-editor-shell-sky-timeout-339eb9.json."
+        },
+        {
+          "name": "A real click on the owned floating window wakes the hidden owner and preserves both complete dirty drafts",
+          "reason": "Explicit --skip-native-input: Sky list_apps/list_windows did not expose the native tool/no-activate floating window. The supported API has no include-tool-window option or desktop-coordinate input. No Window is fabricated and no click is claimed."
+        }
+      ]
+    }
+  },
+  "hiddenUnloadMs": 60097.0377,
+  "hiddenUnloadEvidence": {
+    "name": "A real 60-second WebView unload and same-host wake restore dirty and untitled drafts without saving originals",
+    "pass": true
+  },
+  "cleanup": {
+    "remainingTextQaOwners": 0,
+    "checkedAt": "2026-10-26T04:25:16.5140497Z",
+    "method": "Read-only Win32_Process query after the harness exited; no textqa owner remains.",
+    "keyboardMouseReleasedAt": "2026-10-26T04:25:16.5140497Z"
+  },
+  "schedule": {
+    "automationId": "automation",
+    "scheduledAt": "2026-10-26T04:00:00Z",
+    "triggeredAt": "2026-10-26T04:00:25.907Z",
+    "oneTime": true,
+    "deletedAfterRun": true
+  }
+}

@@ -1,0 +1,1850 @@
+{
+  "schema": 1,
+  "status": "partial",
+  "phase": "all",
+  "quick": true,
+  "startedAt": "2026-10-16T02:54:04.545Z",
+  "executable": "D:\\lxWorkspace\\src-tauri\\target\\text-editor\\release\\shiye-text-qa.exe",
+  "sha256": "0f423db2d90b747a72f193f1d21dd688ad90acb1b0e25f093c810a3c9eec0e26",
+  "runRoot": "D:\\lxWorkspace\\.qa\\text-perf-1792119244519",
+  "environment": {
+    "platform": "win32",
+    "release": "10.0.26200",
+    "architecture": "x64",
+    "cpus": 16,
+    "cpu": "13th Gen Intel(R) Core(TM) i5-13500H",
+    "totalMemoryBytes": 33954172928,
+    "node": "v24.18.0"
+  },
+  "instrumentation": {
+    "memory": "Toolhelp recursive owner/descendants, QueryWorkingSet Shared=0 resident pages, PROCESS_MEMORY_COUNTERS_EX.PrivateUsage",
+    "webview": "CDP on ephemeral localhost port; independent textqa identifier; SHIYE_DATA_DIR; double-gated profile fixture selection",
+    "idle": "profile_unload simulates expiry for performance only; the separate functional smoke verifies real 60-second expiry",
+    "wakeEndpoint": "Native show to frontend_ready after editor creation/requestAnimationFrame; launcher-to-editable is also captured conservatively",
+    "rounds": 1,
+    "samples": 3,
+    "intervalMs": 1000,
+    "stableMs": 500,
+    "loopStableMs": 500,
+    "wakeCount": 2,
+    "cycles": 2
+  },
+  "fixtures": [
+    {
+      "path": "D:\\lxWorkspace\\.qa\\text-perf-1792119244519\\fixtures\\T01.txt",
+      "bytes": 102400
+    },
+    {
+      "path": "D:\\lxWorkspace\\.qa\\text-perf-1792119244519\\fixtures\\T02.json",
+      "bytes": 102400
+    },
+    {
+      "path": "D:\\lxWorkspace\\.qa\\text-perf-1792119244519\\fixtures\\T03.ts",
+      "bytes": 102400
+    },
+    {
+      "path": "D:\\lxWorkspace\\.qa\\text-perf-1792119244519\\fixtures\\T04.txt",
+      "bytes": 102400
+    },
+    {
+      "path": "D:\\lxWorkspace\\.qa\\text-perf-1792119244519\\fixtures\\T05.txt",
+      "bytes": 102400
+    },
+    {
+      "path": "D:\\lxWorkspace\\.qa\\text-perf-1792119244519\\fixtures\\T06.txt",
+      "bytes": 102400
+    },
+    {
+      "path": "D:\\lxWorkspace\\.qa\\text-perf-1792119244519\\fixtures\\T07.txt",
+      "bytes": 102400
+    },
+    {
+      "path": "D:\\lxWorkspace\\.qa\\text-perf-1792119244519\\fixtures\\T08.txt",
+      "bytes": 102400
+    },
+    {
+      "path": "D:\\lxWorkspace\\.qa\\text-perf-1792119244519\\fixtures\\T09.txt",
+      "bytes": 102400
+    },
+    {
+      "path": "D:\\lxWorkspace\\.qa\\text-perf-1792119244519\\fixtures\\T10.txt",
+      "bytes": 102400
+    },
+    {
+      "path": "D:\\lxWorkspace\\.qa\\text-perf-1792119244519\\fixtures\\T11.txt",
+      "bytes": 102400
+    },
+    {
+      "path": "D:\\lxWorkspace\\.qa\\text-perf-1792119244519\\fixtures\\T12.txt",
+      "bytes": 102400
+    }
+  ],
+  "memory": [
+    {
+      "name": "single",
+      "round": 1,
+      "budgetMiB": 200,
+      "pass": true,
+      "raw": {
+        "method": "Toolhelp owner + recursive descendants; PSAPI QueryWorkingSet non-shared resident pages; GetProcessMemoryInfo PROCESS_MEMORY_COUNTERS_EX.PrivateUsage",
+        "references": [
+          "https://learn.microsoft.com/en-us/windows/win32/api/psapi/ns-psapi-psapi_working_set_block",
+          "https://learn.microsoft.com/en-us/windows/win32/api/psapi/nf-psapi-queryworkingset",
+          "https://learn.microsoft.com/en-us/windows/win32/api/psapi/ns-psapi-process_memory_counters_ex"
+        ],
+        "appPid": 33192,
+        "sampleCount": 3,
+        "validSamples": 3,
+        "complete": true,
+        "observationWindowMs": 3072.0354,
+        "pageSize": 4096,
+        "p95MiB": 106.31640625,
+        "peakMiB": 106.31640625,
+        "privateBytesP95MiB": 205.2578125,
+        "privateBytesPeakMiB": 205.2578125,
+        "meanIntervalSeconds": 1.0027099,
+        "samples": [
+          {
+            "timestamp": "2026-10-16T02:54:08.7639605Z",
+            "elapsedMs": 1060.4588,
+            "valid": true,
+            "privateWorkingSet": 111480832,
+            "privateBytes": 215228416,
+            "workingSet": 422502400,
+            "processes": [
+              {
+                "pid": 33192,
+                "parentPid": 34616,
+                "name": "shiye-text-qa.exe",
+                "privateWorkingSet": 4763648,
+                "privateBytes": 6524928,
+                "workingSet": 34144256,
+                "peakWorkingSet": 36413440,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 27972,
+                "parentPid": 33192,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 34869248,
+                "privateBytes": 44552192,
+                "workingSet": 135286784,
+                "peakWorkingSet": 135286784,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 40520,
+                "parentPid": 27972,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 1654784,
+                "privateBytes": 2662400,
+                "workingSet": 11739136,
+                "peakWorkingSet": 11747328,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 41036,
+                "parentPid": 27972,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 27136000,
+                "privateBytes": 97169408,
+                "workingSet": 86474752,
+                "peakWorkingSet": 90513408,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 28524,
+                "parentPid": 27972,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 7442432,
+                "privateBytes": 12865536,
+                "workingSet": 43315200,
+                "peakWorkingSet": 43319296,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 19684,
+                "parentPid": 27972,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 3072000,
+                "privateBytes": 7979008,
+                "workingSet": 20971520,
+                "peakWorkingSet": 20971520,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 27668,
+                "parentPid": 27972,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 32542720,
+                "privateBytes": 43474944,
+                "workingSet": 90570752,
+                "peakWorkingSet": 91119616,
+                "valid": true,
+                "error": null
+              }
+            ]
+          },
+          {
+            "timestamp": "2026-10-16T02:54:09.7578824Z",
+            "elapsedMs": 2033.0448000000001,
+            "valid": true,
+            "privateWorkingSet": 111460352,
+            "privateBytes": 215134208,
+            "workingSet": 422506496,
+            "processes": [
+              {
+                "pid": 33192,
+                "parentPid": 34616,
+                "name": "shiye-text-qa.exe",
+                "privateWorkingSet": 4763648,
+                "privateBytes": 6524928,
+                "workingSet": 34144256,
+                "peakWorkingSet": 36413440,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 27972,
+                "parentPid": 33192,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 34783232,
+                "privateBytes": 44457984,
+                "workingSet": 135225344,
+                "peakWorkingSet": 135303168,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 40520,
+                "parentPid": 27972,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 1654784,
+                "privateBytes": 2662400,
+                "workingSet": 11739136,
+                "peakWorkingSet": 11747328,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 41036,
+                "parentPid": 27972,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 27119616,
+                "privateBytes": 97153024,
+                "workingSet": 86458368,
+                "peakWorkingSet": 90513408,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 28524,
+                "parentPid": 27972,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 7442432,
+                "privateBytes": 12865536,
+                "workingSet": 43315200,
+                "peakWorkingSet": 43319296,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 19684,
+                "parentPid": 27972,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 3072000,
+                "privateBytes": 7979008,
+                "workingSet": 20971520,
+                "peakWorkingSet": 20971520,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 27668,
+                "parentPid": 27972,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 32624640,
+                "privateBytes": 43491328,
+                "workingSet": 90652672,
+                "peakWorkingSet": 91119616,
+                "valid": true,
+                "error": null
+              }
+            ]
+          },
+          {
+            "timestamp": "2026-10-16T02:54:10.7693803Z",
+            "elapsedMs": 3049.8418,
+            "valid": true,
+            "privateWorkingSet": 111353856,
+            "privateBytes": 215031808,
+            "workingSet": 422481920,
+            "processes": [
+              {
+                "pid": 33192,
+                "parentPid": 34616,
+                "name": "shiye-text-qa.exe",
+                "privateWorkingSet": 4763648,
+                "privateBytes": 6524928,
+                "workingSet": 34144256,
+                "peakWorkingSet": 36413440,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 27972,
+                "parentPid": 33192,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 34684928,
+                "privateBytes": 44363776,
+                "workingSet": 135147520,
+                "peakWorkingSet": 135303168,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 40520,
+                "parentPid": 27972,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 1654784,
+                "privateBytes": 2662400,
+                "workingSet": 11739136,
+                "peakWorkingSet": 11747328,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 41036,
+                "parentPid": 27972,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 27103232,
+                "privateBytes": 97136640,
+                "workingSet": 86466560,
+                "peakWorkingSet": 90513408,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 28524,
+                "parentPid": 27972,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 7442432,
+                "privateBytes": 12865536,
+                "workingSet": 43315200,
+                "peakWorkingSet": 43319296,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 19684,
+                "parentPid": 27972,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 3072000,
+                "privateBytes": 7979008,
+                "workingSet": 20971520,
+                "peakWorkingSet": 20971520,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 27668,
+                "parentPid": 27972,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 32632832,
+                "privateBytes": 43499520,
+                "workingSet": 90697728,
+                "peakWorkingSet": 91119616,
+                "valid": true,
+                "error": null
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "dual",
+      "round": 1,
+      "budgetMiB": 260,
+      "pass": true,
+      "raw": {
+        "method": "Toolhelp owner + recursive descendants; PSAPI QueryWorkingSet non-shared resident pages; GetProcessMemoryInfo PROCESS_MEMORY_COUNTERS_EX.PrivateUsage",
+        "references": [
+          "https://learn.microsoft.com/en-us/windows/win32/api/psapi/ns-psapi-psapi_working_set_block",
+          "https://learn.microsoft.com/en-us/windows/win32/api/psapi/nf-psapi-queryworkingset",
+          "https://learn.microsoft.com/en-us/windows/win32/api/psapi/ns-psapi-process_memory_counters_ex"
+        ],
+        "appPid": 33192,
+        "sampleCount": 3,
+        "validSamples": 3,
+        "complete": true,
+        "observationWindowMs": 3064.3171,
+        "pageSize": 4096,
+        "p95MiB": 130.2109375,
+        "peakMiB": 130.2109375,
+        "privateBytesP95MiB": 233.9609375,
+        "privateBytesPeakMiB": 233.9609375,
+        "meanIntervalSeconds": 0.99727565,
+        "samples": [
+          {
+            "timestamp": "2026-10-16T02:54:14.3327886Z",
+            "elapsedMs": 1071.9121,
+            "valid": true,
+            "privateWorkingSet": 136536064,
+            "privateBytes": 245325824,
+            "workingSet": 453214208,
+            "processes": [
+              {
+                "pid": 33192,
+                "parentPid": 34616,
+                "name": "shiye-text-qa.exe",
+                "privateWorkingSet": 4935680,
+                "privateBytes": 6946816,
+                "workingSet": 34385920,
+                "peakWorkingSet": 36806656,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 27972,
+                "parentPid": 33192,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 35946496,
+                "privateBytes": 45576192,
+                "workingSet": 136806400,
+                "peakWorkingSet": 139354112,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 40520,
+                "parentPid": 27972,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 1654784,
+                "privateBytes": 2662400,
+                "workingSet": 11739136,
+                "peakWorkingSet": 11747328,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 41036,
+                "parentPid": 27972,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 29913088,
+                "privateBytes": 103968768,
+                "workingSet": 89419776,
+                "peakWorkingSet": 90513408,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 28524,
+                "parentPid": 27972,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 7352320,
+                "privateBytes": 12722176,
+                "workingSet": 43229184,
+                "peakWorkingSet": 43741184,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 19684,
+                "parentPid": 27972,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 3072000,
+                "privateBytes": 7979008,
+                "workingSet": 20971520,
+                "peakWorkingSet": 20971520,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 27668,
+                "parentPid": 27972,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 53661696,
+                "privateBytes": 65470464,
+                "workingSet": 116662272,
+                "peakWorkingSet": 117903360,
+                "valid": true,
+                "error": null
+              }
+            ]
+          },
+          {
+            "timestamp": "2026-10-16T02:54:15.3156513Z",
+            "elapsedMs": 2037.1115000000002,
+            "valid": true,
+            "privateWorkingSet": 135081984,
+            "privateBytes": 243146752,
+            "workingSet": 451629056,
+            "processes": [
+              {
+                "pid": 33192,
+                "parentPid": 34616,
+                "name": "shiye-text-qa.exe",
+                "privateWorkingSet": 4935680,
+                "privateBytes": 6946816,
+                "workingSet": 34385920,
+                "peakWorkingSet": 36806656,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 27972,
+                "parentPid": 33192,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 35786752,
+                "privateBytes": 45416448,
+                "workingSet": 136667136,
+                "peakWorkingSet": 139354112,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 40520,
+                "parentPid": 27972,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 1654784,
+                "privateBytes": 2662400,
+                "workingSet": 11739136,
+                "peakWorkingSet": 11747328,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 41036,
+                "parentPid": 27972,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 29511680,
+                "privateBytes": 103489536,
+                "workingSet": 88924160,
+                "peakWorkingSet": 90513408,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 28524,
+                "parentPid": 27972,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 7360512,
+                "privateBytes": 12730368,
+                "workingSet": 43278336,
+                "peakWorkingSet": 43741184,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 19684,
+                "parentPid": 27972,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 3072000,
+                "privateBytes": 7979008,
+                "workingSet": 20971520,
+                "peakWorkingSet": 20971520,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 27668,
+                "parentPid": 27972,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 52760576,
+                "privateBytes": 63922176,
+                "workingSet": 115662848,
+                "peakWorkingSet": 117903360,
+                "valid": true,
+                "error": null
+              }
+            ]
+          },
+          {
+            "timestamp": "2026-10-16T02:54:16.3273399Z",
+            "elapsedMs": 3047.7721,
+            "valid": true,
+            "privateWorkingSet": 134975488,
+            "privateBytes": 243220480,
+            "workingSet": 451526656,
+            "processes": [
+              {
+                "pid": 33192,
+                "parentPid": 34616,
+                "name": "shiye-text-qa.exe",
+                "privateWorkingSet": 4935680,
+                "privateBytes": 6946816,
+                "workingSet": 34385920,
+                "peakWorkingSet": 36806656,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 27972,
+                "parentPid": 33192,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 35680256,
+                "privateBytes": 45359104,
+                "workingSet": 136560640,
+                "peakWorkingSet": 139354112,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 40520,
+                "parentPid": 27972,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 1654784,
+                "privateBytes": 2662400,
+                "workingSet": 11739136,
+                "peakWorkingSet": 11747328,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 41036,
+                "parentPid": 27972,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 29507584,
+                "privateBytes": 103485440,
+                "workingSet": 88920064,
+                "peakWorkingSet": 90513408,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 28524,
+                "parentPid": 27972,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 7356416,
+                "privateBytes": 12726272,
+                "workingSet": 43274240,
+                "peakWorkingSet": 43741184,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 19684,
+                "parentPid": 27972,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 3072000,
+                "privateBytes": 7979008,
+                "workingSet": 20971520,
+                "peakWorkingSet": 20971520,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 27668,
+                "parentPid": 27972,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 52768768,
+                "privateBytes": 64061440,
+                "workingSet": 115675136,
+                "peakWorkingSet": 117903360,
+                "valid": true,
+                "error": null
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "full",
+      "round": 1,
+      "budgetMiB": 320,
+      "pass": true,
+      "raw": {
+        "method": "Toolhelp owner + recursive descendants; PSAPI QueryWorkingSet non-shared resident pages; GetProcessMemoryInfo PROCESS_MEMORY_COUNTERS_EX.PrivateUsage",
+        "references": [
+          "https://learn.microsoft.com/en-us/windows/win32/api/psapi/ns-psapi-psapi_working_set_block",
+          "https://learn.microsoft.com/en-us/windows/win32/api/psapi/nf-psapi-queryworkingset",
+          "https://learn.microsoft.com/en-us/windows/win32/api/psapi/ns-psapi-process_memory_counters_ex"
+        ],
+        "appPid": 33192,
+        "sampleCount": 3,
+        "validSamples": 3,
+        "complete": true,
+        "observationWindowMs": 3055.9201000000003,
+        "pageSize": 4096,
+        "p95MiB": 195.390625,
+        "peakMiB": 195.390625,
+        "privateBytesP95MiB": 304.921875,
+        "privateBytesPeakMiB": 304.921875,
+        "meanIntervalSeconds": 0.9981716999999999,
+        "samples": [
+          {
+            "timestamp": "2026-10-16T02:54:22.9856292Z",
+            "elapsedMs": 1067.1306,
+            "valid": true,
+            "privateWorkingSet": 204881920,
+            "privateBytes": 319733760,
+            "workingSet": 524144640,
+            "processes": [
+              {
+                "pid": 33192,
+                "parentPid": 34616,
+                "name": "shiye-text-qa.exe",
+                "privateWorkingSet": 5042176,
+                "privateBytes": 7315456,
+                "workingSet": 34578432,
+                "peakWorkingSet": 46116864,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 27972,
+                "parentPid": 33192,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 36581376,
+                "privateBytes": 46383104,
+                "workingSet": 137920512,
+                "peakWorkingSet": 158908416,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 40520,
+                "parentPid": 27972,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 1654784,
+                "privateBytes": 2662400,
+                "workingSet": 11739136,
+                "peakWorkingSet": 11747328,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 41036,
+                "parentPid": 27972,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 30789632,
+                "privateBytes": 109735936,
+                "workingSet": 90275840,
+                "peakWorkingSet": 91312128,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 28524,
+                "parentPid": 27972,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 7450624,
+                "privateBytes": 12824576,
+                "workingSet": 43413504,
+                "peakWorkingSet": 45936640,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 19684,
+                "parentPid": 27972,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 3080192,
+                "privateBytes": 7987200,
+                "workingSet": 21012480,
+                "peakWorkingSet": 21012480,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 27668,
+                "parentPid": 27972,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 120283136,
+                "privateBytes": 132825088,
+                "workingSet": 185204736,
+                "peakWorkingSet": 195006464,
+                "valid": true,
+                "error": null
+              }
+            ]
+          },
+          {
+            "timestamp": "2026-10-16T02:54:23.9845334Z",
+            "elapsedMs": 2040.4697,
+            "valid": true,
+            "privateWorkingSet": 204705792,
+            "privateBytes": 319598592,
+            "workingSet": 524107776,
+            "processes": [
+              {
+                "pid": 33192,
+                "parentPid": 34616,
+                "name": "shiye-text-qa.exe",
+                "privateWorkingSet": 5042176,
+                "privateBytes": 7315456,
+                "workingSet": 34578432,
+                "peakWorkingSet": 46116864,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 27972,
+                "parentPid": 33192,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 36413440,
+                "privateBytes": 46256128,
+                "workingSet": 137891840,
+                "peakWorkingSet": 158908416,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 40520,
+                "parentPid": 27972,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 1654784,
+                "privateBytes": 2662400,
+                "workingSet": 11739136,
+                "peakWorkingSet": 11747328,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 41036,
+                "parentPid": 27972,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 30773248,
+                "privateBytes": 109719552,
+                "workingSet": 90259456,
+                "peakWorkingSet": 91312128,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 28524,
+                "parentPid": 27972,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 7450624,
+                "privateBytes": 12824576,
+                "workingSet": 43413504,
+                "peakWorkingSet": 45936640,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 19684,
+                "parentPid": 27972,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 3080192,
+                "privateBytes": 7987200,
+                "workingSet": 21012480,
+                "peakWorkingSet": 21012480,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 27668,
+                "parentPid": 27972,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 120291328,
+                "privateBytes": 132833280,
+                "workingSet": 185212928,
+                "peakWorkingSet": 195006464,
+                "valid": true,
+                "error": null
+              }
+            ]
+          },
+          {
+            "timestamp": "2026-10-16T02:54:24.9819726Z",
+            "elapsedMs": 3037.3862000000004,
+            "valid": true,
+            "privateWorkingSet": 204795904,
+            "privateBytes": 319610880,
+            "workingSet": 524197888,
+            "processes": [
+              {
+                "pid": 33192,
+                "parentPid": 34616,
+                "name": "shiye-text-qa.exe",
+                "privateWorkingSet": 5042176,
+                "privateBytes": 7315456,
+                "workingSet": 34578432,
+                "peakWorkingSet": 46116864,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 27972,
+                "parentPid": 33192,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 36515840,
+                "privateBytes": 46280704,
+                "workingSet": 137994240,
+                "peakWorkingSet": 158908416,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 40520,
+                "parentPid": 27972,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 1654784,
+                "privateBytes": 2662400,
+                "workingSet": 11739136,
+                "peakWorkingSet": 11747328,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 41036,
+                "parentPid": 27972,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 30760960,
+                "privateBytes": 109707264,
+                "workingSet": 90247168,
+                "peakWorkingSet": 91312128,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 28524,
+                "parentPid": 27972,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 7450624,
+                "privateBytes": 12824576,
+                "workingSet": 43413504,
+                "peakWorkingSet": 45936640,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 19684,
+                "parentPid": 27972,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 3080192,
+                "privateBytes": 7987200,
+                "workingSet": 21012480,
+                "peakWorkingSet": 21012480,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 27668,
+                "parentPid": 27972,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 120291328,
+                "privateBytes": 132833280,
+                "workingSet": 185212928,
+                "peakWorkingSet": 195006464,
+                "valid": true,
+                "error": null
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "hidden-unloaded",
+      "round": 1,
+      "budgetMiB": 120,
+      "pass": true,
+      "raw": {
+        "method": "Toolhelp owner + recursive descendants; PSAPI QueryWorkingSet non-shared resident pages; GetProcessMemoryInfo PROCESS_MEMORY_COUNTERS_EX.PrivateUsage",
+        "references": [
+          "https://learn.microsoft.com/en-us/windows/win32/api/psapi/ns-psapi-psapi_working_set_block",
+          "https://learn.microsoft.com/en-us/windows/win32/api/psapi/nf-psapi-queryworkingset",
+          "https://learn.microsoft.com/en-us/windows/win32/api/psapi/ns-psapi-process_memory_counters_ex"
+        ],
+        "appPid": 33192,
+        "sampleCount": 3,
+        "validSamples": 3,
+        "complete": true,
+        "observationWindowMs": 3043.1761,
+        "pageSize": 4096,
+        "p95MiB": 4.8671875,
+        "peakMiB": 4.8671875,
+        "privateBytesP95MiB": 7.87890625,
+        "privateBytesPeakMiB": 7.87890625,
+        "meanIntervalSeconds": 1.00245905,
+        "samples": [
+          {
+            "timestamp": "2026-10-16T02:54:28.3107066Z",
+            "elapsedMs": 1043.5102,
+            "valid": true,
+            "privateWorkingSet": 5103616,
+            "privateBytes": 8261632,
+            "workingSet": 34955264,
+            "processes": [
+              {
+                "pid": 33192,
+                "parentPid": 34616,
+                "name": "shiye-text-qa.exe",
+                "privateWorkingSet": 5103616,
+                "privateBytes": 8261632,
+                "workingSet": 34955264,
+                "peakWorkingSet": 46116864,
+                "valid": true,
+                "error": null
+              }
+            ]
+          },
+          {
+            "timestamp": "2026-10-16T02:54:29.3058122Z",
+            "elapsedMs": 2025.7723,
+            "valid": true,
+            "privateWorkingSet": 5103616,
+            "privateBytes": 8261632,
+            "workingSet": 34955264,
+            "processes": [
+              {
+                "pid": 33192,
+                "parentPid": 34616,
+                "name": "shiye-text-qa.exe",
+                "privateWorkingSet": 5103616,
+                "privateBytes": 8261632,
+                "workingSet": 34955264,
+                "peakWorkingSet": 46116864,
+                "valid": true,
+                "error": null
+              }
+            ]
+          },
+          {
+            "timestamp": "2026-10-16T02:54:30.3156247Z",
+            "elapsedMs": 3025.7344000000003,
+            "valid": true,
+            "privateWorkingSet": 5103616,
+            "privateBytes": 8261632,
+            "workingSet": 34955264,
+            "processes": [
+              {
+                "pid": 33192,
+                "parentPid": 34616,
+                "name": "shiye-text-qa.exe",
+                "privateWorkingSet": 5103616,
+                "privateBytes": 8261632,
+                "workingSet": 34955264,
+                "peakWorkingSet": 46116864,
+                "valid": true,
+                "error": null
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "wake": [
+    {
+      "name": "retained",
+      "budgetMs": 300,
+      "sampleCount": 2,
+      "p95Ms": 366.7453999999998,
+      "nativeP95Ms": 263.08799999999997,
+      "measurements": [
+        {
+          "timestamp": "2026-10-16T02:54:39.010Z",
+          "ownerPid": 28824,
+          "launcherPid": 35780,
+          "launcherToEditableMs": 366.7453999999998,
+          "nativeToReadyMs": 263.08799999999997,
+          "cold": false
+        },
+        {
+          "timestamp": "2026-10-16T02:54:39.520Z",
+          "ownerPid": 28824,
+          "launcherPid": 38872,
+          "launcherToEditableMs": 343.8550000000032,
+          "nativeToReadyMs": 256.5483,
+          "cold": false
+        }
+      ],
+      "pass": false
+    },
+    {
+      "name": "unloaded",
+      "budgetMs": 1000,
+      "sampleCount": 2,
+      "p95Ms": 1604.7681999999986,
+      "nativeP95Ms": 1432.4162000000001,
+      "measurements": [
+        {
+          "timestamp": "2026-10-16T02:54:41.762Z",
+          "ownerPid": 28824,
+          "launcherPid": 44868,
+          "launcherToEditableMs": 990.3041999999987,
+          "nativeToReadyMs": 885.1331,
+          "cold": true
+        },
+        {
+          "timestamp": "2026-10-16T02:54:44.623Z",
+          "ownerPid": 28824,
+          "launcherPid": 11312,
+          "launcherToEditableMs": 1604.7681999999986,
+          "nativeToReadyMs": 1432.4162000000001,
+          "cold": true
+        }
+      ],
+      "pass": false
+    }
+  ],
+  "loops": [
+    {
+      "round": 1,
+      "cycles": 2,
+      "elapsedMs": 10086.008800000003,
+      "baseline": {
+        "method": "Toolhelp owner + recursive descendants; PSAPI QueryWorkingSet non-shared resident pages; GetProcessMemoryInfo PROCESS_MEMORY_COUNTERS_EX.PrivateUsage",
+        "references": [
+          "https://learn.microsoft.com/en-us/windows/win32/api/psapi/ns-psapi-psapi_working_set_block",
+          "https://learn.microsoft.com/en-us/windows/win32/api/psapi/nf-psapi-queryworkingset",
+          "https://learn.microsoft.com/en-us/windows/win32/api/psapi/ns-psapi-process_memory_counters_ex"
+        ],
+        "appPid": 28372,
+        "sampleCount": 3,
+        "validSamples": 3,
+        "complete": true,
+        "observationWindowMs": 3059.3614000000002,
+        "pageSize": 4096,
+        "p95MiB": 198.38671875,
+        "peakMiB": 198.38671875,
+        "privateBytesP95MiB": 317.2578125,
+        "privateBytesPeakMiB": 317.2578125,
+        "meanIntervalSeconds": 0.9968864,
+        "samples": [
+          {
+            "timestamp": "2026-10-16T02:54:53.7424356Z",
+            "elapsedMs": 1069.5343,
+            "valid": true,
+            "privateWorkingSet": 208023552,
+            "privateBytes": 332668928,
+            "workingSet": 535064576,
+            "processes": [
+              {
+                "pid": 28372,
+                "parentPid": 34616,
+                "name": "shiye-text-qa.exe",
+                "privateWorkingSet": 5156864,
+                "privateBytes": 7389184,
+                "workingSet": 34516992,
+                "peakWorkingSet": 46112768,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 35704,
+                "parentPid": 28372,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 35602432,
+                "privateBytes": 44298240,
+                "workingSet": 138362880,
+                "peakWorkingSet": 145924096,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 40296,
+                "parentPid": 35704,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 1654784,
+                "privateBytes": 2662400,
+                "workingSet": 11735040,
+                "peakWorkingSet": 11743232,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 38648,
+                "parentPid": 35704,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 29429760,
+                "privateBytes": 114511872,
+                "workingSet": 94687232,
+                "peakWorkingSet": 95670272,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 41436,
+                "parentPid": 35704,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 7352320,
+                "privateBytes": 12709888,
+                "workingSet": 43245568,
+                "peakWorkingSet": 45727744,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 36388,
+                "parentPid": 35704,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 3051520,
+                "privateBytes": 7970816,
+                "workingSet": 20967424,
+                "peakWorkingSet": 20967424,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 26060,
+                "parentPid": 35704,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 125775872,
+                "privateBytes": 143126528,
+                "workingSet": 191549440,
+                "peakWorkingSet": 200056832,
+                "valid": true,
+                "error": null
+              }
+            ]
+          },
+          {
+            "timestamp": "2026-10-16T02:54:54.7418392Z",
+            "elapsedMs": 2048.3607,
+            "valid": true,
+            "privateWorkingSet": 207867904,
+            "privateBytes": 332509184,
+            "workingSet": 534933504,
+            "processes": [
+              {
+                "pid": 28372,
+                "parentPid": 34616,
+                "name": "shiye-text-qa.exe",
+                "privateWorkingSet": 5156864,
+                "privateBytes": 7389184,
+                "workingSet": 34516992,
+                "peakWorkingSet": 46112768,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 35704,
+                "parentPid": 28372,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 35516416,
+                "privateBytes": 44208128,
+                "workingSet": 138301440,
+                "peakWorkingSet": 145924096,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 40296,
+                "parentPid": 35704,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 1654784,
+                "privateBytes": 2662400,
+                "workingSet": 11735040,
+                "peakWorkingSet": 11743232,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 38648,
+                "parentPid": 35704,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 29364224,
+                "privateBytes": 114446336,
+                "workingSet": 94621696,
+                "peakWorkingSet": 95670272,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 41436,
+                "parentPid": 35704,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 7348224,
+                "privateBytes": 12705792,
+                "workingSet": 43241472,
+                "peakWorkingSet": 45727744,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 36388,
+                "parentPid": 35704,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 3051520,
+                "privateBytes": 7970816,
+                "workingSet": 20967424,
+                "peakWorkingSet": 20967424,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 26060,
+                "parentPid": 35704,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 125775872,
+                "privateBytes": 143126528,
+                "workingSet": 191549440,
+                "peakWorkingSet": 200056832,
+                "valid": true,
+                "error": null
+              }
+            ]
+          },
+          {
+            "timestamp": "2026-10-16T02:54:55.7362084Z",
+            "elapsedMs": 3040.5681,
+            "valid": true,
+            "privateWorkingSet": 207880192,
+            "privateBytes": 332521472,
+            "workingSet": 534962176,
+            "processes": [
+              {
+                "pid": 28372,
+                "parentPid": 34616,
+                "name": "shiye-text-qa.exe",
+                "privateWorkingSet": 5156864,
+                "privateBytes": 7389184,
+                "workingSet": 34516992,
+                "peakWorkingSet": 46112768,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 35704,
+                "parentPid": 28372,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 35536896,
+                "privateBytes": 44228608,
+                "workingSet": 138338304,
+                "peakWorkingSet": 145924096,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 40296,
+                "parentPid": 35704,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 1654784,
+                "privateBytes": 2662400,
+                "workingSet": 11735040,
+                "peakWorkingSet": 11743232,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 38648,
+                "parentPid": 35704,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 29356032,
+                "privateBytes": 114438144,
+                "workingSet": 94613504,
+                "peakWorkingSet": 95670272,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 41436,
+                "parentPid": 35704,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 7348224,
+                "privateBytes": 12705792,
+                "workingSet": 43241472,
+                "peakWorkingSet": 45727744,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 36388,
+                "parentPid": 35704,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 3051520,
+                "privateBytes": 7970816,
+                "workingSet": 20967424,
+                "peakWorkingSet": 20967424,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 26060,
+                "parentPid": 35704,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 125775872,
+                "privateBytes": 143126528,
+                "workingSet": 191549440,
+                "peakWorkingSet": 200056832,
+                "valid": true,
+                "error": null
+              }
+            ]
+          }
+        ]
+      },
+      "after": {
+        "method": "Toolhelp owner + recursive descendants; PSAPI QueryWorkingSet non-shared resident pages; GetProcessMemoryInfo PROCESS_MEMORY_COUNTERS_EX.PrivateUsage",
+        "references": [
+          "https://learn.microsoft.com/en-us/windows/win32/api/psapi/ns-psapi-psapi_working_set_block",
+          "https://learn.microsoft.com/en-us/windows/win32/api/psapi/nf-psapi-queryworkingset",
+          "https://learn.microsoft.com/en-us/windows/win32/api/psapi/ns-psapi-process_memory_counters_ex"
+        ],
+        "appPid": 28372,
+        "sampleCount": 3,
+        "validSamples": 3,
+        "complete": true,
+        "observationWindowMs": 3069.2412,
+        "pageSize": 4096,
+        "p95MiB": 224.5234375,
+        "peakMiB": 224.5234375,
+        "privateBytesP95MiB": 339.7734375,
+        "privateBytesPeakMiB": 339.7734375,
+        "meanIntervalSeconds": 1.0040665500000001,
+        "samples": [
+          {
+            "timestamp": "2026-10-16T02:55:03.8091693Z",
+            "elapsedMs": 1057.3223,
+            "valid": true,
+            "privateWorkingSet": 235409408,
+            "privateBytes": 356278272,
+            "workingSet": 567496704,
+            "processes": [
+              {
+                "pid": 28372,
+                "parentPid": 34616,
+                "name": "shiye-text-qa.exe",
+                "privateWorkingSet": 5156864,
+                "privateBytes": 7147520,
+                "workingSet": 34607104,
+                "peakWorkingSet": 46190592,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 35704,
+                "parentPid": 28372,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 36634624,
+                "privateBytes": 46338048,
+                "workingSet": 141262848,
+                "peakWorkingSet": 162807808,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 40296,
+                "parentPid": 35704,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 1654784,
+                "privateBytes": 2662400,
+                "workingSet": 11735040,
+                "peakWorkingSet": 11743232,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 38648,
+                "parentPid": 35704,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 30789632,
+                "privateBytes": 112050176,
+                "workingSet": 96149504,
+                "peakWorkingSet": 96886784,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 41436,
+                "parentPid": 35704,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 7446528,
+                "privateBytes": 12808192,
+                "workingSet": 43417600,
+                "peakWorkingSet": 45940736,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 36388,
+                "parentPid": 35704,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 3051520,
+                "privateBytes": 7970816,
+                "workingSet": 20967424,
+                "peakWorkingSet": 20967424,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 26060,
+                "parentPid": 35704,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 150675456,
+                "privateBytes": 167301120,
+                "workingSet": 219357184,
+                "peakWorkingSet": 231514112,
+                "valid": true,
+                "error": null
+              }
+            ]
+          },
+          {
+            "timestamp": "2026-10-16T02:55:04.8174181Z",
+            "elapsedMs": 2048.003,
+            "valid": true,
+            "privateWorkingSet": 235429888,
+            "privateBytes": 356257792,
+            "workingSet": 567472128,
+            "processes": [
+              {
+                "pid": 28372,
+                "parentPid": 34616,
+                "name": "shiye-text-qa.exe",
+                "privateWorkingSet": 5156864,
+                "privateBytes": 7147520,
+                "workingSet": 34607104,
+                "peakWorkingSet": 46190592,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 35704,
+                "parentPid": 28372,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 36667392,
+                "privateBytes": 46370816,
+                "workingSet": 141414400,
+                "peakWorkingSet": 162807808,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 40296,
+                "parentPid": 35704,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 1654784,
+                "privateBytes": 2662400,
+                "workingSet": 11735040,
+                "peakWorkingSet": 11743232,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 38648,
+                "parentPid": 35704,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 30777344,
+                "privateBytes": 112021504,
+                "workingSet": 96055296,
+                "peakWorkingSet": 96886784,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 41436,
+                "parentPid": 35704,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 7446528,
+                "privateBytes": 12808192,
+                "workingSet": 43417600,
+                "peakWorkingSet": 45940736,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 36388,
+                "parentPid": 35704,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 3051520,
+                "privateBytes": 7970816,
+                "workingSet": 20967424,
+                "peakWorkingSet": 20967424,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 26060,
+                "parentPid": 35704,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 150675456,
+                "privateBytes": 167276544,
+                "workingSet": 219275264,
+                "peakWorkingSet": 231514112,
+                "valid": true,
+                "error": null
+              }
+            ]
+          },
+          {
+            "timestamp": "2026-10-16T02:55:05.8173024Z",
+            "elapsedMs": 3050.6468,
+            "valid": true,
+            "privateWorkingSet": 235401216,
+            "privateBytes": 355901440,
+            "workingSet": 567443456,
+            "processes": [
+              {
+                "pid": 28372,
+                "parentPid": 34616,
+                "name": "shiye-text-qa.exe",
+                "privateWorkingSet": 5156864,
+                "privateBytes": 7147520,
+                "workingSet": 34607104,
+                "peakWorkingSet": 46190592,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 35704,
+                "parentPid": 28372,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 36651008,
+                "privateBytes": 46354432,
+                "workingSet": 141398016,
+                "peakWorkingSet": 162807808,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 40296,
+                "parentPid": 35704,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 1654784,
+                "privateBytes": 2662400,
+                "workingSet": 11735040,
+                "peakWorkingSet": 11743232,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 38648,
+                "parentPid": 35704,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 30765056,
+                "privateBytes": 111681536,
+                "workingSet": 96043008,
+                "peakWorkingSet": 96886784,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 41436,
+                "parentPid": 35704,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 7446528,
+                "privateBytes": 12808192,
+                "workingSet": 43417600,
+                "peakWorkingSet": 45940736,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 36388,
+                "parentPid": 35704,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 3051520,
+                "privateBytes": 7970816,
+                "workingSet": 20967424,
+                "peakWorkingSet": 20967424,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 26060,
+                "parentPid": 35704,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 150675456,
+                "privateBytes": 167276544,
+                "workingSet": 219275264,
+                "peakWorkingSet": 231514112,
+                "valid": true,
+                "error": null
+              }
+            ]
+          }
+        ]
+      },
+      "privateWorkingSetGrowthMiB": 26.13671875,
+      "privateBytesGrowthMiB": 22.515625,
+      "budgetGrowthMiB": 20,
+      "pass": false
+    }
+  ],
+  "stress": [
+    {
+      "totalUtf16Units": 16777216,
+      "singleFileBytes": 16776512,
+      "documents": 12,
+      "boundaryRejectedWithoutTruncation": true,
+      "inLimitEditAndSave": true,
+      "unloadedAndRecovered": true,
+      "raw": {
+        "method": "Toolhelp owner + recursive descendants; PSAPI QueryWorkingSet non-shared resident pages; GetProcessMemoryInfo PROCESS_MEMORY_COUNTERS_EX.PrivateUsage",
+        "references": [
+          "https://learn.microsoft.com/en-us/windows/win32/api/psapi/ns-psapi-psapi_working_set_block",
+          "https://learn.microsoft.com/en-us/windows/win32/api/psapi/nf-psapi-queryworkingset",
+          "https://learn.microsoft.com/en-us/windows/win32/api/psapi/ns-psapi-process_memory_counters_ex"
+        ],
+        "appPid": 12396,
+        "sampleCount": 1,
+        "validSamples": 1,
+        "complete": true,
+        "observationWindowMs": 1085.568,
+        "pageSize": 4096,
+        "p95MiB": 355.54296875,
+        "peakMiB": 355.54296875,
+        "privateBytesP95MiB": 464.8984375,
+        "privateBytesPeakMiB": 464.8984375,
+        "meanIntervalSeconds": 0,
+        "samples": [
+          {
+            "timestamp": "2026-10-16T02:55:17.3764811Z",
+            "elapsedMs": 1065.1832,
+            "valid": true,
+            "privateWorkingSet": 372813824,
+            "privateBytes": 487481344,
+            "workingSet": 688910336,
+            "processes": [
+              {
+                "pid": 12396,
+                "parentPid": 34616,
+                "name": "shiye-text-qa.exe",
+                "privateWorkingSet": 6258688,
+                "privateBytes": 8073216,
+                "workingSet": 35581952,
+                "peakWorkingSet": 206163968,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 34360,
+                "parentPid": 12396,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 33951744,
+                "privateBytes": 43560960,
+                "workingSet": 134426624,
+                "peakWorkingSet": 411574272,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 35176,
+                "parentPid": 34360,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 1658880,
+                "privateBytes": 2678784,
+                "workingSet": 11747328,
+                "peakWorkingSet": 11755520,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 37804,
+                "parentPid": 34360,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 30838784,
+                "privateBytes": 110792704,
+                "workingSet": 90476544,
+                "peakWorkingSet": 93597696,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 31068,
+                "parentPid": 34360,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 7430144,
+                "privateBytes": 12832768,
+                "workingSet": 43347968,
+                "peakWorkingSet": 77492224,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 5424,
+                "parentPid": 34360,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 3039232,
+                "privateBytes": 7938048,
+                "workingSet": 20918272,
+                "peakWorkingSet": 20922368,
+                "valid": true,
+                "error": null
+              },
+              {
+                "pid": 41324,
+                "parentPid": 34360,
+                "name": "msedgewebview2.exe",
+                "privateWorkingSet": 289636352,
+                "privateBytes": 301604864,
+                "workingSet": 352411648,
+                "peakWorkingSet": 615686144,
+                "valid": true,
+                "error": null
+              }
+            ]
+          }
+        ]
+      },
+      "note": "Maximum-body stress is separate from 100 KiB fixture budgets; profile fixture selection bypasses only native dialogs."
+    }
+  ],
+  "acceptance": {
+    "complete": false,
+    "passed": false,
+    "reason": "Instrumentation smoke only; reduced counts are not PERF-06 acceptance."
+  },
+  "sessions": [
+    {
+      "name": "memory-1",
+      "data": "D:\\lxWorkspace\\.qa\\text-perf-1792119244519\\memory-1",
+      "port": 8339,
+      "ownerPid": 33192,
+      "browserVersion": "155.0.4283.45",
+      "viewport": {
+        "width": 1180,
+        "height": 780,
+        "devicePixelRatio": 1,
+        "screenWidth": 1920,
+        "screenHeight": 1080
+      }
+    },
+    {
+      "name": "wake",
+      "data": "D:\\lxWorkspace\\.qa\\text-perf-1792119244519\\wake",
+      "port": 18089,
+      "ownerPid": 28824,
+      "browserVersion": "155.0.4283.45",
+      "viewport": {
+        "width": 1180,
+        "height": 780,
+        "devicePixelRatio": 1,
+        "screenWidth": 1920,
+        "screenHeight": 1080
+      }
+    },
+    {
+      "name": "loops-1",
+      "data": "D:\\lxWorkspace\\.qa\\text-perf-1792119244519\\loops-1",
+      "port": 55357,
+      "ownerPid": 28372,
+      "browserVersion": "155.0.4283.45",
+      "viewport": {
+        "width": 1180,
+        "height": 780,
+        "devicePixelRatio": 1,
+        "screenWidth": 1920,
+        "screenHeight": 1080
+      }
+    },
+    {
+      "name": "stress",
+      "data": "D:\\lxWorkspace\\.qa\\text-perf-1792119244519\\stress",
+      "port": 28681,
+      "ownerPid": 12396,
+      "browserVersion": "155.0.4283.45",
+      "viewport": {
+        "width": 1180,
+        "height": 780,
+        "devicePixelRatio": 1,
+        "screenWidth": 1920,
+        "screenHeight": 1080
+      }
+    }
+  ],
+  "completedAt": "2026-10-16T02:55:21.814Z"
+}

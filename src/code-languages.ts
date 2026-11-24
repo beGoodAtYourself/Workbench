@@ -2,6 +2,7 @@ import {LanguageDescription,LanguageSupport,StreamLanguage} from '@codemirror/la
 import {classHighlighter,highlightTree} from '@lezer/highlight';
 
 const plain = new LanguageSupport(StreamLanguage.define({token(stream){stream.skipToEnd();return null;}}));
+export function isFallbackSupport(support:LanguageSupport){return support===plain;}
 function entry(id:string,name:string,alias:string[],load:()=>Promise<LanguageSupport>){
  return {id,name,description:LanguageDescription.of({name,alias:[id,...alias],load:()=>load().catch(()=>plain)})};
 }
@@ -30,6 +31,17 @@ export function codeLanguage(info:string){
  return codeLanguages.find(item=>item.id===name||item.description.alias.includes(name));
 }
 export const codeDescriptions=codeLanguages.map(item=>item.description);
+// Text files use their own registry so Markdown code fences keep their original choices.
+export const textLanguages=[
+ {id:'plain',name:'纯文本',description:undefined},...codeLanguages,
+ entry('markdown','Markdown',['md','mdown'],()=>import('@codemirror/lang-markdown').then(m=>m.markdown({codeLanguages:codeDescriptions}))),
+ entry('xml','XML',['svg','xsl','xsd'],()=>import('@codemirror/legacy-modes/mode/xml').then(m=>new LanguageSupport(StreamLanguage.define(m.xml))))
+];
+export function textLanguageForPath(path:string|null):string{
+ const name=path?.replace(/\\/g,'/').split('/').pop()?.toLowerCase()??'',extension=name.includes('.')?name.split('.').pop()!:'';
+ const extensions:Record<string,string>={js:'javascript',mjs:'javascript',cjs:'javascript',ts:'typescript',mts:'typescript',cts:'typescript',jsx:'jsx',tsx:'tsx',py:'python',java:'java',c:'c',h:'c',cpp:'cpp',cc:'cpp',cxx:'cpp',hpp:'cpp',hxx:'cpp',cs:'csharp',go:'go',rs:'rust',html:'html',htm:'html',css:'css',json:'json',jsonc:'json',sql:'sql',sh:'shell',bash:'shell',zsh:'shell',ps1:'powershell',psm1:'powershell',psd1:'powershell',yaml:'yaml',yml:'yaml',md:'markdown',markdown:'markdown',mdown:'markdown',xml:'xml',svg:'xml',xsl:'xml',xslt:'xml',xsd:'xml',config:'xml'};
+ return extensions[extension]??'plain';
+}
 export const tokenHighlighter=classHighlighter;
 export const MAX_HIGHLIGHT_LENGTH=100_000;
 export type CodeToken={from:number;to:number;classes:string};

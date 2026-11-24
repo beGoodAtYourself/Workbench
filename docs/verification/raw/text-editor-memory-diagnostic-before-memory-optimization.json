@@ -1,0 +1,3369 @@
+{
+  "schema": 1,
+  "kind": "diagnostic",
+  "status": "diagnostic-complete",
+  "acceptance": false,
+  "notice": "Diagnostic CDP observations and forced GC are excluded from all PERF-06 acceptance results.",
+  "startedAt": "2026-10-16T04:11:21.989Z",
+  "executable": "D:\\lxWorkspace\\src-tauri\\target\\text-editor\\qa\\shiye-text-qa.exe",
+  "sha256": "ed4f6bb2968f032e8c9bf59597fcf763859a24c775210deedc8e479ba46ad488",
+  "runRoot": "D:\\lxWorkspace\\.qa\\text-memory-diagnostic-1792123881978",
+  "protocol": {
+    "fixture": "12 files of 100 KiB, two fixed canonical document views, two saved 100 KiB note sessions; same content and layout as full acceptance fixture",
+    "warmupCycles": 10,
+    "cycles": 100,
+    "stableBeforeMs": 10000,
+    "stableAfterMs": 60000,
+    "osSamplesPerGroup": 3,
+    "intervalMs": 1000,
+    "countsEveryCycles": 10,
+    "forcedGC": "Only after normal baseline, 100 cycles, 60 second settle and normal after measurement"
+  },
+  "references": [
+    "https://chromedevtools.github.io/devtools-protocol/tot/Runtime/#method-getHeapUsage",
+    "https://chromedevtools.github.io/devtools-protocol/tot/Memory/#method-getDOMCounters",
+    "https://chromedevtools.github.io/devtools-protocol/tot/Performance/#method-getMetrics",
+    "https://chromedevtools.github.io/devtools-protocol/tot/Target/#method-getTargets",
+    "https://chromedevtools.github.io/devtools-protocol/tot/HeapProfiler/#method-collectGarbage",
+    "https://chromedevtools.github.io/devtools-protocol/tot/HeapProfiler/#method-takeHeapSnapshot"
+  ],
+  "counts": [
+    {
+      "label": "baseline",
+      "cyclesCompleted": 0,
+      "timestamp": "2026-10-16T04:11:50.080Z",
+      "heap": {
+        "usedSize": 27505296,
+        "totalSize": 45752320,
+        "embedderHeapUsedSize": 31136592,
+        "backingStorageSize": 2193130
+      },
+      "dom": {
+        "documents": 2,
+        "nodes": 8994,
+        "jsEventListeners": 2896
+      },
+      "performance": {
+        "metrics": [
+          {
+            "name": "Timestamp",
+            "value": 263566.047476
+          },
+          {
+            "name": "AudioHandlers",
+            "value": 0
+          },
+          {
+            "name": "AudioWorkletProcessors",
+            "value": 0
+          },
+          {
+            "name": "Documents",
+            "value": 2
+          },
+          {
+            "name": "Frames",
+            "value": 1
+          },
+          {
+            "name": "JSEventListeners",
+            "value": 2896
+          },
+          {
+            "name": "LayoutObjects",
+            "value": 7698
+          },
+          {
+            "name": "MediaKeySessions",
+            "value": 0
+          },
+          {
+            "name": "MediaKeys",
+            "value": 0
+          },
+          {
+            "name": "Nodes",
+            "value": 8994
+          },
+          {
+            "name": "Resources",
+            "value": 69
+          },
+          {
+            "name": "ContextLifecycleStateObservers",
+            "value": 55
+          },
+          {
+            "name": "V8PerContextDatas",
+            "value": 2
+          },
+          {
+            "name": "WorkerGlobalScopes",
+            "value": 0
+          },
+          {
+            "name": "UACSSResources",
+            "value": 0
+          },
+          {
+            "name": "RTCPeerConnections",
+            "value": 0
+          },
+          {
+            "name": "ResourceFetchers",
+            "value": 2
+          },
+          {
+            "name": "AdSubframes",
+            "value": 0
+          },
+          {
+            "name": "DetachedScriptStates",
+            "value": 0
+          },
+          {
+            "name": "ArrayBufferContents",
+            "value": 128
+          },
+          {
+            "name": "LayoutCount",
+            "value": 655
+          },
+          {
+            "name": "RecalcStyleCount",
+            "value": 1687
+          },
+          {
+            "name": "LayoutDuration",
+            "value": 0.134366
+          },
+          {
+            "name": "RecalcStyleDuration",
+            "value": 0.28026
+          },
+          {
+            "name": "DevToolsCommandDuration",
+            "value": 0.260953
+          },
+          {
+            "name": "ScriptDuration",
+            "value": 0.138527
+          },
+          {
+            "name": "V8CompileDuration",
+            "value": 0
+          },
+          {
+            "name": "TaskDuration",
+            "value": 2.16602
+          },
+          {
+            "name": "TaskOtherDuration",
+            "value": 1.351914
+          },
+          {
+            "name": "ThreadTime",
+            "value": 2.268637
+          },
+          {
+            "name": "ProcessTime",
+            "value": 4.688335
+          },
+          {
+            "name": "JSHeapUsedSize",
+            "value": 27505296
+          },
+          {
+            "name": "JSHeapTotalSize",
+            "value": 45752320
+          },
+          {
+            "name": "FirstMeaningfulPaint",
+            "value": 0
+          },
+          {
+            "name": "DomContentLoaded",
+            "value": 263541.082047
+          },
+          {
+            "name": "NavigationStart",
+            "value": 263541.062558
+          }
+        ]
+      },
+      "targets": {
+        "targetInfos": [
+          {
+            "targetId": "661E077F6F4E57C751AB3F3EC334B701",
+            "type": "page",
+            "title": "拾页 · 个人工作台",
+            "url": "http://tauri.localhost/",
+            "attached": true,
+            "canAccessOpener": false,
+            "browserContextId": "6FE5D4C41A6D5591E51B84CE00237A52",
+            "pid": 32764
+          }
+        ]
+      },
+      "workerTargets": []
+    },
+    {
+      "label": "cycle-10",
+      "cyclesCompleted": 10,
+      "timestamp": "2026-10-16T04:11:57.447Z",
+      "heap": {
+        "usedSize": 32286148,
+        "totalSize": 63315968,
+        "embedderHeapUsedSize": 38484608,
+        "backingStorageSize": 2402644
+      },
+      "dom": {
+        "documents": 2,
+        "nodes": 10974,
+        "jsEventListeners": 3396
+      },
+      "performance": {
+        "metrics": [
+          {
+            "name": "Timestamp",
+            "value": 263573.414982
+          },
+          {
+            "name": "AudioHandlers",
+            "value": 0
+          },
+          {
+            "name": "AudioWorkletProcessors",
+            "value": 0
+          },
+          {
+            "name": "Documents",
+            "value": 2
+          },
+          {
+            "name": "Frames",
+            "value": 1
+          },
+          {
+            "name": "JSEventListeners",
+            "value": 3396
+          },
+          {
+            "name": "LayoutObjects",
+            "value": 9372
+          },
+          {
+            "name": "MediaKeySessions",
+            "value": 0
+          },
+          {
+            "name": "MediaKeys",
+            "value": 0
+          },
+          {
+            "name": "Nodes",
+            "value": 10974
+          },
+          {
+            "name": "Resources",
+            "value": 87
+          },
+          {
+            "name": "ContextLifecycleStateObservers",
+            "value": 65
+          },
+          {
+            "name": "V8PerContextDatas",
+            "value": 2
+          },
+          {
+            "name": "WorkerGlobalScopes",
+            "value": 0
+          },
+          {
+            "name": "UACSSResources",
+            "value": 0
+          },
+          {
+            "name": "RTCPeerConnections",
+            "value": 0
+          },
+          {
+            "name": "ResourceFetchers",
+            "value": 2
+          },
+          {
+            "name": "AdSubframes",
+            "value": 0
+          },
+          {
+            "name": "DetachedScriptStates",
+            "value": 0
+          },
+          {
+            "name": "ArrayBufferContents",
+            "value": 164
+          },
+          {
+            "name": "LayoutCount",
+            "value": 1267
+          },
+          {
+            "name": "RecalcStyleCount",
+            "value": 3210
+          },
+          {
+            "name": "LayoutDuration",
+            "value": 0.256816
+          },
+          {
+            "name": "RecalcStyleDuration",
+            "value": 0.541339
+          },
+          {
+            "name": "DevToolsCommandDuration",
+            "value": 0.506787
+          },
+          {
+            "name": "ScriptDuration",
+            "value": 0.257148
+          },
+          {
+            "name": "V8CompileDuration",
+            "value": 0
+          },
+          {
+            "name": "TaskDuration",
+            "value": 4.147671
+          },
+          {
+            "name": "TaskOtherDuration",
+            "value": 2.585581
+          },
+          {
+            "name": "ThreadTime",
+            "value": 4.338978
+          },
+          {
+            "name": "ProcessTime",
+            "value": 7.532266
+          },
+          {
+            "name": "JSHeapUsedSize",
+            "value": 32286148
+          },
+          {
+            "name": "JSHeapTotalSize",
+            "value": 63315968
+          },
+          {
+            "name": "FirstMeaningfulPaint",
+            "value": 0
+          },
+          {
+            "name": "DomContentLoaded",
+            "value": 263541.082047
+          },
+          {
+            "name": "NavigationStart",
+            "value": 263541.062558
+          }
+        ]
+      },
+      "targets": {
+        "targetInfos": [
+          {
+            "targetId": "661E077F6F4E57C751AB3F3EC334B701",
+            "type": "page",
+            "title": "拾页 · 个人工作台",
+            "url": "http://tauri.localhost/",
+            "attached": true,
+            "canAccessOpener": false,
+            "browserContextId": "6FE5D4C41A6D5591E51B84CE00237A52",
+            "pid": 32764
+          }
+        ]
+      },
+      "workerTargets": []
+    },
+    {
+      "label": "cycle-20",
+      "cyclesCompleted": 20,
+      "timestamp": "2026-10-16T04:12:04.937Z",
+      "heap": {
+        "usedSize": 14836272,
+        "totalSize": 60538880,
+        "embedderHeapUsedSize": 6878680,
+        "backingStorageSize": 1980116
+      },
+      "dom": {
+        "documents": 2,
+        "nodes": 3603,
+        "jsEventListeners": 792
+      },
+      "performance": {
+        "metrics": [
+          {
+            "name": "Timestamp",
+            "value": 263580.903506
+          },
+          {
+            "name": "AudioHandlers",
+            "value": 0
+          },
+          {
+            "name": "AudioWorkletProcessors",
+            "value": 0
+          },
+          {
+            "name": "Documents",
+            "value": 2
+          },
+          {
+            "name": "Frames",
+            "value": 1
+          },
+          {
+            "name": "JSEventListeners",
+            "value": 792
+          },
+          {
+            "name": "LayoutObjects",
+            "value": 996
+          },
+          {
+            "name": "MediaKeySessions",
+            "value": 0
+          },
+          {
+            "name": "MediaKeys",
+            "value": 0
+          },
+          {
+            "name": "Nodes",
+            "value": 3603
+          },
+          {
+            "name": "Resources",
+            "value": 27
+          },
+          {
+            "name": "ContextLifecycleStateObservers",
+            "value": 36
+          },
+          {
+            "name": "V8PerContextDatas",
+            "value": 2
+          },
+          {
+            "name": "WorkerGlobalScopes",
+            "value": 0
+          },
+          {
+            "name": "UACSSResources",
+            "value": 0
+          },
+          {
+            "name": "RTCPeerConnections",
+            "value": 0
+          },
+          {
+            "name": "ResourceFetchers",
+            "value": 2
+          },
+          {
+            "name": "AdSubframes",
+            "value": 0
+          },
+          {
+            "name": "DetachedScriptStates",
+            "value": 0
+          },
+          {
+            "name": "ArrayBufferContents",
+            "value": 44
+          },
+          {
+            "name": "LayoutCount",
+            "value": 1877
+          },
+          {
+            "name": "RecalcStyleCount",
+            "value": 4725
+          },
+          {
+            "name": "LayoutDuration",
+            "value": 0.382994
+          },
+          {
+            "name": "RecalcStyleDuration",
+            "value": 0.804421
+          },
+          {
+            "name": "DevToolsCommandDuration",
+            "value": 0.747815
+          },
+          {
+            "name": "ScriptDuration",
+            "value": 0.375611
+          },
+          {
+            "name": "V8CompileDuration",
+            "value": 0
+          },
+          {
+            "name": "TaskDuration",
+            "value": 6.125236
+          },
+          {
+            "name": "TaskOtherDuration",
+            "value": 3.814395
+          },
+          {
+            "name": "ThreadTime",
+            "value": 6.400506
+          },
+          {
+            "name": "ProcessTime",
+            "value": 10.328541
+          },
+          {
+            "name": "JSHeapUsedSize",
+            "value": 14836272
+          },
+          {
+            "name": "JSHeapTotalSize",
+            "value": 60538880
+          },
+          {
+            "name": "FirstMeaningfulPaint",
+            "value": 0
+          },
+          {
+            "name": "DomContentLoaded",
+            "value": 263541.082047
+          },
+          {
+            "name": "NavigationStart",
+            "value": 263541.062558
+          }
+        ]
+      },
+      "targets": {
+        "targetInfos": [
+          {
+            "targetId": "661E077F6F4E57C751AB3F3EC334B701",
+            "type": "page",
+            "title": "拾页 · 个人工作台",
+            "url": "http://tauri.localhost/",
+            "attached": true,
+            "canAccessOpener": false,
+            "browserContextId": "6FE5D4C41A6D5591E51B84CE00237A52",
+            "pid": 32764
+          }
+        ]
+      },
+      "workerTargets": []
+    },
+    {
+      "label": "cycle-30",
+      "cyclesCompleted": 30,
+      "timestamp": "2026-10-16T04:12:12.304Z",
+      "heap": {
+        "usedSize": 23546948,
+        "totalSize": 62844928,
+        "embedderHeapUsedSize": 22481616,
+        "backingStorageSize": 2191930
+      },
+      "dom": {
+        "documents": 2,
+        "nodes": 7289,
+        "jsEventListeners": 2093
+      },
+      "performance": {
+        "metrics": [
+          {
+            "name": "Timestamp",
+            "value": 263588.270548
+          },
+          {
+            "name": "AudioHandlers",
+            "value": 0
+          },
+          {
+            "name": "AudioWorkletProcessors",
+            "value": 0
+          },
+          {
+            "name": "Documents",
+            "value": 2
+          },
+          {
+            "name": "Frames",
+            "value": 1
+          },
+          {
+            "name": "JSEventListeners",
+            "value": 2093
+          },
+          {
+            "name": "LayoutObjects",
+            "value": 5184
+          },
+          {
+            "name": "MediaKeySessions",
+            "value": 0
+          },
+          {
+            "name": "MediaKeys",
+            "value": 0
+          },
+          {
+            "name": "Nodes",
+            "value": 7289
+          },
+          {
+            "name": "Resources",
+            "value": 58
+          },
+          {
+            "name": "ContextLifecycleStateObservers",
+            "value": 50
+          },
+          {
+            "name": "V8PerContextDatas",
+            "value": 2
+          },
+          {
+            "name": "WorkerGlobalScopes",
+            "value": 0
+          },
+          {
+            "name": "UACSSResources",
+            "value": 0
+          },
+          {
+            "name": "RTCPeerConnections",
+            "value": 0
+          },
+          {
+            "name": "ResourceFetchers",
+            "value": 2
+          },
+          {
+            "name": "AdSubframes",
+            "value": 0
+          },
+          {
+            "name": "DetachedScriptStates",
+            "value": 0
+          },
+          {
+            "name": "ArrayBufferContents",
+            "value": 106
+          },
+          {
+            "name": "LayoutCount",
+            "value": 2487
+          },
+          {
+            "name": "RecalcStyleCount",
+            "value": 6232
+          },
+          {
+            "name": "LayoutDuration",
+            "value": 0.51003
+          },
+          {
+            "name": "RecalcStyleDuration",
+            "value": 1.066385
+          },
+          {
+            "name": "DevToolsCommandDuration",
+            "value": 1.000973
+          },
+          {
+            "name": "ScriptDuration",
+            "value": 0.497498
+          },
+          {
+            "name": "V8CompileDuration",
+            "value": 0
+          },
+          {
+            "name": "TaskDuration",
+            "value": 8.114976
+          },
+          {
+            "name": "TaskOtherDuration",
+            "value": 5.04009
+          },
+          {
+            "name": "ThreadTime",
+            "value": 8.480602
+          },
+          {
+            "name": "ProcessTime",
+            "value": 13.115612
+          },
+          {
+            "name": "JSHeapUsedSize",
+            "value": 23546948
+          },
+          {
+            "name": "JSHeapTotalSize",
+            "value": 62844928
+          },
+          {
+            "name": "FirstMeaningfulPaint",
+            "value": 0
+          },
+          {
+            "name": "DomContentLoaded",
+            "value": 263541.082047
+          },
+          {
+            "name": "NavigationStart",
+            "value": 263541.062558
+          }
+        ]
+      },
+      "targets": {
+        "targetInfos": [
+          {
+            "targetId": "661E077F6F4E57C751AB3F3EC334B701",
+            "type": "page",
+            "title": "拾页 · 个人工作台",
+            "url": "http://tauri.localhost/",
+            "attached": true,
+            "canAccessOpener": false,
+            "browserContextId": "6FE5D4C41A6D5591E51B84CE00237A52",
+            "pid": 32764
+          }
+        ]
+      },
+      "workerTargets": []
+    },
+    {
+      "label": "cycle-40",
+      "cyclesCompleted": 40,
+      "timestamp": "2026-10-16T04:12:19.318Z",
+      "heap": {
+        "usedSize": 31696676,
+        "totalSize": 64888832,
+        "embedderHeapUsedSize": 38652152,
+        "backingStorageSize": 2402634
+      },
+      "dom": {
+        "documents": 2,
+        "nodes": 10975,
+        "jsEventListeners": 3394
+      },
+      "performance": {
+        "metrics": [
+          {
+            "name": "Timestamp",
+            "value": 263595.285091
+          },
+          {
+            "name": "AudioHandlers",
+            "value": 0
+          },
+          {
+            "name": "AudioWorkletProcessors",
+            "value": 0
+          },
+          {
+            "name": "Documents",
+            "value": 2
+          },
+          {
+            "name": "Frames",
+            "value": 1
+          },
+          {
+            "name": "JSEventListeners",
+            "value": 3394
+          },
+          {
+            "name": "LayoutObjects",
+            "value": 9372
+          },
+          {
+            "name": "MediaKeySessions",
+            "value": 0
+          },
+          {
+            "name": "MediaKeys",
+            "value": 0
+          },
+          {
+            "name": "Nodes",
+            "value": 10975
+          },
+          {
+            "name": "Resources",
+            "value": 87
+          },
+          {
+            "name": "ContextLifecycleStateObservers",
+            "value": 64
+          },
+          {
+            "name": "V8PerContextDatas",
+            "value": 2
+          },
+          {
+            "name": "WorkerGlobalScopes",
+            "value": 0
+          },
+          {
+            "name": "UACSSResources",
+            "value": 0
+          },
+          {
+            "name": "RTCPeerConnections",
+            "value": 0
+          },
+          {
+            "name": "ResourceFetchers",
+            "value": 2
+          },
+          {
+            "name": "AdSubframes",
+            "value": 0
+          },
+          {
+            "name": "DetachedScriptStates",
+            "value": 0
+          },
+          {
+            "name": "ArrayBufferContents",
+            "value": 164
+          },
+          {
+            "name": "LayoutCount",
+            "value": 3097
+          },
+          {
+            "name": "RecalcStyleCount",
+            "value": 7733
+          },
+          {
+            "name": "LayoutDuration",
+            "value": 0.633433
+          },
+          {
+            "name": "RecalcStyleDuration",
+            "value": 1.325637
+          },
+          {
+            "name": "DevToolsCommandDuration",
+            "value": 1.24724
+          },
+          {
+            "name": "ScriptDuration",
+            "value": 0.612295
+          },
+          {
+            "name": "V8CompileDuration",
+            "value": 0
+          },
+          {
+            "name": "TaskDuration",
+            "value": 10.064585
+          },
+          {
+            "name": "TaskOtherDuration",
+            "value": 6.24598
+          },
+          {
+            "name": "ThreadTime",
+            "value": 10.507725
+          },
+          {
+            "name": "ProcessTime",
+            "value": 15.842892
+          },
+          {
+            "name": "JSHeapUsedSize",
+            "value": 31696676
+          },
+          {
+            "name": "JSHeapTotalSize",
+            "value": 64888832
+          },
+          {
+            "name": "FirstMeaningfulPaint",
+            "value": 0
+          },
+          {
+            "name": "DomContentLoaded",
+            "value": 263541.082047
+          },
+          {
+            "name": "NavigationStart",
+            "value": 263541.062558
+          }
+        ]
+      },
+      "targets": {
+        "targetInfos": [
+          {
+            "targetId": "661E077F6F4E57C751AB3F3EC334B701",
+            "type": "page",
+            "title": "拾页 · 个人工作台",
+            "url": "http://tauri.localhost/",
+            "attached": true,
+            "canAccessOpener": false,
+            "browserContextId": "6FE5D4C41A6D5591E51B84CE00237A52",
+            "pid": 32764
+          }
+        ]
+      },
+      "workerTargets": []
+    },
+    {
+      "label": "cycle-50",
+      "cyclesCompleted": 50,
+      "timestamp": "2026-10-16T04:12:26.661Z",
+      "heap": {
+        "usedSize": 15234656,
+        "totalSize": 61849600,
+        "embedderHeapUsedSize": 6883424,
+        "backingStorageSize": 1979885
+      },
+      "dom": {
+        "documents": 2,
+        "nodes": 3603,
+        "jsEventListeners": 792
+      },
+      "performance": {
+        "metrics": [
+          {
+            "name": "Timestamp",
+            "value": 263602.626673
+          },
+          {
+            "name": "AudioHandlers",
+            "value": 0
+          },
+          {
+            "name": "AudioWorkletProcessors",
+            "value": 0
+          },
+          {
+            "name": "Documents",
+            "value": 2
+          },
+          {
+            "name": "Frames",
+            "value": 1
+          },
+          {
+            "name": "JSEventListeners",
+            "value": 792
+          },
+          {
+            "name": "LayoutObjects",
+            "value": 996
+          },
+          {
+            "name": "MediaKeySessions",
+            "value": 0
+          },
+          {
+            "name": "MediaKeys",
+            "value": 0
+          },
+          {
+            "name": "Nodes",
+            "value": 3603
+          },
+          {
+            "name": "Resources",
+            "value": 27
+          },
+          {
+            "name": "ContextLifecycleStateObservers",
+            "value": 36
+          },
+          {
+            "name": "V8PerContextDatas",
+            "value": 2
+          },
+          {
+            "name": "WorkerGlobalScopes",
+            "value": 0
+          },
+          {
+            "name": "UACSSResources",
+            "value": 0
+          },
+          {
+            "name": "RTCPeerConnections",
+            "value": 0
+          },
+          {
+            "name": "ResourceFetchers",
+            "value": 2
+          },
+          {
+            "name": "AdSubframes",
+            "value": 0
+          },
+          {
+            "name": "DetachedScriptStates",
+            "value": 0
+          },
+          {
+            "name": "ArrayBufferContents",
+            "value": 44
+          },
+          {
+            "name": "LayoutCount",
+            "value": 3707
+          },
+          {
+            "name": "RecalcStyleCount",
+            "value": 9265
+          },
+          {
+            "name": "LayoutDuration",
+            "value": 0.76457
+          },
+          {
+            "name": "RecalcStyleDuration",
+            "value": 1.603046
+          },
+          {
+            "name": "DevToolsCommandDuration",
+            "value": 1.499068
+          },
+          {
+            "name": "ScriptDuration",
+            "value": 0.732673
+          },
+          {
+            "name": "V8CompileDuration",
+            "value": 0
+          },
+          {
+            "name": "TaskDuration",
+            "value": 12.123022
+          },
+          {
+            "name": "TaskOtherDuration",
+            "value": 7.523665
+          },
+          {
+            "name": "ThreadTime",
+            "value": 12.649758
+          },
+          {
+            "name": "ProcessTime",
+            "value": 18.739912
+          },
+          {
+            "name": "JSHeapUsedSize",
+            "value": 15234656
+          },
+          {
+            "name": "JSHeapTotalSize",
+            "value": 61849600
+          },
+          {
+            "name": "FirstMeaningfulPaint",
+            "value": 0
+          },
+          {
+            "name": "DomContentLoaded",
+            "value": 263541.082047
+          },
+          {
+            "name": "NavigationStart",
+            "value": 263541.062558
+          }
+        ]
+      },
+      "targets": {
+        "targetInfos": [
+          {
+            "targetId": "661E077F6F4E57C751AB3F3EC334B701",
+            "type": "page",
+            "title": "拾页 · 个人工作台",
+            "url": "http://tauri.localhost/",
+            "attached": true,
+            "canAccessOpener": false,
+            "browserContextId": "6FE5D4C41A6D5591E51B84CE00237A52",
+            "pid": 32764
+          }
+        ]
+      },
+      "workerTargets": []
+    },
+    {
+      "label": "cycle-60",
+      "cyclesCompleted": 60,
+      "timestamp": "2026-10-16T04:12:33.957Z",
+      "heap": {
+        "usedSize": 12917552,
+        "totalSize": 66043904,
+        "embedderHeapUsedSize": 5740128,
+        "backingStorageSize": 722833
+      },
+      "dom": {
+        "documents": 2,
+        "nodes": 3401,
+        "jsEventListeners": 699
+      },
+      "performance": {
+        "metrics": [
+          {
+            "name": "Timestamp",
+            "value": 263609.923447
+          },
+          {
+            "name": "AudioHandlers",
+            "value": 0
+          },
+          {
+            "name": "AudioWorkletProcessors",
+            "value": 0
+          },
+          {
+            "name": "Documents",
+            "value": 2
+          },
+          {
+            "name": "Frames",
+            "value": 1
+          },
+          {
+            "name": "JSEventListeners",
+            "value": 699
+          },
+          {
+            "name": "LayoutObjects",
+            "value": 583
+          },
+          {
+            "name": "MediaKeySessions",
+            "value": 0
+          },
+          {
+            "name": "MediaKeys",
+            "value": 0
+          },
+          {
+            "name": "Nodes",
+            "value": 3401
+          },
+          {
+            "name": "Resources",
+            "value": 14
+          },
+          {
+            "name": "ContextLifecycleStateObservers",
+            "value": 35
+          },
+          {
+            "name": "V8PerContextDatas",
+            "value": 2
+          },
+          {
+            "name": "WorkerGlobalScopes",
+            "value": 0
+          },
+          {
+            "name": "UACSSResources",
+            "value": 0
+          },
+          {
+            "name": "RTCPeerConnections",
+            "value": 0
+          },
+          {
+            "name": "ResourceFetchers",
+            "value": 2
+          },
+          {
+            "name": "AdSubframes",
+            "value": 0
+          },
+          {
+            "name": "DetachedScriptStates",
+            "value": 0
+          },
+          {
+            "name": "ArrayBufferContents",
+            "value": 16
+          },
+          {
+            "name": "LayoutCount",
+            "value": 4316
+          },
+          {
+            "name": "RecalcStyleCount",
+            "value": 10778
+          },
+          {
+            "name": "LayoutDuration",
+            "value": 0.889817
+          },
+          {
+            "name": "RecalcStyleDuration",
+            "value": 1.867734
+          },
+          {
+            "name": "DevToolsCommandDuration",
+            "value": 1.74285
+          },
+          {
+            "name": "ScriptDuration",
+            "value": 0.847382
+          },
+          {
+            "name": "V8CompileDuration",
+            "value": 0
+          },
+          {
+            "name": "TaskDuration",
+            "value": 14.109097
+          },
+          {
+            "name": "TaskOtherDuration",
+            "value": 8.761314
+          },
+          {
+            "name": "ThreadTime",
+            "value": 14.717155
+          },
+          {
+            "name": "ProcessTime",
+            "value": 21.53904
+          },
+          {
+            "name": "JSHeapUsedSize",
+            "value": 12917552
+          },
+          {
+            "name": "JSHeapTotalSize",
+            "value": 66043904
+          },
+          {
+            "name": "FirstMeaningfulPaint",
+            "value": 0
+          },
+          {
+            "name": "DomContentLoaded",
+            "value": 263541.082047
+          },
+          {
+            "name": "NavigationStart",
+            "value": 263541.062558
+          }
+        ]
+      },
+      "targets": {
+        "targetInfos": [
+          {
+            "targetId": "661E077F6F4E57C751AB3F3EC334B701",
+            "type": "page",
+            "title": "拾页 · 个人工作台",
+            "url": "http://tauri.localhost/",
+            "attached": true,
+            "canAccessOpener": false,
+            "browserContextId": "6FE5D4C41A6D5591E51B84CE00237A52",
+            "pid": 32764
+          }
+        ]
+      },
+      "workerTargets": []
+    },
+    {
+      "label": "cycle-70",
+      "cyclesCompleted": 70,
+      "timestamp": "2026-10-16T04:12:40.974Z",
+      "heap": {
+        "usedSize": 38051860,
+        "totalSize": 71389184,
+        "embedderHeapUsedSize": 52886192,
+        "backingStorageSize": 2508219
+      },
+      "dom": {
+        "documents": 2,
+        "nodes": 14435,
+        "jsEventListeners": 4604
+      },
+      "performance": {
+        "metrics": [
+          {
+            "name": "Timestamp",
+            "value": 263616.939145
+          },
+          {
+            "name": "AudioHandlers",
+            "value": 0
+          },
+          {
+            "name": "AudioWorkletProcessors",
+            "value": 0
+          },
+          {
+            "name": "Documents",
+            "value": 2
+          },
+          {
+            "name": "Frames",
+            "value": 1
+          },
+          {
+            "name": "JSEventListeners",
+            "value": 4604
+          },
+          {
+            "name": "LayoutObjects",
+            "value": 13147
+          },
+          {
+            "name": "MediaKeySessions",
+            "value": 0
+          },
+          {
+            "name": "MediaKeys",
+            "value": 0
+          },
+          {
+            "name": "Nodes",
+            "value": 14435
+          },
+          {
+            "name": "Resources",
+            "value": 103
+          },
+          {
+            "name": "ContextLifecycleStateObservers",
+            "value": 78
+          },
+          {
+            "name": "V8PerContextDatas",
+            "value": 2
+          },
+          {
+            "name": "WorkerGlobalScopes",
+            "value": 0
+          },
+          {
+            "name": "UACSSResources",
+            "value": 0
+          },
+          {
+            "name": "RTCPeerConnections",
+            "value": 0
+          },
+          {
+            "name": "ResourceFetchers",
+            "value": 2
+          },
+          {
+            "name": "AdSubframes",
+            "value": 0
+          },
+          {
+            "name": "DetachedScriptStates",
+            "value": 0
+          },
+          {
+            "name": "ArrayBufferContents",
+            "value": 194
+          },
+          {
+            "name": "LayoutCount",
+            "value": 4926
+          },
+          {
+            "name": "RecalcStyleCount",
+            "value": 12296
+          },
+          {
+            "name": "LayoutDuration",
+            "value": 1.016239
+          },
+          {
+            "name": "RecalcStyleDuration",
+            "value": 2.131415
+          },
+          {
+            "name": "DevToolsCommandDuration",
+            "value": 1.978058
+          },
+          {
+            "name": "ScriptDuration",
+            "value": 0.961919
+          },
+          {
+            "name": "V8CompileDuration",
+            "value": 0
+          },
+          {
+            "name": "TaskDuration",
+            "value": 16.05986
+          },
+          {
+            "name": "TaskOtherDuration",
+            "value": 9.972229
+          },
+          {
+            "name": "ThreadTime",
+            "value": 16.744261
+          },
+          {
+            "name": "ProcessTime",
+            "value": 24.254238
+          },
+          {
+            "name": "JSHeapUsedSize",
+            "value": 38051860
+          },
+          {
+            "name": "JSHeapTotalSize",
+            "value": 71389184
+          },
+          {
+            "name": "FirstMeaningfulPaint",
+            "value": 0
+          },
+          {
+            "name": "DomContentLoaded",
+            "value": 263541.082047
+          },
+          {
+            "name": "NavigationStart",
+            "value": 263541.062558
+          }
+        ]
+      },
+      "targets": {
+        "targetInfos": [
+          {
+            "targetId": "661E077F6F4E57C751AB3F3EC334B701",
+            "type": "page",
+            "title": "拾页 · 个人工作台",
+            "url": "http://tauri.localhost/",
+            "attached": true,
+            "canAccessOpener": false,
+            "browserContextId": "6FE5D4C41A6D5591E51B84CE00237A52",
+            "pid": 32764
+          }
+        ]
+      },
+      "workerTargets": []
+    },
+    {
+      "label": "cycle-80",
+      "cyclesCompleted": 80,
+      "timestamp": "2026-10-16T04:12:48.283Z",
+      "heap": {
+        "usedSize": 23960780,
+        "totalSize": 75689984,
+        "embedderHeapUsedSize": 23364144,
+        "backingStorageSize": 2191979
+      },
+      "dom": {
+        "documents": 2,
+        "nodes": 7740,
+        "jsEventListeners": 2178
+      },
+      "performance": {
+        "metrics": [
+          {
+            "name": "Timestamp",
+            "value": 263624.248837
+          },
+          {
+            "name": "AudioHandlers",
+            "value": 0
+          },
+          {
+            "name": "AudioWorkletProcessors",
+            "value": 0
+          },
+          {
+            "name": "Documents",
+            "value": 2
+          },
+          {
+            "name": "Frames",
+            "value": 1
+          },
+          {
+            "name": "JSEventListeners",
+            "value": 2178
+          },
+          {
+            "name": "LayoutObjects",
+            "value": 5184
+          },
+          {
+            "name": "MediaKeySessions",
+            "value": 0
+          },
+          {
+            "name": "MediaKeys",
+            "value": 0
+          },
+          {
+            "name": "Nodes",
+            "value": 7740
+          },
+          {
+            "name": "Resources",
+            "value": 59
+          },
+          {
+            "name": "ContextLifecycleStateObservers",
+            "value": 54
+          },
+          {
+            "name": "V8PerContextDatas",
+            "value": 2
+          },
+          {
+            "name": "WorkerGlobalScopes",
+            "value": 0
+          },
+          {
+            "name": "UACSSResources",
+            "value": 0
+          },
+          {
+            "name": "RTCPeerConnections",
+            "value": 0
+          },
+          {
+            "name": "ResourceFetchers",
+            "value": 2
+          },
+          {
+            "name": "AdSubframes",
+            "value": 0
+          },
+          {
+            "name": "DetachedScriptStates",
+            "value": 0
+          },
+          {
+            "name": "ArrayBufferContents",
+            "value": 104
+          },
+          {
+            "name": "LayoutCount",
+            "value": 5536
+          },
+          {
+            "name": "RecalcStyleCount",
+            "value": 13810
+          },
+          {
+            "name": "LayoutDuration",
+            "value": 1.142406
+          },
+          {
+            "name": "RecalcStyleDuration",
+            "value": 2.402741
+          },
+          {
+            "name": "DevToolsCommandDuration",
+            "value": 2.226336
+          },
+          {
+            "name": "ScriptDuration",
+            "value": 1.078774
+          },
+          {
+            "name": "V8CompileDuration",
+            "value": 0
+          },
+          {
+            "name": "TaskDuration",
+            "value": 18.09012
+          },
+          {
+            "name": "TaskOtherDuration",
+            "value": 11.239863
+          },
+          {
+            "name": "ThreadTime",
+            "value": 18.855186
+          },
+          {
+            "name": "ProcessTime",
+            "value": 27.149765
+          },
+          {
+            "name": "JSHeapUsedSize",
+            "value": 23960780
+          },
+          {
+            "name": "JSHeapTotalSize",
+            "value": 75689984
+          },
+          {
+            "name": "FirstMeaningfulPaint",
+            "value": 0
+          },
+          {
+            "name": "DomContentLoaded",
+            "value": 263541.082047
+          },
+          {
+            "name": "NavigationStart",
+            "value": 263541.062558
+          }
+        ]
+      },
+      "targets": {
+        "targetInfos": [
+          {
+            "targetId": "661E077F6F4E57C751AB3F3EC334B701",
+            "type": "page",
+            "title": "拾页 · 个人工作台",
+            "url": "http://tauri.localhost/",
+            "attached": true,
+            "canAccessOpener": false,
+            "browserContextId": "6FE5D4C41A6D5591E51B84CE00237A52",
+            "pid": 32764
+          }
+        ]
+      },
+      "workerTargets": []
+    },
+    {
+      "label": "cycle-90",
+      "cyclesCompleted": 90,
+      "timestamp": "2026-10-16T04:12:55.572Z",
+      "heap": {
+        "usedSize": 41037860,
+        "totalSize": 78729216,
+        "embedderHeapUsedSize": 55445760,
+        "backingStorageSize": 2613903
+      },
+      "dom": {
+        "documents": 2,
+        "nodes": 15110,
+        "jsEventListeners": 4784
+      },
+      "performance": {
+        "metrics": [
+          {
+            "name": "Timestamp",
+            "value": 263631.53817
+          },
+          {
+            "name": "AudioHandlers",
+            "value": 0
+          },
+          {
+            "name": "AudioWorkletProcessors",
+            "value": 0
+          },
+          {
+            "name": "Documents",
+            "value": 2
+          },
+          {
+            "name": "Frames",
+            "value": 1
+          },
+          {
+            "name": "JSEventListeners",
+            "value": 4784
+          },
+          {
+            "name": "LayoutObjects",
+            "value": 13560
+          },
+          {
+            "name": "MediaKeySessions",
+            "value": 0
+          },
+          {
+            "name": "MediaKeys",
+            "value": 0
+          },
+          {
+            "name": "Nodes",
+            "value": 15110
+          },
+          {
+            "name": "Resources",
+            "value": 117
+          },
+          {
+            "name": "ContextLifecycleStateObservers",
+            "value": 84
+          },
+          {
+            "name": "V8PerContextDatas",
+            "value": 2
+          },
+          {
+            "name": "WorkerGlobalScopes",
+            "value": 0
+          },
+          {
+            "name": "UACSSResources",
+            "value": 0
+          },
+          {
+            "name": "RTCPeerConnections",
+            "value": 0
+          },
+          {
+            "name": "ResourceFetchers",
+            "value": 2
+          },
+          {
+            "name": "AdSubframes",
+            "value": 0
+          },
+          {
+            "name": "DetachedScriptStates",
+            "value": 0
+          },
+          {
+            "name": "ArrayBufferContents",
+            "value": 224
+          },
+          {
+            "name": "LayoutCount",
+            "value": 6146
+          },
+          {
+            "name": "RecalcStyleCount",
+            "value": 15325
+          },
+          {
+            "name": "LayoutDuration",
+            "value": 1.266968
+          },
+          {
+            "name": "RecalcStyleDuration",
+            "value": 2.667066
+          },
+          {
+            "name": "DevToolsCommandDuration",
+            "value": 2.470744
+          },
+          {
+            "name": "ScriptDuration",
+            "value": 1.191816
+          },
+          {
+            "name": "V8CompileDuration",
+            "value": 0
+          },
+          {
+            "name": "TaskDuration",
+            "value": 20.059912
+          },
+          {
+            "name": "TaskOtherDuration",
+            "value": 12.463318
+          },
+          {
+            "name": "ThreadTime",
+            "value": 20.899043
+          },
+          {
+            "name": "ProcessTime",
+            "value": 29.877844
+          },
+          {
+            "name": "JSHeapUsedSize",
+            "value": 41037860
+          },
+          {
+            "name": "JSHeapTotalSize",
+            "value": 78729216
+          },
+          {
+            "name": "FirstMeaningfulPaint",
+            "value": 0
+          },
+          {
+            "name": "DomContentLoaded",
+            "value": 263541.082047
+          },
+          {
+            "name": "NavigationStart",
+            "value": 263541.062558
+          }
+        ]
+      },
+      "targets": {
+        "targetInfos": [
+          {
+            "targetId": "661E077F6F4E57C751AB3F3EC334B701",
+            "type": "page",
+            "title": "拾页 · 个人工作台",
+            "url": "http://tauri.localhost/",
+            "attached": true,
+            "canAccessOpener": false,
+            "browserContextId": "6FE5D4C41A6D5591E51B84CE00237A52",
+            "pid": 32764
+          }
+        ]
+      },
+      "workerTargets": []
+    },
+    {
+      "label": "cycle-100",
+      "cyclesCompleted": 100,
+      "timestamp": "2026-10-16T04:13:02.504Z",
+      "heap": {
+        "usedSize": 23945816,
+        "totalSize": 75427840,
+        "embedderHeapUsedSize": 23497024,
+        "backingStorageSize": 2192153
+      },
+      "dom": {
+        "documents": 2,
+        "nodes": 7740,
+        "jsEventListeners": 2178
+      },
+      "performance": {
+        "metrics": [
+          {
+            "name": "Timestamp",
+            "value": 263638.469903
+          },
+          {
+            "name": "AudioHandlers",
+            "value": 0
+          },
+          {
+            "name": "AudioWorkletProcessors",
+            "value": 0
+          },
+          {
+            "name": "Documents",
+            "value": 2
+          },
+          {
+            "name": "Frames",
+            "value": 1
+          },
+          {
+            "name": "JSEventListeners",
+            "value": 2178
+          },
+          {
+            "name": "LayoutObjects",
+            "value": 5184
+          },
+          {
+            "name": "MediaKeySessions",
+            "value": 0
+          },
+          {
+            "name": "MediaKeys",
+            "value": 0
+          },
+          {
+            "name": "Nodes",
+            "value": 7740
+          },
+          {
+            "name": "Resources",
+            "value": 57
+          },
+          {
+            "name": "ContextLifecycleStateObservers",
+            "value": 54
+          },
+          {
+            "name": "V8PerContextDatas",
+            "value": 2
+          },
+          {
+            "name": "WorkerGlobalScopes",
+            "value": 0
+          },
+          {
+            "name": "UACSSResources",
+            "value": 0
+          },
+          {
+            "name": "RTCPeerConnections",
+            "value": 0
+          },
+          {
+            "name": "ResourceFetchers",
+            "value": 2
+          },
+          {
+            "name": "AdSubframes",
+            "value": 0
+          },
+          {
+            "name": "DetachedScriptStates",
+            "value": 0
+          },
+          {
+            "name": "ArrayBufferContents",
+            "value": 104
+          },
+          {
+            "name": "LayoutCount",
+            "value": 6755
+          },
+          {
+            "name": "RecalcStyleCount",
+            "value": 16810
+          },
+          {
+            "name": "LayoutDuration",
+            "value": 1.391424
+          },
+          {
+            "name": "RecalcStyleDuration",
+            "value": 2.925301
+          },
+          {
+            "name": "DevToolsCommandDuration",
+            "value": 2.711632
+          },
+          {
+            "name": "ScriptDuration",
+            "value": 1.306602
+          },
+          {
+            "name": "V8CompileDuration",
+            "value": 0
+          },
+          {
+            "name": "TaskDuration",
+            "value": 22.022253
+          },
+          {
+            "name": "TaskOtherDuration",
+            "value": 13.687294
+          },
+          {
+            "name": "ThreadTime",
+            "value": 22.936157
+          },
+          {
+            "name": "ProcessTime",
+            "value": 32.608963
+          },
+          {
+            "name": "JSHeapUsedSize",
+            "value": 23945816
+          },
+          {
+            "name": "JSHeapTotalSize",
+            "value": 75427840
+          },
+          {
+            "name": "FirstMeaningfulPaint",
+            "value": 0
+          },
+          {
+            "name": "DomContentLoaded",
+            "value": 263541.082047
+          },
+          {
+            "name": "NavigationStart",
+            "value": 263541.062558
+          }
+        ]
+      },
+      "targets": {
+        "targetInfos": [
+          {
+            "targetId": "661E077F6F4E57C751AB3F3EC334B701",
+            "type": "page",
+            "title": "拾页 · 个人工作台",
+            "url": "http://tauri.localhost/",
+            "attached": true,
+            "canAccessOpener": false,
+            "browserContextId": "6FE5D4C41A6D5591E51B84CE00237A52",
+            "pid": 32764
+          }
+        ]
+      },
+      "workerTargets": []
+    },
+    {
+      "label": "after-before-forced-gc",
+      "cyclesCompleted": 100,
+      "timestamp": "2026-10-16T04:14:07.207Z",
+      "heap": {
+        "usedSize": 11284072,
+        "totalSize": 12304384,
+        "embedderHeapUsedSize": 5409248,
+        "backingStorageSize": 719473
+      },
+      "dom": {
+        "documents": 2,
+        "nodes": 1945,
+        "jsEventListeners": 444
+      },
+      "performance": {
+        "metrics": [
+          {
+            "name": "Timestamp",
+            "value": 263703.173566
+          },
+          {
+            "name": "AudioHandlers",
+            "value": 0
+          },
+          {
+            "name": "AudioWorkletProcessors",
+            "value": 0
+          },
+          {
+            "name": "Documents",
+            "value": 2
+          },
+          {
+            "name": "Frames",
+            "value": 1
+          },
+          {
+            "name": "JSEventListeners",
+            "value": 444
+          },
+          {
+            "name": "LayoutObjects",
+            "value": 461
+          },
+          {
+            "name": "MediaKeySessions",
+            "value": 0
+          },
+          {
+            "name": "MediaKeys",
+            "value": 0
+          },
+          {
+            "name": "Nodes",
+            "value": 1945
+          },
+          {
+            "name": "Resources",
+            "value": 12
+          },
+          {
+            "name": "ContextLifecycleStateObservers",
+            "value": 24
+          },
+          {
+            "name": "V8PerContextDatas",
+            "value": 2
+          },
+          {
+            "name": "WorkerGlobalScopes",
+            "value": 0
+          },
+          {
+            "name": "UACSSResources",
+            "value": 0
+          },
+          {
+            "name": "RTCPeerConnections",
+            "value": 0
+          },
+          {
+            "name": "ResourceFetchers",
+            "value": 2
+          },
+          {
+            "name": "AdSubframes",
+            "value": 0
+          },
+          {
+            "name": "DetachedScriptStates",
+            "value": 0
+          },
+          {
+            "name": "ArrayBufferContents",
+            "value": 14
+          },
+          {
+            "name": "LayoutCount",
+            "value": 6796
+          },
+          {
+            "name": "RecalcStyleCount",
+            "value": 17131
+          },
+          {
+            "name": "LayoutDuration",
+            "value": 1.400134
+          },
+          {
+            "name": "RecalcStyleDuration",
+            "value": 2.955036
+          },
+          {
+            "name": "DevToolsCommandDuration",
+            "value": 2.726313
+          },
+          {
+            "name": "ScriptDuration",
+            "value": 1.313803
+          },
+          {
+            "name": "V8CompileDuration",
+            "value": 0
+          },
+          {
+            "name": "TaskDuration",
+            "value": 22.2743
+          },
+          {
+            "name": "TaskOtherDuration",
+            "value": 13.879014
+          },
+          {
+            "name": "ThreadTime",
+            "value": 23.204881
+          },
+          {
+            "name": "ProcessTime",
+            "value": 33.594306
+          },
+          {
+            "name": "JSHeapUsedSize",
+            "value": 11284072
+          },
+          {
+            "name": "JSHeapTotalSize",
+            "value": 12304384
+          },
+          {
+            "name": "FirstMeaningfulPaint",
+            "value": 0
+          },
+          {
+            "name": "DomContentLoaded",
+            "value": 263541.082047
+          },
+          {
+            "name": "NavigationStart",
+            "value": 263541.062558
+          }
+        ]
+      },
+      "targets": {
+        "targetInfos": [
+          {
+            "targetId": "661E077F6F4E57C751AB3F3EC334B701",
+            "type": "page",
+            "title": "拾页 · 个人工作台",
+            "url": "http://tauri.localhost/",
+            "attached": true,
+            "canAccessOpener": false,
+            "browserContextId": "6FE5D4C41A6D5591E51B84CE00237A52",
+            "pid": 32764
+          }
+        ]
+      },
+      "workerTargets": []
+    },
+    {
+      "label": "after-forced-gc",
+      "cyclesCompleted": 100,
+      "timestamp": "2026-10-16T04:14:08.245Z",
+      "heap": {
+        "usedSize": 9931528,
+        "totalSize": 10608640,
+        "embedderHeapUsedSize": 4992192,
+        "backingStorageSize": 719307
+      },
+      "dom": {
+        "documents": 2,
+        "nodes": 1945,
+        "jsEventListeners": 444
+      },
+      "performance": {
+        "metrics": [
+          {
+            "name": "Timestamp",
+            "value": 263704.212401
+          },
+          {
+            "name": "AudioHandlers",
+            "value": 0
+          },
+          {
+            "name": "AudioWorkletProcessors",
+            "value": 0
+          },
+          {
+            "name": "Documents",
+            "value": 2
+          },
+          {
+            "name": "Frames",
+            "value": 1
+          },
+          {
+            "name": "JSEventListeners",
+            "value": 444
+          },
+          {
+            "name": "LayoutObjects",
+            "value": 461
+          },
+          {
+            "name": "MediaKeySessions",
+            "value": 0
+          },
+          {
+            "name": "MediaKeys",
+            "value": 0
+          },
+          {
+            "name": "Nodes",
+            "value": 1945
+          },
+          {
+            "name": "Resources",
+            "value": 12
+          },
+          {
+            "name": "ContextLifecycleStateObservers",
+            "value": 24
+          },
+          {
+            "name": "V8PerContextDatas",
+            "value": 2
+          },
+          {
+            "name": "WorkerGlobalScopes",
+            "value": 0
+          },
+          {
+            "name": "UACSSResources",
+            "value": 0
+          },
+          {
+            "name": "RTCPeerConnections",
+            "value": 0
+          },
+          {
+            "name": "ResourceFetchers",
+            "value": 2
+          },
+          {
+            "name": "AdSubframes",
+            "value": 0
+          },
+          {
+            "name": "DetachedScriptStates",
+            "value": 0
+          },
+          {
+            "name": "ArrayBufferContents",
+            "value": 14
+          },
+          {
+            "name": "LayoutCount",
+            "value": 6796
+          },
+          {
+            "name": "RecalcStyleCount",
+            "value": 17135
+          },
+          {
+            "name": "LayoutDuration",
+            "value": 1.400134
+          },
+          {
+            "name": "RecalcStyleDuration",
+            "value": 2.955265
+          },
+          {
+            "name": "DevToolsCommandDuration",
+            "value": 2.726605
+          },
+          {
+            "name": "ScriptDuration",
+            "value": 1.313803
+          },
+          {
+            "name": "V8CompileDuration",
+            "value": 0
+          },
+          {
+            "name": "TaskDuration",
+            "value": 22.303551
+          },
+          {
+            "name": "TaskOtherDuration",
+            "value": 13.907744
+          },
+          {
+            "name": "ThreadTime",
+            "value": 23.231808
+          },
+          {
+            "name": "ProcessTime",
+            "value": 33.681864
+          },
+          {
+            "name": "JSHeapUsedSize",
+            "value": 9931528
+          },
+          {
+            "name": "JSHeapTotalSize",
+            "value": 10608640
+          },
+          {
+            "name": "FirstMeaningfulPaint",
+            "value": 0
+          },
+          {
+            "name": "DomContentLoaded",
+            "value": 263541.082047
+          },
+          {
+            "name": "NavigationStart",
+            "value": 263541.062558
+          }
+        ]
+      },
+      "targets": {
+        "targetInfos": [
+          {
+            "targetId": "661E077F6F4E57C751AB3F3EC334B701",
+            "type": "page",
+            "title": "拾页 · 个人工作台",
+            "url": "http://tauri.localhost/",
+            "attached": true,
+            "canAccessOpener": false,
+            "browserContextId": "6FE5D4C41A6D5591E51B84CE00237A52",
+            "pid": 32764
+          }
+        ]
+      },
+      "workerTargets": []
+    }
+  ],
+  "completedCycles": 100,
+  "harnessSha256": "33f46e62cc5ad981fd46756c0ca6ae763e5ce9851536a84b34845696b614b89f",
+  "ownerPid": 45808,
+  "port": 26202,
+  "normalBaseline": {
+    "method": "Toolhelp owner + recursive descendants; PSAPI QueryWorkingSet non-shared resident pages; GetProcessMemoryInfo PROCESS_MEMORY_COUNTERS_EX.PrivateUsage; failed child queries count as zero only after a previously opened SYNCHRONIZE handle signals termination",
+    "terminationProof": "WaitForSingleObject(handle,0) returns immediately; WAIT_OBJECT_0 proves a process object is signaled, which Microsoft documents as termination. SYNCHRONIZE is sufficient; QUERY_LIMITED_INFORMATION is not a substitute for wait rights. Failed OpenProcess, including error 87, is not proof and remains invalid. Owner failures always remain invalid.",
+    "references": [
+      "https://learn.microsoft.com/en-us/windows/win32/api/psapi/ns-psapi-psapi_working_set_block",
+      "https://learn.microsoft.com/en-us/windows/win32/api/psapi/nf-psapi-queryworkingset",
+      "https://learn.microsoft.com/en-us/windows/win32/api/psapi/ns-psapi-process_memory_counters_ex",
+      "https://learn.microsoft.com/en-us/windows/win32/api/synchapi/nf-synchapi-waitforsingleobject",
+      "https://learn.microsoft.com/en-us/windows/win32/procthread/process-security-and-access-rights",
+      "https://learn.microsoft.com/en-us/windows/win32/procthread/terminating-a-process",
+      "https://learn.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-openprocess",
+      "https://learn.microsoft.com/en-us/windows/win32/api/tlhelp32/nf-tlhelp32-process32nextw",
+      "https://learn.microsoft.com/en-us/windows/win32/api/tlhelp32/nf-tlhelp32-createtoolhelp32snapshot"
+    ],
+    "appPid": 45808,
+    "sampleCount": 3,
+    "validSamples": 3,
+    "complete": true,
+    "observationWindowMs": 3056.9646000000002,
+    "pageSize": 4096,
+    "p95MiB": 249.4609375,
+    "peakMiB": 249.4609375,
+    "privateBytesP95MiB": 337.453125,
+    "privateBytesPeakMiB": 337.453125,
+    "meanIntervalSeconds": 1.00380145,
+    "samples": [
+      {
+        "timestamp": "2026-10-16T04:11:47.9733248Z",
+        "elapsedMs": 1049.4537,
+        "valid": true,
+        "privateWorkingSet": 261533696,
+        "privateBytes": 353800192,
+        "workingSet": 579776512,
+        "processes": [
+          {
+            "pid": 45808,
+            "parentPid": 27644,
+            "name": "shiye-text-qa.exe",
+            "privateWorkingSet": 4993024,
+            "privateBytes": 7749632,
+            "workingSet": 32006144,
+            "peakWorkingSet": 43970560,
+            "valid": true,
+            "exitedDuringProbe": false,
+            "error": null,
+            "exitProof": null
+          },
+          {
+            "pid": 33284,
+            "parentPid": 45808,
+            "name": "msedgewebview2.exe",
+            "privateWorkingSet": 36179968,
+            "privateBytes": 45768704,
+            "workingSet": 137158656,
+            "peakWorkingSet": 159920128,
+            "valid": true,
+            "exitedDuringProbe": false,
+            "error": null,
+            "exitProof": null
+          },
+          {
+            "pid": 31152,
+            "parentPid": 33284,
+            "name": "msedgewebview2.exe",
+            "privateWorkingSet": 1667072,
+            "privateBytes": 2674688,
+            "workingSet": 11751424,
+            "peakWorkingSet": 11755520,
+            "valid": true,
+            "exitedDuringProbe": false,
+            "error": null,
+            "exitProof": null
+          },
+          {
+            "pid": 22548,
+            "parentPid": 33284,
+            "name": "msedgewebview2.exe",
+            "privateWorkingSet": 27090944,
+            "privateBytes": 82485248,
+            "workingSet": 86630400,
+            "peakWorkingSet": 90890240,
+            "valid": true,
+            "exitedDuringProbe": false,
+            "error": null,
+            "exitProof": null
+          },
+          {
+            "pid": 41512,
+            "parentPid": 33284,
+            "name": "msedgewebview2.exe",
+            "privateWorkingSet": 7856128,
+            "privateBytes": 13246464,
+            "workingSet": 43876352,
+            "peakWorkingSet": 46399488,
+            "valid": true,
+            "exitedDuringProbe": false,
+            "error": null,
+            "exitProof": null
+          },
+          {
+            "pid": 24420,
+            "parentPid": 33284,
+            "name": "msedgewebview2.exe",
+            "privateWorkingSet": 3100672,
+            "privateBytes": 8015872,
+            "workingSet": 21004288,
+            "peakWorkingSet": 21004288,
+            "valid": true,
+            "exitedDuringProbe": false,
+            "error": null,
+            "exitProof": null
+          },
+          {
+            "pid": 32764,
+            "parentPid": 33284,
+            "name": "msedgewebview2.exe",
+            "privateWorkingSet": 180645888,
+            "privateBytes": 193859584,
+            "workingSet": 247349248,
+            "peakWorkingSet": 258859008,
+            "valid": true,
+            "exitedDuringProbe": false,
+            "error": null,
+            "exitProof": null
+          }
+        ]
+      },
+      {
+        "timestamp": "2026-10-16T04:11:48.9827665Z",
+        "elapsedMs": 2046.9329,
+        "valid": true,
+        "privateWorkingSet": 261578752,
+        "privateBytes": 353845248,
+        "workingSet": 580104192,
+        "processes": [
+          {
+            "pid": 45808,
+            "parentPid": 27644,
+            "name": "shiye-text-qa.exe",
+            "privateWorkingSet": 4993024,
+            "privateBytes": 7749632,
+            "workingSet": 32006144,
+            "peakWorkingSet": 43970560,
+            "valid": true,
+            "exitedDuringProbe": false,
+            "error": null,
+            "exitProof": null
+          },
+          {
+            "pid": 33284,
+            "parentPid": 45808,
+            "name": "msedgewebview2.exe",
+            "privateWorkingSet": 36220928,
+            "privateBytes": 45813760,
+            "workingSet": 137482240,
+            "peakWorkingSet": 159920128,
+            "valid": true,
+            "exitedDuringProbe": false,
+            "error": null,
+            "exitProof": null
+          },
+          {
+            "pid": 31152,
+            "parentPid": 33284,
+            "name": "msedgewebview2.exe",
+            "privateWorkingSet": 1667072,
+            "privateBytes": 2674688,
+            "workingSet": 11751424,
+            "peakWorkingSet": 11755520,
+            "valid": true,
+            "exitedDuringProbe": false,
+            "error": null,
+            "exitProof": null
+          },
+          {
+            "pid": 22548,
+            "parentPid": 33284,
+            "name": "msedgewebview2.exe",
+            "privateWorkingSet": 27095040,
+            "privateBytes": 82485248,
+            "workingSet": 86634496,
+            "peakWorkingSet": 90890240,
+            "valid": true,
+            "exitedDuringProbe": false,
+            "error": null,
+            "exitProof": null
+          },
+          {
+            "pid": 41512,
+            "parentPid": 33284,
+            "name": "msedgewebview2.exe",
+            "privateWorkingSet": 7856128,
+            "privateBytes": 13246464,
+            "workingSet": 43876352,
+            "peakWorkingSet": 46399488,
+            "valid": true,
+            "exitedDuringProbe": false,
+            "error": null,
+            "exitProof": null
+          },
+          {
+            "pid": 24420,
+            "parentPid": 33284,
+            "name": "msedgewebview2.exe",
+            "privateWorkingSet": 3100672,
+            "privateBytes": 8015872,
+            "workingSet": 21004288,
+            "peakWorkingSet": 21004288,
+            "valid": true,
+            "exitedDuringProbe": false,
+            "error": null,
+            "exitProof": null
+          },
+          {
+            "pid": 32764,
+            "parentPid": 33284,
+            "name": "msedgewebview2.exe",
+            "privateWorkingSet": 180645888,
+            "privateBytes": 193859584,
+            "workingSet": 247349248,
+            "peakWorkingSet": 258859008,
+            "valid": true,
+            "exitedDuringProbe": false,
+            "error": null,
+            "exitProof": null
+          }
+        ]
+      },
+      {
+        "timestamp": "2026-10-16T04:11:49.9809277Z",
+        "elapsedMs": 3041.2505,
+        "valid": true,
+        "privateWorkingSet": 261574656,
+        "privateBytes": 353837056,
+        "workingSet": 580100096,
+        "processes": [
+          {
+            "pid": 45808,
+            "parentPid": 27644,
+            "name": "shiye-text-qa.exe",
+            "privateWorkingSet": 4993024,
+            "privateBytes": 7749632,
+            "workingSet": 32006144,
+            "peakWorkingSet": 43970560,
+            "valid": true,
+            "exitedDuringProbe": false,
+            "error": null,
+            "exitProof": null
+          },
+          {
+            "pid": 33284,
+            "parentPid": 45808,
+            "name": "msedgewebview2.exe",
+            "privateWorkingSet": 36212736,
+            "privateBytes": 45805568,
+            "workingSet": 137474048,
+            "peakWorkingSet": 159920128,
+            "valid": true,
+            "exitedDuringProbe": false,
+            "error": null,
+            "exitProof": null
+          },
+          {
+            "pid": 31152,
+            "parentPid": 33284,
+            "name": "msedgewebview2.exe",
+            "privateWorkingSet": 1667072,
+            "privateBytes": 2674688,
+            "workingSet": 11751424,
+            "peakWorkingSet": 11755520,
+            "valid": true,
+            "exitedDuringProbe": false,
+            "error": null,
+            "exitProof": null
+          },
+          {
+            "pid": 22548,
+            "parentPid": 33284,
+            "name": "msedgewebview2.exe",
+            "privateWorkingSet": 27099136,
+            "privateBytes": 82485248,
+            "workingSet": 86638592,
+            "peakWorkingSet": 90890240,
+            "valid": true,
+            "exitedDuringProbe": false,
+            "error": null,
+            "exitProof": null
+          },
+          {
+            "pid": 41512,
+            "parentPid": 33284,
+            "name": "msedgewebview2.exe",
+            "privateWorkingSet": 7856128,
+            "privateBytes": 13246464,
+            "workingSet": 43876352,
+            "peakWorkingSet": 46399488,
+            "valid": true,
+            "exitedDuringProbe": false,
+            "error": null,
+            "exitProof": null
+          },
+          {
+            "pid": 24420,
+            "parentPid": 33284,
+            "name": "msedgewebview2.exe",
+            "privateWorkingSet": 3100672,
+            "privateBytes": 8015872,
+            "workingSet": 21004288,
+            "peakWorkingSet": 21004288,
+            "valid": true,
+            "exitedDuringProbe": false,
+            "error": null,
+            "exitProof": null
+          },
+          {
+            "pid": 32764,
+            "parentPid": 33284,
+            "name": "msedgewebview2.exe",
+            "privateWorkingSet": 180645888,
+            "privateBytes": 193859584,
+            "workingSet": 247349248,
+            "peakWorkingSet": 258859008,
+            "valid": true,
+            "exitedDuringProbe": false,
+            "error": null,
+            "exitProof": null
+          }
+        ]
+      }
+    ]
+  },
+  "normalAfter": {
+    "method": "Toolhelp owner + recursive descendants; PSAPI QueryWorkingSet non-shared resident pages; GetProcessMemoryInfo PROCESS_MEMORY_COUNTERS_EX.PrivateUsage; failed child queries count as zero only after a previously opened SYNCHRONIZE handle signals termination",
+    "terminationProof": "WaitForSingleObject(handle,0) returns immediately; WAIT_OBJECT_0 proves a process object is signaled, which Microsoft documents as termination. SYNCHRONIZE is sufficient; QUERY_LIMITED_INFORMATION is not a substitute for wait rights. Failed OpenProcess, including error 87, is not proof and remains invalid. Owner failures always remain invalid.",
+    "references": [
+      "https://learn.microsoft.com/en-us/windows/win32/api/psapi/ns-psapi-psapi_working_set_block",
+      "https://learn.microsoft.com/en-us/windows/win32/api/psapi/nf-psapi-queryworkingset",
+      "https://learn.microsoft.com/en-us/windows/win32/api/psapi/ns-psapi-process_memory_counters_ex",
+      "https://learn.microsoft.com/en-us/windows/win32/api/synchapi/nf-synchapi-waitforsingleobject",
+      "https://learn.microsoft.com/en-us/windows/win32/procthread/process-security-and-access-rights",
+      "https://learn.microsoft.com/en-us/windows/win32/procthread/terminating-a-process",
+      "https://learn.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-openprocess",
+      "https://learn.microsoft.com/en-us/windows/win32/api/tlhelp32/nf-tlhelp32-process32nextw",
+      "https://learn.microsoft.com/en-us/windows/win32/api/tlhelp32/nf-tlhelp32-createtoolhelp32snapshot"
+    ],
+    "appPid": 45808,
+    "sampleCount": 3,
+    "validSamples": 3,
+    "complete": true,
+    "observationWindowMs": 3045.6048,
+    "pageSize": 4096,
+    "p95MiB": 380.7578125,
+    "peakMiB": 380.7578125,
+    "privateBytesP95MiB": 474.6953125,
+    "privateBytesPeakMiB": 474.6953125,
+    "meanIntervalSeconds": 0.99748765,
+    "samples": [
+      {
+        "timestamp": "2026-10-16T04:14:05.1157722Z",
+        "elapsedMs": 1053.0298,
+        "valid": true,
+        "privateWorkingSet": 399130624,
+        "privateBytes": 497573888,
+        "workingSet": 730378240,
+        "processes": [
+          {
+            "pid": 45808,
+            "parentPid": 27644,
+            "name": "shiye-text-qa.exe",
+            "privateWorkingSet": 6803456,
+            "privateBytes": 8626176,
+            "workingSet": 33824768,
+            "peakWorkingSet": 44937216,
+            "valid": true,
+            "exitedDuringProbe": false,
+            "error": null,
+            "exitProof": null
+          },
+          {
+            "pid": 33284,
+            "parentPid": 45808,
+            "name": "msedgewebview2.exe",
+            "privateWorkingSet": 40824832,
+            "privateBytes": 50581504,
+            "workingSet": 148705280,
+            "peakWorkingSet": 172728320,
+            "valid": true,
+            "exitedDuringProbe": false,
+            "error": null,
+            "exitProof": null
+          },
+          {
+            "pid": 31152,
+            "parentPid": 33284,
+            "name": "msedgewebview2.exe",
+            "privateWorkingSet": 1900544,
+            "privateBytes": 3215360,
+            "workingSet": 15175680,
+            "peakWorkingSet": 21581824,
+            "valid": true,
+            "exitedDuringProbe": false,
+            "error": null,
+            "exitProof": null
+          },
+          {
+            "pid": 22548,
+            "parentPid": 33284,
+            "name": "msedgewebview2.exe",
+            "privateWorkingSet": 26947584,
+            "privateBytes": 81752064,
+            "workingSet": 86999040,
+            "peakWorkingSet": 91582464,
+            "valid": true,
+            "exitedDuringProbe": false,
+            "error": null,
+            "exitProof": null
+          },
+          {
+            "pid": 41512,
+            "parentPid": 33284,
+            "name": "msedgewebview2.exe",
+            "privateWorkingSet": 8265728,
+            "privateBytes": 13574144,
+            "workingSet": 44748800,
+            "peakWorkingSet": 47816704,
+            "valid": true,
+            "exitedDuringProbe": false,
+            "error": null,
+            "exitProof": null
+          },
+          {
+            "pid": 24420,
+            "parentPid": 33284,
+            "name": "msedgewebview2.exe",
+            "privateWorkingSet": 3010560,
+            "privateBytes": 7884800,
+            "workingSet": 21192704,
+            "peakWorkingSet": 21241856,
+            "valid": true,
+            "exitedDuringProbe": false,
+            "error": null,
+            "exitProof": null
+          },
+          {
+            "pid": 32764,
+            "parentPid": 33284,
+            "name": "msedgewebview2.exe",
+            "privateWorkingSet": 311377920,
+            "privateBytes": 331939840,
+            "workingSet": 379731968,
+            "peakWorkingSet": 500449280,
+            "valid": true,
+            "exitedDuringProbe": false,
+            "error": null,
+            "exitProof": null
+          }
+        ]
+      },
+      {
+        "timestamp": "2026-10-16T04:14:06.1137814Z",
+        "elapsedMs": 2033.4324000000001,
+        "valid": true,
+        "privateWorkingSet": 399224832,
+        "privateBytes": 497729536,
+        "workingSet": 730472448,
+        "processes": [
+          {
+            "pid": 45808,
+            "parentPid": 27644,
+            "name": "shiye-text-qa.exe",
+            "privateWorkingSet": 6803456,
+            "privateBytes": 8626176,
+            "workingSet": 33824768,
+            "peakWorkingSet": 44937216,
+            "valid": true,
+            "exitedDuringProbe": false,
+            "error": null,
+            "exitProof": null
+          },
+          {
+            "pid": 33284,
+            "parentPid": 45808,
+            "name": "msedgewebview2.exe",
+            "privateWorkingSet": 40824832,
+            "privateBytes": 50581504,
+            "workingSet": 148705280,
+            "peakWorkingSet": 172728320,
+            "valid": true,
+            "exitedDuringProbe": false,
+            "error": null,
+            "exitProof": null
+          },
+          {
+            "pid": 31152,
+            "parentPid": 33284,
+            "name": "msedgewebview2.exe",
+            "privateWorkingSet": 1900544,
+            "privateBytes": 3215360,
+            "workingSet": 15175680,
+            "peakWorkingSet": 21581824,
+            "valid": true,
+            "exitedDuringProbe": false,
+            "error": null,
+            "exitProof": null
+          },
+          {
+            "pid": 22548,
+            "parentPid": 33284,
+            "name": "msedgewebview2.exe",
+            "privateWorkingSet": 26947584,
+            "privateBytes": 81752064,
+            "workingSet": 86999040,
+            "peakWorkingSet": 91582464,
+            "valid": true,
+            "exitedDuringProbe": false,
+            "error": null,
+            "exitProof": null
+          },
+          {
+            "pid": 41512,
+            "parentPid": 33284,
+            "name": "msedgewebview2.exe",
+            "privateWorkingSet": 8265728,
+            "privateBytes": 13574144,
+            "workingSet": 44748800,
+            "peakWorkingSet": 47816704,
+            "valid": true,
+            "exitedDuringProbe": false,
+            "error": null,
+            "exitProof": null
+          },
+          {
+            "pid": 24420,
+            "parentPid": 33284,
+            "name": "msedgewebview2.exe",
+            "privateWorkingSet": 3010560,
+            "privateBytes": 7884800,
+            "workingSet": 21192704,
+            "peakWorkingSet": 21241856,
+            "valid": true,
+            "exitedDuringProbe": false,
+            "error": null,
+            "exitProof": null
+          },
+          {
+            "pid": 32764,
+            "parentPid": 33284,
+            "name": "msedgewebview2.exe",
+            "privateWorkingSet": 311472128,
+            "privateBytes": 332095488,
+            "workingSet": 379826176,
+            "peakWorkingSet": 500449280,
+            "valid": true,
+            "exitedDuringProbe": false,
+            "error": null,
+            "exitProof": null
+          }
+        ]
+      },
+      {
+        "timestamp": "2026-10-16T04:14:07.1107475Z",
+        "elapsedMs": 3032.7213,
+        "valid": true,
+        "privateWorkingSet": 399253504,
+        "privateBytes": 497754112,
+        "workingSet": 730501120,
+        "processes": [
+          {
+            "pid": 45808,
+            "parentPid": 27644,
+            "name": "shiye-text-qa.exe",
+            "privateWorkingSet": 6803456,
+            "privateBytes": 8626176,
+            "workingSet": 33824768,
+            "peakWorkingSet": 44937216,
+            "valid": true,
+            "exitedDuringProbe": false,
+            "error": null,
+            "exitProof": null
+          },
+          {
+            "pid": 33284,
+            "parentPid": 45808,
+            "name": "msedgewebview2.exe",
+            "privateWorkingSet": 40824832,
+            "privateBytes": 50581504,
+            "workingSet": 148705280,
+            "peakWorkingSet": 172728320,
+            "valid": true,
+            "exitedDuringProbe": false,
+            "error": null,
+            "exitProof": null
+          },
+          {
+            "pid": 31152,
+            "parentPid": 33284,
+            "name": "msedgewebview2.exe",
+            "privateWorkingSet": 1900544,
+            "privateBytes": 3215360,
+            "workingSet": 15175680,
+            "peakWorkingSet": 21581824,
+            "valid": true,
+            "exitedDuringProbe": false,
+            "error": null,
+            "exitProof": null
+          },
+          {
+            "pid": 22548,
+            "parentPid": 33284,
+            "name": "msedgewebview2.exe",
+            "privateWorkingSet": 26947584,
+            "privateBytes": 81752064,
+            "workingSet": 86999040,
+            "peakWorkingSet": 91582464,
+            "valid": true,
+            "exitedDuringProbe": false,
+            "error": null,
+            "exitProof": null
+          },
+          {
+            "pid": 41512,
+            "parentPid": 33284,
+            "name": "msedgewebview2.exe",
+            "privateWorkingSet": 8265728,
+            "privateBytes": 13574144,
+            "workingSet": 44748800,
+            "peakWorkingSet": 47816704,
+            "valid": true,
+            "exitedDuringProbe": false,
+            "error": null,
+            "exitProof": null
+          },
+          {
+            "pid": 24420,
+            "parentPid": 33284,
+            "name": "msedgewebview2.exe",
+            "privateWorkingSet": 3010560,
+            "privateBytes": 7884800,
+            "workingSet": 21192704,
+            "peakWorkingSet": 21241856,
+            "valid": true,
+            "exitedDuringProbe": false,
+            "error": null,
+            "exitProof": null
+          },
+          {
+            "pid": 32764,
+            "parentPid": 33284,
+            "name": "msedgewebview2.exe",
+            "privateWorkingSet": 311500800,
+            "privateBytes": 332120064,
+            "workingSet": 379854848,
+            "peakWorkingSet": 500449280,
+            "valid": true,
+            "exitedDuringProbe": false,
+            "error": null,
+            "exitProof": null
+          }
+        ]
+      }
+    ]
+  },
+  "forcedGC": {
+    "requestedAt": "2026-10-16T04:14:07.213Z",
+    "completedAt": "2026-10-16T04:14:07.241Z"
+  },
+  "afterForcedGC": {
+    "method": "Toolhelp owner + recursive descendants; PSAPI QueryWorkingSet non-shared resident pages; GetProcessMemoryInfo PROCESS_MEMORY_COUNTERS_EX.PrivateUsage; failed child queries count as zero only after a previously opened SYNCHRONIZE handle signals termination",
+    "terminationProof": "WaitForSingleObject(handle,0) returns immediately; WAIT_OBJECT_0 proves a process object is signaled, which Microsoft documents as termination. SYNCHRONIZE is sufficient; QUERY_LIMITED_INFORMATION is not a substitute for wait rights. Failed OpenProcess, including error 87, is not proof and remains invalid. Owner failures always remain invalid.",
+    "references": [
+      "https://learn.microsoft.com/en-us/windows/win32/api/psapi/ns-psapi-psapi_working_set_block",
+      "https://learn.microsoft.com/en-us/windows/win32/api/psapi/nf-psapi-queryworkingset",
+      "https://learn.microsoft.com/en-us/windows/win32/api/psapi/ns-psapi-process_memory_counters_ex",
+      "https://learn.microsoft.com/en-us/windows/win32/api/synchapi/nf-synchapi-waitforsingleobject",
+      "https://learn.microsoft.com/en-us/windows/win32/procthread/process-security-and-access-rights",
+      "https://learn.microsoft.com/en-us/windows/win32/procthread/terminating-a-process",
+      "https://learn.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-openprocess",
+      "https://learn.microsoft.com/en-us/windows/win32/api/tlhelp32/nf-tlhelp32-process32nextw",
+      "https://learn.microsoft.com/en-us/windows/win32/api/tlhelp32/nf-tlhelp32-createtoolhelp32snapshot"
+    ],
+    "appPid": 45808,
+    "sampleCount": 3,
+    "validSamples": 3,
+    "complete": true,
+    "observationWindowMs": 3059.1937000000003,
+    "pageSize": 4096,
+    "p95MiB": 379.74609375,
+    "peakMiB": 379.74609375,
+    "privateBytesP95MiB": 473.01953125,
+    "privateBytesPeakMiB": 473.01953125,
+    "meanIntervalSeconds": 1.0010966,
+    "samples": [
+      {
+        "timestamp": "2026-10-16T04:14:09.5515990Z",
+        "elapsedMs": 1052.255,
+        "valid": true,
+        "privateWorkingSet": 398192640,
+        "privateBytes": 495996928,
+        "workingSet": 729448448,
+        "processes": [
+          {
+            "pid": 45808,
+            "parentPid": 27644,
+            "name": "shiye-text-qa.exe",
+            "privateWorkingSet": 6803456,
+            "privateBytes": 8626176,
+            "workingSet": 33824768,
+            "peakWorkingSet": 44937216,
+            "valid": true,
+            "exitedDuringProbe": false,
+            "error": null,
+            "exitProof": null
+          },
+          {
+            "pid": 33284,
+            "parentPid": 45808,
+            "name": "msedgewebview2.exe",
+            "privateWorkingSet": 40824832,
+            "privateBytes": 50581504,
+            "workingSet": 148705280,
+            "peakWorkingSet": 172728320,
+            "valid": true,
+            "exitedDuringProbe": false,
+            "error": null,
+            "exitProof": null
+          },
+          {
+            "pid": 31152,
+            "parentPid": 33284,
+            "name": "msedgewebview2.exe",
+            "privateWorkingSet": 1900544,
+            "privateBytes": 3215360,
+            "workingSet": 15175680,
+            "peakWorkingSet": 21581824,
+            "valid": true,
+            "exitedDuringProbe": false,
+            "error": null,
+            "exitProof": null
+          },
+          {
+            "pid": 22548,
+            "parentPid": 33284,
+            "name": "msedgewebview2.exe",
+            "privateWorkingSet": 26947584,
+            "privateBytes": 81752064,
+            "workingSet": 86999040,
+            "peakWorkingSet": 91582464,
+            "valid": true,
+            "exitedDuringProbe": false,
+            "error": null,
+            "exitProof": null
+          },
+          {
+            "pid": 41512,
+            "parentPid": 33284,
+            "name": "msedgewebview2.exe",
+            "privateWorkingSet": 8265728,
+            "privateBytes": 13574144,
+            "workingSet": 44748800,
+            "peakWorkingSet": 47816704,
+            "valid": true,
+            "exitedDuringProbe": false,
+            "error": null,
+            "exitProof": null
+          },
+          {
+            "pid": 24420,
+            "parentPid": 33284,
+            "name": "msedgewebview2.exe",
+            "privateWorkingSet": 3010560,
+            "privateBytes": 7884800,
+            "workingSet": 21192704,
+            "peakWorkingSet": 21241856,
+            "valid": true,
+            "exitedDuringProbe": false,
+            "error": null,
+            "exitProof": null
+          },
+          {
+            "pid": 32764,
+            "parentPid": 33284,
+            "name": "msedgewebview2.exe",
+            "privateWorkingSet": 310439936,
+            "privateBytes": 330362880,
+            "workingSet": 378802176,
+            "peakWorkingSet": 500449280,
+            "valid": true,
+            "exitedDuringProbe": false,
+            "error": null,
+            "exitProof": null
+          }
+        ]
+      },
+      {
+        "timestamp": "2026-10-16T04:14:10.5621637Z",
+        "elapsedMs": 2049.991,
+        "valid": true,
+        "privateWorkingSet": 398192640,
+        "privateBytes": 495996928,
+        "workingSet": 729448448,
+        "processes": [
+          {
+            "pid": 45808,
+            "parentPid": 27644,
+            "name": "shiye-text-qa.exe",
+            "privateWorkingSet": 6803456,
+            "privateBytes": 8626176,
+            "workingSet": 33824768,
+            "peakWorkingSet": 44937216,
+            "valid": true,
+            "exitedDuringProbe": false,
+            "error": null,
+            "exitProof": null
+          },
+          {
+            "pid": 33284,
+            "parentPid": 45808,
+            "name": "msedgewebview2.exe",
+            "privateWorkingSet": 40824832,
+            "privateBytes": 50581504,
+            "workingSet": 148705280,
+            "peakWorkingSet": 172728320,
+            "valid": true,
+            "exitedDuringProbe": false,
+            "error": null,
+            "exitProof": null
+          },
+          {
+            "pid": 31152,
+            "parentPid": 33284,
+            "name": "msedgewebview2.exe",
+            "privateWorkingSet": 1900544,
+            "privateBytes": 3215360,
+            "workingSet": 15175680,
+            "peakWorkingSet": 21581824,
+            "valid": true,
+            "exitedDuringProbe": false,
+            "error": null,
+            "exitProof": null
+          },
+          {
+            "pid": 22548,
+            "parentPid": 33284,
+            "name": "msedgewebview2.exe",
+            "privateWorkingSet": 26947584,
+            "privateBytes": 81752064,
+            "workingSet": 86999040,
+            "peakWorkingSet": 91582464,
+            "valid": true,
+            "exitedDuringProbe": false,
+            "error": null,
+            "exitProof": null
+          },
+          {
+            "pid": 41512,
+            "parentPid": 33284,
+            "name": "msedgewebview2.exe",
+            "privateWorkingSet": 8265728,
+            "privateBytes": 13574144,
+            "workingSet": 44748800,
+            "peakWorkingSet": 47816704,
+            "valid": true,
+            "exitedDuringProbe": false,
+            "error": null,
+            "exitProof": null
+          },
+          {
+            "pid": 24420,
+            "parentPid": 33284,
+            "name": "msedgewebview2.exe",
+            "privateWorkingSet": 3010560,
+            "privateBytes": 7884800,
+            "workingSet": 21192704,
+            "peakWorkingSet": 21241856,
+            "valid": true,
+            "exitedDuringProbe": false,
+            "error": null,
+            "exitProof": null
+          },
+          {
+            "pid": 32764,
+            "parentPid": 33284,
+            "name": "msedgewebview2.exe",
+            "privateWorkingSet": 310439936,
+            "privateBytes": 330362880,
+            "workingSet": 378802176,
+            "peakWorkingSet": 500449280,
+            "valid": true,
+            "exitedDuringProbe": false,
+            "error": null,
+            "exitProof": null
+          }
+        ]
+      },
+      {
+        "timestamp": "2026-10-16T04:14:11.5537922Z",
+        "elapsedMs": 3045.3319,
+        "valid": true,
+        "privateWorkingSet": 398082048,
+        "privateBytes": 495886336,
+        "workingSet": 729337856,
+        "processes": [
+          {
+            "pid": 45808,
+            "parentPid": 27644,
+            "name": "shiye-text-qa.exe",
+            "privateWorkingSet": 6803456,
+            "privateBytes": 8626176,
+            "workingSet": 33824768,
+            "peakWorkingSet": 44937216,
+            "valid": true,
+            "exitedDuringProbe": false,
+            "error": null,
+            "exitProof": null
+          },
+          {
+            "pid": 33284,
+            "parentPid": 45808,
+            "name": "msedgewebview2.exe",
+            "privateWorkingSet": 40824832,
+            "privateBytes": 50581504,
+            "workingSet": 148705280,
+            "peakWorkingSet": 172728320,
+            "valid": true,
+            "exitedDuringProbe": false,
+            "error": null,
+            "exitProof": null
+          },
+          {
+            "pid": 31152,
+            "parentPid": 33284,
+            "name": "msedgewebview2.exe",
+            "privateWorkingSet": 1900544,
+            "privateBytes": 3215360,
+            "workingSet": 15175680,
+            "peakWorkingSet": 21581824,
+            "valid": true,
+            "exitedDuringProbe": false,
+            "error": null,
+            "exitProof": null
+          },
+          {
+            "pid": 22548,
+            "parentPid": 33284,
+            "name": "msedgewebview2.exe",
+            "privateWorkingSet": 26836992,
+            "privateBytes": 81641472,
+            "workingSet": 86888448,
+            "peakWorkingSet": 91582464,
+            "valid": true,
+            "exitedDuringProbe": false,
+            "error": null,
+            "exitProof": null
+          },
+          {
+            "pid": 41512,
+            "parentPid": 33284,
+            "name": "msedgewebview2.exe",
+            "privateWorkingSet": 8265728,
+            "privateBytes": 13574144,
+            "workingSet": 44748800,
+            "peakWorkingSet": 47816704,
+            "valid": true,
+            "exitedDuringProbe": false,
+            "error": null,
+            "exitProof": null
+          },
+          {
+            "pid": 24420,
+            "parentPid": 33284,
+            "name": "msedgewebview2.exe",
+            "privateWorkingSet": 3010560,
+            "privateBytes": 7884800,
+            "workingSet": 21192704,
+            "peakWorkingSet": 21241856,
+            "valid": true,
+            "exitedDuringProbe": false,
+            "error": null,
+            "exitProof": null
+          },
+          {
+            "pid": 32764,
+            "parentPid": 33284,
+            "name": "msedgewebview2.exe",
+            "privateWorkingSet": 310439936,
+            "privateBytes": 330362880,
+            "workingSet": 378802176,
+            "peakWorkingSet": 500449280,
+            "valid": true,
+            "exitedDuringProbe": false,
+            "error": null,
+            "exitProof": null
+          }
+        ]
+      }
+    ]
+  },
+  "deltas": {
+    "heapUsedBeforeGcBytes": -16221224,
+    "nodesBeforeGc": -7049,
+    "heapUsedAfterGcBytes": -17573768,
+    "nodesAfterGc": -7049,
+    "normalPrivateWorkingSetMiB": 131.296875,
+    "normalPrivateBytesMiB": 137.2421875
+  },
+  "completedAt": "2026-10-16T04:14:12.304Z"
+}

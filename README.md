@@ -1,124 +1,55 @@
-# 拾页 · 个人工作台
+# 拾页 · Workbench
 
-拾页是一个 Windows 本地 Markdown 工作台。通过悬浮入口或全局快捷键打开，在两个窗格中编辑、阅读和连接笔记，也可以查看当前剪贴板文本。笔记是你选择的文件夹里的普通文件，不需要账户、数据库或云服务。
+拾页是一款 Windows 本地桌面工作台。你可以用 Markdown 写项目笔记，沿着链接在旁边查阅另一篇笔记，也可以在同一窗口打开日志、源码和配置文件。笔记保存在你选择的文件夹里，可以直接用其他编辑器打开。
 
-## 运行与安装
+![拾页浏览器演示中，左侧列出笔记文件，右侧并排阅读《使用指南》和《灵感收集》](docs/images/workbench-notes.png)
 
-当前构建平台为 **Windows 11 x64**。Windows 10、ARM64 和其他系统未完成兼容性验收。
+## 用拾页做什么
 
-- 最新编辑器改进版程序：`src-tauri/target/editor-improvements/release/shiye.exe`，双击运行。
-- 最新安装包：`src-tauri/target/editor-improvements/release/bundle/nsis/拾页_0.1.0_x64-setup.exe`。
-- 将安装包发送给其他人，对方双击安装即可，无需 Node.js 或 Rust。
-- 程序需要 Microsoft Edge WebView2 Runtime。安装包会检测运行环境，缺少时联网下载安装；已安装运行环境后，笔记功能可离线使用。此安装包不是包含 WebView2 的完全离线安装包。
-- 安装在当前用户范围。当前构建未配置代码签名。
+| 模块 | 用法 |
+| --- | --- |
+| 笔记管理 | 选择一个文件夹作为笔记库，新建或导入 `.md` 文件。将文件树中的笔记拖入正文即可插入相对链接，打开链接后两篇笔记并排显示。停止输入约半秒后自动保存。 |
+| 文本编辑 | 将日志拖入窗口，或在资源管理器中右键选择「打开方式 → 拾页」。支持 UTF-8、GBK 等编码、查找替换、选区标注和双视图。重复打开文件会回到已有标签并保留草稿，按 `Ctrl+S` 写回原文件。 |
+| 剪贴板 | 查看和刷新系统剪贴板中的当前文本。长文本可以分页阅读，离开模块后释放本次读取的内容。 |
 
-本次变更已按用户要求提前归档，正式规格位于 `openspec/specs/`。已完成检查见 [验收记录](docs/verification/README.md)，剩余项目见 [待验收清单](docs/verification/deferred-tests.md)；[归档任务清单](openspec/archive/2026-09-11-add-local-personal-workbench/tasks.md) 保留未完成标记，性能预算尚未完成整体验收。
+默认按 **Ctrl+Alt+Space** 显示或隐藏工作台，也可以点击悬浮入口或托盘图标。关闭主窗口后拾页会驻留后台，选择「设置 → 退出拾页」可完全退出。
 
-2026-09-11 的[同级文件夹修复](openspec/archive/2026-09-11-fix-sibling-folder-creation/proposal.md)已完成归档。此前的[修复版程序](src-tauri/target/folder-fix/release/shiye.exe)和[安装包](src-tauri/target/folder-fix/release/bundle/nsis/拾页_0.1.0_x64-setup.exe)保存在 `src-tauri/target/folder-fix/`，供回溯使用。
+## 在 Windows 上运行
 
-2026-09-11 的[编辑器高亮与便捷排版改进](openspec/archive/2026-09-14-improve-editor-formatting/proposal.md)修复选区底色、增加格式工具栏与代码语法颜色，并让显示模式保留普通换行，已于 2026-09-14 合并规格并归档。新版独立输出到 `src-tauri/target/editor-improvements/`，常规构建仍输出到 `src-tauri/target/release/`。使用新版前，请通过“设置 → 退出拾页”结束正在运行的旧版；单实例机制会将第二次启动转交给已运行的程序。验证详情见[本次记录](openspec/archive/2026-09-14-improve-editor-formatting/verification.md)。
+项目已在 Windows 11 x64 上验证。使用安装包时，双击 `拾页_0.1.0_x64-setup.exe` 即可安装到当前用户。桌面版依赖 Microsoft Edge WebView2 Runtime，安装程序会在缺少运行环境时联网下载。
 
-## 开始记录
+### 从源码启动
 
-1. 打开拾页，点击“选择笔记文件夹”，选择一个已有目录或新建的空目录。
-2. 左侧展示文件夹和 `.md` 文件。选中文件夹后，新建操作会在其中创建项目；选中文件时，会在同级目录创建。要建立并列文件夹，可右键文件夹或点击“更多文件操作”，选择“新建同级文件夹”。点击左上方笔记库名称或文件树空白处可返回根目录，再新建顶层文件夹；更换笔记库仍使用“选择笔记文件夹”按钮。
-3. 点击笔记，在当前活动窗格打开。已有笔记默认显示，新建笔记默认编辑。
-4. 每个窗格右上角可以独立切换“显示”和“编辑”。停止输入 500 ms 后自动保存，也可以按 `Ctrl+S`。
-
-左侧“更多文件操作”、右键菜单、`F2` 和 `Delete` 提供重命名及移至回收站操作。删除需要确认，失败不会改为永久删除。**重命名不会自动修改其他笔记中的链接**，需要自行修复引用。
-
-## 不用记 Markdown 语法也能排版
-
-编辑模式的格式工具栏提供正文、一级至三级标题、加粗、斜体、列表、任务、引用、行内代码、代码块、链接和撤销／重做。选中文字后点按钮即可生成 Markdown；标题、列表和引用处理当前行或选中行，再次应用相同格式会取消。没有选中文字时，行内格式插入可直接替换的占位文字。每次格式操作可以一步撤销，并照常自动保存；加粗和斜体也可用 `Ctrl+B`、`Ctrl+I`。
-
-从 TXT 复制文字后直接粘贴即可。显示模式现在保留段落内的单次换行，空行仍用于分段；这也会改变已有笔记里手动折行段落的显示，但不会因此改写文件。需要标题或列表时用工具栏设置，应用不会自动猜测文字结构。
-
-选中代码后点击“代码块”，选择语言并应用。支持 JavaScript、TypeScript、JSX、TSX、Python、Java、C、C++、C#、Go、Rust、HTML、CSS、JSON、SQL、Shell、PowerShell 和 YAML，以及 `js`、`ts`、`py`、`bash`、`ps1` 等常见标记。编辑和显示使用同一套语法配色；光标在已有代码块中时，该按钮改为修改语言，其他文字格式按钮暂不可用。
-
-代码块默认“纯文本”；未标明、不支持或加载失败的语言保持完整纯文本。预览中的单块代码超过 100,000 个 UTF-16 字符时显示“大代码块 · 按纯文本显示”，不会截断内容。语言模块随安装包提供，使用时无需联网。
-
-## 随时调出
-
-- 默认全局快捷键：`Ctrl+Alt+Space`。主窗口已聚焦时隐藏，隐藏或失焦时显示并聚焦。
-- 点击桌面上的“拾”悬浮入口打开；拖动改变位置。设置中可以关闭入口或更换快捷键。
-- 快捷键注册失败时，会提示原因并保留原绑定。
-- 托盘菜单可以显示主窗口、切换悬浮入口或退出。
-- 关闭主窗口会隐藏到后台。隐藏 60 秒后释放主界面，再次唤起时从磁盘恢复最近的模块、笔记、模式和滚动位置。
-- 完全结束运行，请使用“设置 → 退出拾页”或托盘“退出拾页”。
-
-## 连接笔记与双分屏
-
-把左侧的笔记拖进编辑区，在鼠标落点生成 Markdown 相对链接，例如：
-
-```md
-[项目计划](../项目/计划.md)
-```
-
-生成的路径会编码中文和特殊字符，仍然是可由其他 Markdown 工具读取的标准链接。文件夹和显示模式不能插入链接。
-
-- 显示模式单击链接打开；编辑模式使用 `Ctrl+单击`，普通单击只定位光标。
-- 从 A 打开 B，显示 `A | B`。
-- 在右侧 B 继续打开 C，显示 `B | C`。
-- 最多两个笔记窗格；目标已打开时复用会话，自身链接不会新增窗格。
-- 关闭右窗格回到单栏。发生保存问题时保留原布局和修改。
-- 支持标题片段，如 `[下一节](指南.md#下一节)`。HTTP/HTTPS 链接在系统浏览器中打开。
-
-## 保存与外部修改
-
-页脚显示“未保存”“正在保存”“已保存到本地”或保存错误。应用使用版本校验、串行写入和同目录临时文件替换，保留已有 UTF-8 BOM 和 CRLF 换行风格。
-
-其他编辑器改动了已打开的文件时，返回拾页或点击刷新会检查变化。没有未保存修改时读取新版本；存在本地修改时提示冲突，保留双方内容。点击错误旁的“处理”可重试、另存本地副本，或确认丢弃本地修改并重新载入磁盘内容。
-
-保存失败会阻止隐藏、退出、切换工作区和会移出未保存笔记的跳转。此时不要直接结束进程，应先保存副本或处理错误。自动保存不是备份；突然断电或强制结束可能失去最后尚未写入的输入。
-
-笔记必须是 UTF-8；不支持的编码会明确报错。首版不进入笔记库内部的符号链接或 Windows junction，不打开库外笔记。
-
-## 剪贴板
-
-顶部“剪贴板”显示系统当前文本，可手动刷新，可见期间自动更新。支持空内容、非文本、繁忙和读取失败状态。首版不收集历史，不写入磁盘或日志，也不修改剪贴板。
-
-最多读取并保留前 1 MiB UTF-8 文本，截断保持完整字符并显示说明。长文本分段浏览，避免一次排版大量文字或表情。离开模块或隐藏后释放快照，返回时重新读取当前内容。
-
-## 资源与大文件
-
-- 正文按打开动作读取，最多保留两个文档会话。目录按需加载，文件列表按可见范围渲染，最多展开 300 个目录。
-- 超过 2 MiB 的笔记先提示，可继续或取消；超过 64 MiB 明确拒绝，不截断后覆盖原文件。
-- 编辑器按视口创建行；撤销缓冲达到 200 次文档变更或累计 4 Mi 个插入字符时重置，保留当前正文及光标。模式切换保留上限内的撤销状态。
-- 本地 PNG/JPEG/GIF/WebP 图片上限 4 MiB、800 万像素，每个显示窗格同时保留最多两张图片，超限时显示占位。
-- 原始 HTML 作为文本展示，远程图片不会自动请求。任务列表在显示模式中只读。
-
-## 开发与构建
-
-需要 Node.js、Rust MSVC 工具链、Visual Studio C++ Build Tools、Windows SDK 和 WebView2。依赖版本由 `package-lock.json` 与 `src-tauri/Cargo.lock` 锁定。
+准备 Node.js 22.12 或更高版本、Rust MSVC 工具链、Visual Studio C++ Build Tools、Windows SDK 和 WebView2。在 PowerShell 中运行以下命令。
 
 ```powershell
-cd D:\lxWorkspace
+git clone https://github.com/beGoodAtYourself/Workbench.git
+cd Workbench
 npm ci
 npm run desktop
 ```
 
-`npm run desktop` 运行完整桌面程序。`npm run dev` 是浏览器演示，使用浏览器本地示例数据，不操作真实笔记文件或系统入口。
+如果想先看界面，在项目目录运行 `npm run dev`，打开终端显示的本地地址。浏览器演示使用独立的示例笔记。
+
+### 构建安装包
+
+```powershell
+npm run package
+```
+
+构建成功后，可执行文件位于 `src-tauri/target/release/shiye.exe`，Windows 安装包位于 `src-tauri/target/release/bundle/nsis/`。
+
+## 开发与文档
+
+桌面宿主使用 Tauri 2 和 Rust，界面使用 TypeScript、Vite 和 CodeMirror 6。
 
 ```powershell
 npm run check
 npm test
 npm run test:e2e
-cargo test --manifest-path src-tauri/Cargo.toml
-cargo clippy --manifest-path src-tauri/Cargo.toml --all-targets -- -D warnings
-npm run package
+cargo test --locked --manifest-path src-tauri/Cargo.toml
 ```
 
-安装包生成在 `src-tauri/target/release/bundle/nsis/`，源码中的 `npm run build` 仅构建界面。
-
-配置位于 Tauri 当前用户配置目录下的 `local.shiye.workbench/settings.json`，只保存目录、快捷键、窗口位置和恢复元数据。测试脚本通过 `SHIYE_DATA_DIR` 使用独立目录。`SHIYE_PROFILE=1` 仅用于验收：记录唤起时间并允许对已隐藏窗口提前触发卸载；日常运行不需要这些变量。
-
-## 项目结构
-
-| 位置 | 内容 |
-| --- | --- |
-| `src/` | TypeScript 界面、会话与保存事务、Markdown、编辑器 |
-| `src-tauri/src/` | Rust 文件操作、配置、Windows 系统入口与剪贴板 |
-| `tests/` | 状态/链接单元测试与界面回归 |
-| `scripts/` | 图标、测试数据、内存采样和原生集成验收 |
-| `openspec/` | 提案、任务和行为规格 |
-| `docs/verification/` | 验收结果与原始性能记录 |
+- 查看编辑快捷键、编码转换、草稿恢复和历次版本记录。[使用手册](docs/usage.md)
+- 了解笔记、桌面入口和资源限制的行为约定。[项目规格](openspec/specs)
+- 查阅已完成的测试和仍待验证的项目。[Windows 验收记录](docs/verification/README.md)

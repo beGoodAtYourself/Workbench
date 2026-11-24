@@ -8,5 +8,5 @@
     "windows": [],
     "security": { "csp": "default-src 'self'; connect-src ipc: http://ipc.localhost; img-src 'self' data: blob:; style-src 'self' 'unsafe-inline'; script-src 'self'; object-src 'none'; frame-src 'none'" }
   },
-  "bundle": { "active": true, "targets": ["nsis"], "icon": ["icons/icon.png", "icons/icon.ico"], "windows": { "nsis": { "displayLanguageSelector": false, "languages": ["SimpChinese"], "installMode": "currentUser" } } }
+  "bundle": { "active": true, "targets": ["nsis"], "icon": ["icons/icon.png", "icons/icon.ico"], "windows": { "nsis": { "displayLanguageSelector": false, "languages": ["SimpChinese"], "installMode": "currentUser", "template": "./windows/installer.nsi", "installerHooks": "./windows/startup-hooks.nsh" } } }
 }

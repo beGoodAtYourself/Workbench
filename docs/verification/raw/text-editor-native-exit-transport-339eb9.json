@@ -1,0 +1,102 @@
+{
+  "startedAt": "2026-10-16T04:31:20.058Z",
+  "executable": "D:\\lxWorkspace\\src-tauri\\target\\text-editor\\qa\\shiye-text-qa.exe",
+  "sha256": "339eb9dc3cfe1e817f84fae91d7c4756be827fca4313e3d729c674939ee462a5",
+  "data": "D:\\lxWorkspace\\.qa\\text-native-1792125080045",
+  "fixtures": "D:\\lxWorkspace\\.qa\\text-native-1792125080045\\files",
+  "port": 28616,
+  "scope": "Real release WebView2, synthetic files, QA-gated file selection; native dialogs verified separately. Real 60-second idle timer unless --skip-idle is recorded.",
+  "checks": [
+    {
+      "name": "Strict encoding, BOM and no-op byte preservation: utf8/lf",
+      "pass": true
+    },
+    {
+      "name": "Strict encoding, BOM and no-op byte preservation: utf8-bom/crlf",
+      "pass": true
+    },
+    {
+      "name": "Strict encoding, BOM and no-op byte preservation: utf16le/crlf",
+      "pass": true
+    },
+    {
+      "name": "Strict encoding, BOM and no-op byte preservation: utf16be/crlf",
+      "pass": true
+    },
+    {
+      "name": "Invalid UTF-8 cannot become a writable replacement-character document",
+      "pass": true
+    },
+    {
+      "name": "Binary input is rejected without modifying bytes",
+      "pass": true
+    },
+    {
+      "name": "16 MiB raw input boundary rejects a complete oversized file",
+      "pass": true
+    },
+    {
+      "name": "Unknown grant IDs and fixture-root escapes are rejected",
+      "pass": true
+    },
+    {
+      "name": "Explicit UTF-16 BE/CRLF conversion produces exact expected bytes",
+      "pass": true
+    },
+    {
+      "name": "External byte changes prevent stale writes and preserve external content",
+      "pass": true
+    },
+    {
+      "name": "Atomic external replacement invalidates the old file identity",
+      "pass": true
+    },
+    {
+      "name": "Read-only save failure leaves original bytes intact",
+      "pass": true
+    },
+    {
+      "name": "Deleted originals are never automatically recreated by save",
+      "pass": true
+    },
+    {
+      "name": "Mixed/CR line endings require explicit normalization before writing",
+      "pass": true
+    },
+    {
+      "name": "Save As without overwrite approval never replaces an existing target",
+      "pass": true
+    },
+    {
+      "name": "Real UI edits checkpoint locally without modifying the source file",
+      "pass": true
+    },
+    {
+      "name": "Explicit real UI save writes the full original file",
+      "pass": true
+    },
+    {
+      "name": "Module switching preserves dirty/untitled sessions and at most two mounted editors",
+      "pass": true
+    },
+    {
+      "name": "Note file operations cannot rename a path occupied by the text module",
+      "pass": true
+    },
+    {
+      "name": "The host rejects a stale lifecycle confirmation and accepts a matching complete checkpoint",
+      "pass": true
+    },
+    {
+      "name": "A real 60-second WebView unload and same-host wake restore dirty and untitled drafts without saving originals",
+      "pass": true
+    }
+  ],
+  "pageErrors": [],
+  "ownerPid": 34860,
+  "lastConnectionError": "browserType.connectOverCDP: Protocol error (Browser.setDownloadBehavior): Browser context management is not supported.\nCall log:\n\u001b[2m  - <ws preparing> retrieving websocket url from http://127.0.0.1:28616\u001b[22m\n\u001b[2m  - <ws connecting> ws://127.0.0.1:28616/devtools/browser/bcb77ccd-159d-4671-a76c-bedb5c5ab933\u001b[22m\n\u001b[2m  - <ws connected> ws://127.0.0.1:28616/devtools/browser/bcb77ccd-159d-4671-a76c-bedb5c5ab933\u001b[22m\n\u001b[2m  - <ws disconnecting> ws://127.0.0.1:28616/devtools/browser/bcb77ccd-159d-4671-a76c-bedb5c5ab933\u001b[22m\n\u001b[2m  - <ws disconnected> ws://127.0.0.1:28616/devtools/browser/bcb77ccd-159d-4671-a76c-bedb5c5ab933 code=1000 reason=\u001b[22m\n",
+  "hiddenUnloadMs": 60104.839199999995,
+  "status": "failed",
+  "error": "page.evaluate: Target page, context or browser has been closed\n    at invoke (D:\\lxWorkspace\\scripts\\text-native-smoke.mjs:38:26)\n    at D:\\lxWorkspace\\scripts\\text-native-smoke.mjs:84:23",
+  "completedAt": "2026-10-16T04:32:26.737Z"
+}

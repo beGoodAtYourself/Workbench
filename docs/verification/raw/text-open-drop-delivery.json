@@ -1,0 +1,51 @@
+{
+  "date": "2026-11-14",
+  "version": "0.1.0",
+  "checks": {
+    "frontendUnitTests": 261,
+    "relatedBrowserTests": 44,
+    "rustTests": 93,
+    "originalLogReadOnlyRoundTrip": "passed",
+    "originalLogHeadlessUI": "passed",
+    "typecheck": "passed",
+    "rustfmt": "passed",
+    "clippy": "passed",
+    "productionBuild": "passed"
+  },
+  "sources": {
+    "src-tauri/src/app.rs": "4ca6851038b7885506bc7f385f188e077bf9c22999e6dbb9c55a0fd6808a74a6",
+    "src-tauri/src/commands.rs": "4eb1565bfe069b31c68b45bc32773ecaed3dc8e64ab0d1f59ddb3ee27af01a20",
+    "src-tauri/src/settings.rs": "c61fef50f867a558eb5a0fe0ecef1ac7c3c79883ebc8da1025a3f70997db284e",
+    "src-tauri/src/main.rs": "061f865fe1d48f342140d6adf23f9775708d7861977eda718817230a22a3e28d",
+    "src-tauri/src/text_drop.rs": "5b8105a3306cc43c67b6f1a91cc55f19330379a50dd4714527431eee11b63de8",
+    "src-tauri/src/text_files.rs": "96e10b8b829401e5c05bd87d4a98712007a056471329978a48801e6e254f4bc3",
+    "src-tauri/src/text_session.rs": "bdf1f168fcb8f43fe27360f9d60776686fff57c0f100608af549484071dd5670",
+    "src/main.ts": "62f1860208b711cd79925d215e02612297f1e622992fb11768f2eada8f207408",
+    "src/style.css": "ad3c404e5bd9d0a939f4912522eaf1887fca389d1e594fa3ec84505a345501c3",
+    "src/text-types.ts": "571e9ed40cf77bb7f5af8dcc7d33aa8b874ee53ce1897c6cfb291c14e5726ac4",
+    "src/text-bridge.ts": "aafbf9a9ebafc17c0096ddc02d3699e1880acea8b7347e817f3a55e4ce2c3d1b",
+    "src/text-model.ts": "2bd591974169bb8025a58f99ad8748b78a979be8d3362deaedd4b992ea86d137",
+    "src/text-workspace.ts": "35cc923306f437083d1ecdd88617ea405618a0f9acdd1587671826ee9d0b43e5",
+    "src/text-style.css": "8c6b7d3050a1a9b98866e372f7c008e269b229d919d58ab549a60e6a225b69af",
+    "src/text-tab-drag.ts": "c3b925732c17f5f7479f0ea8919e2f545648a4d982c5d036f719c8804e313996",
+    "tests/text-bridge.test.ts": "91ceb74cf08b72b4ebd13ca06e61eca607e222bdc97d68fa734dd95b8b4e4803",
+    "tests/text-model.test.ts": "7eda8f1428fb096c85289edf48d7ae0d06ed8d78600de86e42d3f5ddf4312bd5",
+    "tests/e2e/text-open-drop.spec.ts": "f5496d5d256b82591246be33b487b5aa7d1817701f31935c653f30c35aca050a"
+  },
+  "artifacts": [
+    {
+      "path": "D:\\lxWorkspace\\src-tauri\\target\\text-open-drop\\release\\shiye.exe",
+      "bytes": 7275520,
+      "sha256": "7c1c3bc9bfdd09baf62b9d656feb8edcec6fb7716e2d958b806593952a8f3c80"
+    },
+    {
+      "path": "D:\\lxWorkspace\\src-tauri\\target\\text-open-drop\\release\\bundle\\nsis\\拾页_0.1.0_x64-setup.exe",
+      "bytes": 2550045,
+      "sha256": "84b2a447405ed27c3eccfaca94d8c9eaa153707683b63dcc6ac5d466860102b8"
+    }
+  ],
+  "limitations": [
+    "用户按 Esc 停止桌面控制后未继续操作窗口；最终原生文件拖放和文件选择对话框尚待实测。",
+    "用户原会话中无提示打开失败的精确触发条件未完整复现；已修复独立回归用例确认的打开期间切换/隐藏导致结果被丢弃路径。"
+  ]
+}

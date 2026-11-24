@@ -65,10 +65,11 @@ test('renders the workbench and rotates A B C without a third pane',async({page}
 });
 test('edits, saves, switches modes and retains undo across remounts',async({page})=>{
  await page.getByRole('button',{name:'编辑模式',exact:true}).click();
- const editor=page.locator('.cm-content');await editor.click();await editor.press('Control+End');await editor.press('Enter');await editor.pressSequentially('Saved marker');
+ const editor=page.locator('.cm-content');await editor.click();await editor.press('Control+End');await editor.press('Enter');await page.keyboard.insertText('Saved marker');
+ await expect(editor).toContainText('Saved marker');
  await expect(page.locator('.save-state')).toHaveText('已保存到本地');
  await page.getByRole('button',{name:'显示模式',exact:true}).click();await expect(page.locator('.article')).toContainText('Saved marker');
- await page.getByRole('button',{name:'编辑模式',exact:true}).click();await editor.click();await editor.press('Control+z');await expect(editor).not.toContainText('Saved marker');await editor.press('Control+y');await expect(editor).toContainText('Saved marker');await editor.press('Control+End');await editor.press('Enter');await editor.pressSequentially('Second marker');
+ await page.getByRole('button',{name:'编辑模式',exact:true}).click();await editor.click();await editor.press('Control+z');await expect(editor).not.toContainText('Saved marker');await editor.press('Control+y');await expect(editor).toContainText('Saved marker');await editor.press('Control+End');await editor.press('Enter');await page.keyboard.insertText('Second marker');await expect(editor).toContainText('Second marker');
  await editor.press('Control+s');await page.getByRole('button',{name:'显示模式',exact:true}).click();await expect(page.locator('.article')).toContainText('Second marker');
  await page.reload();await expect(page.locator('.cm-content')).toContainText('Second marker');
 });

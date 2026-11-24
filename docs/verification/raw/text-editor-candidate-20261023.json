@@ -1,0 +1,100 @@
+{
+  "recordedAt": "2026-10-23T01:39:56.008Z",
+  "status": "native-retest-complete-budget-failed",
+  "qaSha256": "d82f5abc3e0210f82766b358e27d1fb6ea0fbaf0c71c886a8620aa3038b1be4f",
+  "artifacts": [
+    {
+      "path": "D:\\lxWorkspace\\src-tauri\\target\\text-editor\\release\\shiye.exe",
+      "bytes": 6845952,
+      "modifiedAt": "2026-10-23T01:39:46.801Z",
+      "sha256": "ee76de5797ff27b40c7dbfdcb0b545e0253d612b61207e7bb1095fffb4c0d1e7"
+    },
+    {
+      "path": "D:\\lxWorkspace\\src-tauri\\target\\text-editor\\release\\bundle\\nsis\\拾页_0.1.0_x64-setup.exe",
+      "bytes": 2346192,
+      "modifiedAt": "2026-10-23T01:39:46.787Z",
+      "sha256": "78d5c8b6b8da635cfe36ac1c6b4b2996518291e7278971bada330beb261fcdf6"
+    }
+  ],
+  "frontEndAssets": 32,
+  "sourceHashes": {
+    "src/main.ts": "cbb532ce960c50c4aa390b9b69cf6fa136bd3dac01feb7c6668b8d12be6d098d",
+    "src/text-editor.ts": "c2921e833bfad0abca07e911e6ae72dbdbf1ef11bf978e96227b9107c8873f98",
+    "src/text-workspace.ts": "55d9f8d816c50c0e203f929c05163dbe92c7844fc714c81dfd4f339997efd19c"
+  },
+  "harnessHashes": {
+    "performance": "64b5df633759f164896c2921306287247203d6bdf2dbd772f4829275177c977e",
+    "diagnostic": "c1f91270834f84c2ce0aac3e06f160c42f4bc6ba36f0687b4eb4e6e336667934",
+    "memoryProbe": "0137e59589a85d1222e44efcc92972132f15fada7d53c30deaa12f39b050fb3e"
+  },
+  "resourceSpecSha256": "7a6ca304f1b3e0ba2552d8e534a2fcd7260fb86755281174d773514bbe3bf75e",
+  "previousQaSha256": "dfe4190f47507d907a9f1ef879bafd42e55e794f2b5c3537c88c73b7402aaf8b",
+  "previousPerformanceStatus": "budget-failed",
+  "budgetGrowthMiB": 20,
+  "nativeRetest": {
+    "performed": true,
+    "requiresNewUserTimeWindow": true,
+    "scheduled": false,
+    "scheduledStart": "2026-10-23T12:00:00+08:00",
+    "timezone": "Asia/Singapore",
+    "expectedDurationMinutes": 25,
+    "automationId": "automation",
+    "authorization": "User confirmed noon start in this chat; one-time foreground retest, keyboard and mouse idle.",
+    "completedAt": "2026-10-23T04:24:23.841Z",
+    "status": "budget-failed",
+    "acceptance": {
+      "complete": true,
+      "passed": false,
+      "effectiveMemoryIds": [
+        "1:single:1:0",
+        "1:dual:1:0",
+        "1:full:1:0",
+        "1:hidden-unloaded:1:0",
+        "2:single:1:0",
+        "2:dual:1:0",
+        "2:full:1:0",
+        "2:hidden-unloaded:1:0",
+        "3:single:1:0",
+        "3:dual:1:0",
+        "3:full:1:0",
+        "3:hidden-unloaded:1:0"
+      ],
+      "effectiveLoopIds": [
+        "loops:1:1",
+        "loops:2:1",
+        "loops:3:1"
+      ]
+    },
+    "summary": "docs/verification/raw/text-editor-retest-20261023.json",
+    "automationDeleted": true,
+    "keyboardMouseReleasedAt": "2026-10-23T04:24:31Z"
+  },
+  "checks": {
+    "typescript": "passed",
+    "unitTests": 244,
+    "fullHeadlessE2E": 97,
+    "focusedLifecycleE2E": 5,
+    "backend": "unchanged; prior 80 tests and Clippy not rerun"
+  },
+  "diagnostic": {
+    "acceptance": false,
+    "before": "docs/verification/raw/text-editor-browser-churn-before-pause-20261023.json",
+    "after": "docs/verification/raw/text-editor-browser-churn-after-pause-final-20261023.json",
+    "cycles": 100,
+    "documents": 2,
+    "bytesEach": 102400,
+    "createdViewsBefore": 200,
+    "createdViewsAfter": 0,
+    "fixturesUnchanged": true
+  },
+  "protocol": {
+    "rounds": 3,
+    "samples": 30,
+    "warmupCycles": 10,
+    "cycles": 100,
+    "stableAfterMs": 60000,
+    "growthBudgetMiB": 20,
+    "unchanged": true
+  },
+  "hiddenAssertion": "At most two parked read-only views before idle unload, no active language parser or worker; actual WebView unload remains mandatory."
+}

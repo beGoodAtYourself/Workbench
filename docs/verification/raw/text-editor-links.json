@@ -1,0 +1,67 @@
+{
+  "startedAt": "2026-10-26T10:32:57.964Z",
+  "source": "D:\\lxWorkspace\\src-tauri\\target\\text-editor\\qa\\shiye-text-qa.exe",
+  "sha256": "8d0066c1b881538985f1b5a347a92b2dfd876e6793814b5cc76ccc6cd877172f",
+  "executable": "D:\\lxWorkspace\\.qa\\text-links-native-1793010777954\\app\\shiye-text-qa.exe",
+  "data": "D:\\lxWorkspace\\.qa\\text-links-native-1793010777954",
+  "fixtures": "D:\\lxWorkspace\\.qa\\text-links-native-1793010777954\\files",
+  "notes": "D:\\lxWorkspace\\.qa\\text-links-native-1793010777954\\files\\notes",
+  "port": 32868,
+  "scope": "Isolated textqa release WebView2 with synthetic A/B/C notes and authorized synthetic outside/non-Markdown files. Normal Open uses the double-gated fixture queue; links use real preview and editor mouse gestures. No production source changes, user notes, clipboard or Run-key modifications.",
+  "checks": [
+    {
+      "name": "Real Tauri text_read accepts optional knownVersion, omits an unchanged original body, and preserves the legacy full TextFile wire shape",
+      "pass": true
+    },
+    {
+      "name": "A real preview-link click activates the existing dirty C text owner, preserves all text IDs and original bytes, and returns to the unchanged A | B notes layout",
+      "pass": true,
+      "details": {
+        "textDocumentId": "text-73b8-18e20dcdcc11c75c-2",
+        "textDocumentIds": [
+          "text-73b8-18e20dcdcc11c75c-2",
+          "text-73b8-18e20dcdcc6515ec-4",
+          "text-73b8-18e20dcdccb8af18-6"
+        ],
+        "sourcePaths": [
+          "A.md",
+          "B.md"
+        ],
+        "originalHashes": {
+          "notes/A.md": "1c7c45eef827f076d90b5d2345bb39429b2bb6a25cbf7e00a368f964ac057f54",
+          "notes/B.md": "aa798673fe7354bd8ecb5388732a6c4297434a8695e5c9085ea22f00198a68a4",
+          "notes/C.md": "943b8322fc9d519e14dbe0afc612d5baf5da49142bc93358731268ff9b2d4dba",
+          "notes/config.txt": "ab72b4a1bf472ece11d6185f0e218f88ba8a325d46bc0f6d26b44e9474921731",
+          "other/Outside.md": "9c2209832e527374a1fd6d0ba3aa5dd774b461797e597f7f1d6e52026c993e58"
+        }
+      }
+    },
+    {
+      "name": "An ordinary editor-link click only positions the cursor and leaves the A | B notes module active",
+      "pass": true
+    },
+    {
+      "name": "A real Ctrl+click activates the same dirty C text owner and returning preserves the source B editor mode and A | B layout",
+      "pass": true
+    },
+    {
+      "name": "The 越出笔记库 note link is refused without widening the boundary despite existing text authorization",
+      "pass": true
+    },
+    {
+      "name": "The 非笔记类型 note link is refused without widening the boundary despite existing text authorization",
+      "pass": true
+    },
+    {
+      "name": "The 不支持的协议 note link is refused without widening the boundary despite existing text authorization",
+      "pass": true
+    }
+  ],
+  "pageErrors": [],
+  "ownerPid": 29624,
+  "status": "passed",
+  "exitMode": "normal",
+  "ownerExited": true,
+  "ownerExitCode": 0,
+  "completedAt": "2026-10-26T10:33:06.341Z"
+}

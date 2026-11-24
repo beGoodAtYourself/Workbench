@@ -1,0 +1,161 @@
+{
+  "acceptance": false,
+  "kind": "headless-component-allocation",
+  "label": "baseline-extensions-20261026",
+  "profile": true,
+  "startedAt": "2026-10-26T05:44:34.064Z",
+  "notice": "Real text model/workspace/editor with an in-memory synthetic repository; no native bridge, private-process-memory acceptance or disk recovery claim. Forced GC is diagnostic only.",
+  "sourceHashes": {
+    "src/text-editor.ts": "c20d63cf906904a8c21f26435336060dff5d6fbaa9f8d55d49fc340b78eb5a73",
+    "src/text-workspace.ts": "57cf9bbf48b3b2a95582d8c0082d1dceaeb969f89c597c606c6a95added2b012",
+    "src/text-model.ts": "1cb9a53b56860965a49b950dcb902c39ecbac0be52cc40e78ac3a9091852ea22",
+    "src/text-search-client.ts": "e30f632cf1248027839c7dfd671283fee0b4f435af5ab0a5ba86bda9269fc6b0"
+  },
+  "scenes": [
+    {
+      "mode": "pause",
+      "cycles": 100,
+      "warmup": 10,
+      "before": {
+        "heap": {
+          "usedSize": 7780360,
+          "totalSize": 12267520,
+          "embedderHeapUsedSize": 18444440,
+          "backingStorageSize": 1841207
+        },
+        "dom": {
+          "documents": 5,
+          "nodes": 3261,
+          "jsEventListeners": 351
+        },
+        "counts": {
+          "editors": 1,
+          "workers": 0,
+          "searchForms": 0,
+          "elements": 1013
+        }
+      },
+      "after": {
+        "heap": {
+          "usedSize": 8914120,
+          "totalSize": 17248256,
+          "embedderHeapUsedSize": 10063728,
+          "backingStorageSize": 1839869
+        },
+        "dom": {
+          "documents": 2,
+          "nodes": 2419,
+          "jsEventListeners": 306
+        },
+        "counts": {
+          "editors": 2,
+          "workers": 0,
+          "searchForms": 0,
+          "elements": 10178
+        }
+      },
+      "afterGc": {
+        "heap": {
+          "usedSize": 5969312,
+          "totalSize": 7024640,
+          "embedderHeapUsedSize": 2200808,
+          "backingStorageSize": 1839219
+        },
+        "dom": {
+          "documents": 2,
+          "nodes": 1012,
+          "jsEventListeners": 201
+        },
+        "counts": {
+          "editors": 2,
+          "workers": 0,
+          "searchForms": 0,
+          "elements": 10178
+        }
+      },
+      "allocations": {
+        "editors": 1,
+        "workers": 0,
+        "searchForms": 0,
+        "elements": 9165
+      },
+      "fixtureUnchanged": true,
+      "pageErrors": [],
+      "profileFile": "text-allocation-profile-baseline-extensions-20261026-pause.json"
+    },
+    {
+      "mode": "combined",
+      "cycles": 100,
+      "warmup": 10,
+      "before": {
+        "heap": {
+          "usedSize": 8024288,
+          "totalSize": 19345408,
+          "embedderHeapUsedSize": 4024160,
+          "backingStorageSize": 1842545
+        },
+        "dom": {
+          "documents": 2,
+          "nodes": 2406,
+          "jsEventListeners": 435
+        },
+        "counts": {
+          "editors": 11,
+          "workers": 10,
+          "searchForms": 1,
+          "elements": 3357
+        }
+      },
+      "after": {
+        "heap": {
+          "usedSize": 9784112,
+          "totalSize": 67977216,
+          "embedderHeapUsedSize": 5163856,
+          "backingStorageSize": 1842148
+        },
+        "dom": {
+          "documents": 2,
+          "nodes": 3057,
+          "jsEventListeners": 540
+        },
+        "counts": {
+          "editors": 112,
+          "workers": 110,
+          "searchForms": 1,
+          "elements": 34939
+        }
+      },
+      "afterGc": {
+        "heap": {
+          "usedSize": 7352408,
+          "totalSize": 8208384,
+          "embedderHeapUsedSize": 3232552,
+          "backingStorageSize": 1841652
+        },
+        "dom": {
+          "documents": 2,
+          "nodes": 1084,
+          "jsEventListeners": 204
+        },
+        "counts": {
+          "editors": 112,
+          "workers": 110,
+          "searchForms": 1,
+          "elements": 34939
+        }
+      },
+      "allocations": {
+        "editors": 101,
+        "workers": 100,
+        "searchForms": 0,
+        "elements": 31582
+      },
+      "fixtureUnchanged": true,
+      "pageErrors": [],
+      "profileFile": "text-allocation-profile-baseline-extensions-20261026-combined.json"
+    }
+  ],
+  "browserVersion": "156.0.4314.42",
+  "status": "diagnostic-complete",
+  "completedAt": "2026-10-26T05:45:09.850Z"
+}

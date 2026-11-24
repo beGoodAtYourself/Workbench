@@ -61,8 +61,14 @@ impl Default for Settings {
 }
 pub struct AppState {
     pub settings: Mutex<Settings>,
+    pub configuration: Mutex<()>,
+    pub config_warning: Option<String>,
     pub data: PathBuf,
     pub io: Mutex<()>,
+    pub folders: Mutex<crate::folder_order::FolderStore>,
+    pub text: Mutex<crate::text_session::TextStore>,
+    pub text_drops: Mutex<crate::text_drop::TextDrops>,
+    pub text_selection: Mutex<crate::text_session::ProfileSelection>,
     pub epoch: AtomicU64,
     pub idle: Mutex<Option<Instant>>,
     pub idle_changed: Condvar,
@@ -88,9 +94,15 @@ impl AppState {
             Err(e) => return Err(e.into()),
         };
         Ok(Self {
+            text: Mutex::new(crate::text_session::TextStore::load(&data)),
+            text_drops: Mutex::new(crate::text_drop::TextDrops::default()),
+            text_selection: Mutex::new(crate::text_session::ProfileSelection::default()),
+            config_warning: settings.startup_error.clone(),
             settings: Mutex::new(settings),
+            configuration: Mutex::new(()),
             data,
             io: Mutex::new(()),
+            folders: Mutex::new(crate::folder_order::FolderStore::default()),
             epoch: AtomicU64::new(0),
             idle: Mutex::new(None),
             idle_changed: Condvar::new(),

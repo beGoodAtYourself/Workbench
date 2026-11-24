@@ -1,0 +1,57 @@
+{
+  "recordedAt": "2026-10-22T10:59:29.662Z",
+  "sha256": "dfe4190f47507d907a9f1ef879bafd42e55e794f2b5c3537c88c73b7402aaf8b",
+  "scope": "Metadata and actual recovery-body SHA-256 audit for all seven normal synthetic sessions. No body text recorded; this does not waive memory budgets.",
+  "passed": true,
+  "rows": [
+    {
+      "name": "memory-1",
+      "data": "D:\\lxWorkspace\\.qa\\text-perf-1792665212623\\memory-1-attempt-1",
+      "documents": 12,
+      "clean": true,
+      "changed": []
+    },
+    {
+      "name": "memory-2",
+      "data": "D:\\lxWorkspace\\.qa\\text-perf-1792665212623\\memory-2-attempt-1",
+      "documents": 12,
+      "clean": true,
+      "changed": []
+    },
+    {
+      "name": "memory-3",
+      "data": "D:\\lxWorkspace\\.qa\\text-perf-1792665212623\\memory-3-attempt-1",
+      "documents": 12,
+      "clean": true,
+      "changed": []
+    },
+    {
+      "name": "wake",
+      "data": "D:\\lxWorkspace\\.qa\\text-perf-1792665212623\\wake-attempt-1",
+      "documents": 12,
+      "clean": true,
+      "changed": []
+    },
+    {
+      "name": "loops-1",
+      "data": "D:\\lxWorkspace\\.qa\\text-perf-1792665212623\\loops-1-attempt-1",
+      "documents": 12,
+      "clean": true,
+      "changed": []
+    },
+    {
+      "name": "loops-2",
+      "data": "D:\\lxWorkspace\\.qa\\text-perf-1792665212623\\loops-2-attempt-1",
+      "documents": 12,
+      "clean": true,
+      "changed": []
+    },
+    {
+      "name": "loops-3",
+      "data": "D:\\lxWorkspace\\.qa\\text-perf-1792665212623\\loops-3-attempt-1",
+      "documents": 12,
+      "clean": true,
+      "changed": []
+    }
+  ]
+}

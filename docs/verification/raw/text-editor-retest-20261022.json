@@ -1,0 +1,235 @@
+{
+  "recordedAt": "2026-10-22T10:59:29.662Z",
+  "sha256": "dfe4190f47507d907a9f1ef879bafd42e55e794f2b5c3537c88c73b7402aaf8b",
+  "status": "budget-failed",
+  "acceptance": {
+    "complete": true,
+    "passed": false,
+    "effectiveMemoryIds": [
+      "1:single:1:0",
+      "1:dual:1:0",
+      "1:full:1:0",
+      "1:hidden-unloaded:1:0",
+      "2:single:1:0",
+      "2:dual:1:0",
+      "2:full:1:0",
+      "2:hidden-unloaded:1:0",
+      "3:single:1:0",
+      "3:dual:1:0",
+      "3:full:1:0",
+      "3:hidden-unloaded:1:0"
+    ],
+    "effectiveLoopIds": [
+      "loops:1:1",
+      "loops:2:1",
+      "loops:3:1"
+    ]
+  },
+  "startedAt": "2026-10-22T10:33:32.631Z",
+  "completedAt": "2026-10-22T10:54:30.544Z",
+  "environment": {
+    "platform": "win32",
+    "release": "10.0.26200",
+    "architecture": "x64",
+    "cpus": 16,
+    "cpu": "13th Gen Intel(R) Core(TM) i5-13500H",
+    "totalMemoryBytes": 33954172928,
+    "node": "v24.18.0"
+  },
+  "browserVersion": "155.0.4283.62",
+  "memory": [
+    {
+      "name": "single",
+      "round": 1,
+      "workingSetP95MiB": 98.64453125,
+      "privateBytesP95MiB": 178.95703125,
+      "pass": true
+    },
+    {
+      "name": "dual",
+      "round": 1,
+      "workingSetP95MiB": 110.9140625,
+      "privateBytesP95MiB": 197.88671875,
+      "pass": true
+    },
+    {
+      "name": "full",
+      "round": 1,
+      "workingSetP95MiB": 145.54296875,
+      "privateBytesP95MiB": 232.4921875,
+      "pass": true
+    },
+    {
+      "name": "hidden-unloaded",
+      "round": 1,
+      "workingSetP95MiB": 4.49609375,
+      "privateBytesP95MiB": 6.45703125,
+      "pass": true
+    },
+    {
+      "name": "single",
+      "round": 2,
+      "workingSetP95MiB": 100.5390625,
+      "privateBytesP95MiB": 181.8984375,
+      "pass": true
+    },
+    {
+      "name": "dual",
+      "round": 2,
+      "workingSetP95MiB": 110.94140625,
+      "privateBytesP95MiB": 196.71484375,
+      "pass": true
+    },
+    {
+      "name": "full",
+      "round": 2,
+      "workingSetP95MiB": 146.046875,
+      "privateBytesP95MiB": 233.234375,
+      "pass": true
+    },
+    {
+      "name": "hidden-unloaded",
+      "round": 2,
+      "workingSetP95MiB": 4.20703125,
+      "privateBytesP95MiB": 5.8359375,
+      "pass": true
+    },
+    {
+      "name": "single",
+      "round": 3,
+      "workingSetP95MiB": 98.56640625,
+      "privateBytesP95MiB": 181.54296875,
+      "pass": true
+    },
+    {
+      "name": "dual",
+      "round": 3,
+      "workingSetP95MiB": 111.7265625,
+      "privateBytesP95MiB": 198.5,
+      "pass": true
+    },
+    {
+      "name": "full",
+      "round": 3,
+      "workingSetP95MiB": 146.01953125,
+      "privateBytesP95MiB": 234.90234375,
+      "pass": true
+    },
+    {
+      "name": "hidden-unloaded",
+      "round": 3,
+      "workingSetP95MiB": 4.26171875,
+      "privateBytesP95MiB": 6.03125,
+      "pass": true
+    }
+  ],
+  "wake": [
+    {
+      "name": "retained",
+      "count": 30,
+      "nativeP95Ms": 96.8147,
+      "launcherP95Ms": 182.2567000000272,
+      "pass": true
+    },
+    {
+      "name": "unloaded",
+      "count": 30,
+      "nativeP95Ms": 523.0536,
+      "launcherP95Ms": 622.9723000000231,
+      "pass": true
+    }
+  ],
+  "loops": [
+    {
+      "round": 1,
+      "workingSetGrowthMiB": 17.0625,
+      "privateBytesGrowthMiB": 16.8046875,
+      "pass": true
+    },
+    {
+      "round": 2,
+      "workingSetGrowthMiB": 23.421875,
+      "privateBytesGrowthMiB": 25.03515625,
+      "pass": false
+    },
+    {
+      "round": 3,
+      "workingSetGrowthMiB": 24.1171875,
+      "privateBytesGrowthMiB": 26.234375,
+      "pass": false
+    }
+  ],
+  "stress": [
+    {
+      "totalUtf16Units": 16777216,
+      "singleFileBytes": 16776512,
+      "boundaryRejected": true,
+      "inLimitEditAndSave": true,
+      "unloadedAndRecovered": true,
+      "workingSetP95MiB": 335.046875,
+      "privateBytesP95MiB": 444.515625
+    }
+  ],
+  "adoptedValidMemoryFrames": 545,
+  "normalScenePeakWorkingSetMiB": 146.109375,
+  "coverageRetries": 0,
+  "instrumentationFailures": 0,
+  "fixtureIntegrityFailures": 0,
+  "nativeSuites": {
+    "native": {
+      "checks": 24,
+      "status": "passed",
+      "sha256": "dfe4190f47507d907a9f1ef879bafd42e55e794f2b5c3537c88c73b7402aaf8b",
+      "startedAt": "2026-10-22T10:31:01.872Z",
+      "completedAt": "2026-10-22T10:32:13.241Z"
+    },
+    "editing": {
+      "checks": 6,
+      "status": "passed",
+      "sha256": "dfe4190f47507d907a9f1ef879bafd42e55e794f2b5c3537c88c73b7402aaf8b",
+      "startedAt": "2026-10-22T10:32:24.562Z",
+      "completedAt": "2026-10-22T10:32:32.678Z"
+    },
+    "links": {
+      "checks": 7,
+      "status": "passed",
+      "sha256": "dfe4190f47507d907a9f1ef879bafd42e55e794f2b5c3537c88c73b7402aaf8b",
+      "startedAt": "2026-10-22T10:32:33.029Z",
+      "completedAt": "2026-10-22T10:32:41.368Z"
+    },
+    "recovery": {
+      "checks": 7,
+      "status": "passed",
+      "sha256": "dfe4190f47507d907a9f1ef879bafd42e55e794f2b5c3537c88c73b7402aaf8b",
+      "startedAt": "2026-10-22T10:32:41.714Z",
+      "completedAt": "2026-10-22T10:33:02.542Z"
+    },
+    "workspace": {
+      "checks": 9,
+      "status": "partial",
+      "sha256": "dfe4190f47507d907a9f1ef879bafd42e55e794f2b5c3537c88c73b7402aaf8b",
+      "startedAt": "2026-10-22T10:33:02.875Z",
+      "completedAt": "2026-10-22T10:33:19.187Z"
+    },
+    "shell": {
+      "checks": 3,
+      "status": "partial",
+      "sha256": "dfe4190f47507d907a9f1ef879bafd42e55e794f2b5c3537c88c73b7402aaf8b",
+      "startedAt": "2026-10-22T10:33:19.531Z",
+      "completedAt": "2026-10-22T10:33:24.220Z"
+    }
+  },
+  "hiddenUnloadMs": 60121.3998,
+  "cleanup": {
+    "remainingTextQaOwners": 0,
+    "checkedAt": "2026-10-22T11:00:26.014Z",
+    "method": "Post-run read-only Win32_Process query returned no textqa owner."
+  },
+  "schedule": {
+    "automationId": "automation",
+    "scheduledAt": "2026-10-22T10:30:00Z",
+    "triggeredAt": "2026-10-22T10:30:29.944Z",
+    "oneTime": true,
+    "deletedAfterRun": true
+  }
+}

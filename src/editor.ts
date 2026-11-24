@@ -1,6 +1,7 @@
 import {EditorState,StateEffect,type Extension} from '@codemirror/state';
-import {EditorView,keymap,lineNumbers,drawSelection,highlightActiveLine,highlightActiveLineGutter} from '@codemirror/view';
-import {defaultKeymap,history,historyKeymap,indentWithTab} from '@codemirror/commands';
+import {EditorView,keymap} from '@codemirror/view';
+import {defaultKeymap,historyKeymap,indentWithTab} from '@codemirror/commands';
+import {editorBase} from './editor-base';
 import {markdown} from '@codemirror/lang-markdown';
 import {syntaxTree,syntaxHighlighting} from '@codemirror/language';
 import {Lexer} from 'marked';
@@ -17,7 +18,7 @@ export function editor(parent:HTMLElement,doc:Document,edit:(text:string)=>void,
  const meter=metrics.get(doc)??{changes:0,bytes:0};metrics.set(doc,meter);
  function extensions():Extension[]{
   return [
-   lineNumbers(),drawSelection(),highlightActiveLine(),highlightActiveLineGutter(),history({minDepth:100}),
+   ...editorBase(),
    markdown({codeLanguages:codeDescriptions}),syntaxHighlighting(tokenHighlighter),EditorView.lineWrapping,
    EditorView.contentAttributes.of({'aria-label':basename(doc.path)+' 编辑器',spellcheck:'true'}),
    keymap.of([{key:'Mod-s',run:()=>{save();return true;}},{key:'Mod-b',run:()=>format('bold')},{key:'Mod-i',run:()=>format('italic')},...defaultKeymap,...historyKeymap,indentWithTab]),

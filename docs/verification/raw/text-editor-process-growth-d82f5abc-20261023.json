@@ -1,0 +1,496 @@
+{
+  "recordedAt": "2026-10-23T06:03:25.778Z",
+  "acceptance": false,
+  "kind": "derived-per-process-diagnostic",
+  "source": "docs/verification/raw/text-editor-performance-d82f5abc-20261023.json",
+  "sourceSha256": "e9dcf030caff84ae2cce71379ecbbad8aa8fcf97d52f5faa7bec2d09413b98db",
+  "qaSha256": "d82f5abc3e0210f82766b358e27d1fb6ea0fbaf0c71c886a8620aa3038b1be4f",
+  "method": "Per-process P95(after) minus P95(baseline) over the existing 30-point groups; no new samples and no process-role guesses beyond parent PID. Per-process quantiles are diagnostic and need not sum to the whole-process-set quantile.",
+  "rounds": [
+    {
+      "round": 1,
+      "appPid": 9836,
+      "total": {
+        "privateWorkingSetGrowthMiB": 19.5,
+        "privateBytesGrowthMiB": 21.58203125,
+        "pass": false
+      },
+      "processes": [
+        {
+          "pid": 9836,
+          "parentPid": 33616,
+          "name": "shiye-text-qa.exe",
+          "kind": "host",
+          "sampleCounts": [
+            30,
+            30
+          ],
+          "complete": true,
+          "privateWorkingSetP95MiB": [
+            4.47265625,
+            4.69921875
+          ],
+          "privateWorkingSetGrowthMiB": 0.2265625,
+          "privateBytesP95MiB": [
+            6.703125,
+            7.55078125
+          ],
+          "privateBytesGrowthMiB": 0.84765625
+        },
+        {
+          "pid": 14584,
+          "parentPid": 9836,
+          "name": "msedgewebview2.exe",
+          "kind": "direct-webview-child",
+          "sampleCounts": [
+            30,
+            30
+          ],
+          "complete": true,
+          "privateWorkingSetP95MiB": [
+            32.43359375,
+            36.87109375
+          ],
+          "privateWorkingSetGrowthMiB": 4.4375,
+          "privateBytesP95MiB": [
+            41.51953125,
+            46.06640625
+          ],
+          "privateBytesGrowthMiB": 4.546875
+        },
+        {
+          "pid": 32244,
+          "parentPid": 14584,
+          "name": "msedgewebview2.exe",
+          "kind": "webview-descendant",
+          "sampleCounts": [
+            30,
+            30
+          ],
+          "complete": true,
+          "privateWorkingSetP95MiB": [
+            2.0703125,
+            1.76953125
+          ],
+          "privateWorkingSetGrowthMiB": -0.30078125,
+          "privateBytesP95MiB": [
+            3.421875,
+            2.98828125
+          ],
+          "privateBytesGrowthMiB": -0.43359375
+        },
+        {
+          "pid": 1564,
+          "parentPid": 14584,
+          "name": "msedgewebview2.exe",
+          "kind": "webview-descendant",
+          "sampleCounts": [
+            30,
+            30
+          ],
+          "complete": true,
+          "privateWorkingSetP95MiB": [
+            25.30859375,
+            24.9296875
+          ],
+          "privateWorkingSetGrowthMiB": -0.37890625,
+          "privateBytesP95MiB": [
+            76.6640625,
+            76.53125
+          ],
+          "privateBytesGrowthMiB": -0.1328125
+        },
+        {
+          "pid": 32360,
+          "parentPid": 14584,
+          "name": "msedgewebview2.exe",
+          "kind": "webview-descendant",
+          "sampleCounts": [
+            30,
+            30
+          ],
+          "complete": true,
+          "privateWorkingSetP95MiB": [
+            7.359375,
+            8.17578125
+          ],
+          "privateWorkingSetGrowthMiB": 0.81640625,
+          "privateBytesP95MiB": [
+            12.5,
+            13.22265625
+          ],
+          "privateBytesGrowthMiB": 0.72265625
+        },
+        {
+          "pid": 32336,
+          "parentPid": 14584,
+          "name": "msedgewebview2.exe",
+          "kind": "webview-descendant",
+          "sampleCounts": [
+            30,
+            30
+          ],
+          "complete": true,
+          "privateWorkingSetP95MiB": [
+            2.96875,
+            2.88671875
+          ],
+          "privateWorkingSetGrowthMiB": -0.08203125,
+          "privateBytesP95MiB": [
+            7.6328125,
+            7.51171875
+          ],
+          "privateBytesGrowthMiB": -0.12109375
+        },
+        {
+          "pid": 5980,
+          "parentPid": 14584,
+          "name": "msedgewebview2.exe",
+          "kind": "webview-descendant",
+          "sampleCounts": [
+            30,
+            30
+          ],
+          "complete": true,
+          "privateWorkingSetP95MiB": [
+            110.37890625,
+            124.609375
+          ],
+          "privateWorkingSetGrowthMiB": 14.23046875,
+          "privateBytesP95MiB": [
+            121.48828125,
+            136.68359375
+          ],
+          "privateBytesGrowthMiB": 15.1953125
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "appPid": 14780,
+      "total": {
+        "privateWorkingSetGrowthMiB": 24.0859375,
+        "privateBytesGrowthMiB": 25.95703125,
+        "pass": false
+      },
+      "processes": [
+        {
+          "pid": 14780,
+          "parentPid": 33616,
+          "name": "shiye-text-qa.exe",
+          "kind": "host",
+          "sampleCounts": [
+            30,
+            30
+          ],
+          "complete": true,
+          "privateWorkingSetP95MiB": [
+            4.17578125,
+            4.58984375
+          ],
+          "privateWorkingSetGrowthMiB": 0.4140625,
+          "privateBytesP95MiB": [
+            5.90625,
+            6.2734375
+          ],
+          "privateBytesGrowthMiB": 0.3671875
+        },
+        {
+          "pid": 11492,
+          "parentPid": 14780,
+          "name": "msedgewebview2.exe",
+          "kind": "direct-webview-child",
+          "sampleCounts": [
+            30,
+            30
+          ],
+          "complete": true,
+          "privateWorkingSetP95MiB": [
+            32.5703125,
+            41.265625
+          ],
+          "privateWorkingSetGrowthMiB": 8.6953125,
+          "privateBytesP95MiB": [
+            41.6328125,
+            50.48828125
+          ],
+          "privateBytesGrowthMiB": 8.85546875
+        },
+        {
+          "pid": 43852,
+          "parentPid": 11492,
+          "name": "msedgewebview2.exe",
+          "kind": "webview-descendant",
+          "sampleCounts": [
+            30,
+            30
+          ],
+          "complete": true,
+          "privateWorkingSetP95MiB": [
+            2.1328125,
+            1.80859375
+          ],
+          "privateWorkingSetGrowthMiB": -0.32421875,
+          "privateBytesP95MiB": [
+            3.515625,
+            3.046875
+          ],
+          "privateBytesGrowthMiB": -0.46875
+        },
+        {
+          "pid": 22472,
+          "parentPid": 11492,
+          "name": "msedgewebview2.exe",
+          "kind": "webview-descendant",
+          "sampleCounts": [
+            30,
+            30
+          ],
+          "complete": true,
+          "privateWorkingSetP95MiB": [
+            25.640625,
+            24.99609375
+          ],
+          "privateWorkingSetGrowthMiB": -0.64453125,
+          "privateBytesP95MiB": [
+            77.14453125,
+            76.859375
+          ],
+          "privateBytesGrowthMiB": -0.28515625
+        },
+        {
+          "pid": 27796,
+          "parentPid": 11492,
+          "name": "msedgewebview2.exe",
+          "kind": "webview-descendant",
+          "sampleCounts": [
+            30,
+            30
+          ],
+          "complete": true,
+          "privateWorkingSetP95MiB": [
+            7.44140625,
+            7.8671875
+          ],
+          "privateWorkingSetGrowthMiB": 0.42578125,
+          "privateBytesP95MiB": [
+            12.6015625,
+            12.953125
+          ],
+          "privateBytesGrowthMiB": 0.3515625
+        },
+        {
+          "pid": 10280,
+          "parentPid": 11492,
+          "name": "msedgewebview2.exe",
+          "kind": "webview-descendant",
+          "sampleCounts": [
+            30,
+            30
+          ],
+          "complete": true,
+          "privateWorkingSetP95MiB": [
+            2.9609375,
+            2.87890625
+          ],
+          "privateWorkingSetGrowthMiB": -0.08203125,
+          "privateBytesP95MiB": [
+            7.62890625,
+            7.5078125
+          ],
+          "privateBytesGrowthMiB": -0.12109375
+        },
+        {
+          "pid": 29120,
+          "parentPid": 11492,
+          "name": "msedgewebview2.exe",
+          "kind": "webview-descendant",
+          "sampleCounts": [
+            30,
+            30
+          ],
+          "complete": true,
+          "privateWorkingSetP95MiB": [
+            112.328125,
+            127.38671875
+          ],
+          "privateWorkingSetGrowthMiB": 15.05859375,
+          "privateBytesP95MiB": [
+            123.28125,
+            139.5859375
+          ],
+          "privateBytesGrowthMiB": 16.3046875
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "appPid": 26764,
+      "total": {
+        "privateWorkingSetGrowthMiB": 21.83984375,
+        "privateBytesGrowthMiB": 27.15234375,
+        "pass": false
+      },
+      "processes": [
+        {
+          "pid": 26764,
+          "parentPid": 33616,
+          "name": "shiye-text-qa.exe",
+          "kind": "host",
+          "sampleCounts": [
+            30,
+            30
+          ],
+          "complete": true,
+          "privateWorkingSetP95MiB": [
+            4.30078125,
+            4.71875
+          ],
+          "privateWorkingSetGrowthMiB": 0.41796875,
+          "privateBytesP95MiB": [
+            6.0078125,
+            6.4453125
+          ],
+          "privateBytesGrowthMiB": 0.4375
+        },
+        {
+          "pid": 33888,
+          "parentPid": 26764,
+          "name": "msedgewebview2.exe",
+          "kind": "direct-webview-child",
+          "sampleCounts": [
+            30,
+            30
+          ],
+          "complete": true,
+          "privateWorkingSetP95MiB": [
+            33.01171875,
+            35.73046875
+          ],
+          "privateWorkingSetGrowthMiB": 2.71875,
+          "privateBytesP95MiB": [
+            42.21484375,
+            45.10546875
+          ],
+          "privateBytesGrowthMiB": 2.890625
+        },
+        {
+          "pid": 18956,
+          "parentPid": 33888,
+          "name": "msedgewebview2.exe",
+          "kind": "webview-descendant",
+          "sampleCounts": [
+            30,
+            30
+          ],
+          "complete": true,
+          "privateWorkingSetP95MiB": [
+            2.12890625,
+            1.796875
+          ],
+          "privateWorkingSetGrowthMiB": -0.33203125,
+          "privateBytesP95MiB": [
+            3.53125,
+            3.05078125
+          ],
+          "privateBytesGrowthMiB": -0.48046875
+        },
+        {
+          "pid": 20744,
+          "parentPid": 33888,
+          "name": "msedgewebview2.exe",
+          "kind": "webview-descendant",
+          "sampleCounts": [
+            30,
+            30
+          ],
+          "complete": true,
+          "privateWorkingSetP95MiB": [
+            25.21875,
+            24.609375
+          ],
+          "privateWorkingSetGrowthMiB": -0.609375,
+          "privateBytesP95MiB": [
+            76.609375,
+            76.3828125
+          ],
+          "privateBytesGrowthMiB": -0.2265625
+        },
+        {
+          "pid": 36756,
+          "parentPid": 33888,
+          "name": "msedgewebview2.exe",
+          "kind": "webview-descendant",
+          "sampleCounts": [
+            30,
+            30
+          ],
+          "complete": true,
+          "privateWorkingSetP95MiB": [
+            7.3828125,
+            7.890625
+          ],
+          "privateWorkingSetGrowthMiB": 0.5078125,
+          "privateBytesP95MiB": [
+            12.5390625,
+            12.99609375
+          ],
+          "privateBytesGrowthMiB": 0.45703125
+        },
+        {
+          "pid": 31908,
+          "parentPid": 33888,
+          "name": "msedgewebview2.exe",
+          "kind": "webview-descendant",
+          "sampleCounts": [
+            30,
+            30
+          ],
+          "complete": true,
+          "privateWorkingSetP95MiB": [
+            2.9609375,
+            2.87890625
+          ],
+          "privateWorkingSetGrowthMiB": -0.08203125,
+          "privateBytesP95MiB": [
+            7.61328125,
+            7.4921875
+          ],
+          "privateBytesGrowthMiB": -0.12109375
+        },
+        {
+          "pid": 41704,
+          "parentPid": 33888,
+          "name": "msedgewebview2.exe",
+          "kind": "webview-descendant",
+          "sampleCounts": [
+            30,
+            30
+          ],
+          "complete": true,
+          "privateWorkingSetP95MiB": [
+            110.3828125,
+            126.1640625
+          ],
+          "privateWorkingSetGrowthMiB": 15.78125,
+          "privateBytesP95MiB": [
+            122.4765625,
+            138.2578125
+          ],
+          "privateBytesGrowthMiB": 15.78125
+        },
+        {
+          "pid": 23076,
+          "parentPid": 33888,
+          "name": "msedgewebview2.exe",
+          "kind": "webview-descendant",
+          "sampleCounts": [
+            0,
+            1
+          ],
+          "complete": false
+        }
+      ]
+    }
+  ]
+}

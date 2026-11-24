@@ -1,0 +1,87 @@
+{
+  "recordedAt": "2026-10-16T07:01:45.849Z",
+  "sha256": "d1c5d05e9467057840dfa35dca335ec2bf7810fad375a2187ac7a267c2b63a9a",
+  "scope": "Post-run review of committed metadata and body hashes, without recording body text. The interrupted loop attempt is excluded from accepted measurements; its original report is preserved. This review does not waive memory budgets.",
+  "passed": true,
+  "rows": [
+    {
+      "name": "memory-1",
+      "data": "D:\\lxWorkspace\\.qa\\text-perf-1792132398245\\memory-1-attempt-1",
+      "accepted": true,
+      "documents": 12,
+      "clean": true,
+      "changed": []
+    },
+    {
+      "name": "memory-2",
+      "data": "D:\\lxWorkspace\\.qa\\text-perf-1792132398245\\memory-2-attempt-1",
+      "accepted": true,
+      "documents": 12,
+      "clean": true,
+      "changed": []
+    },
+    {
+      "name": "memory-3",
+      "data": "D:\\lxWorkspace\\.qa\\text-perf-1792132398245\\memory-3-attempt-1",
+      "accepted": true,
+      "documents": 12,
+      "clean": true,
+      "changed": []
+    },
+    {
+      "name": "wake",
+      "data": "D:\\lxWorkspace\\.qa\\text-perf-1792132398245\\wake-attempt-1",
+      "accepted": true,
+      "documents": 12,
+      "clean": true,
+      "changed": []
+    },
+    {
+      "name": "loops-1",
+      "data": "D:\\lxWorkspace\\.qa\\text-perf-1792132398245\\loops-1-attempt-1",
+      "accepted": true,
+      "documents": 12,
+      "clean": true,
+      "changed": []
+    },
+    {
+      "name": "loops-2",
+      "data": "D:\\lxWorkspace\\.qa\\text-perf-1792132398245\\loops-2-attempt-1",
+      "accepted": false,
+      "documents": 12,
+      "clean": false,
+      "changed": [
+        {
+          "id": "text-b2fc-18deefa8d23383b4-1",
+          "name": "T01.txt",
+          "length": 102401,
+          "revision": 1,
+          "savedRevision": 0
+        },
+        {
+          "id": "text-b2fc-18deefc1441a4a90-110",
+          "name": "T12.txt",
+          "length": 102393,
+          "revision": 1,
+          "savedRevision": 0
+        }
+      ]
+    },
+    {
+      "name": "loops-2",
+      "data": "D:\\lxWorkspace\\.qa\\text-perf-1792132398245\\loops-2-attempt-2",
+      "accepted": true,
+      "documents": 12,
+      "clean": true,
+      "changed": []
+    },
+    {
+      "name": "loops-3",
+      "data": "D:\\lxWorkspace\\.qa\\text-perf-1792132398245\\loops-3-attempt-2",
+      "accepted": true,
+      "documents": 12,
+      "clean": true,
+      "changed": []
+    }
+  ]
+}

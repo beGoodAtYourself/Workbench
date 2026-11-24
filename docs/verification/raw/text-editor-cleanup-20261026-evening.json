@@ -1,0 +1,7 @@
+{
+  "foreignProcessesTerminated": false,
+  "scope": "Scheduled 2026-10-26 evening isolated textqa retest; runners exited their owned processes",
+  "recordedAt": "2026-10-26T10:56:06.6586423Z",
+  "allTextQaExited": true,
+  "remainingTextQaProcesses": []
+}

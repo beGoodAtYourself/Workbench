@@ -1,0 +1,237 @@
+{
+  "recordedAt": "2026-10-23T04:25:27.230Z",
+  "sha256": "d82f5abc3e0210f82766b358e27d1fb6ea0fbaf0c71c886a8620aa3038b1be4f",
+  "status": "budget-failed",
+  "acceptance": {
+    "complete": true,
+    "passed": false,
+    "effectiveMemoryIds": [
+      "1:single:1:0",
+      "1:dual:1:0",
+      "1:full:1:0",
+      "1:hidden-unloaded:1:0",
+      "2:single:1:0",
+      "2:dual:1:0",
+      "2:full:1:0",
+      "2:hidden-unloaded:1:0",
+      "3:single:1:0",
+      "3:dual:1:0",
+      "3:full:1:0",
+      "3:hidden-unloaded:1:0"
+    ],
+    "effectiveLoopIds": [
+      "loops:1:1",
+      "loops:2:1",
+      "loops:3:1"
+    ]
+  },
+  "startedAt": "2026-10-23T04:03:47.928Z",
+  "completedAt": "2026-10-23T04:24:23.841Z",
+  "environment": {
+    "platform": "win32",
+    "release": "10.0.26200",
+    "architecture": "x64",
+    "cpus": 16,
+    "cpu": "13th Gen Intel(R) Core(TM) i5-13500H",
+    "totalMemoryBytes": 33954172928,
+    "node": "v24.18.0"
+  },
+  "browserVersion": "155.0.4283.62",
+  "memory": [
+    {
+      "name": "single",
+      "round": 1,
+      "workingSetP95MiB": 98.86328125,
+      "privateBytesP95MiB": 180.9296875,
+      "pass": true
+    },
+    {
+      "name": "dual",
+      "round": 1,
+      "workingSetP95MiB": 110.69140625,
+      "privateBytesP95MiB": 196.9140625,
+      "pass": true
+    },
+    {
+      "name": "full",
+      "round": 1,
+      "workingSetP95MiB": 144.67578125,
+      "privateBytesP95MiB": 232.8671875,
+      "pass": true
+    },
+    {
+      "name": "hidden-unloaded",
+      "round": 1,
+      "workingSetP95MiB": 4.3515625,
+      "privateBytesP95MiB": 6.05078125,
+      "pass": true
+    },
+    {
+      "name": "single",
+      "round": 2,
+      "workingSetP95MiB": 100.28125,
+      "privateBytesP95MiB": 181.96484375,
+      "pass": true
+    },
+    {
+      "name": "dual",
+      "round": 2,
+      "workingSetP95MiB": 110.9296875,
+      "privateBytesP95MiB": 196.4453125,
+      "pass": true
+    },
+    {
+      "name": "full",
+      "round": 2,
+      "workingSetP95MiB": 145.53125,
+      "privateBytesP95MiB": 233.328125,
+      "pass": true
+    },
+    {
+      "name": "hidden-unloaded",
+      "round": 2,
+      "workingSetP95MiB": 4.375,
+      "privateBytesP95MiB": 6.26171875,
+      "pass": true
+    },
+    {
+      "name": "single",
+      "round": 3,
+      "workingSetP95MiB": 100.6484375,
+      "privateBytesP95MiB": 185.4296875,
+      "pass": true
+    },
+    {
+      "name": "dual",
+      "round": 3,
+      "workingSetP95MiB": 111.109375,
+      "privateBytesP95MiB": 199.82421875,
+      "pass": true
+    },
+    {
+      "name": "full",
+      "round": 3,
+      "workingSetP95MiB": 145.48828125,
+      "privateBytesP95MiB": 236.2265625,
+      "pass": true
+    },
+    {
+      "name": "hidden-unloaded",
+      "round": 3,
+      "workingSetP95MiB": 4.640625,
+      "privateBytesP95MiB": 6.6328125,
+      "pass": true
+    }
+  ],
+  "wake": [
+    {
+      "name": "retained",
+      "count": 30,
+      "nativeP95Ms": 122.6594,
+      "launcherP95Ms": 191.37310000008438,
+      "pass": true
+    },
+    {
+      "name": "unloaded",
+      "count": 30,
+      "nativeP95Ms": 538.709,
+      "launcherP95Ms": 642.702699999907,
+      "pass": true
+    }
+  ],
+  "loops": [
+    {
+      "round": 1,
+      "workingSetGrowthMiB": 19.5,
+      "privateBytesGrowthMiB": 21.58203125,
+      "pass": false
+    },
+    {
+      "round": 2,
+      "workingSetGrowthMiB": 24.0859375,
+      "privateBytesGrowthMiB": 25.95703125,
+      "pass": false
+    },
+    {
+      "round": 3,
+      "workingSetGrowthMiB": 21.83984375,
+      "privateBytesGrowthMiB": 27.15234375,
+      "pass": false
+    }
+  ],
+  "stress": [
+    {
+      "totalUtf16Units": 16777216,
+      "singleFileBytes": 16776512,
+      "boundaryRejected": true,
+      "inLimitEditAndSave": true,
+      "unloadedAndRecovered": true,
+      "workingSetP95MiB": 335.125,
+      "privateBytesP95MiB": 442.91796875
+    }
+  ],
+  "adoptedValidMemoryFrames": 545,
+  "normalScenePeakWorkingSetMiB": 149.33984375,
+  "coverageRetries": 0,
+  "instrumentationFailures": 0,
+  "fixtureIntegrityFailures": 0,
+  "nativeSuites": {
+    "native": {
+      "checks": 24,
+      "status": "passed",
+      "sha256": "d82f5abc3e0210f82766b358e27d1fb6ea0fbaf0c71c886a8620aa3038b1be4f",
+      "startedAt": "2026-10-23T04:00:58.201Z",
+      "completedAt": "2026-10-23T04:02:09.189Z"
+    },
+    "editing": {
+      "checks": 6,
+      "status": "passed",
+      "sha256": "d82f5abc3e0210f82766b358e27d1fb6ea0fbaf0c71c886a8620aa3038b1be4f",
+      "startedAt": "2026-10-23T04:02:20.872Z",
+      "completedAt": "2026-10-23T04:02:28.636Z"
+    },
+    "links": {
+      "checks": 7,
+      "status": "passed",
+      "sha256": "d82f5abc3e0210f82766b358e27d1fb6ea0fbaf0c71c886a8620aa3038b1be4f",
+      "startedAt": "2026-10-23T04:02:28.963Z",
+      "completedAt": "2026-10-23T04:02:37.360Z"
+    },
+    "recovery": {
+      "checks": 7,
+      "status": "passed",
+      "sha256": "d82f5abc3e0210f82766b358e27d1fb6ea0fbaf0c71c886a8620aa3038b1be4f",
+      "startedAt": "2026-10-23T04:02:37.683Z",
+      "completedAt": "2026-10-23T04:02:58.707Z"
+    },
+    "workspace": {
+      "checks": 9,
+      "status": "partial",
+      "sha256": "d82f5abc3e0210f82766b358e27d1fb6ea0fbaf0c71c886a8620aa3038b1be4f",
+      "startedAt": "2026-10-23T04:02:59.047Z",
+      "completedAt": "2026-10-23T04:03:15.186Z"
+    },
+    "shell": {
+      "checks": 3,
+      "status": "partial",
+      "sha256": "d82f5abc3e0210f82766b358e27d1fb6ea0fbaf0c71c886a8620aa3038b1be4f",
+      "startedAt": "2026-10-23T04:03:15.533Z",
+      "completedAt": "2026-10-23T04:03:20.502Z"
+    }
+  },
+  "hiddenUnloadMs": 60089.3525,
+  "cleanup": {
+    "remainingTextQaOwners": 0,
+    "checkedAt": "2026-10-23T04:24:31Z",
+    "method": "Post-run read-only Win32_Process query returned no textqa owner.",
+    "keyboardMouseReleasedAt": "2026-10-23T04:24:31Z",
+    "staleOwnedRunner": "Earlier 09:25 lifecycle runner was identified from this chat's original tool record, exact command and creation time; only that owned process tree was stopped before performance measurement."
+  },
+  "schedule": {
+    "automationId": "automation",
+    "scheduledAt": "2026-10-23T04:00:00Z",
+    "triggeredAt": "2026-10-23T04:00:18.418Z",
+    "oneTime": true,
+    "deletedAfterRun": true
+  }
+}

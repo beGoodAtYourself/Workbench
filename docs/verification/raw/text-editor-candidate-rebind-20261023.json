@@ -1,0 +1,243 @@
+{
+  "recordedAt": "2026-10-23T06:05:02.119Z",
+  "status": "native-retest-complete-budget-failed",
+  "qaPath": "D:\\lxWorkspace\\src-tauri\\target\\text-editor\\qa\\shiye-text-qa.exe",
+  "qaSha256": "fb766acf83893347b4511e8ec5089e534d64d6edbdcad6558371e88dac842f19",
+  "qaBytes": 6845952,
+  "artifacts": [
+    {
+      "path": "D:\\lxWorkspace\\src-tauri\\target\\text-editor\\release\\shiye.exe",
+      "bytes": 6845952,
+      "modifiedAt": "2026-10-23T06:04:50.372Z",
+      "sha256": "c795668538f2817966d21e8aac428061db641344d60058d71a86f6dda78cfd8a"
+    },
+    {
+      "path": "D:\\lxWorkspace\\src-tauri\\target\\text-editor\\release\\bundle\\nsis\\拾页_0.1.0_x64-setup.exe",
+      "bytes": 2346666,
+      "modifiedAt": "2026-10-23T06:04:50.353Z",
+      "sha256": "0cc550938c584b0351bc96e570136398de4ef5ef975b1da6c6eac53e8e23ba55"
+    }
+  ],
+  "frontEndAssets": 32,
+  "sourceHashes": {
+    "src/main.ts": "cbb532ce960c50c4aa390b9b69cf6fa136bd3dac01feb7c6668b8d12be6d098d",
+    "src/text-editor.ts": "c20d63cf906904a8c21f26435336060dff5d6fbaa9f8d55d49fc340b78eb5a73",
+    "src/text-workspace.ts": "57cf9bbf48b3b2a95582d8c0082d1dceaeb969f89c597c606c6a95added2b012",
+    "src/text-model.ts": "1cb9a53b56860965a49b950dcb902c39ecbac0be52cc40e78ac3a9091852ea22",
+    "src/text-search-client.ts": "e30f632cf1248027839c7dfd671283fee0b4f435af5ab0a5ba86bda9269fc6b0"
+  },
+  "sourceTreeHashes": {
+    "package-lock.json": "8b955d6bc491b23e3b58f31c8347f6bab1ecded77890712c770b5eafc811be8e",
+    "package.json": "5260aaad2247b2380a2e32e291823419292e557740f61dc0626a7538fbf91b56",
+    "src-tauri/Cargo.lock": "5f3d2ff31e8468b94b2d53b31c4a212f89357787e03e4ad7ab8a3a8b096d0466",
+    "src-tauri/Cargo.toml": "95a1664d211220b518096012920d8a21eb0f88f4fee7087e1e70e7f5c9ca86cf",
+    "src-tauri/src/app.rs": "5f91966240176168e53d601d0660734659a4e0292f3a10a54ba4b4b9e91a3667",
+    "src-tauri/src/autostart.rs": "0c6f1bd16a3707521144fe143b7dbb60a12f2c274b4c3a8ba74b8fee299eb31e",
+    "src-tauri/src/commands.rs": "1825ebdc310f7581314a1c2cacca19ce4e2cd3a162266e1ecefe1919178ca9c5",
+    "src-tauri/src/files.rs": "83403f6769a4b5916fc2db9611afad3588dda3a6d6885d393ad70a7baf0dea7c",
+    "src-tauri/src/folder_order.rs": "8ae335879c436ef1699ffddd78b1531e389d6a6d7399fcffc9130344ca1c8306",
+    "src-tauri/src/main.rs": "be19f715846c9e00b319f12a01c6a27c1cb177a00aa8712501e727d3db095d1f",
+    "src-tauri/src/native.rs": "ca80401bd21f9b147e6061201918d4f424fd44d595a6bbfbe288448f462c26c1",
+    "src-tauri/src/settings.rs": "661e9e29fbea93e7a18fa583f440da6ddeae98aa5e1c8ae765b68851358d63ae",
+    "src-tauri/src/startup.rs": "c2d1f11126c21af5c5a6f604014525c4dca4b3d9877b51fb9e8a97948b2b315a",
+    "src-tauri/src/text_files.rs": "34495174b2f4124af215300f1aa2d98d741651c9be21990d77f94b173782ffa8",
+    "src-tauri/src/text_session.rs": "0c515a9bcfaaf7f36fd34b3e54e7fef845f57c47abc9ea14a9a49b7fb7f67685",
+    "src-tauri/tauri.conf.json": "78355a7f37033a3fd26f3726d2aba8e93ee27c8ffa0f6cb57542364956f42b4a",
+    "src/autostart-settings.ts": "097efaa7008b6ab6bc5c9efcb60df224d03f8b800df626e2fc1598bdcc1c2b47",
+    "src/bridge.ts": "a7a78ffef7cea0d4d6a98c6b842a7c3cf2410a3479f2574796a77d5fd4bed3dd",
+    "src/code-languages.ts": "152346030c186477775ac033de19c9a43c81fb4b674719ca34202c58037fe473",
+    "src/demo.ts": "a293e3292a79740369ff7fde26b889e61931fdd4ad4477760daa564f0f3fd1f5",
+    "src/editor-base.ts": "58ff79ce193e3f1278e7636943b3aa6aafe86b4b5afbc90d7b2616e40b0d8976",
+    "src/editor.ts": "dd1e5e92b78eac8f0f5f1eab513ba3eb10a10b8120a8ec05cc089df6444af4bf",
+    "src/folder-interactions.ts": "9bccefba70a9bc86537e2fdf70a5f62647fa1ca1746ef5e68c89d67c8f968a10",
+    "src/folder-tree.ts": "6cf93297eb73420e8e7be0d1e9fcf9907e91a65879315be6ed2ba8d6c3076624",
+    "src/format-toolbar.ts": "e5f13a9975146a22176d52660512d0890167822f8b7bb2b6a0e7902230454526",
+    "src/formatting.ts": "dc996856d9d35f46a50a7d2a4686f85a12d91f2b20cbaadd3812bc493de1c430",
+    "src/main.ts": "cbb532ce960c50c4aa390b9b69cf6fa136bd3dac01feb7c6668b8d12be6d098d",
+    "src/markdown.ts": "020db2917cf4a0d43644871970a077380dc6171ee0c0bcdda49647f1f1d42f15",
+    "src/model.ts": "7fe8c2c5be7e3c5f88993f665488c042475a5df83d7d4945e0736acc45193ff4",
+    "src/paths.ts": "a60ae5a049191cbc053ebebc5c4c8e11e03b5f851183ee10d31924cb1bdd93bf",
+    "src/style.css": "d0671df9840dc02209215d43823e2d02b445aa1851092fdb29000217d34fc630",
+    "src/text-bridge.ts": "eb60a301b238250ed3330d2c26b817ba6c5ff4b73392b89f5d994a7fcce7064a",
+    "src/text-demo.ts": "936b2bb3601ebe039986048835a084103ab4d807e203702486f0ae403740c113",
+    "src/text-editor.ts": "c20d63cf906904a8c21f26435336060dff5d6fbaa9f8d55d49fc340b78eb5a73",
+    "src/text-model.ts": "1cb9a53b56860965a49b950dcb902c39ecbac0be52cc40e78ac3a9091852ea22",
+    "src/text-search-client.ts": "e30f632cf1248027839c7dfd671283fee0b4f435af5ab0a5ba86bda9269fc6b0",
+    "src/text-search.ts": "19290abe561de857c8b191c187c3234836967143e753a23bcd424658aeedf72b",
+    "src/text-search.worker.ts": "32f2b3a3c6744355cb67ccc23ccb52bf4cc2f17e70e8278b68b76ea7702cbf5c",
+    "src/text-style.css": "6bd0a5bcc388a2c6211576a65f606cdc659019888bd27e63e47e0f07b4ceb5aa",
+    "src/text-types.ts": "4c67bee90ad26b3dcab2a9893089f6a53b262c2760b0016318530e87278c6f41",
+    "src/text-workspace.ts": "57cf9bbf48b3b2a95582d8c0082d1dceaeb969f89c597c606c6a95added2b012",
+    "src/types.ts": "54cabf8147a0a5d8357bc7aaf038ba12cc1bd0e6ce1598f6705095dfe2796084",
+    "tests/e2e/text-lifecycle.spec.ts": "ae9170ad846defa8d6a79a7a2cdcab4fd1da6d00f3ca275897537f31484dea9b",
+    "tsconfig.json": "85b50411c37a0f889cf4d6eed6d5e241dbf990438ac94e3948ace2f565a4edb9",
+    "vite.config.ts": "f50400467100affae5a68620240f3075fb63387fd15c39719420d51f6d9fd120"
+  },
+  "harnessHashes": {
+    "scripts/text-native-smoke.mjs": "7bc71b4cb3931fa30ec7216628700b3904dfc4c7bc696497c377cee36bf05b21",
+    "scripts/text-editor-native.mjs": "359843c74e9c0536e3e0a5a6c7f65edb613b9d780e3b52ea6fa7146936a66b06",
+    "scripts/text-links-native.mjs": "f7afd36c674a68a11412d1647203bd9032475dc7082b8a92ade424f68e534b41",
+    "scripts/text-recovery-native.mjs": "622edb56931ccfe0b0e7f43584913c53b5d52cf2dc7f685202d57af15ec48f7c",
+    "scripts/text-workspace-native.mjs": "ae724c6f7ad259faff99b61590e9b619dc167c807ad559ddb67d17e44222c9fc",
+    "scripts/text-shell-native.mjs": "f46fb709d6df6071a6d2272253352efd51d4479f47f13e714e26b65ca2e6b66a",
+    "scripts/text-native-performance.mjs": "64b5df633759f164896c2921306287247203d6bdf2dbd772f4829275177c977e",
+    "scripts/text-memory-probe.ps1": "0137e59589a85d1222e44efcc92972132f15fada7d53c30deaa12f39b050fb3e",
+    "scripts/text-native-config.json": "a21916e19bf4bababb9eeec649507d678487c3db3aa134b61155bea1c28e7c8b",
+    "scripts/text-component-allocation.mjs": "5ef5ce7986cf776857aa86d4a55e4b02cee4d931c64802a792315efa28800c15",
+    "scripts/text-delivery.mjs": "abc86be9523c2d585c9d563ac520c72efea1e382d2c779255c47556f4f04f8c6"
+  },
+  "resourceSpecSha256": "7a6ca304f1b3e0ba2552d8e534a2fcd7260fb86755281174d773514bbe3bf75e",
+  "previousCandidate": "docs/verification/raw/text-editor-candidate-20261023.json",
+  "previousQaSha256": "d82f5abc3e0210f82766b358e27d1fb6ea0fbaf0c71c886a8620aa3038b1be4f",
+  "previousPerformanceStatus": "budget-failed",
+  "historyArchive": "src-tauri/target/text-editor/history/before-rebind-d82f5abc/archive.json",
+  "budgetGrowthMiB": 20,
+  "nativeRetest": {
+    "performed": true,
+    "scheduled": false,
+    "requiresNewUserTimeWindow": true,
+    "timezone": "Asia/Singapore",
+    "expectedDurationMinutes": 25,
+    "status": "budget-failed",
+    "scheduledStart": "2026-10-26T12:00:00+08:00",
+    "automationId": "automation",
+    "authorization": "User rescheduled the one-time foreground retest to Monday 2026-10-26 at noon, Asia/Singapore; keyboard and mouse idle during the agreed window.",
+    "rescheduledFrom": "2026-10-23T18:30:00+08:00",
+    "completedAt": "2026-10-26T04:25:01.419Z",
+    "acceptance": {
+      "complete": true,
+      "passed": false,
+      "effectiveMemoryIds": [
+        "1:single:1:0",
+        "1:dual:1:0",
+        "1:full:1:0",
+        "1:hidden-unloaded:1:0",
+        "2:single:1:0",
+        "2:dual:1:0",
+        "2:full:1:0",
+        "2:hidden-unloaded:1:0",
+        "3:single:1:0",
+        "3:dual:1:0",
+        "3:full:1:0",
+        "3:hidden-unloaded:1:0"
+      ],
+      "effectiveLoopIds": [
+        "loops:1:1",
+        "loops:2:1",
+        "loops:3:1"
+      ]
+    },
+    "summary": "docs/verification/raw/text-editor-retest-20261026.json",
+    "automationDeleted": true,
+    "keyboardMouseReleasedAt": "2026-10-26T04:25:16.5140497Z"
+  },
+  "checks": {
+    "typescript": "passed",
+    "unitTests": 244,
+    "fullHeadlessE2E": 101,
+    "additionalFocusedE2E": 1,
+    "totalDistinctHeadlessE2E": 102,
+    "additionalFocusedCase": "long/short document scroll restoration through a reused view",
+    "buildQa": "passed",
+    "buildFormalNsis": "passed",
+    "diagnosticSyntax": "passed",
+    "backend": "unchanged; prior 80 Rust tests and Clippy not rerun"
+  },
+  "diagnostic": {
+    "acceptance": false,
+    "before": "docs/verification/raw/text-component-allocation-baseline-rebind-20261023.json",
+    "after": "docs/verification/raw/text-component-allocation-after-rebind-20261023.json",
+    "sourceProcessAnalysis": "docs/verification/raw/text-editor-process-growth-d82f5abc-20261023.json",
+    "cycles": 100,
+    "documents": 12,
+    "bytesEach": 102400,
+    "scenes": [
+      {
+        "mode": "switch",
+        "before": {
+          "editors": 201,
+          "workers": 0,
+          "searchForms": 0
+        },
+        "after": {
+          "editors": 1,
+          "workers": 0,
+          "searchForms": 0
+        },
+        "fixturesUnchanged": true
+      },
+      {
+        "mode": "search",
+        "before": {
+          "editors": 1,
+          "workers": 100,
+          "searchForms": 100
+        },
+        "after": {
+          "editors": 1,
+          "workers": 100,
+          "searchForms": 0
+        },
+        "fixturesUnchanged": true
+      },
+      {
+        "mode": "split",
+        "before": {
+          "editors": 101,
+          "workers": 0,
+          "searchForms": 0
+        },
+        "after": {
+          "editors": 101,
+          "workers": 0,
+          "searchForms": 0
+        },
+        "fixturesUnchanged": true
+      },
+      {
+        "mode": "pause",
+        "before": {
+          "editors": 1,
+          "workers": 0,
+          "searchForms": 0
+        },
+        "after": {
+          "editors": 1,
+          "workers": 0,
+          "searchForms": 0
+        },
+        "fixturesUnchanged": true
+      },
+      {
+        "mode": "combined",
+        "before": {
+          "editors": 202,
+          "workers": 100,
+          "searchForms": 100
+        },
+        "after": {
+          "editors": 101,
+          "workers": 100,
+          "searchForms": 0
+        },
+        "fixturesUnchanged": true
+      }
+    ],
+    "limits": "Synthetic in-memory repository, headless Edge, 1/2 second waits and diagnostic forced GC; not the native disk/IPC/OS-memory acceptance protocol. Counts include final canonical layout. No claim that 20 MiB is met."
+  },
+  "protocol": {
+    "rounds": 3,
+    "samples": 30,
+    "warmupCycles": 10,
+    "cycles": 100,
+    "stableAfterMs": 60000,
+    "growthBudgetMiB": 20,
+    "unchanged": true
+  },
+  "changes": [
+    "Rebind at most two existing visible EditorViews when a loaded tab replaces another; persist only bounded per-document pure state.",
+    "Keep queued history reset, late language loading and search results bound to their original document generation.",
+    "Reuse search form nodes while resetting controls and scope according to existing open behavior; closing still terminates the Worker."
+  ],
+  "hiddenAssertion": "At most two parked read-only views before idle unload, no active language parser or worker; actual WebView unload remains mandatory."
+}

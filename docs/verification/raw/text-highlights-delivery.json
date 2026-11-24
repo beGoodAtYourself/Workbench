@@ -1,0 +1,56 @@
+{
+  "date": "2026-10-29",
+  "feature": "text-selection-background-highlights",
+  "checks": {
+    "frontendUnitTests": 257,
+    "rustTests": 90,
+    "existingTextBrowserTests": 26,
+    "newHighlightBrowserTests": 4,
+    "typecheck": "passed",
+    "clippy": "passed",
+    "visualReview": "ship",
+    "designDocumentation": "no-changes",
+    "desktopSizes": [
+      [
+        1280,
+        850
+      ],
+      [
+        960,
+        850
+      ]
+    ]
+  },
+  "sources": {
+    "src/text-highlights.ts": "cf49dbb9c0bb332f6f10788c23dd4d284b0c573652ec124c7db9db34ac107333",
+    "src/text-highlight-state.ts": "ff99a0bf0fd1c694913ede51df1584c79bc88bfc1b33526d29b5e54b53afdff7",
+    "src/text-editor.ts": "de5f8e83fab263badf65da914a08c58ef65941180537a693123284fb8d31910d",
+    "src/text-model.ts": "11777e405407fdf04e25e2465bfb572b308fa098557efe9b6f307df0629c48bd",
+    "src/text-workspace.ts": "bd731d687bc307daa18e04f3b2a30e7bfb62818a71260e095351dafc6202bb0e",
+    "src/text-types.ts": "8cb4dd2ed5bb43b7963dd39c1278d59e3a13cf7cc43e0c1a8ad49ced1dd53148",
+    "src/text-demo.ts": "548f4a51457dd20f39e7182f349aab11bce208fc7ac3901eaa8cc2f47763497a",
+    "src/text-style.css": "6b9d32f8e6607bc357d6bc0f20bbd2d6998a73e63af74dc3202f6e7412dd7b75",
+    "src-tauri/src/text_annotations.rs": "c3202532dfca67c0476f1c57e1c7b45eb7ed55c870e3d2f2a18d718d74a1e57a",
+    "src-tauri/src/text_session.rs": "317a0e30606082479c18bd3119dff38a45749d87f4b8006e510a92cca0cbd7db",
+    "src-tauri/src/text_files.rs": "eb0710cd87b4cabed8863bcf44190a800d1ce2b8189716901ad03ce0b9d54757",
+    "src-tauri/src/main.rs": "cc35de458e1adfffeaa5144b8d5797c7926a4f1f4beee78e14dc46d2aaccd64a"
+  },
+  "limitations": [
+    "标注仅在本机按文件路径保存，不随原文件传送。",
+    "外部正文不同，不套用旧位置。",
+    "未执行完整原生前台、安装生命周期或性能循环验收。"
+  ],
+  "recordedAt": "2026-10-29T16:21:11.652893+08:00",
+  "artifacts": [
+    {
+      "path": "D:\\lxWorkspace\\src-tauri\\target\\text-highlights\\release\\shiye.exe",
+      "bytes": 7228928,
+      "sha256": "34353f1e6910b7643acb7d250edb1b2c5fed630b35ffbcd4937ade40f81b8301"
+    },
+    {
+      "path": "D:\\lxWorkspace\\src-tauri\\target\\text-highlights\\release\\bundle\\nsis\\拾页_0.1.0_x64-setup.exe",
+      "bytes": 2535934,
+      "sha256": "805366989e49dcbaf2d4aa8afbd020b845d35b1ec3f492c137ead8ae3ec14ee7"
+    }
+  ]
+}

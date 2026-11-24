@@ -1,0 +1,173 @@
+{
+  "startedAt": "2026-10-26T10:33:55.895Z",
+  "source": "D:\\lxWorkspace\\src-tauri\\target\\text-editor\\qa\\shiye-text-qa.exe",
+  "sha256": "8d0066c1b881538985f1b5a347a92b2dfd876e6793814b5cc76ccc6cd877172f",
+  "executable": "D:\\lxWorkspace\\.qa\\text-workspace-native-1793010835884\\app\\shiye-text-qa.exe",
+  "data": "D:\\lxWorkspace\\.qa\\text-workspace-native-1793010835884",
+  "fixtures": "D:\\lxWorkspace\\.qa\\text-workspace-native-1793010835884\\files",
+  "port": 22415,
+  "scope": "Isolated textqa release WebView2; real visible controls and dedicated search workers; only synthetic files. QA queue selects exact fixture files then runs the normal text-open command. No mock file writes or fabricated folder-picker result.",
+  "checks": [
+    {
+      "name": "Opening an already-owned note through normal text-open activates its notes owner without another text buffer",
+      "pass": true
+    },
+    {
+      "name": "Closing the note owner allows text ownership; a notes-tree click reactivates that same dirty text buffer without saving its original",
+      "pass": true
+    },
+    {
+      "name": "The host rejects ancestor rename, cross-folder move and recycle while text owns a descendant; source bytes and paths remain intact",
+      "pass": true
+    },
+    {
+      "name": "The actual notes-tree same-parent ordering menu remains usable while a text descendant is open",
+      "pass": true
+    },
+    {
+      "name": "A partial multi-open failure keeps valid XML/JSON documents, reports invalid UTF-8, and creates no bad-file tab or authorization",
+      "pass": true,
+      "details": {
+        "openedNames": [
+          "共享.md",
+          "code.xml",
+          "config.json"
+        ],
+        "invalidFileSha256": "eddf68639913a3cb8331cdfe7f87559e0beccf2c289c0d90ac4d89b3204004f8",
+        "grants": 3
+      }
+    },
+    {
+      "name": "Release JSON and XML languages are selected by extension and visibly colored using local bundled script resources",
+      "pass": true,
+      "details": {
+        "scriptRequests": [
+          "http://tauri.localhost/assets/index-Bv2s4VXV.js",
+          "http://tauri.localhost/assets/core-BEOw45JP.js",
+          "http://tauri.localhost/assets/event-Gip4rtXm.js",
+          "http://tauri.localhost/assets/text-workspace-DfHlBpjd.js",
+          "http://tauri.localhost/assets/code-languages-B_vvGJb5.js",
+          "http://tauri.localhost/assets/editor-base-Sh7Eg1iq.js",
+          "http://tauri.localhost/assets/index-BfX5SVDL.js",
+          "http://tauri.localhost/assets/index-BAJBmuE6.js",
+          "http://tauri.localhost/assets/index-B39rsdy7.js",
+          "http://tauri.localhost/assets/index-Dmiq8Jyl.js",
+          "http://tauri.localhost/assets/index-CLMBEdkp.js",
+          "http://tauri.localhost/assets/index-DjylMm6_.js",
+          "http://tauri.localhost/assets/index-BVeIymtj.js",
+          "http://tauri.localhost/assets/xml-BQQZnNBQ.js"
+        ]
+      }
+    },
+    {
+      "name": "A real catastrophic regex worker times out while the release UI stays usable and accepts subsequent text input",
+      "pass": true
+    },
+    {
+      "name": "Closing active search terminates its real dedicated worker and prevents late task UI from blocking further editing",
+      "pass": true,
+      "details": {
+        "releaseMs": 2964.1247000000003
+      }
+    },
+    {
+      "name": "Twelve native tabs and two distinct visible editors retain all buffers; a thirteenth tab is rejected without eviction or source-file writes",
+      "pass": true,
+      "details": {
+        "documentIds": [
+          "text-ad0c-18e20ddb56f27ee0-4",
+          "text-ad0c-18e20ddb7febddc8-a",
+          "text-ad0c-18e20ddb806d7144-d",
+          "5f5ce22c-e94e-4b3e-9831-fcec5fa6397d",
+          "2543b0cc-3f10-40a0-bdfc-b51e10869ab2",
+          "70a77b60-4330-4360-8a03-fb92801268bc",
+          "19830e60-90f3-40f1-89a8-e9c7b1d07415",
+          "d9e02506-e238-45dd-9af1-bdb21b94af9e",
+          "b94e2d8c-f616-4cd5-a643-56e70e11c4c2",
+          "3e3a89e7-2bf4-49a9-94e6-c76fe48b4d1f",
+          "705f1168-34b6-4c13-b83e-0ba18ca92062",
+          "7328e009-8170-4481-9246-e953c0b35964"
+        ],
+        "bodySha256": {
+          "text-ad0c-18e20ddb56f27ee0-4": "f9694a4260039edc56465b73f5a86a084d74ffaf02d5f2a078db2f863ba2e43c",
+          "text-ad0c-18e20ddb7febddc8-a": "cb4d0367aa3b46388363f67161aa94bd4e6c7b661e704912ea1c249d60be44f1",
+          "text-ad0c-18e20ddb806d7144-d": "6258a1f6873a1b60634eb874263cdfe0279dccb7b6149c5ee95a637440dbdfc1",
+          "5f5ce22c-e94e-4b3e-9831-fcec5fa6397d": "dcef48646bf8eccf9d3c47df2a2847959621f7f5fe486fc69cc6e21553202622",
+          "2543b0cc-3f10-40a0-bdfc-b51e10869ab2": "4dc7de0790c07b70f104a910940910fa386f79bcabba15cc17fe869d30707584",
+          "70a77b60-4330-4360-8a03-fb92801268bc": "1c77806f2cc6256e1e7499c26ab6ab1710fb913df780c41580ac2f530b6edf1f",
+          "19830e60-90f3-40f1-89a8-e9c7b1d07415": "de5497c0662060009178901ab8a84df95bdddfea2fe84813c3997cb5042320d4",
+          "d9e02506-e238-45dd-9af1-bdb21b94af9e": "c1a3856cd72f0441d487222b3227e84cdf5a8277aca2667f7b39e4b3791824fb",
+          "b94e2d8c-f616-4cd5-a643-56e70e11c4c2": "e92b32c9bb6d8b544279815e4827c25c69ddff12063d7889d7d69c75c9c7cdff",
+          "3e3a89e7-2bf4-49a9-94e6-c76fe48b4d1f": "6525f5bbae33e9166aa07aa0324c3badf5b871b6ea0b6c124df501fce56da81b",
+          "705f1168-34b6-4c13-b83e-0ba18ca92062": "79adae8494a03b38cddabb3a23f521d442364df84cfd83c7a7d4a34edff1cbc3",
+          "7328e009-8170-4481-9246-e953c0b35964": "602270dae5d7f190dcaaa36bad71ddf277b165d6f94edc1c02904513698c3ec8"
+        },
+        "visibleIds": [
+          "text-ad0c-18e20ddb56f27ee0-4",
+          "text-ad0c-18e20ddb7febddc8-a"
+        ]
+      }
+    }
+  ],
+  "pendingChecks": [
+    {
+      "name": "Change notes library through the actual native directory picker while keeping text tabs",
+      "reason": "Run with --native-root-picker to pause for a human-operated Windows folder picker. Without that flag, this harness does not fabricate a result or substitute direct set_workspace IPC for UI coverage."
+    }
+  ],
+  "pageErrors": [],
+  "workerEvents": [
+    {
+      "event": "created",
+      "url": "http://tauri.localhost/assets/text-search.worker-DdK7sHSX.js",
+      "at": "2026-10-26T10:34:00.368Z"
+    },
+    {
+      "event": "closed",
+      "url": "http://tauri.localhost/assets/text-search.worker-DdK7sHSX.js",
+      "at": "2026-10-26T10:34:03.876Z"
+    },
+    {
+      "event": "created",
+      "url": "http://tauri.localhost/assets/text-search.worker-DdK7sHSX.js",
+      "at": "2026-10-26T10:34:03.996Z"
+    },
+    {
+      "event": "closed",
+      "url": "http://tauri.localhost/assets/text-search.worker-DdK7sHSX.js",
+      "at": "2026-10-26T10:34:04.002Z"
+    },
+    {
+      "event": "created",
+      "url": "http://tauri.localhost/assets/text-search.worker-DdK7sHSX.js",
+      "at": "2026-10-26T10:34:04.230Z"
+    },
+    {
+      "event": "closed",
+      "url": "http://tauri.localhost/assets/text-search.worker-DdK7sHSX.js",
+      "at": "2026-10-26T10:34:06.296Z"
+    }
+  ],
+  "resourceRequests": [
+    "http://tauri.localhost/assets/index-Bv2s4VXV.js",
+    "http://tauri.localhost/assets/core-BEOw45JP.js",
+    "http://tauri.localhost/assets/event-Gip4rtXm.js",
+    "http://tauri.localhost/assets/text-workspace-DfHlBpjd.js",
+    "http://tauri.localhost/assets/code-languages-B_vvGJb5.js",
+    "http://tauri.localhost/assets/editor-base-Sh7Eg1iq.js",
+    "http://tauri.localhost/assets/index-BfX5SVDL.js",
+    "http://tauri.localhost/assets/index-BAJBmuE6.js",
+    "http://tauri.localhost/assets/index-B39rsdy7.js",
+    "http://tauri.localhost/assets/index-Dmiq8Jyl.js",
+    "http://tauri.localhost/assets/index-CLMBEdkp.js",
+    "http://tauri.localhost/assets/index-DjylMm6_.js",
+    "http://tauri.localhost/assets/index-BVeIymtj.js",
+    "http://tauri.localhost/assets/xml-BQQZnNBQ.js",
+    "http://tauri.localhost/assets/text-search.worker-DdK7sHSX.js",
+    "http://tauri.localhost/assets/text-search.worker-DdK7sHSX.js",
+    "http://tauri.localhost/assets/text-search.worker-DdK7sHSX.js"
+  ],
+  "ownerPid": 44300,
+  "status": "partial",
+  "completedAt": "2026-10-26T10:34:11.983Z"
+}

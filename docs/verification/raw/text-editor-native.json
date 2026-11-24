@@ -1,0 +1,226 @@
+{
+  "startedAt": "2026-10-26T10:31:24.205Z",
+  "executable": "D:\\lxWorkspace\\src-tauri\\target\\text-editor\\qa\\shiye-text-qa.exe",
+  "sha256": "8d0066c1b881538985f1b5a347a92b2dfd876e6793814b5cc76ccc6cd877172f",
+  "data": "D:\\lxWorkspace\\.qa\\text-native-1793010684196",
+  "fixtures": "D:\\lxWorkspace\\.qa\\text-native-1793010684196\\files",
+  "port": 5796,
+  "scope": "Real release WebView2, synthetic files, QA-gated file selection; native dialogs verified separately. Real 60-second idle timer unless --skip-idle is recorded.",
+  "checks": [
+    {
+      "name": "Strict encoding, BOM and no-op byte preservation: utf8/lf",
+      "pass": true
+    },
+    {
+      "name": "Strict encoding, BOM and no-op byte preservation: utf8-bom/crlf",
+      "pass": true
+    },
+    {
+      "name": "Strict encoding, BOM and no-op byte preservation: utf16le/crlf",
+      "pass": true
+    },
+    {
+      "name": "Strict encoding, BOM and no-op byte preservation: utf16be/crlf",
+      "pass": true
+    },
+    {
+      "name": "Invalid UTF-8 cannot become a writable replacement-character document",
+      "pass": true
+    },
+    {
+      "name": "Binary input is rejected without modifying bytes",
+      "pass": true
+    },
+    {
+      "name": "16 MiB raw input boundary rejects a complete oversized file",
+      "pass": true
+    },
+    {
+      "name": "Unknown grant IDs and fixture-root escapes are rejected",
+      "pass": true
+    },
+    {
+      "name": "Explicit UTF-16 BE/CRLF conversion produces exact expected bytes",
+      "pass": true
+    },
+    {
+      "name": "External byte changes prevent stale writes and preserve external content",
+      "pass": true
+    },
+    {
+      "name": "Atomic external replacement invalidates the old file identity",
+      "pass": true
+    },
+    {
+      "name": "Read-only save failure leaves original bytes intact",
+      "pass": true
+    },
+    {
+      "name": "Deleted originals are never automatically recreated by save",
+      "pass": true
+    },
+    {
+      "name": "Mixed/CR line endings require explicit normalization before writing",
+      "pass": true
+    },
+    {
+      "name": "Save As without overwrite approval never replaces an existing target",
+      "pass": true
+    },
+    {
+      "name": "Real UI edits checkpoint locally without modifying the source file",
+      "pass": true
+    },
+    {
+      "name": "Explicit real UI save writes the full original file",
+      "pass": true
+    },
+    {
+      "name": "Module switching preserves dirty/untitled sessions and at most two mounted editors",
+      "pass": true
+    },
+    {
+      "name": "Note file operations cannot rename a path occupied by the text module",
+      "pass": true
+    },
+    {
+      "name": "The host rejects a stale lifecycle confirmation and accepts a matching complete checkpoint",
+      "pass": true
+    },
+    {
+      "name": "A real 60-second WebView unload and same-host wake restore dirty and untitled drafts without saving originals",
+      "pass": true
+    },
+    {
+      "name": "Normal exit and a new host process restore the latest complete recovery generation",
+      "pass": true
+    },
+    {
+      "name": "Background and repeated --autostart launches keep text recovery metadata without creating a main WebView",
+      "pass": true
+    },
+    {
+      "name": "A manual second launch wakes the background owner and first restores its dirty and untitled text sessions",
+      "pass": true
+    }
+  ],
+  "pageErrors": [],
+  "ownerPid": 29680,
+  "lastConnectionError": "browserType.connectOverCDP: connect ECONNREFUSED 127.0.0.1:5796\nCall log:\n\u001b[2m  - <ws preparing> retrieving websocket url from http://127.0.0.1:5796\u001b[22m\n",
+  "hiddenUnloadMs": 60102.803400000004,
+  "background": {
+    "ownerPid": 20568,
+    "initial": {
+      "children": [],
+      "windows": [
+        {
+          "handle": 789308,
+          "title": "拾页悬浮入口",
+          "className": "ShiyeFloat",
+          "visible": false,
+          "width": 52,
+          "height": 52
+        },
+        {
+          "handle": 1444452,
+          "title": "",
+          "className": "global_hotkey_app",
+          "visible": false,
+          "width": 1440,
+          "height": 753
+        },
+        {
+          "handle": 462472,
+          "title": "",
+          "className": "tray_icon_app",
+          "visible": false,
+          "width": 1440,
+          "height": 753
+        },
+        {
+          "handle": 593488,
+          "title": "local.shiye.workbench.textqa-siw",
+          "className": "local.shiye.workbench.textqa-sic",
+          "visible": true,
+          "width": 16,
+          "height": 16
+        },
+        {
+          "handle": 658546,
+          "title": "",
+          "className": "Tao Thread Event Target",
+          "visible": true,
+          "width": 16,
+          "height": 16
+        },
+        {
+          "handle": 1117508,
+          "title": "Default IME",
+          "className": "IME",
+          "visible": false,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "foreground": 66374,
+      "foregroundProcess": 45460
+    },
+    "repeated": {
+      "children": [],
+      "windows": [
+        {
+          "handle": 789308,
+          "title": "拾页悬浮入口",
+          "className": "ShiyeFloat",
+          "visible": false,
+          "width": 52,
+          "height": 52
+        },
+        {
+          "handle": 1444452,
+          "title": "",
+          "className": "global_hotkey_app",
+          "visible": false,
+          "width": 1440,
+          "height": 753
+        },
+        {
+          "handle": 462472,
+          "title": "",
+          "className": "tray_icon_app",
+          "visible": false,
+          "width": 1440,
+          "height": 753
+        },
+        {
+          "handle": 593488,
+          "title": "local.shiye.workbench.textqa-siw",
+          "className": "local.shiye.workbench.textqa-sic",
+          "visible": true,
+          "width": 16,
+          "height": 16
+        },
+        {
+          "handle": 658546,
+          "title": "",
+          "className": "Tao Thread Event Target",
+          "visible": true,
+          "width": 16,
+          "height": 16
+        },
+        {
+          "handle": 1117508,
+          "title": "Default IME",
+          "className": "IME",
+          "visible": false,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "foreground": 66374,
+      "foregroundProcess": 45460
+    }
+  },
+  "status": "passed",
+  "completedAt": "2026-10-26T10:32:35.323Z"
+}

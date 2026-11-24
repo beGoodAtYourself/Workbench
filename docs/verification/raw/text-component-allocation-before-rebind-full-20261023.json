@@ -1,0 +1,18 @@
+{
+  "acceptance": false,
+  "kind": "headless-component-allocation",
+  "label": "before-rebind-full-20261023",
+  "startedAt": "2026-10-23T05:48:59.030Z",
+  "notice": "Real text model/workspace/editor with an in-memory synthetic repository; no native bridge, private-process-memory acceptance or disk recovery claim. Forced GC is diagnostic only.",
+  "sourceHashes": {
+    "src/text-editor.ts": "c2921e833bfad0abca07e911e6ae72dbdbf1ef11bf978e96227b9107c8873f98",
+    "src/text-workspace.ts": "55d9f8d816c50c0e203f929c05163dbe92c7844fc714c81dfd4f339997efd19c",
+    "src/text-model.ts": "1cb9a53b56860965a49b950dcb902c39ecbac0be52cc40e78ac3a9091852ea22",
+    "src/text-search-client.ts": "e30f632cf1248027839c7dfd671283fee0b4f435af5ab0a5ba86bda9269fc6b0"
+  },
+  "scenes": [],
+  "browserVersion": "155.0.4283.62",
+  "status": "diagnostic-failed",
+  "error": "page.evaluate: TypeError: Failed to resolve module specifier 'undefined'\n    at eval (eval at evaluate (:311:30), <anonymous>:3:93)\n    at async <anonymous>:337:30\n    at D:\\lxWorkspace\\scripts\\text-component-allocation.mjs:25:14",
+  "completedAt": "2026-10-23T05:49:00.677Z"
+}

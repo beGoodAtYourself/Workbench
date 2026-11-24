@@ -1,0 +1,100 @@
+{
+  "recordedAt": "2026-10-26T05:51:40.271Z",
+  "acceptance": false,
+  "status": "diagnostic-complete",
+  "harness": "scripts/text-component-allocation.mjs",
+  "harnessSha256": "8fe89ddfe384c1d5656298d5cde79d2a2e5e9c154971a3d428110059ab04fc95",
+  "fixture": "12 synthetic 100 KiB documents, including JSON and TypeScript paths; in-memory repository; two visible panes",
+  "samplingInterval": 32768,
+  "cycles": 100,
+  "warmup": 10,
+  "redGreen": {
+    "beforeStyleWrites": 400,
+    "afterStyleWrites": 0,
+    "rounds": 100,
+    "views": 2,
+    "pausedInputRejected": true,
+    "parserDetached": true
+  },
+  "scenes": [
+    {
+      "mode": "pause",
+      "before": {
+        "report": "docs/verification/raw/text-component-allocation-baseline-styles-20261026.json",
+        "sha256": "f49e2c18613163b59f324f68816760bf57f798f72f2f28c04453fa5b893b08d1",
+        "profile": "docs/verification/raw/text-allocation-profile-baseline-styles-20261026-pause.json",
+        "profileSha256": "45a3015048fffcbf09c5d17886435cd1dab8455596cc211110bf773fc672e481",
+        "allocations": {
+          "editors": 1,
+          "workers": 0,
+          "searchForms": 0,
+          "elements": 6522,
+          "styleWrites": 401,
+          "styleCharacters": 2514270
+        },
+        "sampledBytes": 45151340,
+        "styleMountSampledBytes": 4482364,
+        "afterGcHeapBytes": 6643392,
+        "fixtureUnchanged": true
+      },
+      "after": {
+        "report": "docs/verification/raw/text-component-allocation-after-styles-20261026.json",
+        "sha256": "92426b96d6da0fee879a003e0ea931fc489d9eabd09a3472f7d8447e5983b7eb",
+        "profile": "docs/verification/raw/text-allocation-profile-after-styles-20261026-pause.json",
+        "profileSha256": "8ade89f5eb48f616be67116d6c5f4c521dc98dc455a91fa2f05c721acf0801e8",
+        "allocations": {
+          "editors": 1,
+          "workers": 0,
+          "searchForms": 0,
+          "elements": 6515,
+          "styleWrites": 1,
+          "styleCharacters": 6270
+        },
+        "sampledBytes": 42099228,
+        "styleMountSampledBytes": 0,
+        "afterGcHeapBytes": 6634180,
+        "fixtureUnchanged": true
+      }
+    },
+    {
+      "mode": "combined",
+      "before": {
+        "report": "docs/verification/raw/text-component-allocation-baseline-styles-20261026.json",
+        "sha256": "f49e2c18613163b59f324f68816760bf57f798f72f2f28c04453fa5b893b08d1",
+        "profile": "docs/verification/raw/text-allocation-profile-baseline-styles-20261026-combined.json",
+        "profileSha256": "77ae9d735d58543720dd09ff780f8b7f76954ee862100a31b5517e43bd4fc046",
+        "allocations": {
+          "editors": 101,
+          "workers": 100,
+          "searchForms": 0,
+          "elements": 31609,
+          "styleWrites": 602,
+          "styleCharacters": 3774540
+        },
+        "sampledBytes": 271545116,
+        "styleMountSampledBytes": 8288432,
+        "afterGcHeapBytes": 7936624,
+        "fixtureUnchanged": true
+      },
+      "after": {
+        "report": "docs/verification/raw/text-component-allocation-after-styles-20261026.json",
+        "sha256": "92426b96d6da0fee879a003e0ea931fc489d9eabd09a3472f7d8447e5983b7eb",
+        "profile": "docs/verification/raw/text-allocation-profile-after-styles-20261026-combined.json",
+        "profileSha256": "cb34a98d808298d1ced9f721c7f1081fddc36f7bdb1ab18e48757f44af6d2623",
+        "allocations": {
+          "editors": 101,
+          "workers": 100,
+          "searchForms": 0,
+          "elements": 31603,
+          "styleWrites": 202,
+          "styleCharacters": 1266540
+        },
+        "sampledBytes": 268958332,
+        "styleMountSampledBytes": 2350076,
+        "afterGcHeapBytes": 7924556,
+        "fixtureUnchanged": true
+      }
+    }
+  ],
+  "limitations": "Headless Edge with DevTools sampling, 1/2 second waits, synthetic repository and diagnostic GC after measurement. Counts include final canonical layout. Sampled allocations are cumulative estimates, not retained bytes or native process Private Bytes. No native acceptance or 20 MiB pass claim."
+}

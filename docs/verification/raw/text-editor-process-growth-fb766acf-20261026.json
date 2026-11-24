@@ -1,0 +1,251 @@
+{
+  "recordedAt": "2026-10-26T05:51:40.252Z",
+  "acceptance": false,
+  "kind": "derived-per-process-p95",
+  "source": "docs/verification/raw/text-editor-performance-fb766acf-20261026.json",
+  "sourceSha256": "403a21be113f1e1c6d1bf4ab24a1b55d24d0775fb0d5b09fa4c92314315fc962",
+  "qaSha256": "fb766acf83893347b4511e8ec5089e534d64d6edbdcad6558371e88dac842f19",
+  "method": "Same 30 valid samples; nearest-rank P95 per PID. Per-process quantiles do not sum to the aggregate P95. Descendant role is not inferred without command-line evidence.",
+  "rounds": [
+    {
+      "round": 1,
+      "aggregate": {
+        "privateWorkingSetGrowthMiB": 19.88671875,
+        "privateBytesGrowthMiB": 20.1796875,
+        "pass": false
+      },
+      "processes": [
+        {
+          "pid": 7112,
+          "parentPid": 35064,
+          "name": "shiye-text-qa.exe",
+          "owner": true,
+          "baselineSamples": 30,
+          "afterSamples": 30,
+          "privateWorkingSetGrowthMiB": -0.45703125,
+          "privateBytesGrowthMiB": -1.0390625
+        },
+        {
+          "pid": 26368,
+          "parentPid": 7112,
+          "name": "msedgewebview2.exe",
+          "owner": false,
+          "baselineSamples": 30,
+          "afterSamples": 30,
+          "privateWorkingSetGrowthMiB": 1.39453125,
+          "privateBytesGrowthMiB": 1.5
+        },
+        {
+          "pid": 18904,
+          "parentPid": 26368,
+          "name": "msedgewebview2.exe",
+          "owner": false,
+          "baselineSamples": 30,
+          "afterSamples": 30,
+          "privateWorkingSetGrowthMiB": -0.29296875,
+          "privateBytesGrowthMiB": -0.421875
+        },
+        {
+          "pid": 44152,
+          "parentPid": 26368,
+          "name": "msedgewebview2.exe",
+          "owner": false,
+          "baselineSamples": 30,
+          "afterSamples": 30,
+          "privateWorkingSetGrowthMiB": -0.0859375,
+          "privateBytesGrowthMiB": 0.765625
+        },
+        {
+          "pid": 14832,
+          "parentPid": 26368,
+          "name": "msedgewebview2.exe",
+          "owner": false,
+          "baselineSamples": 30,
+          "afterSamples": 30,
+          "privateWorkingSetGrowthMiB": 0.48828125,
+          "privateBytesGrowthMiB": 0.41796875
+        },
+        {
+          "pid": 15052,
+          "parentPid": 26368,
+          "name": "msedgewebview2.exe",
+          "owner": false,
+          "baselineSamples": 30,
+          "afterSamples": 30,
+          "privateWorkingSetGrowthMiB": -0.07421875,
+          "privateBytesGrowthMiB": -0.11328125
+        },
+        {
+          "pid": 23340,
+          "parentPid": 26368,
+          "name": "msedgewebview2.exe",
+          "owner": false,
+          "baselineSamples": 30,
+          "afterSamples": 30,
+          "privateWorkingSetGrowthMiB": 18.4296875,
+          "privateBytesGrowthMiB": 18.203125
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "aggregate": {
+        "privateWorkingSetGrowthMiB": 19.69921875,
+        "privateBytesGrowthMiB": 19.09765625,
+        "pass": true
+      },
+      "processes": [
+        {
+          "pid": 32824,
+          "parentPid": 35064,
+          "name": "shiye-text-qa.exe",
+          "owner": true,
+          "baselineSamples": 30,
+          "afterSamples": 30,
+          "privateWorkingSetGrowthMiB": 0.1171875,
+          "privateBytesGrowthMiB": -0.1796875
+        },
+        {
+          "pid": 33264,
+          "parentPid": 32824,
+          "name": "msedgewebview2.exe",
+          "owner": false,
+          "baselineSamples": 30,
+          "afterSamples": 30,
+          "privateWorkingSetGrowthMiB": 1.71875,
+          "privateBytesGrowthMiB": 1.8359375
+        },
+        {
+          "pid": 41688,
+          "parentPid": 33264,
+          "name": "msedgewebview2.exe",
+          "owner": false,
+          "baselineSamples": 30,
+          "afterSamples": 30,
+          "privateWorkingSetGrowthMiB": -0.2890625,
+          "privateBytesGrowthMiB": -0.41796875
+        },
+        {
+          "pid": 24592,
+          "parentPid": 33264,
+          "name": "msedgewebview2.exe",
+          "owner": false,
+          "baselineSamples": 30,
+          "afterSamples": 30,
+          "privateWorkingSetGrowthMiB": -0.76953125,
+          "privateBytesGrowthMiB": -1.734375
+        },
+        {
+          "pid": 41300,
+          "parentPid": 33264,
+          "name": "msedgewebview2.exe",
+          "owner": false,
+          "baselineSamples": 30,
+          "afterSamples": 30,
+          "privateWorkingSetGrowthMiB": 0.58984375,
+          "privateBytesGrowthMiB": 0.5390625
+        },
+        {
+          "pid": 7400,
+          "parentPid": 33264,
+          "name": "msedgewebview2.exe",
+          "owner": false,
+          "baselineSamples": 30,
+          "afterSamples": 30,
+          "privateWorkingSetGrowthMiB": -0.08203125,
+          "privateBytesGrowthMiB": -0.12109375
+        },
+        {
+          "pid": 26780,
+          "parentPid": 33264,
+          "name": "msedgewebview2.exe",
+          "owner": false,
+          "baselineSamples": 30,
+          "afterSamples": 30,
+          "privateWorkingSetGrowthMiB": 17.91015625,
+          "privateBytesGrowthMiB": 18.28515625
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "aggregate": {
+        "privateWorkingSetGrowthMiB": 16.9921875,
+        "privateBytesGrowthMiB": 17.3984375,
+        "pass": true
+      },
+      "processes": [
+        {
+          "pid": 45012,
+          "parentPid": 35064,
+          "name": "shiye-text-qa.exe",
+          "owner": true,
+          "baselineSamples": 30,
+          "afterSamples": 30,
+          "privateWorkingSetGrowthMiB": 0.19140625,
+          "privateBytesGrowthMiB": -0.16796875
+        },
+        {
+          "pid": 36048,
+          "parentPid": 45012,
+          "name": "msedgewebview2.exe",
+          "owner": false,
+          "baselineSamples": 30,
+          "afterSamples": 30,
+          "privateWorkingSetGrowthMiB": 1.3203125,
+          "privateBytesGrowthMiB": 1.5078125
+        },
+        {
+          "pid": 21924,
+          "parentPid": 36048,
+          "name": "msedgewebview2.exe",
+          "owner": false,
+          "baselineSamples": 30,
+          "afterSamples": 30,
+          "privateWorkingSetGrowthMiB": -0.35546875,
+          "privateBytesGrowthMiB": -0.5234375
+        },
+        {
+          "pid": 24144,
+          "parentPid": 36048,
+          "name": "msedgewebview2.exe",
+          "owner": false,
+          "baselineSamples": 30,
+          "afterSamples": 30,
+          "privateWorkingSetGrowthMiB": -0.40234375,
+          "privateBytesGrowthMiB": -0.41015625
+        },
+        {
+          "pid": 10108,
+          "parentPid": 36048,
+          "name": "msedgewebview2.exe",
+          "owner": false,
+          "baselineSamples": 30,
+          "afterSamples": 30,
+          "privateWorkingSetGrowthMiB": 0.55078125,
+          "privateBytesGrowthMiB": 0.49609375
+        },
+        {
+          "pid": 33124,
+          "parentPid": 36048,
+          "name": "msedgewebview2.exe",
+          "owner": false,
+          "baselineSamples": 30,
+          "afterSamples": 30,
+          "privateWorkingSetGrowthMiB": -0.08203125,
+          "privateBytesGrowthMiB": -0.12109375
+        },
+        {
+          "pid": 43548,
+          "parentPid": 36048,
+          "name": "msedgewebview2.exe",
+          "owner": false,
+          "baselineSamples": 30,
+          "afterSamples": 30,
+          "privateWorkingSetGrowthMiB": 15.21875,
+          "privateBytesGrowthMiB": 15.640625
+        }
+      ]
+    }
+  ]
+}

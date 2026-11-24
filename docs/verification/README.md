@@ -2,6 +2,30 @@
 
 首版状态：2026-09-11 按用户要求提前归档。已完成检查与部分性能证据保留；剩余验收见 [待验收清单](deferred-tests.md)，继续按原计划延期。
 
+## 独立文本编辑模块
+
+2026-10-26 18:30预约已执行，QA 8d0066c1b881538985f1b5a347a92b2dfd876e6793814b5cc76ccc6cd877172f 的56项已执行原生检查通过，工作区／shell保留partial。完整性能545／545帧有效；三轮工作集增长27.83984375／22.6484375／24.78125 MiB，Private Bytes增长28.796875／24.453125／26.20703125 MiB，三轮均超各20 MiB上限，完整结果budget-failed。静态样式复用未解决原生循环增长，全部有效失败与旧fb／d82／dfe／d1c5历史保留。自有测试进程已退出，18:56确认并通知恢复键鼠，一次性自动化已删除。系统入口、物理ENOSPC和历史待验／归档依赖继续保留，未归档。
+
+程序及NSIS包位于 src-tauri/target/text-editor/，32项资源与封存QA相同；本轮原生及性能证据匹配当前8d0066c1封存QA哈希，完整性能仍为budget-failed，旧对话框、目录选择器与安装payload保留原哈希和限制。[当前验证](../../openspec/changes/add-text-editor-module/verification.md)、[本轮汇总](raw/text-editor-retest-20261026-evening.json)、[当前候选](raw/text-editor-candidate-styles-20261026.json)、[交付记录](raw/text-editor-delivery.json)。
+
+## 开机自启动
+
+2026-10-14 的 `add-launch-at-startup` 增加默认关闭的当前用户登录后台启动、实际注册查询与失败恢复，以及升级／卸载的所属路径保护。类型检查、148 项前端单元测试、68 项界面回归、54 项 Rust 测试、Clippy、生产构建及 8 项安装器模拟通过。隔离发布版的 14 项原生启动／恢复和 8 组实际安装生命周期检查通过，12 次安装／卸载退出码均为 0；正式进程与 Run 值保持原状，QA 项已清理。
+
+正式程序与安装包在 `src-tauri/target/startup/release/`。详情见[本次验证记录](../../openspec/changes/add-launch-at-startup/verification.md)、[启动原始数据](raw/startup-native.json)、[安装原始数据](raw/startup-installer-native.json)及[产物哈希](raw/startup-delivery.json)。真实注销登录、完整系统入口、系统启动设置禁用及 GUI 跨版本升级仍待验收；实施状态为 Implemented — Acceptance Pending，尚未归档，首版历史延期项目保留。
+
+## 单篇 Markdown 笔记排序与移动
+
+2026-09-14 的 `add-note-reordering-and-moves` 补齐笔记拖动和菜单排序、跨目录移动及保存路径映射。类型检查、148 项单元测试、52 项界面回归、31 项 Rust 测试、Clippy 及生产构建通过。隔离 Windows WebView2 的 7 组原生检查验证内容哈希、BOM／CRLF、双窗格保存／撤销、重启及真实失败恢复。详见[本次验证记录](../../openspec/changes/add-note-reordering-and-moves/verification.md)和[原始报告](raw/note-moves-native.json)。首版历史延期项目状态不变。
+
+正式程序与 NSIS 安装包独立输出到 `src-tauri/target/note-moves/`，25 个前端资源哈希与原生验收一致，见[交付记录](raw/note-moves-delivery.json)。
+
+## 文件夹排序与移动
+
+2026-09-14 的 `add-folder-reordering-and-moves` 已通过类型检查、128 项前端单元测试、39 项界面回归、24 项 Rust 测试、Clippy 和生产构建。隔离应用标识的 Windows WebView2 原生验收通过 7 组检查，覆盖真实移动、内容哈希、BOM/CRLF、双窗格新路径保存、重启与只读偏好失败恢复。正式标识程序和 NSIS 安装包输出至独立 `src-tauri/target/folder-moves/`，25 个前端资源哈希与隔离验收一致。
+
+真实隐藏 60 秒后 WebView 卸载、同一宿主经第二实例唤醒的检查也已通过，排序、新路径会话和文件哈希保持一致。详见[本次验证记录](../../openspec/changes/add-folder-reordering-and-moves/verification.md)、[原生报告](raw/folder-moves-native.json)、[隐藏恢复报告](raw/folder-moves-idle.json)与[交付哈希](raw/folder-moves-delivery.json)。首版历史延期的完整性能与安装兼容性验收保持原状态。
+
 ## 编辑器高亮与便捷排版
 
 2026-09-11 的 `improve-editor-formatting` 已通过类型检查、69 项单元测试和 17 项界面回归；隔离应用标识的 Windows WebView2 实机验收通过 7 组检查，含 18 个语言选项的编辑/显示着色、真实 BOM/CRLF 文件保存和退出重开。2026-09-14 归档复核通过上述前端自动化、生产构建、9 项 Rust 测试及 Clippy，并核对原交付哈希。详见[本次验证记录](../../openspec/archive/2026-09-14-improve-editor-formatting/verification.md)与[原生报告](raw/editor-formatting-native.json)。原有延期的完整性能与安装兼容性验收仍按原记录处理。

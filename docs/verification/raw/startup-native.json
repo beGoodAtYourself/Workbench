@@ -1,0 +1,236 @@
+{
+  "date": "2026-10-14T03:59:20.605Z",
+  "source": "D:\\lxWorkspace\\src-tauri\\target\\startup\\qa\\shiye-startup-qa.exe",
+  "sha256": "4f370c9303adc4a31996fe2b3e6112ec64104aef8fad0e088a6494e13b5dfe0e",
+  "executable": "D:\\lxWorkspace\\.qa\\startup-native-1791950360589\\中文 空格\\shiye-startup-qa.exe",
+  "data": "D:\\lxWorkspace\\.qa\\startup-native-1791950360589",
+  "checks": [
+    {
+      "name": "Automatic launch creates no visible owner window or WebView2 children and does not register itself",
+      "pass": true
+    },
+    {
+      "name": "A repeated automatic launch exits without opening the owning host",
+      "pass": true
+    },
+    {
+      "name": "A manual second launch wakes the same owner and restores its previous note",
+      "pass": true
+    },
+    {
+      "name": "Enabling registers the quoted Chinese/space executable path in the isolated Run value",
+      "pass": true
+    },
+    {
+      "name": "Cancel leaves the registered login command unchanged",
+      "pass": true
+    },
+    {
+      "name": "Stale revisions are rejected, disabling preserves another copy, and explicit enable switches to the current copy",
+      "pass": true
+    },
+    {
+      "name": "A real settings-file replacement failure restores the original Run value and in-memory preferences",
+      "pass": true
+    },
+    {
+      "name": "External removal refreshes the checkbox; saving unchanged preferences does not recreate the value",
+      "pass": true
+    },
+    {
+      "name": "Repeated automatic startup preserves an already visible main window",
+      "pass": true
+    },
+    {
+      "name": "The real 60-second unload remains functional; automatic repeats stay hidden and manual launch restores the note",
+      "pass": true
+    },
+    {
+      "name": "Explicit exit releases the owner while retaining login registration",
+      "pass": true
+    },
+    {
+      "name": "A subsequent registered background launch remains lazy and can be woken manually",
+      "pass": true
+    },
+    {
+      "name": "Disabling removes only the QA registration and explicit exit completes",
+      "pass": true
+    },
+    {
+      "name": "A background shortcut failure is deferred to first wake and can be repaired through settings",
+      "pass": true
+    }
+  ],
+  "configuration": "Release code and assets with isolated startupqa identifier, fixed startupqa Run value, and synthetic note library. Simulated login arguments and real WebView2; this does not replace an actual sign-out/sign-in acceptance.",
+  "ownerPid": 36232,
+  "background": {
+    "children": [],
+    "windows": [
+      {
+        "handle": 4261908,
+        "title": "拾页悬浮入口",
+        "className": "ShiyeFloat",
+        "visible": false,
+        "width": 52,
+        "height": 52
+      },
+      {
+        "handle": 3082336,
+        "title": "",
+        "className": "tray_icon_app",
+        "visible": false,
+        "width": 1440,
+        "height": 745
+      },
+      {
+        "handle": 2426832,
+        "title": "",
+        "className": "global_hotkey_app",
+        "visible": false,
+        "width": 1440,
+        "height": 745
+      },
+      {
+        "handle": 3015978,
+        "title": "local.shiye.workbench.startupqa-siw",
+        "className": "local.shiye.workbench.startupqa-sic",
+        "visible": true,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "handle": 4393112,
+        "title": "",
+        "className": "Tao Thread Event Target",
+        "visible": true,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "handle": 3866688,
+        "title": "Default IME",
+        "className": "IME",
+        "visible": false,
+        "width": 0,
+        "height": 0
+      }
+    ],
+    "foreground": 69482,
+    "foregroundProcess": 24724
+  },
+  "repeatBackgroundPid": 43960,
+  "manualLauncherPid": 37012,
+  "manualWake": {
+    "children": [
+      {
+        "processId": 13608,
+        "parent": 36232,
+        "name": "msedgewebview2.exe"
+      },
+      {
+        "processId": 35580,
+        "parent": 13608,
+        "name": "msedgewebview2.exe"
+      },
+      {
+        "processId": 40468,
+        "parent": 13608,
+        "name": "msedgewebview2.exe"
+      },
+      {
+        "processId": 21452,
+        "parent": 13608,
+        "name": "msedgewebview2.exe"
+      },
+      {
+        "processId": 32648,
+        "parent": 13608,
+        "name": "msedgewebview2.exe"
+      },
+      {
+        "processId": 34068,
+        "parent": 13608,
+        "name": "msedgewebview2.exe"
+      }
+    ],
+    "windows": [
+      {
+        "handle": 4261908,
+        "title": "拾页悬浮入口",
+        "className": "ShiyeFloat",
+        "visible": false,
+        "width": 52,
+        "height": 52
+      },
+      {
+        "handle": 4131252,
+        "title": "拾页 · 个人工作台",
+        "className": "Tauri Window",
+        "visible": true,
+        "width": 1196,
+        "height": 819
+      },
+      {
+        "handle": 3082336,
+        "title": "",
+        "className": "tray_icon_app",
+        "visible": false,
+        "width": 1440,
+        "height": 745
+      },
+      {
+        "handle": 2426832,
+        "title": "",
+        "className": "global_hotkey_app",
+        "visible": false,
+        "width": 1440,
+        "height": 745
+      },
+      {
+        "handle": 3015978,
+        "title": "local.shiye.workbench.startupqa-siw",
+        "className": "local.shiye.workbench.startupqa-sic",
+        "visible": true,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "handle": 4393112,
+        "title": "",
+        "className": "Tao Thread Event Target",
+        "visible": true,
+        "width": 16,
+        "height": 16
+      },
+      {
+        "handle": 3866688,
+        "title": "Default IME",
+        "className": "IME",
+        "visible": false,
+        "width": 0,
+        "height": 0
+      },
+      {
+        "handle": 3604568,
+        "title": "MSCTFIME UI",
+        "className": "MSCTFIME UI",
+        "visible": false,
+        "width": 0,
+        "height": 0
+      }
+    ],
+    "foreground": 69482,
+    "foregroundProcess": 24724
+  },
+  "hiddenUnloadMs": 60075.8903,
+  "stderr": "[1014/120029.031:ERROR:ui\\gfx\\win\\window_impl.cc:172] Failed to unregister class Chrome_WidgetWin_0. Error = 1412\r\n[1014/120032.656:ERROR:ui\\gfx\\win\\window_impl.cc:172] Failed to unregister class Chrome_WidgetWin_0. Error = 1412\r\n[1014/120035.162:ERROR:ui\\gfx\\win\\window_impl.cc:172] Failed to unregister class Chrome_WidgetWin_0. Error = 1412\r\n",
+  "status": "passed",
+  "registryAfter": {
+    "formal": null,
+    "qaKind": null,
+    "formalKind": null,
+    "qa": null
+  },
+  "completedAt": "2026-10-14T04:00:35.691Z"
+}

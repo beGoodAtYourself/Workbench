@@ -1,0 +1,253 @@
+{
+  "recordedAt": "2026-10-26T06:00:44.015Z",
+  "status": "native-retest-complete-budget-failed",
+  "qaPath": "D:\\lxWorkspace\\src-tauri\\target\\text-editor\\qa\\shiye-text-qa.exe",
+  "qaSha256": "8d0066c1b881538985f1b5a347a92b2dfd876e6793814b5cc76ccc6cd877172f",
+  "qaBytes": 6846464,
+  "artifacts": [
+    {
+      "path": "D:\\lxWorkspace\\src-tauri\\target\\text-editor\\release\\shiye.exe",
+      "bytes": 6846464,
+      "modifiedAt": "2026-10-26T05:59:53.767Z",
+      "sha256": "31796befd60874c3dd35aea336bf3bcb4221641ed2260d6d5e94f33f91e6402d"
+    },
+    {
+      "path": "D:\\lxWorkspace\\src-tauri\\target\\text-editor\\release\\bundle\\nsis\\拾页_0.1.0_x64-setup.exe",
+      "bytes": 2346836,
+      "modifiedAt": "2026-10-26T05:59:53.752Z",
+      "sha256": "092e0aaae5bed8214ab2e8bed2f21605d740278a24f0d0757de0f5b2ac57010b"
+    }
+  ],
+  "frontEndAssets": 32,
+  "sourceHashes": {
+    "src/main.ts": "cbb532ce960c50c4aa390b9b69cf6fa136bd3dac01feb7c6668b8d12be6d098d",
+    "src/text-editor.ts": "9c1840a553857dc5e66984699348ad57d47831f92bdce8f624a319efc4dadf76",
+    "src/text-workspace.ts": "57cf9bbf48b3b2a95582d8c0082d1dceaeb969f89c597c606c6a95added2b012",
+    "src/text-model.ts": "1cb9a53b56860965a49b950dcb902c39ecbac0be52cc40e78ac3a9091852ea22",
+    "src/text-search-client.ts": "e30f632cf1248027839c7dfd671283fee0b4f435af5ab0a5ba86bda9269fc6b0"
+  },
+  "sourceTreeHashes": {
+    "package-lock.json": "8b955d6bc491b23e3b58f31c8347f6bab1ecded77890712c770b5eafc811be8e",
+    "package.json": "5260aaad2247b2380a2e32e291823419292e557740f61dc0626a7538fbf91b56",
+    "src-tauri/Cargo.lock": "5f3d2ff31e8468b94b2d53b31c4a212f89357787e03e4ad7ab8a3a8b096d0466",
+    "src-tauri/Cargo.toml": "95a1664d211220b518096012920d8a21eb0f88f4fee7087e1e70e7f5c9ca86cf",
+    "src-tauri/src/app.rs": "5f91966240176168e53d601d0660734659a4e0292f3a10a54ba4b4b9e91a3667",
+    "src-tauri/src/autostart.rs": "0c6f1bd16a3707521144fe143b7dbb60a12f2c274b4c3a8ba74b8fee299eb31e",
+    "src-tauri/src/commands.rs": "1825ebdc310f7581314a1c2cacca19ce4e2cd3a162266e1ecefe1919178ca9c5",
+    "src-tauri/src/files.rs": "83403f6769a4b5916fc2db9611afad3588dda3a6d6885d393ad70a7baf0dea7c",
+    "src-tauri/src/folder_order.rs": "8ae335879c436ef1699ffddd78b1531e389d6a6d7399fcffc9130344ca1c8306",
+    "src-tauri/src/main.rs": "be19f715846c9e00b319f12a01c6a27c1cb177a00aa8712501e727d3db095d1f",
+    "src-tauri/src/native.rs": "ca80401bd21f9b147e6061201918d4f424fd44d595a6bbfbe288448f462c26c1",
+    "src-tauri/src/settings.rs": "661e9e29fbea93e7a18fa583f440da6ddeae98aa5e1c8ae765b68851358d63ae",
+    "src-tauri/src/startup.rs": "c2d1f11126c21af5c5a6f604014525c4dca4b3d9877b51fb9e8a97948b2b315a",
+    "src-tauri/src/text_files.rs": "34495174b2f4124af215300f1aa2d98d741651c9be21990d77f94b173782ffa8",
+    "src-tauri/src/text_session.rs": "0c515a9bcfaaf7f36fd34b3e54e7fef845f57c47abc9ea14a9a49b7fb7f67685",
+    "src-tauri/tauri.conf.json": "78355a7f37033a3fd26f3726d2aba8e93ee27c8ffa0f6cb57542364956f42b4a",
+    "src/autostart-settings.ts": "097efaa7008b6ab6bc5c9efcb60df224d03f8b800df626e2fc1598bdcc1c2b47",
+    "src/bridge.ts": "a7a78ffef7cea0d4d6a98c6b842a7c3cf2410a3479f2574796a77d5fd4bed3dd",
+    "src/code-languages.ts": "152346030c186477775ac033de19c9a43c81fb4b674719ca34202c58037fe473",
+    "src/demo.ts": "a293e3292a79740369ff7fde26b889e61931fdd4ad4477760daa564f0f3fd1f5",
+    "src/editor-base.ts": "58ff79ce193e3f1278e7636943b3aa6aafe86b4b5afbc90d7b2616e40b0d8976",
+    "src/editor.ts": "dd1e5e92b78eac8f0f5f1eab513ba3eb10a10b8120a8ec05cc089df6444af4bf",
+    "src/folder-interactions.ts": "9bccefba70a9bc86537e2fdf70a5f62647fa1ca1746ef5e68c89d67c8f968a10",
+    "src/folder-tree.ts": "6cf93297eb73420e8e7be0d1e9fcf9907e91a65879315be6ed2ba8d6c3076624",
+    "src/format-toolbar.ts": "e5f13a9975146a22176d52660512d0890167822f8b7bb2b6a0e7902230454526",
+    "src/formatting.ts": "dc996856d9d35f46a50a7d2a4686f85a12d91f2b20cbaadd3812bc493de1c430",
+    "src/main.ts": "cbb532ce960c50c4aa390b9b69cf6fa136bd3dac01feb7c6668b8d12be6d098d",
+    "src/markdown.ts": "020db2917cf4a0d43644871970a077380dc6171ee0c0bcdda49647f1f1d42f15",
+    "src/model.ts": "7fe8c2c5be7e3c5f88993f665488c042475a5df83d7d4945e0736acc45193ff4",
+    "src/paths.ts": "a60ae5a049191cbc053ebebc5c4c8e11e03b5f851183ee10d31924cb1bdd93bf",
+    "src/style.css": "d0671df9840dc02209215d43823e2d02b445aa1851092fdb29000217d34fc630",
+    "src/text-bridge.ts": "eb60a301b238250ed3330d2c26b817ba6c5ff4b73392b89f5d994a7fcce7064a",
+    "src/text-demo.ts": "936b2bb3601ebe039986048835a084103ab4d807e203702486f0ae403740c113",
+    "src/text-editor.ts": "9c1840a553857dc5e66984699348ad57d47831f92bdce8f624a319efc4dadf76",
+    "src/text-model.ts": "1cb9a53b56860965a49b950dcb902c39ecbac0be52cc40e78ac3a9091852ea22",
+    "src/text-search-client.ts": "e30f632cf1248027839c7dfd671283fee0b4f435af5ab0a5ba86bda9269fc6b0",
+    "src/text-search.ts": "19290abe561de857c8b191c187c3234836967143e753a23bcd424658aeedf72b",
+    "src/text-search.worker.ts": "32f2b3a3c6744355cb67ccc23ccb52bf4cc2f17e70e8278b68b76ea7702cbf5c",
+    "src/text-style.css": "6bd0a5bcc388a2c6211576a65f606cdc659019888bd27e63e47e0f07b4ceb5aa",
+    "src/text-types.ts": "4c67bee90ad26b3dcab2a9893089f6a53b262c2760b0016318530e87278c6f41",
+    "src/text-workspace.ts": "57cf9bbf48b3b2a95582d8c0082d1dceaeb969f89c597c606c6a95added2b012",
+    "src/types.ts": "54cabf8147a0a5d8357bc7aaf038ba12cc1bd0e6ce1598f6705095dfe2796084",
+    "tests/e2e/text-lifecycle.spec.ts": "f41ae3c663454124ae657a5a73bf004b5dd8d1a95398be6731464df317835f2d",
+    "tsconfig.json": "85b50411c37a0f889cf4d6eed6d5e241dbf990438ac94e3948ace2f565a4edb9",
+    "vite.config.ts": "f50400467100affae5a68620240f3075fb63387fd15c39719420d51f6d9fd120"
+  },
+  "harnessHashes": {
+    "scripts/text-native-smoke.mjs": "7bc71b4cb3931fa30ec7216628700b3904dfc4c7bc696497c377cee36bf05b21",
+    "scripts/text-editor-native.mjs": "359843c74e9c0536e3e0a5a6c7f65edb613b9d780e3b52ea6fa7146936a66b06",
+    "scripts/text-links-native.mjs": "f7afd36c674a68a11412d1647203bd9032475dc7082b8a92ade424f68e534b41",
+    "scripts/text-recovery-native.mjs": "622edb56931ccfe0b0e7f43584913c53b5d52cf2dc7f685202d57af15ec48f7c",
+    "scripts/text-workspace-native.mjs": "ae724c6f7ad259faff99b61590e9b619dc167c807ad559ddb67d17e44222c9fc",
+    "scripts/text-shell-native.mjs": "f46fb709d6df6071a6d2272253352efd51d4479f47f13e714e26b65ca2e6b66a",
+    "scripts/text-native-performance.mjs": "64b5df633759f164896c2921306287247203d6bdf2dbd772f4829275177c977e",
+    "scripts/text-memory-probe.ps1": "0137e59589a85d1222e44efcc92972132f15fada7d53c30deaa12f39b050fb3e",
+    "scripts/text-native-config.json": "a21916e19bf4bababb9eeec649507d678487c3db3aa134b61155bea1c28e7c8b",
+    "scripts/text-component-allocation.mjs": "8fe89ddfe384c1d5656298d5cde79d2a2e5e9c154971a3d428110059ab04fc95",
+    "scripts/text-delivery.mjs": "abc86be9523c2d585c9d563ac520c72efea1e382d2c779255c47556f4f04f8c6"
+  },
+  "resourceSpecSha256": "7a6ca304f1b3e0ba2552d8e534a2fcd7260fb86755281174d773514bbe3bf75e",
+  "previousCandidate": "docs/verification/raw/text-editor-candidate-rebind-20261023.json",
+  "previousQaSha256": "fb766acf83893347b4511e8ec5089e534d64d6edbdcad6558371e88dac842f19",
+  "previousPerformanceStatus": "budget-failed",
+  "previousLoopPrivateWorkingSetGrowthMiB": [
+    19.88671875,
+    19.69921875,
+    16.9921875
+  ],
+  "previousLoopPrivateBytesGrowthMiB": [
+    20.1796875,
+    19.09765625,
+    17.3984375
+  ],
+  "historyArchive": "src-tauri/target/text-editor/history/before-extension-reuse-fb766acf-20261026/archive.json",
+  "budgetGrowthMiB": 20,
+  "nativeRetest": {
+    "performed": true,
+    "scheduled": false,
+    "requiresNewUserTimeWindow": true,
+    "timezone": "Asia/Singapore",
+    "expectedDurationMinutes": 25,
+    "status": "budget-failed",
+    "scheduledStart": "2026-10-26T18:30:00+08:00",
+    "automationId": "automation",
+    "authorization": "User confirmed tonight 18:30 Asia/Singapore, with keyboard and mouse idle for the approximately 25-minute foreground retest.",
+    "completedAt": "2026-10-26T10:55:41.674Z",
+    "acceptance": {
+      "complete": true,
+      "passed": false,
+      "effectiveMemoryIds": [
+        "1:single:1:0",
+        "1:dual:1:0",
+        "1:full:1:0",
+        "1:hidden-unloaded:1:0",
+        "2:single:1:0",
+        "2:dual:1:0",
+        "2:full:1:0",
+        "2:hidden-unloaded:1:0",
+        "3:single:1:0",
+        "3:dual:1:0",
+        "3:full:1:0",
+        "3:hidden-unloaded:1:0"
+      ],
+      "effectiveLoopIds": [
+        "loops:1:1",
+        "loops:2:1",
+        "loops:3:1"
+      ]
+    },
+    "summary": "docs/verification/raw/text-editor-retest-20261026-evening.json",
+    "automationDeleted": true,
+    "keyboardMouseReleasedAt": "2026-10-26T10:56:06.6586423Z"
+  },
+  "checks": {
+    "typescript": "passed",
+    "unitTests": 244,
+    "fullHeadlessE2E": 103,
+    "focusedLifecycleE2E": 11,
+    "buildQa": "passed",
+    "buildFormalNsis": "passed",
+    "diagnosticSyntax": "passed",
+    "backend": "unchanged; previous 80 Rust tests and Clippy retained, not rerun"
+  },
+  "diagnostic": {
+    "acceptance": false,
+    "summary": "docs/verification/raw/text-editor-style-reuse-diagnostic-20261026.json",
+    "sourceProcessAnalysis": "docs/verification/raw/text-editor-process-growth-fb766acf-20261026.json",
+    "scenes": [
+      {
+        "mode": "pause",
+        "before": {
+          "report": "docs/verification/raw/text-component-allocation-baseline-styles-20261026.json",
+          "sha256": "f49e2c18613163b59f324f68816760bf57f798f72f2f28c04453fa5b893b08d1",
+          "profile": "docs/verification/raw/text-allocation-profile-baseline-styles-20261026-pause.json",
+          "profileSha256": "45a3015048fffcbf09c5d17886435cd1dab8455596cc211110bf773fc672e481",
+          "allocations": {
+            "editors": 1,
+            "workers": 0,
+            "searchForms": 0,
+            "elements": 6522,
+            "styleWrites": 401,
+            "styleCharacters": 2514270
+          },
+          "sampledBytes": 45151340,
+          "styleMountSampledBytes": 4482364,
+          "afterGcHeapBytes": 6643392,
+          "fixtureUnchanged": true
+        },
+        "after": {
+          "report": "docs/verification/raw/text-component-allocation-after-styles-20261026.json",
+          "sha256": "92426b96d6da0fee879a003e0ea931fc489d9eabd09a3472f7d8447e5983b7eb",
+          "profile": "docs/verification/raw/text-allocation-profile-after-styles-20261026-pause.json",
+          "profileSha256": "8ade89f5eb48f616be67116d6c5f4c521dc98dc455a91fa2f05c721acf0801e8",
+          "allocations": {
+            "editors": 1,
+            "workers": 0,
+            "searchForms": 0,
+            "elements": 6515,
+            "styleWrites": 1,
+            "styleCharacters": 6270
+          },
+          "sampledBytes": 42099228,
+          "styleMountSampledBytes": 0,
+          "afterGcHeapBytes": 6634180,
+          "fixtureUnchanged": true
+        }
+      },
+      {
+        "mode": "combined",
+        "before": {
+          "report": "docs/verification/raw/text-component-allocation-baseline-styles-20261026.json",
+          "sha256": "f49e2c18613163b59f324f68816760bf57f798f72f2f28c04453fa5b893b08d1",
+          "profile": "docs/verification/raw/text-allocation-profile-baseline-styles-20261026-combined.json",
+          "profileSha256": "77ae9d735d58543720dd09ff780f8b7f76954ee862100a31b5517e43bd4fc046",
+          "allocations": {
+            "editors": 101,
+            "workers": 100,
+            "searchForms": 0,
+            "elements": 31609,
+            "styleWrites": 602,
+            "styleCharacters": 3774540
+          },
+          "sampledBytes": 271545116,
+          "styleMountSampledBytes": 8288432,
+          "afterGcHeapBytes": 7936624,
+          "fixtureUnchanged": true
+        },
+        "after": {
+          "report": "docs/verification/raw/text-component-allocation-after-styles-20261026.json",
+          "sha256": "92426b96d6da0fee879a003e0ea931fc489d9eabd09a3472f7d8447e5983b7eb",
+          "profile": "docs/verification/raw/text-allocation-profile-after-styles-20261026-combined.json",
+          "profileSha256": "cb34a98d808298d1ced9f721c7f1081fddc36f7bdb1ab18e48757f44af6d2623",
+          "allocations": {
+            "editors": 101,
+            "workers": 100,
+            "searchForms": 0,
+            "elements": 31603,
+            "styleWrites": 202,
+            "styleCharacters": 1266540
+          },
+          "sampledBytes": 268958332,
+          "styleMountSampledBytes": 2350076,
+          "afterGcHeapBytes": 7924556,
+          "fixtureUnchanged": true
+        }
+      }
+    ],
+    "limits": "Headless Edge with DevTools sampling, 1/2 second waits, synthetic repository and diagnostic GC after measurement. Counts include final canonical layout. Sampled allocations are cumulative estimates, not retained bytes or native process Private Bytes. No native acceptance or 20 MiB pass claim."
+  },
+  "protocol": {
+    "rounds": 3,
+    "samples": 30,
+    "warmupCycles": 10,
+    "cycles": 100,
+    "stableAfterMs": 60000,
+    "growthBudgetMiB": 20,
+    "unchanged": true
+  },
+  "changes": [
+    "Retain only static CodeMirror style-module values during a brief pause, avoiding redundant whole-stylesheet rewrites; keep parser, search and view plugins detached.",
+    "Clear parked style references on resume or document rebind; pure document history cache and actual 60-second WebView unload remain unchanged."
+  ],
+  "hiddenAssertion": "At most two parked read-only views with no active parser or worker; static style definitions contain no document body or listeners. Actual 60-second WebView unload remains mandatory."
+}

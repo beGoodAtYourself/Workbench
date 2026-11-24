@@ -1,0 +1,50 @@
+{
+  "date": "2026-09-14T03:56:22.685Z",
+  "identifier": "local.shiye.workbench",
+  "artifacts": [
+    {
+      "path": "D:\\lxWorkspace\\src-tauri\\target\\folder-moves\\release\\shiye.exe",
+      "bytes": 6330368,
+      "sha256": "9d688d95e90149e5a0446f1c9d5da0ce1503b7b9b0a2063f6ae6c632e6da25f3"
+    },
+    {
+      "path": "D:\\lxWorkspace\\src-tauri\\target\\folder-moves\\release\\bundle\\nsis\\拾页_0.1.0_x64-setup.exe",
+      "bytes": 2174978,
+      "sha256": "486637164284ccb7efbc4162335c2dec6d24fe0280495172ecadc9c16db26ba9"
+    }
+  ],
+  "verification": {
+    "nativeReport": "docs/verification/raw/folder-moves-native.json",
+    "nativeExecutableSha256": "405c4b52bc21b978faa1a845b80a2d943efa2509cabb2a3f0b2ae957e131e75a",
+    "assetsIdentical": true,
+    "assetCount": 25,
+    "note": "Native acceptance used an isolated application identifier with identical frontend assets; delivered binary has the production identifier and NSIS bundle marker."
+  },
+  "assets": {
+    "assets/clike-B9uivgTg.js": "362289d801a4f7b5abb548e9220660731b08cf3e00989bb8462ebed73bf28e96",
+    "assets/code-languages-D2wcbY9d.js": "5d6e4a58fdbf34801db00cd813bd1e29f1a1efe91a9cda067fc307ec2c48f0fc",
+    "assets/core-BEOw45JP.js": "ce1a9e1aa11d35b33569adfaed564e5f21120d27335edcf8415394a497c04a8d",
+    "assets/demo-DDewGIym.js": "b9e0052d57ed61d56ec6488752331135277f17e91f64d72277b5ddd3da256932",
+    "assets/editor-B2yS3yh_.js": "1d2c65aa249b5370fc19a273a79d0fc78343bb343b1396bfe6d32fdada367cec",
+    "assets/event-Gip4rtXm.js": "b8e37f04ff5b51d8ac237ce58d676fd8a12302cc987c45b37888a1919972ba9c",
+    "assets/index--U_Nsdrh.js": "84eaea9a8955a08ba62f81ca7757f43c1c11bf5dc9e19f1665e5ebc045273d5f",
+    "assets/index-BHqOMhuL.js": "ab0e854f32675e149d5ea3254ca98d07847b566c433031acd06fa03f8d7db128",
+    "assets/index-BTWoiFKV.js": "da19c6ac1e07fcdc5b6a818de7065fb2f3fb4438de815f68734fc184c13361ec",
+    "assets/index-BvjdJugp.js": "e54109305d62bf3c9c8f552f539f861048339efa1748c1284bfa3fdff7048b44",
+    "assets/index-Bx9zjOAZ.js": "d15440bfa6532a794cbb4d2b14b28ee19274dc957a7e960e344eb0466926a7b2",
+    "assets/index-CU_haXI-.js": "bef121e587d33676b2c96a74bf6b51dddf34df4333f4ee7a770a7934d8969e4e",
+    "assets/index-CVOaMCjU.js": "caa08373d96da540212fa6f12d94523c818ca8f9554c2dd502c5bf7532e83db2",
+    "assets/index-CY7KqUH-.js": "2ba96c5b852fa0c680c5ce219b9ec1a5c75ed3ed29df5b6883a52d01db85b932",
+    "assets/index-CYVwh8JX.js": "21741e24ef4d758716742e56bba7bf165664bd07e75595a41771ac4230163583",
+    "assets/index-CobN-WeX.js": "a15390f154f78a67ce072576c3fbb17703aa82b205e23fa062a7eff32dbfe700",
+    "assets/index-D-K-OoTc.js": "db2efe1fe301b9db4f849fa6d9f3dd66f744b1bdd5f0f8b4d2679a2a4b79f0d8",
+    "assets/index-DF0CAQ6-.js": "7172c5f5b0536a5f87443f03967c69ba18296ee896c1c720ba8a0b9ea392d51c",
+    "assets/index-DXFP1lI5.js": "c2a614df597d373161dace252891b859521393677f836e13c5fffc96e9e23db3",
+    "assets/index-DcikAriY.js": "0722998337479ca704cb0c151e1a991ed1ef2b1d39c68c7618067e7a186fbaf8",
+    "assets/index-SM4aUv_M.js": "1c98fec4a15fcbfccce25ec91802c06a1acb54890c837f920d75a774ef737ff4",
+    "assets/index-oRL3o2tg.css": "e55f125bb83ccbd3b8a6df0b2420d6c8a63dbe7450023588885b4bc0eb28245e",
+    "assets/powershell-CFHJl5sT.js": "5eef7d073bc36b86d7cfd0804c38c091931f20dadc61b176ca2d70ce6bb488d2",
+    "assets/shell-CjFT_Tl9.js": "b4da8a11db1127e003f10a94ff707474af1392051c41f1e0ef78152e9bd0ea95",
+    "index.html": "0fed2cb3d1ac84532193a2949acfe73347b65ffe20e6905f582811f43970adbf"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "kind": "headless-diagnostic",
+  "acceptance": false,
+  "label": "before-pause-20261023",
+  "startedAt": "2026-10-23T01:20:52.819Z",
+  "notice": "Two 100 KiB demo documents, 100 short hide/restore cycles in headless Edge. Counts quantify allocations, not native private working set or PERF-06 compliance.",
+  "sourceHashes": {
+    "src/main.ts": "53b6d6e42896837a4ce989a55ca3d3511329d45c9ee7b719e0de11df7488fd67",
+    "src/text-editor.ts": "cb11aebf8e46c9bc962d36401e0534287a16910c1b03eff3c0967fa5852bde3c",
+    "src/text-workspace.ts": "7c8c1a2cff400406871af24c952dcba0519199dfe8f81746ec56b273811adefc"
+  },
+  "browserVersion": "155.0.4283.62",
+  "before": {
+    "heap": {
+      "usedSize": 6850368,
+      "totalSize": 10432512,
+      "embedderHeapUsedSize": 5745832,
+      "backingStorageSize": 2032644
+    },
+    "dom": {
+      "documents": 5,
+      "nodes": 931,
+      "jsEventListeners": 146
+    }
+  },
+  "after": {
+    "heap": {
+      "usedSize": 17052920,
+      "totalSize": 29044736,
+      "embedderHeapUsedSize": 16255392,
+      "backingStorageSize": 3379863
+    },
+    "dom": {
+      "documents": 2,
+      "nodes": 3350,
+      "jsEventListeners": 858
+    }
+  },
+  "createdEditors": 200,
+  "fixture": {
+    "documents": 2,
+    "bytesEach": 102400,
+    "bodySha256": "fb1f425d9d2f8ab3aa019014f35601b4643ac7498f487ca13470d5ec8846984d",
+    "unchanged": true
+  },
+  "status": "diagnostic-complete",
+  "pageErrors": [],
+  "completedAt": "2026-10-23T01:21:02.264Z"
+}

@@ -1,0 +1,50 @@
+{
+  "date": "2026-09-14T07:35:21.469Z",
+  "identifier": "local.shiye.workbench",
+  "artifacts": [
+    {
+      "path": "D:\\lxWorkspace\\src-tauri\\target\\note-moves\\release\\shiye.exe",
+      "bytes": 6332928,
+      "sha256": "9bffea640ac5e756e467f897a18c3b9748d758c83a9ec17ffb4a9ee02dc607be"
+    },
+    {
+      "path": "D:\\lxWorkspace\\src-tauri\\target\\note-moves\\release\\bundle\\nsis\\拾页_0.1.0_x64-setup.exe",
+      "bytes": 2177031,
+      "sha256": "509d840bebfe31b09edea1dc628e4a26b5af48d515ebecb52c0a098c18fdda5d"
+    }
+  ],
+  "verification": {
+    "nativeReport": "docs/verification/raw/note-moves-native.json",
+    "nativeExecutableSha256": "61ec3b92d3ce60f8cc275f824507bab39047854c88ad6198a3b768eb40d0356b",
+    "assetsIdentical": true,
+    "assetCount": 25,
+    "note": "Native acceptance used the isolated noteqa identity and identical frontend assets. The delivered binary uses the production identity and NSIS bundle marker."
+  },
+  "assets": {
+    "assets/clike-B9uivgTg.js": "362289d801a4f7b5abb548e9220660731b08cf3e00989bb8462ebed73bf28e96",
+    "assets/code-languages-DJPva1pW.js": "6cf4a1a924fe414ba0b6863fd00e28010177d6fbb9b2f03a6f1da5a765940c37",
+    "assets/core-BEOw45JP.js": "ce1a9e1aa11d35b33569adfaed564e5f21120d27335edcf8415394a497c04a8d",
+    "assets/demo-DsXj6Xpb.js": "002888d4164441b3c85ea23e24bb836153837b79240de28566632b0c67e394af",
+    "assets/editor-BcY6yO7Y.js": "f79f335e97894c014df15d58f1f37aefbf4c70b7fefaa62a72df5715ba78fd4e",
+    "assets/event-Gip4rtXm.js": "b8e37f04ff5b51d8ac237ce58d676fd8a12302cc987c45b37888a1919972ba9c",
+    "assets/index-B9zDu7K0.js": "0615188a745efadfaa7d45031bfe413b956f02298812d530caea2af545b9e1b0",
+    "assets/index-BUgZWMyZ.js": "03d2d4c4b09e0889fa6f449635ce01db02028691c13218bc55a4d8aed253e4ec",
+    "assets/index-CU_haXI-.js": "bef121e587d33676b2c96a74bf6b51dddf34df4333f4ee7a770a7934d8969e4e",
+    "assets/index-CYrg4Tgh.js": "987b70271abf5260d841a7cd44e06625128d196b618b5de2f8ef4ec3e18bd0c4",
+    "assets/index-CaDebdIC.js": "52429a3ab08d2f40e98ca401d174ec2aabf79e4671912b865ce7d582e2b6fa21",
+    "assets/index-CchofU5o.js": "d9937ba063987b5f1ed4d9d9cc2a3dd287fb935f2c1325437f33800881f69cfd",
+    "assets/index-CjcFqi9o.js": "f1e98bdfd04236b4c29cbb5f2754bf992936269f0a8f8d2c83a5a21e30b39256",
+    "assets/index-D2AXkcVA.js": "ca741022972794ef3557d8fdc13e8ef3639fb4e61946f60d61202a9a152a8a4e",
+    "assets/index-DY6PYGzo.js": "ba2415ea7ba35ddef53b66a43524be59f9b60d976485ff9241aefe38f7088660",
+    "assets/index-Dn3_yUpV.js": "24eb0d5f79eed97905f2526c03dc788fbcaec3fb93064620597a543b9b4ada6a",
+    "assets/index-DqRzgQ0U.js": "ac81b2cb349a5519eb13489af3ab28a136fa0d9399d5e195a13af4b76fc0f792",
+    "assets/index-Dxn3BUwI.js": "2ed90239d126e2dfb50028151c14272fd06cec641ea5fd2a0c824aa58020f547",
+    "assets/index-GfFQBSl9.js": "4ad7e0ebd8c02c94a81be6148f1ecd835f904761feea6fd23a8a960c572383cb",
+    "assets/index-Nc_hsWoI.js": "9179ef716c40edab9072a0e694167c65d2449258caae05706466964a74203ab4",
+    "assets/index-YOAOn7cO.js": "5bd40d7501af5d383cf3b290ad93b3cb7c0c2a4e7a160d79332659a5c96b73e1",
+    "assets/index-oRL3o2tg.css": "e55f125bb83ccbd3b8a6df0b2420d6c8a63dbe7450023588885b4bc0eb28245e",
+    "assets/powershell-CFHJl5sT.js": "5eef7d073bc36b86d7cfd0804c38c091931f20dadc61b176ca2d70ce6bb488d2",
+    "assets/shell-CjFT_Tl9.js": "b4da8a11db1127e003f10a94ff707474af1392051c41f1e0ef78152e9bd0ea95",
+    "index.html": "f453e2b28ddc65e395d276954ecc960707e57cfba3e2c5ddc8e94107e818045d"
+  }
+}

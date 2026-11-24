@@ -1,0 +1,61 @@
+{
+  "date": "2026-10-14",
+  "change": "add-launch-at-startup",
+  "status": "implemented-acceptance-pending",
+  "artifacts": [
+    {
+      "path": "D:\\lxWorkspace\\src-tauri\\target\\startup\\release\\shiye.exe",
+      "sha256": "6278ff7deca0cd3eaf5cc57bb17298f88fe6ca03b14d9e8996363e7b45835a4d",
+      "bytes": 6372864,
+      "productName": "拾页"
+    },
+    {
+      "path": "D:\\lxWorkspace\\src-tauri\\target\\startup\\release\\bundle\\nsis\\拾页_0.1.0_x64-setup.exe",
+      "sha256": "640c287ba8a1976fb8f4850bdc75e332b3d7fbe014807fcd36aedec744e88f3d",
+      "bytes": 2194477,
+      "productName": "拾页"
+    },
+    {
+      "path": "D:\\lxWorkspace\\src-tauri\\target\\startup\\qa\\shiye-startup-qa.exe",
+      "sha256": "4f370c9303adc4a31996fe2b3e6112ec64104aef8fad0e088a6494e13b5dfe0e",
+      "bytes": 6372864,
+      "productName": "拾页自启动验收"
+    },
+    {
+      "path": "D:\\lxWorkspace\\src-tauri\\target\\startup\\qa\\bundle\\nsis\\拾页自启动验收_0.1.0_x64-setup.exe",
+      "sha256": "c1e8cd69c62e743e776f38cdb61d9a0f8f620eb4b44a7c7cf25c85ce1442df42",
+      "bytes": 2194269,
+      "productName": "拾页自启动验收"
+    }
+  ],
+  "checks": {
+    "typeCheck": "passed",
+    "frontendUnitTests": 148,
+    "e2eTests": 68,
+    "rustTests": 54,
+    "clippy": "passed",
+    "installerSimulationTests": 8,
+    "startupNativeChecks": 14,
+    "installerNativeChecks": 8
+  },
+  "pending": [
+    "Real sign-out/sign-in and keyboard/tray entry combinations",
+    "Windows startup approval toggled through system settings",
+    "GUI cross-version installer upgrade"
+  ],
+  "formalProcessPreserved": [
+    {
+      "id": 37572,
+      "path": "D:\\lxWorkspace\\src-tauri\\target\\note-moves\\release\\shiye.exe"
+    }
+  ],
+  "deferredAcceptance": [
+    {
+      "scope": "real-sign-out-sign-in",
+      "owner": "user",
+      "confirmedDate": "2026-10-14",
+      "reason": "用户确认没有可用的测试账户或虚拟机，登录验收由用户后续完成",
+      "result": "not-executed"
+    }
+  ]
+}

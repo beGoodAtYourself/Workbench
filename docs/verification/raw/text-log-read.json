@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "bytes": 99323,
+  "lines": 692,
+  "encoding": "gbk",
+  "sha256": "76e4271152311e656d48f30b5ca8d54655eb311b88ea0d72d62bd0cd2c22ee6b",
+  "checks": [
+    "visible editor",
+    "module switch",
+    "page reload",
+    "duplicate open",
+    "complete draft body",
+    "original unchanged"
+  ]
+}

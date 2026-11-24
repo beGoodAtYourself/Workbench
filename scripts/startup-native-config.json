@@ -1,0 +1,5 @@
+{
+  "identifier": "local.shiye.workbench.startupqa",
+  "productName": "拾页自启动验收",
+  "mainBinaryName": "shiye-startup-qa"
+}

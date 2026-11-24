@@ -1,0 +1,93 @@
+{
+  "date": "2026-11-17",
+  "timezone": "Asia/Singapore",
+  "checks": {
+    "frontendUnit": {
+      "passed": 261
+    },
+    "browserRegression": {
+      "passed": 15,
+      "files": [
+        "tests/e2e/note-import.spec.ts",
+        "tests/e2e/workbench.spec.ts"
+      ]
+    },
+    "backendUnit": {
+      "passed": 98,
+      "ignored": 1,
+      "ignoredReason": "Existing local-log test requires SHIYE_LOG_REGRESSION."
+    },
+    "clippy": "passed: --all-targets -- -D warnings",
+    "frontendBuild": "passed",
+    "newRustFormatting": "passed",
+    "visualInspection": [
+      "1280x850",
+      "900x850"
+    ],
+    "windowsPackaging": "passed: Tauri release and NSIS x64"
+  },
+  "notExecuted": [
+    "Windows native file-picker physical interaction",
+    "Installer upgrade"
+  ],
+  "sourceSha256": {
+    "src/main.ts": "61917f61f6854d61b2328fabc38a60c62ac7ba98a48fc5a5acd63bcf42917260",
+    "src/style.css": "338096399bb4cc89306f5f79beeea3220e3b67b7f37f257f403261d7c81c9164",
+    "src/types.ts": "74c4cc044909943ea798935f6cecc6a52a427ec3e724e79da6c335277b11c699",
+    "src/bridge.ts": "6daff676002b9a03f6d75d626642be1047ac5131e67cc2c62acc7a643411f508",
+    "src/demo.ts": "b204675b9bb64ca59055ba00361b0cc0103a84547d308773f3add9ffdf161a94",
+    "src/note-import.ts": "ee872ad14761db824b1f6a081117dfab5716d8869765169d75f91e01584d3eb9",
+    "src-tauri/src/main.rs": "48e6a967bbc45692afce92fa28ee1016b53bfd95dadd90b5d17660adc31c5967",
+    "src-tauri/src/app.rs": "cecd747766ccfd28d5471890b07021ce5bc6e38f08e65d9bc1fe1032f49272cf",
+    "src-tauri/src/commands.rs": "36e7ee13f4a8dafa7c3978172dc55b109612e6f8890d35ba0ba38006bab89057",
+    "src-tauri/src/note_import.rs": "3701e9a66a4ace58a6e8e6565ec8c67fc427b8b86d8d84ce1aaa3837c5cdda8e",
+    "tests/e2e/note-import.spec.ts": "42c63a6e34dc56b3f3a625e93423539ac4d16701bc895badc3c955fe67716742"
+  },
+  "artifacts": [
+    {
+      "path": "src-tauri/target/note-import/release/shiye.exe",
+      "bytes": 7290368,
+      "sha256": "2ffc7717eb578594e0d9f3c954ec872d20bca7b4a9289554badacd3a736467b0"
+    },
+    {
+      "path": "src-tauri/target/note-import/release/bundle/nsis/拾页_0.1.0_x64-setup.exe",
+      "bytes": 2555801,
+      "sha256": "56aa10d653831d80eb3e231c0b0fbb00b932cf0f37026d74d03327bc9f06155a"
+    }
+  ],
+  "recordedAt": "2026-11-17T03:18:18.159623+00:00",
+  "assetsSha256": {
+    "assets/clike-B9uivgTg.js": "362289d801a4f7b5abb548e9220660731b08cf3e00989bb8462ebed73bf28e96",
+    "assets/code-languages-D63oLSIY.js": "50590cd293e29e131cc170487e96dd00086c5ca4fd8b42eca36480d594cf58b9",
+    "assets/core-BEOw45JP.js": "ce1a9e1aa11d35b33569adfaed564e5f21120d27335edcf8415394a497c04a8d",
+    "assets/demo-uZUIAwgx.js": "94ad6911831b39b2091ebb543f2d0b09d0cf968c28e44a05aea029b3400afbbe",
+    "assets/editor-base-aTeoKtwM.js": "6a22b4f34478a74a8e275aa38804cfdf9962822c0641f3a753516189718464f9",
+    "assets/editor-Bc_XGFZ2.js": "8a97b99cbf11aae1abdae5363eedbd07a238c9168b3a6cc479b50627cf113d07",
+    "assets/event-Gip4rtXm.js": "b8e37f04ff5b51d8ac237ce58d676fd8a12302cc987c45b37888a1919972ba9c",
+    "assets/index-3pX3Xk4L.js": "cf84b42271804b6ee6c1e8e2dcf565834eb409b321ce4a669bae0dffa0cb7a21",
+    "assets/index-aj_-M57c.js": "20a2a829ce31b7d70cafdec4c30facbe62936b868f3342728b6131285688455e",
+    "assets/index-B8P4Cfoq.js": "aae04075dde59141a96bcf45e691e1e802349b9f90d596ec2de510d7437b20ca",
+    "assets/index-BbzFi8hk.js": "b6585500529fe0d10b1d0ed34625a80d65ff571966cd2b2065aef8107d2f61a3",
+    "assets/index-BwTdXnWp.js": "84fedad2beb00ecc0bf61085fb6c3c91b05b7cdd0c675d7e97a35fb3f82ea383",
+    "assets/index-C32B3sMf.js": "5ef05cb835433c048436e41790e1aa047f62e4446bedafc1dd27f03249c881fc",
+    "assets/index-CU_haXI-.js": "bef121e587d33676b2c96a74bf6b51dddf34df4333f4ee7a770a7934d8969e4e",
+    "assets/index-Cug1S_OE.js": "b691e04e82b2dd1a8a9b876447570e9d99ec13b5bcc9396b808d04a091854343",
+    "assets/index-CxNAscK_.js": "c90040db47f8530f892905bacbfdd268919d96fd26f14d64aaec40c848177f36",
+    "assets/index-D-EUhUBt.js": "74a1c877f983736dedd45bd85a90df32d56202ec2d619d7d13f8987380708461",
+    "assets/index-DdrbsXKY.js": "f225ad1fde670db9be181fefd4afdb989a7217d6534ed01cf19e7f49b2285ad7",
+    "assets/index-DrpTezev.js": "753b8fd116d0b4e3af3d4c4725e3428a35f6f277c58183a785c40f1f31ed1459",
+    "assets/index-DtQjvQf2.js": "f0299134af2a0e4c8e97095e24f59ab49c320d9c87a4d47b085ec20bca16fb40",
+    "assets/index-Du3GrRod.js": "dcacdbdceb80c98d2c32ef1b97e99cc394afb0ad07bb4c9b6dc130988ad75f79",
+    "assets/index-ikSzps-6.js": "1b048f6f287aca814462ac76c324da85cc99c2f0c712bafa4749d3e1ff6da855",
+    "assets/index-lElueJZg.css": "469e075ead3094ea145ec5ee27bfd3031bf38717210e54b44310d72fe80670bb",
+    "assets/index-yLvd2ApD.js": "e99f1eacd0cf2398a36a6224e9bbf815a5d819efdba1574bc7e71b4c4dbaeb5f",
+    "assets/powershell-CFHJl5sT.js": "5eef7d073bc36b86d7cfd0804c38c091931f20dadc61b176ca2d70ce6bb488d2",
+    "assets/shell-CjFT_Tl9.js": "b4da8a11db1127e003f10a94ff707474af1392051c41f1e0ef78152e9bd0ea95",
+    "assets/text-demo-uZt3Vqh8.js": "e8305b85c841ce6df7395f4ca288096a73a03517118aa0abfc870e89e166e8a0",
+    "assets/text-search.worker-DdK7sHSX.js": "724d0f64278b0b82f3f2773741678d3e3fcaf044381977f4cfd858f9f0785cf1",
+    "assets/text-workspace-BHGLbEE0.css": "f5027fef55b968359277223d8890e2c301577ae06565f5e126a9532009878382",
+    "assets/text-workspace-Dq4T0FRD.js": "ee0188c6beedd0dad8c506b56b90ceea94b7ec59cd2d252a62249db9d6fae681",
+    "assets/xml-BQQZnNBQ.js": "3084c64a4b1953e9c46aff390e9fef9ea7bdb637f9d1c8f94e3c009293ecc560",
+    "index.html": "f9caa22947c679ccb90cc994022dd9a00218f74cd018ef74954fdea40fa41e9d"
+  }
+}

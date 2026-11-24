@@ -1,0 +1,661 @@
+{
+  "recordedAt": "2026-10-26T10:31:21.311Z",
+  "candidate": "docs/verification/raw/text-editor-candidate-styles-20261026.json",
+  "qaSha256": "8d0066c1b881538985f1b5a347a92b2dfd876e6793814b5cc76ccc6cd877172f",
+  "pass": true,
+  "checks": [
+    {
+      "path": "package-lock.json",
+      "bytes": 81408,
+      "expected": "8b955d6bc491b23e3b58f31c8347f6bab1ecded77890712c770b5eafc811be8e",
+      "actual": "8b955d6bc491b23e3b58f31c8347f6bab1ecded77890712c770b5eafc811be8e",
+      "match": true
+    },
+    {
+      "path": "package.json",
+      "bytes": 1412,
+      "expected": "5260aaad2247b2380a2e32e291823419292e557740f61dc0626a7538fbf91b56",
+      "actual": "5260aaad2247b2380a2e32e291823419292e557740f61dc0626a7538fbf91b56",
+      "match": true
+    },
+    {
+      "path": "src-tauri/Cargo.lock",
+      "bytes": 131976,
+      "expected": "5f3d2ff31e8468b94b2d53b31c4a212f89357787e03e4ad7ab8a3a8b096d0466",
+      "actual": "5f3d2ff31e8468b94b2d53b31c4a212f89357787e03e4ad7ab8a3a8b096d0466",
+      "match": true
+    },
+    {
+      "path": "src-tauri/Cargo.toml",
+      "bytes": 1102,
+      "expected": "95a1664d211220b518096012920d8a21eb0f88f4fee7087e1e70e7f5c9ca86cf",
+      "actual": "95a1664d211220b518096012920d8a21eb0f88f4fee7087e1e70e7f5c9ca86cf",
+      "match": true
+    },
+    {
+      "path": "src-tauri/src/app.rs",
+      "bytes": 10972,
+      "expected": "5f91966240176168e53d601d0660734659a4e0292f3a10a54ba4b4b9e91a3667",
+      "actual": "5f91966240176168e53d601d0660734659a4e0292f3a10a54ba4b4b9e91a3667",
+      "match": true
+    },
+    {
+      "path": "src-tauri/src/autostart.rs",
+      "bytes": 33569,
+      "expected": "0c6f1bd16a3707521144fe143b7dbb60a12f2c274b4c3a8ba74b8fee299eb31e",
+      "actual": "0c6f1bd16a3707521144fe143b7dbb60a12f2c274b4c3a8ba74b8fee299eb31e",
+      "match": true
+    },
+    {
+      "path": "src-tauri/src/commands.rs",
+      "bytes": 22532,
+      "expected": "1825ebdc310f7581314a1c2cacca19ce4e2cd3a162266e1ecefe1919178ca9c5",
+      "actual": "1825ebdc310f7581314a1c2cacca19ce4e2cd3a162266e1ecefe1919178ca9c5",
+      "match": true
+    },
+    {
+      "path": "src-tauri/src/files.rs",
+      "bytes": 25895,
+      "expected": "83403f6769a4b5916fc2db9611afad3588dda3a6d6885d393ad70a7baf0dea7c",
+      "actual": "83403f6769a4b5916fc2db9611afad3588dda3a6d6885d393ad70a7baf0dea7c",
+      "match": true
+    },
+    {
+      "path": "src-tauri/src/folder_order.rs",
+      "bytes": 43869,
+      "expected": "8ae335879c436ef1699ffddd78b1531e389d6a6d7399fcffc9130344ca1c8306",
+      "actual": "8ae335879c436ef1699ffddd78b1531e389d6a6d7399fcffc9130344ca1c8306",
+      "match": true
+    },
+    {
+      "path": "src-tauri/src/main.rs",
+      "bytes": 237,
+      "expected": "be19f715846c9e00b319f12a01c6a27c1cb177a00aa8712501e727d3db095d1f",
+      "actual": "be19f715846c9e00b319f12a01c6a27c1cb177a00aa8712501e727d3db095d1f",
+      "match": true
+    },
+    {
+      "path": "src-tauri/src/native.rs",
+      "bytes": 10039,
+      "expected": "ca80401bd21f9b147e6061201918d4f424fd44d595a6bbfbe288448f462c26c1",
+      "actual": "ca80401bd21f9b147e6061201918d4f424fd44d595a6bbfbe288448f462c26c1",
+      "match": true
+    },
+    {
+      "path": "src-tauri/src/settings.rs",
+      "bytes": 4566,
+      "expected": "661e9e29fbea93e7a18fa583f440da6ddeae98aa5e1c8ae765b68851358d63ae",
+      "actual": "661e9e29fbea93e7a18fa583f440da6ddeae98aa5e1c8ae765b68851358d63ae",
+      "match": true
+    },
+    {
+      "path": "src-tauri/src/startup.rs",
+      "bytes": 762,
+      "expected": "c2d1f11126c21af5c5a6f604014525c4dca4b3d9877b51fb9e8a97948b2b315a",
+      "actual": "c2d1f11126c21af5c5a6f604014525c4dca4b3d9877b51fb9e8a97948b2b315a",
+      "match": true
+    },
+    {
+      "path": "src-tauri/src/text_files.rs",
+      "bytes": 18980,
+      "expected": "34495174b2f4124af215300f1aa2d98d741651c9be21990d77f94b173782ffa8",
+      "actual": "34495174b2f4124af215300f1aa2d98d741651c9be21990d77f94b173782ffa8",
+      "match": true
+    },
+    {
+      "path": "src-tauri/src/text_session.rs",
+      "bytes": 71050,
+      "expected": "0c515a9bcfaaf7f36fd34b3e54e7fef845f57c47abc9ea14a9a49b7fb7f67685",
+      "actual": "0c515a9bcfaaf7f36fd34b3e54e7fef845f57c47abc9ea14a9a49b7fb7f67685",
+      "match": true
+    },
+    {
+      "path": "src-tauri/tauri.conf.json",
+      "bytes": 842,
+      "expected": "78355a7f37033a3fd26f3726d2aba8e93ee27c8ffa0f6cb57542364956f42b4a",
+      "actual": "78355a7f37033a3fd26f3726d2aba8e93ee27c8ffa0f6cb57542364956f42b4a",
+      "match": true
+    },
+    {
+      "path": "src/autostart-settings.ts",
+      "bytes": 7509,
+      "expected": "097efaa7008b6ab6bc5c9efcb60df224d03f8b800df626e2fc1598bdcc1c2b47",
+      "actual": "097efaa7008b6ab6bc5c9efcb60df224d03f8b800df626e2fc1598bdcc1c2b47",
+      "match": true
+    },
+    {
+      "path": "src/bridge.ts",
+      "bytes": 1994,
+      "expected": "a7a78ffef7cea0d4d6a98c6b842a7c3cf2410a3479f2574796a77d5fd4bed3dd",
+      "actual": "a7a78ffef7cea0d4d6a98c6b842a7c3cf2410a3479f2574796a77d5fd4bed3dd",
+      "match": true
+    },
+    {
+      "path": "src/code-languages.ts",
+      "bytes": 4686,
+      "expected": "152346030c186477775ac033de19c9a43c81fb4b674719ca34202c58037fe473",
+      "actual": "152346030c186477775ac033de19c9a43c81fb4b674719ca34202c58037fe473",
+      "match": true
+    },
+    {
+      "path": "src/demo.ts",
+      "bytes": 17656,
+      "expected": "a293e3292a79740369ff7fde26b889e61931fdd4ad4477760daa564f0f3fd1f5",
+      "actual": "a293e3292a79740369ff7fde26b889e61931fdd4ad4477760daa564f0f3fd1f5",
+      "match": true
+    },
+    {
+      "path": "src/editor-base.ts",
+      "bytes": 1313,
+      "expected": "58ff79ce193e3f1278e7636943b3aa6aafe86b4b5afbc90d7b2616e40b0d8976",
+      "actual": "58ff79ce193e3f1278e7636943b3aa6aafe86b4b5afbc90d7b2616e40b0d8976",
+      "match": true
+    },
+    {
+      "path": "src/editor.ts",
+      "bytes": 4755,
+      "expected": "dd1e5e92b78eac8f0f5f1eab513ba3eb10a10b8120a8ec05cc089df6444af4bf",
+      "actual": "dd1e5e92b78eac8f0f5f1eab513ba3eb10a10b8120a8ec05cc089df6444af4bf",
+      "match": true
+    },
+    {
+      "path": "src/folder-interactions.ts",
+      "bytes": 10046,
+      "expected": "9bccefba70a9bc86537e2fdf70a5f62647fa1ca1746ef5e68c89d67c8f968a10",
+      "actual": "9bccefba70a9bc86537e2fdf70a5f62647fa1ca1746ef5e68c89d67c8f968a10",
+      "match": true
+    },
+    {
+      "path": "src/folder-tree.ts",
+      "bytes": 2374,
+      "expected": "6cf93297eb73420e8e7be0d1e9fcf9907e91a65879315be6ed2ba8d6c3076624",
+      "actual": "6cf93297eb73420e8e7be0d1e9fcf9907e91a65879315be6ed2ba8d6c3076624",
+      "match": true
+    },
+    {
+      "path": "src/format-toolbar.ts",
+      "bytes": 5478,
+      "expected": "e5f13a9975146a22176d52660512d0890167822f8b7bb2b6a0e7902230454526",
+      "actual": "e5f13a9975146a22176d52660512d0890167822f8b7bb2b6a0e7902230454526",
+      "match": true
+    },
+    {
+      "path": "src/formatting.ts",
+      "bytes": 6777,
+      "expected": "dc996856d9d35f46a50a7d2a4686f85a12d91f2b20cbaadd3812bc493de1c430",
+      "actual": "dc996856d9d35f46a50a7d2a4686f85a12d91f2b20cbaadd3812bc493de1c430",
+      "match": true
+    },
+    {
+      "path": "src/main.ts",
+      "bytes": 44654,
+      "expected": "cbb532ce960c50c4aa390b9b69cf6fa136bd3dac01feb7c6668b8d12be6d098d",
+      "actual": "cbb532ce960c50c4aa390b9b69cf6fa136bd3dac01feb7c6668b8d12be6d098d",
+      "match": true
+    },
+    {
+      "path": "src/markdown.ts",
+      "bytes": 4987,
+      "expected": "020db2917cf4a0d43644871970a077380dc6171ee0c0bcdda49647f1f1d42f15",
+      "actual": "020db2917cf4a0d43644871970a077380dc6171ee0c0bcdda49647f1f1d42f15",
+      "match": true
+    },
+    {
+      "path": "src/model.ts",
+      "bytes": 7657,
+      "expected": "7fe8c2c5be7e3c5f88993f665488c042475a5df83d7d4945e0736acc45193ff4",
+      "actual": "7fe8c2c5be7e3c5f88993f665488c042475a5df83d7d4945e0736acc45193ff4",
+      "match": true
+    },
+    {
+      "path": "src/paths.ts",
+      "bytes": 2822,
+      "expected": "a60ae5a049191cbc053ebebc5c4c8e11e03b5f851183ee10d31924cb1bdd93bf",
+      "actual": "a60ae5a049191cbc053ebebc5c4c8e11e03b5f851183ee10d31924cb1bdd93bf",
+      "match": true
+    },
+    {
+      "path": "src/style.css",
+      "bytes": 21254,
+      "expected": "d0671df9840dc02209215d43823e2d02b445aa1851092fdb29000217d34fc630",
+      "actual": "d0671df9840dc02209215d43823e2d02b445aa1851092fdb29000217d34fc630",
+      "match": true
+    },
+    {
+      "path": "src/text-bridge.ts",
+      "bytes": 817,
+      "expected": "eb60a301b238250ed3330d2c26b817ba6c5ff4b73392b89f5d994a7fcce7064a",
+      "actual": "eb60a301b238250ed3330d2c26b817ba6c5ff4b73392b89f5d994a7fcce7064a",
+      "match": true
+    },
+    {
+      "path": "src/text-demo.ts",
+      "bytes": 9394,
+      "expected": "936b2bb3601ebe039986048835a084103ab4d807e203702486f0ae403740c113",
+      "actual": "936b2bb3601ebe039986048835a084103ab4d807e203702486f0ae403740c113",
+      "match": true
+    },
+    {
+      "path": "src/text-editor.ts",
+      "bytes": 22164,
+      "expected": "9c1840a553857dc5e66984699348ad57d47831f92bdce8f624a319efc4dadf76",
+      "actual": "9c1840a553857dc5e66984699348ad57d47831f92bdce8f624a319efc4dadf76",
+      "match": true
+    },
+    {
+      "path": "src/text-model.ts",
+      "bytes": 24780,
+      "expected": "1cb9a53b56860965a49b950dcb902c39ecbac0be52cc40e78ac3a9091852ea22",
+      "actual": "1cb9a53b56860965a49b950dcb902c39ecbac0be52cc40e78ac3a9091852ea22",
+      "match": true
+    },
+    {
+      "path": "src/text-search-client.ts",
+      "bytes": 2350,
+      "expected": "e30f632cf1248027839c7dfd671283fee0b4f435af5ab0a5ba86bda9269fc6b0",
+      "actual": "e30f632cf1248027839c7dfd671283fee0b4f435af5ab0a5ba86bda9269fc6b0",
+      "match": true
+    },
+    {
+      "path": "src/text-search.ts",
+      "bytes": 4354,
+      "expected": "19290abe561de857c8b191c187c3234836967143e753a23bcd424658aeedf72b",
+      "actual": "19290abe561de857c8b191c187c3234836967143e753a23bcd424658aeedf72b",
+      "match": true
+    },
+    {
+      "path": "src/text-search.worker.ts",
+      "bytes": 285,
+      "expected": "32f2b3a3c6744355cb67ccc23ccb52bf4cc2f17e70e8278b68b76ea7702cbf5c",
+      "actual": "32f2b3a3c6744355cb67ccc23ccb52bf4cc2f17e70e8278b68b76ea7702cbf5c",
+      "match": true
+    },
+    {
+      "path": "src/text-style.css",
+      "bytes": 9617,
+      "expected": "6bd0a5bcc388a2c6211576a65f606cdc659019888bd27e63e47e0f07b4ceb5aa",
+      "actual": "6bd0a5bcc388a2c6211576a65f606cdc659019888bd27e63e47e0f07b4ceb5aa",
+      "match": true
+    },
+    {
+      "path": "src/text-types.ts",
+      "bytes": 1844,
+      "expected": "4c67bee90ad26b3dcab2a9893089f6a53b262c2760b0016318530e87278c6f41",
+      "actual": "4c67bee90ad26b3dcab2a9893089f6a53b262c2760b0016318530e87278c6f41",
+      "match": true
+    },
+    {
+      "path": "src/text-workspace.ts",
+      "bytes": 35488,
+      "expected": "57cf9bbf48b3b2a95582d8c0082d1dceaeb969f89c597c606c6a95added2b012",
+      "actual": "57cf9bbf48b3b2a95582d8c0082d1dceaeb969f89c597c606c6a95added2b012",
+      "match": true
+    },
+    {
+      "path": "src/types.ts",
+      "bytes": 2657,
+      "expected": "54cabf8147a0a5d8357bc7aaf038ba12cc1bd0e6ce1598f6705095dfe2796084",
+      "actual": "54cabf8147a0a5d8357bc7aaf038ba12cc1bd0e6ce1598f6705095dfe2796084",
+      "match": true
+    },
+    {
+      "path": "tests/e2e/text-lifecycle.spec.ts",
+      "bytes": 22818,
+      "expected": "f41ae3c663454124ae657a5a73bf004b5dd8d1a95398be6731464df317835f2d",
+      "actual": "f41ae3c663454124ae657a5a73bf004b5dd8d1a95398be6731464df317835f2d",
+      "match": true
+    },
+    {
+      "path": "tsconfig.json",
+      "bytes": 439,
+      "expected": "85b50411c37a0f889cf4d6eed6d5e241dbf990438ac94e3948ace2f565a4edb9",
+      "actual": "85b50411c37a0f889cf4d6eed6d5e241dbf990438ac94e3948ace2f565a4edb9",
+      "match": true
+    },
+    {
+      "path": "vite.config.ts",
+      "bytes": 254,
+      "expected": "f50400467100affae5a68620240f3075fb63387fd15c39719420d51f6d9fd120",
+      "actual": "f50400467100affae5a68620240f3075fb63387fd15c39719420d51f6d9fd120",
+      "match": true
+    },
+    {
+      "path": "scripts/text-native-smoke.mjs",
+      "bytes": 16514,
+      "expected": "7bc71b4cb3931fa30ec7216628700b3904dfc4c7bc696497c377cee36bf05b21",
+      "actual": "7bc71b4cb3931fa30ec7216628700b3904dfc4c7bc696497c377cee36bf05b21",
+      "match": true
+    },
+    {
+      "path": "scripts/text-editor-native.mjs",
+      "bytes": 14292,
+      "expected": "359843c74e9c0536e3e0a5a6c7f65edb613b9d780e3b52ea6fa7146936a66b06",
+      "actual": "359843c74e9c0536e3e0a5a6c7f65edb613b9d780e3b52ea6fa7146936a66b06",
+      "match": true
+    },
+    {
+      "path": "scripts/text-links-native.mjs",
+      "bytes": 12441,
+      "expected": "f7afd36c674a68a11412d1647203bd9032475dc7082b8a92ade424f68e534b41",
+      "actual": "f7afd36c674a68a11412d1647203bd9032475dc7082b8a92ade424f68e534b41",
+      "match": true
+    },
+    {
+      "path": "scripts/text-recovery-native.mjs",
+      "bytes": 19943,
+      "expected": "622edb56931ccfe0b0e7f43584913c53b5d52cf2dc7f685202d57af15ec48f7c",
+      "actual": "622edb56931ccfe0b0e7f43584913c53b5d52cf2dc7f685202d57af15ec48f7c",
+      "match": true
+    },
+    {
+      "path": "scripts/text-workspace-native.mjs",
+      "bytes": 20533,
+      "expected": "ae724c6f7ad259faff99b61590e9b619dc167c807ad559ddb67d17e44222c9fc",
+      "actual": "ae724c6f7ad259faff99b61590e9b619dc167c807ad559ddb67d17e44222c9fc",
+      "match": true
+    },
+    {
+      "path": "scripts/text-shell-native.mjs",
+      "bytes": 15265,
+      "expected": "f46fb709d6df6071a6d2272253352efd51d4479f47f13e714e26b65ca2e6b66a",
+      "actual": "f46fb709d6df6071a6d2272253352efd51d4479f47f13e714e26b65ca2e6b66a",
+      "match": true
+    },
+    {
+      "path": "scripts/text-native-performance.mjs",
+      "bytes": 28033,
+      "expected": "64b5df633759f164896c2921306287247203d6bdf2dbd772f4829275177c977e",
+      "actual": "64b5df633759f164896c2921306287247203d6bdf2dbd772f4829275177c977e",
+      "match": true
+    },
+    {
+      "path": "scripts/text-memory-probe.ps1",
+      "bytes": 10231,
+      "expected": "0137e59589a85d1222e44efcc92972132f15fada7d53c30deaa12f39b050fb3e",
+      "actual": "0137e59589a85d1222e44efcc92972132f15fada7d53c30deaa12f39b050fb3e",
+      "match": true
+    },
+    {
+      "path": "scripts/text-native-config.json",
+      "bytes": 127,
+      "expected": "a21916e19bf4bababb9eeec649507d678487c3db3aa134b61155bea1c28e7c8b",
+      "actual": "a21916e19bf4bababb9eeec649507d678487c3db3aa134b61155bea1c28e7c8b",
+      "match": true
+    },
+    {
+      "path": "scripts/text-component-allocation.mjs",
+      "bytes": 9157,
+      "expected": "8fe89ddfe384c1d5656298d5cde79d2a2e5e9c154971a3d428110059ab04fc95",
+      "actual": "8fe89ddfe384c1d5656298d5cde79d2a2e5e9c154971a3d428110059ab04fc95",
+      "match": true
+    },
+    {
+      "path": "scripts/text-delivery.mjs",
+      "bytes": 3692,
+      "expected": "abc86be9523c2d585c9d563ac520c72efea1e382d2c779255c47556f4f04f8c6",
+      "actual": "abc86be9523c2d585c9d563ac520c72efea1e382d2c779255c47556f4f04f8c6",
+      "match": true
+    },
+    {
+      "path": "D:\\lxWorkspace\\src-tauri\\target\\text-editor\\qa\\shiye-text-qa.exe",
+      "bytes": 6846464,
+      "expected": "8d0066c1b881538985f1b5a347a92b2dfd876e6793814b5cc76ccc6cd877172f",
+      "actual": "8d0066c1b881538985f1b5a347a92b2dfd876e6793814b5cc76ccc6cd877172f",
+      "match": true
+    },
+    {
+      "path": "D:\\lxWorkspace\\src-tauri\\target\\text-editor\\release\\shiye.exe",
+      "bytes": 6846464,
+      "expected": "31796befd60874c3dd35aea336bf3bcb4221641ed2260d6d5e94f33f91e6402d",
+      "actual": "31796befd60874c3dd35aea336bf3bcb4221641ed2260d6d5e94f33f91e6402d",
+      "match": true
+    },
+    {
+      "path": "D:\\lxWorkspace\\src-tauri\\target\\text-editor\\release\\bundle\\nsis\\拾页_0.1.0_x64-setup.exe",
+      "bytes": 2346836,
+      "expected": "092e0aaae5bed8214ab2e8bed2f21605d740278a24f0d0757de0f5b2ac57010b",
+      "actual": "092e0aaae5bed8214ab2e8bed2f21605d740278a24f0d0757de0f5b2ac57010b",
+      "match": true
+    },
+    {
+      "path": "openspec/changes/add-text-editor-module/specs/runtime-resources_delta.md",
+      "bytes": 4778,
+      "expected": "7a6ca304f1b3e0ba2552d8e534a2fcd7260fb86755281174d773514bbe3bf75e",
+      "actual": "7a6ca304f1b3e0ba2552d8e534a2fcd7260fb86755281174d773514bbe3bf75e",
+      "match": true
+    },
+    {
+      "path": "dist/assets/clike-B9uivgTg.js",
+      "bytes": 22302,
+      "expected": "362289d801a4f7b5abb548e9220660731b08cf3e00989bb8462ebed73bf28e96",
+      "actual": "362289d801a4f7b5abb548e9220660731b08cf3e00989bb8462ebed73bf28e96",
+      "match": true
+    },
+    {
+      "path": "dist/assets/code-languages-B_vvGJb5.js",
+      "bytes": 290935,
+      "expected": "4ed47ff60b6791696c77458b54f7ee0f8b6257b70b163cfac2c43ee90519603d",
+      "actual": "4ed47ff60b6791696c77458b54f7ee0f8b6257b70b163cfac2c43ee90519603d",
+      "match": true
+    },
+    {
+      "path": "dist/assets/core-BEOw45JP.js",
+      "bytes": 195,
+      "expected": "ce1a9e1aa11d35b33569adfaed564e5f21120d27335edcf8415394a497c04a8d",
+      "actual": "ce1a9e1aa11d35b33569adfaed564e5f21120d27335edcf8415394a497c04a8d",
+      "match": true
+    },
+    {
+      "path": "dist/assets/demo-CG7RXoUO.js",
+      "bytes": 11243,
+      "expected": "fedf53fb2d4a762e0da1a870739bde4b78c4899cbc3af753427b8eb4755e148e",
+      "actual": "fedf53fb2d4a762e0da1a870739bde4b78c4899cbc3af753427b8eb4755e148e",
+      "match": true
+    },
+    {
+      "path": "dist/assets/editor-base-Sh7Eg1iq.js",
+      "bytes": 24107,
+      "expected": "8eb60f985965b9d257d765964ffd90892ee839558ab3a83fc3ab5da3077938d9",
+      "actual": "8eb60f985965b9d257d765964ffd90892ee839558ab3a83fc3ab5da3077938d9",
+      "match": true
+    },
+    {
+      "path": "dist/assets/editor-D-yTPnqF.js",
+      "bytes": 10086,
+      "expected": "831867c19016b9563dcbd6e9b991b58c94049d895e5258a9a2b4c9c0ec687bfb",
+      "actual": "831867c19016b9563dcbd6e9b991b58c94049d895e5258a9a2b4c9c0ec687bfb",
+      "match": true
+    },
+    {
+      "path": "dist/assets/event-Gip4rtXm.js",
+      "bytes": 1116,
+      "expected": "b8e37f04ff5b51d8ac237ce58d676fd8a12302cc987c45b37888a1919972ba9c",
+      "actual": "b8e37f04ff5b51d8ac237ce58d676fd8a12302cc987c45b37888a1919972ba9c",
+      "match": true
+    },
+    {
+      "path": "dist/assets/index-7pPzE9bt.js",
+      "bytes": 12748,
+      "expected": "5033815e64077aef6c2fef15d5d0fa5144459713d3b97a3b4d91c1e1d9fd6b44",
+      "actual": "5033815e64077aef6c2fef15d5d0fa5144459713d3b97a3b4d91c1e1d9fd6b44",
+      "match": true
+    },
+    {
+      "path": "dist/assets/index-B39rsdy7.js",
+      "bytes": 28797,
+      "expected": "3e584d9924a8b48b32ad58c5a96aeeb55dd48341eda18ecaa3ed902a1ffedcba",
+      "actual": "3e584d9924a8b48b32ad58c5a96aeeb55dd48341eda18ecaa3ed902a1ffedcba",
+      "match": true
+    },
+    {
+      "path": "dist/assets/index-BAJBmuE6.js",
+      "bytes": 8374,
+      "expected": "57118095db74add9783a644dd77ddadaa4e8418bdfde06155cb215f1173eecc9",
+      "actual": "57118095db74add9783a644dd77ddadaa4e8418bdfde06155cb215f1173eecc9",
+      "match": true
+    },
+    {
+      "path": "dist/assets/index-BfX5SVDL.js",
+      "bytes": 44418,
+      "expected": "b4671892b57a4a2ce6897eb87d13632c24e547828ea27bf85d43f1458e6f80a8",
+      "actual": "b4671892b57a4a2ce6897eb87d13632c24e547828ea27bf85d43f1458e6f80a8",
+      "match": true
+    },
+    {
+      "path": "dist/assets/index-Bv2s4VXV.js",
+      "bytes": 144358,
+      "expected": "a3f3f5013401b444f2157ca2175c5eec68ff331a12c8ef49ea360829849a64bf",
+      "actual": "a3f3f5013401b444f2157ca2175c5eec68ff331a12c8ef49ea360829849a64bf",
+      "match": true
+    },
+    {
+      "path": "dist/assets/index-BVeIymtj.js",
+      "bytes": 2461,
+      "expected": "111f90966a1aa1fa670160cafb26e17da0bfda5b7f6b57431081eab46ce7c333",
+      "actual": "111f90966a1aa1fa670160cafb26e17da0bfda5b7f6b57431081eab46ce7c333",
+      "match": true
+    },
+    {
+      "path": "dist/assets/index-CLMBEdkp.js",
+      "bytes": 28259,
+      "expected": "6dab913351829842a9f0161bf470569ba4fe555ecf4eaca8e2643b2cee5ada05",
+      "actual": "6dab913351829842a9f0161bf470569ba4fe555ecf4eaca8e2643b2cee5ada05",
+      "match": true
+    },
+    {
+      "path": "dist/assets/index-CquwEwmq.js",
+      "bytes": 45172,
+      "expected": "8f49487971bebec504b7d090b857017e3ad34e5a7f20ed4f7a580138ee95033b",
+      "actual": "8f49487971bebec504b7d090b857017e3ad34e5a7f20ed4f7a580138ee95033b",
+      "match": true
+    },
+    {
+      "path": "dist/assets/index-CU_haXI-.js",
+      "bytes": 172,
+      "expected": "bef121e587d33676b2c96a74bf6b51dddf34df4333f4ee7a770a7934d8969e4e",
+      "actual": "bef121e587d33676b2c96a74bf6b51dddf34df4333f4ee7a770a7934d8969e4e",
+      "match": true
+    },
+    {
+      "path": "dist/assets/index-CZxSe5xW.css",
+      "bytes": 21000,
+      "expected": "52cb54b865d1ba6bacf95073b0cac49071c11805cfbe281fd920745c72fab566",
+      "actual": "52cb54b865d1ba6bacf95073b0cac49071c11805cfbe281fd920745c72fab566",
+      "match": true
+    },
+    {
+      "path": "dist/assets/index-DDQQ6RnV.js",
+      "bytes": 30866,
+      "expected": "d22c7808a8ff859e0d26465e6027b7cf04dac020121a0e753e1a21e2e6d987c6",
+      "actual": "d22c7808a8ff859e0d26465e6027b7cf04dac020121a0e753e1a21e2e6d987c6",
+      "match": true
+    },
+    {
+      "path": "dist/assets/index-DGL0A4rV.js",
+      "bytes": 70847,
+      "expected": "984e02c530d579a761bf20bf5b77177f041e45b055ec78298535b0b01300f570",
+      "actual": "984e02c530d579a761bf20bf5b77177f041e45b055ec78298535b0b01300f570",
+      "match": true
+    },
+    {
+      "path": "dist/assets/index-DjylMm6_.js",
+      "bytes": 87002,
+      "expected": "fbe0475f723f50d7ca1fb992afdbb582d12af984000d1f8887a80893d5183d4b",
+      "actual": "fbe0475f723f50d7ca1fb992afdbb582d12af984000d1f8887a80893d5183d4b",
+      "match": true
+    },
+    {
+      "path": "dist/assets/index-Dk0lNQAP.js",
+      "bytes": 40291,
+      "expected": "cdcf65747c64d6466f0e2a46ce580c62a1743e578aa73edc353ccf15b920f61a",
+      "actual": "cdcf65747c64d6466f0e2a46ce580c62a1743e578aa73edc353ccf15b920f61a",
+      "match": true
+    },
+    {
+      "path": "dist/assets/index-Dl6B5sZn.js",
+      "bytes": 103955,
+      "expected": "2ae9d0fde0eb6eae43200c592cf7bd71279cb735d62929ca7d6c0be8bc51c7d9",
+      "actual": "2ae9d0fde0eb6eae43200c592cf7bd71279cb735d62929ca7d6c0be8bc51c7d9",
+      "match": true
+    },
+    {
+      "path": "dist/assets/index-Dmiq8Jyl.js",
+      "bytes": 26534,
+      "expected": "6affd871676d6a969c62a41e9521621dd823382027edb8bbdf22107c1b0e9976",
+      "actual": "6affd871676d6a969c62a41e9521621dd823382027edb8bbdf22107c1b0e9976",
+      "match": true
+    },
+    {
+      "path": "dist/assets/index-Dxmewk5r.js",
+      "bytes": 32367,
+      "expected": "58c4be195534d61631317f1e413a3dc7fc1d8aba84199865f4a0248563d3ff00",
+      "actual": "58c4be195534d61631317f1e413a3dc7fc1d8aba84199865f4a0248563d3ff00",
+      "match": true
+    },
+    {
+      "path": "dist/assets/powershell-CFHJl5sT.js",
+      "bytes": 7769,
+      "expected": "5eef7d073bc36b86d7cfd0804c38c091931f20dadc61b176ca2d70ce6bb488d2",
+      "actual": "5eef7d073bc36b86d7cfd0804c38c091931f20dadc61b176ca2d70ce6bb488d2",
+      "match": true
+    },
+    {
+      "path": "dist/assets/shell-CjFT_Tl9.js",
+      "bytes": 2571,
+      "expected": "b4da8a11db1127e003f10a94ff707474af1392051c41f1e0ef78152e9bd0ea95",
+      "actual": "b4da8a11db1127e003f10a94ff707474af1392051c41f1e0ef78152e9bd0ea95",
+      "match": true
+    },
+    {
+      "path": "dist/assets/text-demo-Bqem8Bc1.js",
+      "bytes": 6248,
+      "expected": "1cd8586658044244fac97e9afd5b9168a920e2ba77e4d2337a2d51b6353bb162",
+      "actual": "1cd8586658044244fac97e9afd5b9168a920e2ba77e4d2337a2d51b6353bb162",
+      "match": true
+    },
+    {
+      "path": "dist/assets/text-search.worker-DdK7sHSX.js",
+      "bytes": 2246,
+      "expected": "724d0f64278b0b82f3f2773741678d3e3fcaf044381977f4cfd858f9f0785cf1",
+      "actual": "724d0f64278b0b82f3f2773741678d3e3fcaf044381977f4cfd858f9f0785cf1",
+      "match": true
+    },
+    {
+      "path": "dist/assets/text-workspace-DfHlBpjd.js",
+      "bytes": 40810,
+      "expected": "880515c1df8c6291e86883d24fd59e2f2633f9624ee7ae2a0fdc0db2d0c4d03f",
+      "actual": "880515c1df8c6291e86883d24fd59e2f2633f9624ee7ae2a0fdc0db2d0c4d03f",
+      "match": true
+    },
+    {
+      "path": "dist/assets/text-workspace-N62pwIYz.css",
+      "bytes": 9513,
+      "expected": "336e1214fad02f9b8b5deb8e39d443c5a38d03cd2090da9e89d995fa2fb8d3e6",
+      "actual": "336e1214fad02f9b8b5deb8e39d443c5a38d03cd2090da9e89d995fa2fb8d3e6",
+      "match": true
+    },
+    {
+      "path": "dist/assets/xml-BQQZnNBQ.js",
+      "bytes": 5634,
+      "expected": "3084c64a4b1953e9c46aff390e9fef9ea7bdb637f9d1c8f94e3c009293ecc560",
+      "actual": "3084c64a4b1953e9c46aff390e9fef9ea7bdb637f9d1c8f94e3c009293ecc560",
+      "match": true
+    },
+    {
+      "path": "dist/index.html",
+      "bytes": 369,
+      "expected": "611113f840dba3584daa6f2bc88181239fc8e4f32a3514a0617a1f2667842d7e",
+      "actual": "611113f840dba3584daa6f2bc88181239fc8e4f32a3514a0617a1f2667842d7e",
+      "match": true
+    }
+  ],
+  "archive": "src-tauri/target/text-editor/history/before-native-8d0066c1-20261026-evening",
+  "priorTextQaProcesses": [],
+  "priorBuildOrTestProcesses": [],
+  "authorization": "2026-10-26 18:30 Asia/Singapore; one approximately 25-minute foreground session",
+  "postflight": {
+    "recordedAt": "2026-10-26T10:59:08.806Z",
+    "hashChecks": 92,
+    "allUnchanged": true
+  }
+}

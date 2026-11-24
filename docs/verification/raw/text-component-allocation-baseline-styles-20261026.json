@@ -1,0 +1,178 @@
+{
+  "acceptance": false,
+  "kind": "headless-component-allocation",
+  "label": "baseline-styles-20261026",
+  "profile": true,
+  "codeFixtures": true,
+  "startedAt": "2026-10-26T05:47:15.554Z",
+  "notice": "Real text model/workspace/editor with an in-memory synthetic repository; no native bridge, private-process-memory acceptance or disk recovery claim. Forced GC is diagnostic only.",
+  "sourceHashes": {
+    "src/text-editor.ts": "c20d63cf906904a8c21f26435336060dff5d6fbaa9f8d55d49fc340b78eb5a73",
+    "src/text-workspace.ts": "57cf9bbf48b3b2a95582d8c0082d1dceaeb969f89c597c606c6a95added2b012",
+    "src/text-model.ts": "1cb9a53b56860965a49b950dcb902c39ecbac0be52cc40e78ac3a9091852ea22",
+    "src/text-search-client.ts": "e30f632cf1248027839c7dfd671283fee0b4f435af5ab0a5ba86bda9269fc6b0"
+  },
+  "scenes": [
+    {
+      "mode": "pause",
+      "cycles": 100,
+      "warmup": 10,
+      "before": {
+        "heap": {
+          "usedSize": 7318588,
+          "totalSize": 12529664,
+          "embedderHeapUsedSize": 15311592,
+          "backingStorageSize": 1908283
+        },
+        "dom": {
+          "documents": 5,
+          "nodes": 3094,
+          "jsEventListeners": 360
+        },
+        "counts": {
+          "editors": 1,
+          "workers": 0,
+          "searchForms": 0,
+          "elements": 756,
+          "styleWrites": 41,
+          "styleCharacters": 257070
+        }
+      },
+      "after": {
+        "heap": {
+          "usedSize": 9036620,
+          "totalSize": 19607552,
+          "embedderHeapUsedSize": 11405776,
+          "backingStorageSize": 1906925
+        },
+        "dom": {
+          "documents": 2,
+          "nodes": 2841,
+          "jsEventListeners": 359
+        },
+        "counts": {
+          "editors": 2,
+          "workers": 0,
+          "searchForms": 0,
+          "elements": 7278,
+          "styleWrites": 442,
+          "styleCharacters": 2771340
+        }
+      },
+      "afterGc": {
+        "heap": {
+          "usedSize": 6643392,
+          "totalSize": 7286784,
+          "embedderHeapUsedSize": 2104128,
+          "backingStorageSize": 1898168
+        },
+        "dom": {
+          "documents": 2,
+          "nodes": 891,
+          "jsEventListeners": 201
+        },
+        "counts": {
+          "editors": 2,
+          "workers": 0,
+          "searchForms": 0,
+          "elements": 7278,
+          "styleWrites": 442,
+          "styleCharacters": 2771340
+        }
+      },
+      "allocations": {
+        "editors": 1,
+        "workers": 0,
+        "searchForms": 0,
+        "elements": 6522,
+        "styleWrites": 401,
+        "styleCharacters": 2514270
+      },
+      "fixtureUnchanged": true,
+      "pageErrors": [],
+      "profileFile": "text-allocation-profile-baseline-styles-20261026-pause.json"
+    },
+    {
+      "mode": "combined",
+      "cycles": 100,
+      "warmup": 10,
+      "before": {
+        "heap": {
+          "usedSize": 8575828,
+          "totalSize": 20918272,
+          "embedderHeapUsedSize": 4207784,
+          "backingStorageSize": 1901514
+        },
+        "dom": {
+          "documents": 2,
+          "nodes": 2286,
+          "jsEventListeners": 435
+        },
+        "counts": {
+          "editors": 11,
+          "workers": 10,
+          "searchForms": 1,
+          "elements": 3386,
+          "styleWrites": 62,
+          "styleCharacters": 388740
+        }
+      },
+      "after": {
+        "heap": {
+          "usedSize": 10838672,
+          "totalSize": 73220096,
+          "embedderHeapUsedSize": 5720088,
+          "backingStorageSize": 1901117
+        },
+        "dom": {
+          "documents": 2,
+          "nodes": 3429,
+          "jsEventListeners": 624
+        },
+        "counts": {
+          "editors": 112,
+          "workers": 110,
+          "searchForms": 1,
+          "elements": 34995,
+          "styleWrites": 664,
+          "styleCharacters": 4163280
+        }
+      },
+      "afterGc": {
+        "heap": {
+          "usedSize": 7936624,
+          "totalSize": 8732672,
+          "embedderHeapUsedSize": 3097696,
+          "backingStorageSize": 1900578
+        },
+        "dom": {
+          "documents": 2,
+          "nodes": 963,
+          "jsEventListeners": 204
+        },
+        "counts": {
+          "editors": 112,
+          "workers": 110,
+          "searchForms": 1,
+          "elements": 34995,
+          "styleWrites": 664,
+          "styleCharacters": 4163280
+        }
+      },
+      "allocations": {
+        "editors": 101,
+        "workers": 100,
+        "searchForms": 0,
+        "elements": 31609,
+        "styleWrites": 602,
+        "styleCharacters": 3774540
+      },
+      "fixtureUnchanged": true,
+      "pageErrors": [],
+      "profileFile": "text-allocation-profile-baseline-styles-20261026-combined.json"
+    }
+  ],
+  "browserVersion": "156.0.4314.42",
+  "status": "diagnostic-complete",
+  "completedAt": "2026-10-26T05:47:52.117Z"
+}

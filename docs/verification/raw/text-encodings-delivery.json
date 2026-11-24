@@ -1,0 +1,44 @@
+{
+  "date": "2026-10-29",
+  "encodings": 47,
+  "checks": {
+    "frontendUnitTests": 248,
+    "rustTests": 87,
+    "textBrowserTests": 36,
+    "typecheck": "passed",
+    "clippy": "passed",
+    "ansiColorLogRegression": "passed"
+  },
+  "sources": {
+    "src/text-encodings.ts": "7eb166e3f66d211f3af17bf348deb932f3bf800fd94f03bea71c9f181fd27dbe",
+    "src/text-types.ts": "491db30c50ce9ba821489b5862cca2a5a269682eb30a054f4f775ce13b9dd92e",
+    "src/text-bridge.ts": "1b3bef2ac6c093d4b3ba30277735e8373051541c6ae3273ec32291ff5929cf0f",
+    "src/text-model.ts": "9b31e3e8649043ad41193f3eb98a1eefe8f88d38df803b2a0b8c308e147dcff9",
+    "src/text-workspace.ts": "1fdedd1aaf0990947660461700431f4d292c3f92654740c7caf4d3d5604ac100",
+    "src/text-demo.ts": "e84548cba4e66f1d7ab821698c0636b730da1316006c0aa12d2a1061c38333f3",
+    "src-tauri/src/text_encoding.rs": "eeef0c226aba748409ee9c2c0f19e6013ccfa8b48f0c405a5859dcbfd531d95e",
+    "src-tauri/src/text_files.rs": "44878b3caee3b25b581349352138c0205cee2dc66904ac8a6962838c540f1035",
+    "src-tauri/src/text_session.rs": "80f19af84f559cfae8f4d45db4e0b1925c23372b106639c2c9e2d7ec63cdf5b0",
+    "src-tauri/src/commands.rs": "9f2dc576ed1f9f788507c2feb48b420dc8f6115a899dd4e14d443c9b81e17451",
+    "src-tauri/src/main.rs": "986bd44df13a5b97245cdc080d4b74c9968fd510338baf762d59d9ce874c67be",
+    "src-tauri/Cargo.toml": "612fb46b040fb73ef671ea6f656df85970fa366fbca1305e7ec3d00af2f61ef5",
+    "src-tauri/Cargo.lock": "a0e154962f320072ae351f315b2d93e10444881dd57abfa740c0536cf3b6a973"
+  },
+  "limitations": [
+    "自动识别不保证短文本或无明显 Unicode 特征文件的结果，需要手动选择编码。",
+    "未重新执行原生前台交互、安装生命周期或完整性能验收。"
+  ],
+  "recordedAt": "2026-10-29T15:49:35.551583+08:00",
+  "artifacts": [
+    {
+      "path": "D:\\lxWorkspace\\src-tauri\\target\\text-encodings\\release\\shiye.exe",
+      "bytes": 7179776,
+      "sha256": "6a7a5cb4f6f5dc59e72f1426313eaec3aae42a3a031ff2fbd184221e160132d7"
+    },
+    {
+      "path": "D:\\lxWorkspace\\src-tauri\\target\\text-encodings\\release\\bundle\\nsis\\拾页_0.1.0_x64-setup.exe",
+      "bytes": 2519288,
+      "sha256": "d41ff4cf262255427c1a8bb27bee41cb11922f354c7be5c0fbaa32bc61a08920"
+    }
+  ]
+}

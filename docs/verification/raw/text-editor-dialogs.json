@@ -1,0 +1,39 @@
+{
+  "date": "2026-10-16",
+  "status": "passed",
+  "method": "computer-use sky native Open and Save As dialogs; generated fixture paths only",
+  "original": "D:/lxWorkspace/.qa/text-dialogs-1792118551509/files/原生 打开.txt",
+  "copy": "D:/lxWorkspace/.qa/text-dialogs-1792118551509/files/原生 另存.txt",
+  "sha256": "e7e4b8861e3312665e0beafaa8f715852662da4bdd040534a7208af00f5ce99c",
+  "checks": [
+    "Native Open selects a UTF-8 CRLF Chinese/space path and displays Chinese/emoji intact",
+    "Native Save As creates a distinct Chinese/space path",
+    "Saved copy exactly matches original bytes; original retained",
+    "Native Open cancellation keeps the same one-tab document and path",
+    "Native Save As cancellation keeps the same path and saved contents",
+    "Real Windows multi-select opened both empty TXT and XML Chinese/space paths, retaining previous document (3 tabs total)",
+    "Empty file is editable and remains zero bytes without an edit/save",
+    "Windows overwrite No returns to Save As and preserves the existing target bytes",
+    "Windows overwrite Yes followed by application explicit confirmation replaces only the chosen target with exact expected UTF-8 CRLF bytes",
+    "QA application exits normally through Settings; no textqa process remains"
+  ],
+  "pending": [],
+  "finalBuild": {
+    "executable": "D:/lxWorkspace/src-tauri/target/text-editor/qa/shiye-text-qa.exe",
+    "sha256": "7bd3623620438947277c1dcc0b7bcc8cd3149420ceec71cc99e7fa3a07a35ef9",
+    "fixture": "D:\\lxWorkspace\\.qa\\text-dialogs-final-1792119908532",
+    "windowId": 45619480,
+    "nativeOpenDialogId": 17897210,
+    "nativeSaveDialogId": 3151952,
+    "applicationOverwriteDialogId": 2235322,
+    "overwrittenSha256": "866fd91fb50e6296145cd4d1d9e6bd371503bb941b1781bafd97439dad31a549",
+    "checks": [
+      "Real Windows multi-select opened both empty TXT and XML Chinese/space paths, retaining previous document (3 tabs total)",
+      "Empty file is editable and remains zero bytes without an edit/save",
+      "Windows overwrite No returns to Save As and preserves the existing target bytes",
+      "Windows overwrite Yes followed by application explicit confirmation replaces only the chosen target with exact expected UTF-8 CRLF bytes",
+      "QA application exits normally through Settings; no textqa process remains"
+    ]
+  },
+  "completedAt": "2026-10-16T03:20:02.664273+00:00"
+}

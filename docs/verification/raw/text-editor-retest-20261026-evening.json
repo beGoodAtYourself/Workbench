@@ -1,0 +1,267 @@
+{
+  "recordedAt": "2026-10-26T10:56:29.291Z",
+  "sha256": "8d0066c1b881538985f1b5a347a92b2dfd876e6793814b5cc76ccc6cd877172f",
+  "status": "budget-failed",
+  "acceptance": {
+    "complete": true,
+    "passed": false,
+    "effectiveMemoryIds": [
+      "1:single:1:0",
+      "1:dual:1:0",
+      "1:full:1:0",
+      "1:hidden-unloaded:1:0",
+      "2:single:1:0",
+      "2:dual:1:0",
+      "2:full:1:0",
+      "2:hidden-unloaded:1:0",
+      "3:single:1:0",
+      "3:dual:1:0",
+      "3:full:1:0",
+      "3:hidden-unloaded:1:0"
+    ],
+    "effectiveLoopIds": [
+      "loops:1:1",
+      "loops:2:1",
+      "loops:3:1"
+    ]
+  },
+  "startedAt": "2026-10-26T10:34:45.064Z",
+  "completedAt": "2026-10-26T10:55:41.674Z",
+  "environment": {
+    "platform": "win32",
+    "release": "10.0.26200",
+    "architecture": "x64",
+    "cpus": 16,
+    "cpu": "13th Gen Intel(R) Core(TM) i5-13500H",
+    "totalMemoryBytes": 33954172928,
+    "node": "v24.18.0"
+  },
+  "browserVersion": "155.0.4283.62",
+  "memory": [
+    {
+      "name": "single",
+      "round": 1,
+      "workingSetP95MiB": 99.5546875,
+      "privateBytesP95MiB": 183.32421875,
+      "pass": true
+    },
+    {
+      "name": "dual",
+      "round": 1,
+      "workingSetP95MiB": 110.875,
+      "privateBytesP95MiB": 199.59765625,
+      "pass": true
+    },
+    {
+      "name": "full",
+      "round": 1,
+      "workingSetP95MiB": 142.3671875,
+      "privateBytesP95MiB": 231.75390625,
+      "pass": true
+    },
+    {
+      "name": "hidden-unloaded",
+      "round": 1,
+      "workingSetP95MiB": 4.5,
+      "privateBytesP95MiB": 6.23828125,
+      "pass": true
+    },
+    {
+      "name": "single",
+      "round": 2,
+      "workingSetP95MiB": 100.13671875,
+      "privateBytesP95MiB": 185.84765625,
+      "pass": true
+    },
+    {
+      "name": "dual",
+      "round": 2,
+      "workingSetP95MiB": 110.98828125,
+      "privateBytesP95MiB": 199.76171875,
+      "pass": true
+    },
+    {
+      "name": "full",
+      "round": 2,
+      "workingSetP95MiB": 141.8046875,
+      "privateBytesP95MiB": 234.27734375,
+      "pass": true
+    },
+    {
+      "name": "hidden-unloaded",
+      "round": 2,
+      "workingSetP95MiB": 4.30078125,
+      "privateBytesP95MiB": 7.10546875,
+      "pass": true
+    },
+    {
+      "name": "single",
+      "round": 3,
+      "workingSetP95MiB": 99.2109375,
+      "privateBytesP95MiB": 182.6015625,
+      "pass": true
+    },
+    {
+      "name": "dual",
+      "round": 3,
+      "workingSetP95MiB": 111.5546875,
+      "privateBytesP95MiB": 198.8203125,
+      "pass": true
+    },
+    {
+      "name": "full",
+      "round": 3,
+      "workingSetP95MiB": 142.42578125,
+      "privateBytesP95MiB": 231.2109375,
+      "pass": true
+    },
+    {
+      "name": "hidden-unloaded",
+      "round": 3,
+      "workingSetP95MiB": 4.421875,
+      "privateBytesP95MiB": 6.4375,
+      "pass": true
+    }
+  ],
+  "wake": [
+    {
+      "name": "retained",
+      "count": 30,
+      "nativeP95Ms": 101.9871,
+      "launcherP95Ms": 175.20550000004005,
+      "pass": true
+    },
+    {
+      "name": "unloaded",
+      "count": 30,
+      "nativeP95Ms": 540.8358,
+      "launcherP95Ms": 640.108899999992,
+      "pass": true
+    }
+  ],
+  "loops": [
+    {
+      "round": 1,
+      "workingSetGrowthMiB": 27.83984375,
+      "privateBytesGrowthMiB": 28.796875,
+      "pass": false
+    },
+    {
+      "round": 2,
+      "workingSetGrowthMiB": 22.6484375,
+      "privateBytesGrowthMiB": 24.453125,
+      "pass": false
+    },
+    {
+      "round": 3,
+      "workingSetGrowthMiB": 24.78125,
+      "privateBytesGrowthMiB": 26.20703125,
+      "pass": false
+    }
+  ],
+  "stress": [
+    {
+      "totalUtf16Units": 16777216,
+      "singleFileBytes": 16776512,
+      "documents": 12,
+      "boundaryRejectedWithoutTruncation": true,
+      "inLimitEditAndSave": true,
+      "unloadedAndRecovered": true,
+      "note": "Maximum-body stress is separate from 100 KiB fixture budgets; profile fixture selection bypasses only native dialogs.",
+      "workingSetP95MiB": 334.53515625,
+      "privateBytesP95MiB": 440.33203125,
+      "validSamples": 5
+    }
+  ],
+  "adoptedValidMemoryFrames": 545,
+  "adoptedTotalMemoryFrames": 545,
+  "normalScenePeakWorkingSetMiB": 142.48046875,
+  "coverageRetries": 0,
+  "instrumentationFailures": 0,
+  "fixtureIntegrityFailures": 0,
+  "nativeSuites": [
+    {
+      "name": "native",
+      "path": "docs/verification/raw/text-editor-native.json",
+      "status": "passed",
+      "checks": 24,
+      "pageErrors": 0,
+      "pending": []
+    },
+    {
+      "name": "editing",
+      "path": "docs/verification/raw/text-editor-editing.json",
+      "status": "passed",
+      "checks": 6,
+      "pageErrors": 0,
+      "pending": []
+    },
+    {
+      "name": "links",
+      "path": "docs/verification/raw/text-editor-links.json",
+      "status": "passed",
+      "checks": 7,
+      "pageErrors": 0,
+      "pending": []
+    },
+    {
+      "name": "recovery",
+      "path": "docs/verification/raw/text-editor-recovery.json",
+      "status": "passed",
+      "checks": 7,
+      "pageErrors": 0,
+      "pending": []
+    },
+    {
+      "name": "workspace",
+      "path": "docs/verification/raw/text-editor-workspace.json",
+      "status": "partial",
+      "checks": 9,
+      "pageErrors": 0,
+      "pending": [
+        {
+          "name": "Change notes library through the actual native directory picker while keeping text tabs",
+          "reason": "Run with --native-root-picker to pause for a human-operated Windows folder picker. Without that flag, this harness does not fabricate a result or substitute direct set_workspace IPC for UI coverage."
+        }
+      ]
+    },
+    {
+      "name": "shell",
+      "path": "docs/verification/raw/text-editor-shell.json",
+      "status": "partial",
+      "checks": 3,
+      "pageErrors": 0,
+      "pending": [
+        {
+          "name": "Live system clipboard entry, listener pause and DOM disposal after leaving clipboard",
+          "reason": "Intentionally not opened because the native module would read the personal system clipboard. Only its unused DOM is checked empty; browser-demo regressions and source review cover the separate listener/disposal paths."
+        },
+        {
+          "name": "A real global shortcut wakes the hidden owner and preserves both complete dirty drafts",
+          "reason": "Explicit --skip-native-input: the previous Sky input did not complete; selecting the neutral Calculator target then failed with Computer Use app approval timed out. No actual global-key input is confirmed. The failed attempt is retained as text-editor-shell-sky-timeout-339eb9.json."
+        },
+        {
+          "name": "A real click on the owned floating window wakes the hidden owner and preserves both complete dirty drafts",
+          "reason": "Explicit --skip-native-input: Sky list_apps/list_windows did not expose the native tool/no-activate floating window. The supported API has no include-tool-window option or desktop-coordinate input. No Window is fabricated and no click is claimed."
+        }
+      ]
+    }
+  ],
+  "hiddenUnloadMs": 60102.803400000004,
+  "hiddenUnloadEvidence": "docs/verification/raw/text-editor-native.json",
+  "cleanup": {
+    "foreignProcessesTerminated": false,
+    "scope": "Scheduled 2026-10-26 evening isolated textqa retest; runners exited their owned processes",
+    "recordedAt": "2026-10-26T10:56:06.6586423Z",
+    "allTextQaExited": true,
+    "remainingTextQaProcesses": []
+  },
+  "schedule": {
+    "start": "2026-10-26T18:30:00+08:00",
+    "timezone": "Asia/Singapore",
+    "automationId": "automation",
+    "oneTime": true,
+    "automationDeleted": true,
+    "keyboardMouseReleasedAt": "2026-10-26T10:56:06.6586423Z"
+  }
+}

@@ -1,0 +1,1013 @@
+{
+  "startedAt": "2026-10-14T04:04:40.529Z",
+  "installer": "D:\\lxWorkspace\\src-tauri\\target\\startup\\qa\\bundle\\nsis\\拾页自启动验收_0.1.0_x64-setup.exe",
+  "executable": "D:\\lxWorkspace\\src-tauri\\target\\startup\\qa\\shiye-startup-qa.exe",
+  "generatedTemplate": "D:\\lxWorkspace\\src-tauri\\target\\startup\\qa\\nsis\\x64\\installer.nsi",
+  "identity": "local.shiye.workbench.startupqa",
+  "fixture": "D:\\lxWorkspace\\.qa\\startup-install-1791950680529",
+  "scope": "Current-user isolated NSIS install/replacement/migration/uninstall; /S without /R. No application launch, no real logoff/login. Explicit /UPDATE tests the old-uninstaller branch; silent install bypasses the reinstall GUI.",
+  "operations": [
+    {
+      "name": "initial Run values",
+      "executable": "pwsh.exe",
+      "args": [
+        "D:\\lxWorkspace\\scripts\\startup-native-probe.ps1",
+        "-Action",
+        "read"
+      ],
+      "startedAt": "2026-10-14T04:04:40.547Z",
+      "processId": 40212,
+      "exitCode": 0,
+      "signal": null,
+      "stdout": "{\"formalKind\":null,\"formal\":null,\"qaKind\":null,\"qa\":null}\r\n",
+      "stderr": "",
+      "endedAt": "2026-10-14T04:04:40.922Z"
+    },
+    {
+      "name": "initial identity/process/metadata inspection",
+      "executable": "pwsh.exe",
+      "args": [
+        "D:\\lxWorkspace\\.qa\\startup-install-1791950680529\\installer-runner.ps1",
+        "-Action",
+        "inspect",
+        "-Executable",
+        "D:\\lxWorkspace\\src-tauri\\target\\startup\\qa\\bundle\\nsis\\拾页自启动验收_0.1.0_x64-setup.exe"
+      ],
+      "startedAt": "2026-10-14T04:04:40.922Z",
+      "processId": 35492,
+      "exitCode": 0,
+      "signal": null,
+      "stdout": "{\"uninstallEntryExists\":false,\"qaProcesses\":[],\"productName\":\"拾页自启动验收\",\"formalProcesses\":[{\"processId\":37572,\"path\":\"D:\\\\lxWorkspace\\\\src-tauri\\\\target\\\\note-moves\\\\release\\\\shiye.exe\"}],\"metadataExists\":false}\r\n",
+      "stderr": "",
+      "endedAt": "2026-10-14T04:04:41.313Z"
+    },
+    {
+      "name": "fresh silent install",
+      "executable": "pwsh.exe",
+      "args": [
+        "D:\\lxWorkspace\\.qa\\startup-install-1791950680529\\installer-runner.ps1",
+        "-Action",
+        "install",
+        "-Executable",
+        "D:\\lxWorkspace\\src-tauri\\target\\startup\\qa\\bundle\\nsis\\拾页自启动验收_0.1.0_x64-setup.exe",
+        "-Directory",
+        "D:\\lxWorkspace\\.qa\\startup-install-1791950680529\\中文 空格目录"
+      ],
+      "startedAt": "2026-10-14T04:04:41.316Z",
+      "processId": 34632,
+      "exitCode": 0,
+      "signal": null,
+      "stdout": "{\"exitCode\":0,\"arguments\":\"/S /D=D:\\\\lxWorkspace\\\\.qa\\\\startup-install-1791950680529\\\\中文 空格目录\",\"processId\":45396}\r\n",
+      "stderr": "",
+      "endedAt": "2026-10-14T04:04:42.051Z",
+      "nativeProcessId": 45396,
+      "nativeExitCode": 0,
+      "nativeArguments": "/S /D=D:\\lxWorkspace\\.qa\\startup-install-1791950680529\\中文 空格目录"
+    },
+    {
+      "name": "fresh installation leaves startup off",
+      "executable": "pwsh.exe",
+      "args": [
+        "D:\\lxWorkspace\\scripts\\startup-native-probe.ps1",
+        "-Action",
+        "read"
+      ],
+      "startedAt": "2026-10-14T04:04:42.074Z",
+      "processId": 41316,
+      "exitCode": 0,
+      "signal": null,
+      "stdout": "{\"qa\":null,\"formalKind\":null,\"formal\":null,\"qaKind\":null}\r\n",
+      "stderr": "",
+      "endedAt": "2026-10-14T04:04:42.443Z"
+    },
+    {
+      "name": "disabled same-version silent replacement",
+      "executable": "pwsh.exe",
+      "args": [
+        "D:\\lxWorkspace\\.qa\\startup-install-1791950680529\\installer-runner.ps1",
+        "-Action",
+        "install",
+        "-Executable",
+        "D:\\lxWorkspace\\src-tauri\\target\\startup\\qa\\bundle\\nsis\\拾页自启动验收_0.1.0_x64-setup.exe",
+        "-Directory",
+        "D:\\lxWorkspace\\.qa\\startup-install-1791950680529\\中文 空格目录"
+      ],
+      "startedAt": "2026-10-14T04:04:42.447Z",
+      "processId": 19300,
+      "exitCode": 0,
+      "signal": null,
+      "stdout": "{\"processId\":21996,\"exitCode\":0,\"arguments\":\"/S /D=D:\\\\lxWorkspace\\\\.qa\\\\startup-install-1791950680529\\\\中文 空格目录\"}\r\n",
+      "stderr": "",
+      "endedAt": "2026-10-14T04:04:43.187Z",
+      "nativeProcessId": 21996,
+      "nativeExitCode": 0,
+      "nativeArguments": "/S /D=D:\\lxWorkspace\\.qa\\startup-install-1791950680529\\中文 空格目录"
+    },
+    {
+      "name": "disabled replacement remains off",
+      "executable": "pwsh.exe",
+      "args": [
+        "D:\\lxWorkspace\\scripts\\startup-native-probe.ps1",
+        "-Action",
+        "read"
+      ],
+      "startedAt": "2026-10-14T04:04:43.200Z",
+      "processId": 18776,
+      "exitCode": 0,
+      "signal": null,
+      "stdout": "{\"qa\":null,\"formalKind\":null,\"qaKind\":null,\"formal\":null}\r\n",
+      "stderr": "",
+      "endedAt": "2026-10-14T04:04:43.551Z"
+    },
+    {
+      "name": "disabled update-mode old uninstall",
+      "executable": "pwsh.exe",
+      "args": [
+        "D:\\lxWorkspace\\.qa\\startup-install-1791950680529\\installer-runner.ps1",
+        "-Action",
+        "uninstall",
+        "-Executable",
+        "D:\\lxWorkspace\\.qa\\startup-install-1791950680529\\中文 空格目录\\uninstall.exe",
+        "-Directory",
+        "D:\\lxWorkspace\\.qa\\startup-install-1791950680529\\中文 空格目录",
+        "-Update"
+      ],
+      "startedAt": "2026-10-14T04:04:43.551Z",
+      "processId": 14692,
+      "exitCode": 0,
+      "signal": null,
+      "stdout": "{\"arguments\":\"/S /UPDATE _?=D:\\\\lxWorkspace\\\\.qa\\\\startup-install-1791950680529\\\\中文 空格目录\",\"processId\":32584,\"exitCode\":0}\r\n",
+      "stderr": "",
+      "endedAt": "2026-10-14T04:04:44.071Z",
+      "nativeProcessId": 32584,
+      "nativeExitCode": 0,
+      "nativeArguments": "/S /UPDATE _?=D:\\lxWorkspace\\.qa\\startup-install-1791950680529\\中文 空格目录"
+    },
+    {
+      "name": "disabled update uninstall remains off",
+      "executable": "pwsh.exe",
+      "args": [
+        "D:\\lxWorkspace\\scripts\\startup-native-probe.ps1",
+        "-Action",
+        "read"
+      ],
+      "startedAt": "2026-10-14T04:04:44.072Z",
+      "processId": 14480,
+      "exitCode": 0,
+      "signal": null,
+      "stdout": "{\"formal\":null,\"qa\":null,\"formalKind\":null,\"qaKind\":null}\r\n",
+      "stderr": "",
+      "endedAt": "2026-10-14T04:04:44.446Z"
+    },
+    {
+      "name": "disabled replacement after update uninstall",
+      "executable": "pwsh.exe",
+      "args": [
+        "D:\\lxWorkspace\\.qa\\startup-install-1791950680529\\installer-runner.ps1",
+        "-Action",
+        "install",
+        "-Executable",
+        "D:\\lxWorkspace\\src-tauri\\target\\startup\\qa\\bundle\\nsis\\拾页自启动验收_0.1.0_x64-setup.exe",
+        "-Directory",
+        "D:\\lxWorkspace\\.qa\\startup-install-1791950680529\\中文 空格目录"
+      ],
+      "startedAt": "2026-10-14T04:04:44.449Z",
+      "processId": 20400,
+      "exitCode": 0,
+      "signal": null,
+      "stdout": "{\"exitCode\":0,\"arguments\":\"/S /D=D:\\\\lxWorkspace\\\\.qa\\\\startup-install-1791950680529\\\\中文 空格目录\",\"processId\":27316}\r\n",
+      "stderr": "",
+      "endedAt": "2026-10-14T04:04:45.180Z",
+      "nativeProcessId": 27316,
+      "nativeExitCode": 0,
+      "nativeArguments": "/S /D=D:\\lxWorkspace\\.qa\\startup-install-1791950680529\\中文 空格目录"
+    },
+    {
+      "name": "disabled update reinstall remains off",
+      "executable": "pwsh.exe",
+      "args": [
+        "D:\\lxWorkspace\\scripts\\startup-native-probe.ps1",
+        "-Action",
+        "read"
+      ],
+      "startedAt": "2026-10-14T04:04:45.193Z",
+      "processId": 28688,
+      "exitCode": 0,
+      "signal": null,
+      "stdout": "{\"formalKind\":null,\"formal\":null,\"qa\":null,\"qaKind\":null}\r\n",
+      "stderr": "",
+      "endedAt": "2026-10-14T04:04:45.553Z"
+    },
+    {
+      "name": "enable isolated current-copy fixture: before fixture write",
+      "executable": "pwsh.exe",
+      "args": [
+        "D:\\lxWorkspace\\scripts\\startup-native-probe.ps1",
+        "-Action",
+        "read"
+      ],
+      "startedAt": "2026-10-14T04:04:45.554Z",
+      "processId": 36520,
+      "exitCode": 0,
+      "signal": null,
+      "stdout": "{\"formalKind\":null,\"qaKind\":null,\"formal\":null,\"qa\":null}\r\n",
+      "stderr": "",
+      "endedAt": "2026-10-14T04:04:45.915Z"
+    },
+    {
+      "name": "enable isolated current-copy fixture",
+      "executable": "pwsh.exe",
+      "args": [
+        "D:\\lxWorkspace\\scripts\\startup-native-probe.ps1",
+        "-Action",
+        "write",
+        "-Value",
+        "\"D:\\lxWorkspace\\.qa\\startup-install-1791950680529\\中文 空格目录\\shiye-startup-qa.exe\" --autostart"
+      ],
+      "startedAt": "2026-10-14T04:04:45.915Z",
+      "processId": 15404,
+      "exitCode": 0,
+      "signal": null,
+      "stdout": "",
+      "stderr": "",
+      "endedAt": "2026-10-14T04:04:46.201Z"
+    },
+    {
+      "name": "enable isolated current-copy fixture: after fixture write",
+      "executable": "pwsh.exe",
+      "args": [
+        "D:\\lxWorkspace\\scripts\\startup-native-probe.ps1",
+        "-Action",
+        "read"
+      ],
+      "startedAt": "2026-10-14T04:04:46.201Z",
+      "processId": 3532,
+      "exitCode": 0,
+      "signal": null,
+      "stdout": "{\"qaKind\":\"String\",\"qa\":\"\\\"D:\\\\lxWorkspace\\\\.qa\\\\startup-install-1791950680529\\\\中文 空格目录\\\\shiye-startup-qa.exe\\\" --autostart\",\"formal\":null,\"formalKind\":null}\r\n",
+      "stderr": "",
+      "endedAt": "2026-10-14T04:04:46.591Z"
+    },
+    {
+      "name": "enabled same-version silent replacement",
+      "executable": "pwsh.exe",
+      "args": [
+        "D:\\lxWorkspace\\.qa\\startup-install-1791950680529\\installer-runner.ps1",
+        "-Action",
+        "install",
+        "-Executable",
+        "D:\\lxWorkspace\\src-tauri\\target\\startup\\qa\\bundle\\nsis\\拾页自启动验收_0.1.0_x64-setup.exe",
+        "-Directory",
+        "D:\\lxWorkspace\\.qa\\startup-install-1791950680529\\中文 空格目录"
+      ],
+      "startedAt": "2026-10-14T04:04:46.593Z",
+      "processId": 6028,
+      "exitCode": 0,
+      "signal": null,
+      "stdout": "{\"exitCode\":0,\"processId\":41864,\"arguments\":\"/S /D=D:\\\\lxWorkspace\\\\.qa\\\\startup-install-1791950680529\\\\中文 空格目录\"}\r\n",
+      "stderr": "",
+      "endedAt": "2026-10-14T04:04:47.318Z",
+      "nativeProcessId": 41864,
+      "nativeExitCode": 0,
+      "nativeArguments": "/S /D=D:\\lxWorkspace\\.qa\\startup-install-1791950680529\\中文 空格目录"
+    },
+    {
+      "name": "enabled silent replacement retains original command",
+      "executable": "pwsh.exe",
+      "args": [
+        "D:\\lxWorkspace\\scripts\\startup-native-probe.ps1",
+        "-Action",
+        "read"
+      ],
+      "startedAt": "2026-10-14T04:04:47.334Z",
+      "processId": 38204,
+      "exitCode": 0,
+      "signal": null,
+      "stdout": "{\"formal\":null,\"qa\":\"\\\"D:\\\\lxWorkspace\\\\.qa\\\\startup-install-1791950680529\\\\中文 空格目录\\\\shiye-startup-qa.exe\\\" --autostart\",\"qaKind\":\"String\",\"formalKind\":null}\r\n",
+      "stderr": "",
+      "endedAt": "2026-10-14T04:04:47.694Z"
+    },
+    {
+      "name": "enabled update-mode old uninstall",
+      "executable": "pwsh.exe",
+      "args": [
+        "D:\\lxWorkspace\\.qa\\startup-install-1791950680529\\installer-runner.ps1",
+        "-Action",
+        "uninstall",
+        "-Executable",
+        "D:\\lxWorkspace\\.qa\\startup-install-1791950680529\\中文 空格目录\\uninstall.exe",
+        "-Directory",
+        "D:\\lxWorkspace\\.qa\\startup-install-1791950680529\\中文 空格目录",
+        "-Update"
+      ],
+      "startedAt": "2026-10-14T04:04:47.695Z",
+      "processId": 42428,
+      "exitCode": 0,
+      "signal": null,
+      "stdout": "{\"processId\":40568,\"exitCode\":0,\"arguments\":\"/S /UPDATE _?=D:\\\\lxWorkspace\\\\.qa\\\\startup-install-1791950680529\\\\中文 空格目录\"}\r\n",
+      "stderr": "",
+      "endedAt": "2026-10-14T04:04:48.215Z",
+      "nativeProcessId": 40568,
+      "nativeExitCode": 0,
+      "nativeArguments": "/S /UPDATE _?=D:\\lxWorkspace\\.qa\\startup-install-1791950680529\\中文 空格目录"
+    },
+    {
+      "name": "enabled update uninstall preserves Run value",
+      "executable": "pwsh.exe",
+      "args": [
+        "D:\\lxWorkspace\\scripts\\startup-native-probe.ps1",
+        "-Action",
+        "read"
+      ],
+      "startedAt": "2026-10-14T04:04:48.216Z",
+      "processId": 32652,
+      "exitCode": 0,
+      "signal": null,
+      "stdout": "{\"formal\":null,\"formalKind\":null,\"qa\":\"\\\"D:\\\\lxWorkspace\\\\.qa\\\\startup-install-1791950680529\\\\中文 空格目录\\\\shiye-startup-qa.exe\\\" --autostart\",\"qaKind\":\"String\"}\r\n",
+      "stderr": "",
+      "endedAt": "2026-10-14T04:04:48.581Z"
+    },
+    {
+      "name": "enabled replacement after update uninstall",
+      "executable": "pwsh.exe",
+      "args": [
+        "D:\\lxWorkspace\\.qa\\startup-install-1791950680529\\installer-runner.ps1",
+        "-Action",
+        "install",
+        "-Executable",
+        "D:\\lxWorkspace\\src-tauri\\target\\startup\\qa\\bundle\\nsis\\拾页自启动验收_0.1.0_x64-setup.exe",
+        "-Directory",
+        "D:\\lxWorkspace\\.qa\\startup-install-1791950680529\\中文 空格目录"
+      ],
+      "startedAt": "2026-10-14T04:04:48.584Z",
+      "processId": 33556,
+      "exitCode": 0,
+      "signal": null,
+      "stdout": "{\"processId\":3452,\"arguments\":\"/S /D=D:\\\\lxWorkspace\\\\.qa\\\\startup-install-1791950680529\\\\中文 空格目录\",\"exitCode\":0}\r\n",
+      "stderr": "",
+      "endedAt": "2026-10-14T04:04:49.314Z",
+      "nativeProcessId": 3452,
+      "nativeExitCode": 0,
+      "nativeArguments": "/S /D=D:\\lxWorkspace\\.qa\\startup-install-1791950680529\\中文 空格目录"
+    },
+    {
+      "name": "enabled update reinstall preserves Run value",
+      "executable": "pwsh.exe",
+      "args": [
+        "D:\\lxWorkspace\\scripts\\startup-native-probe.ps1",
+        "-Action",
+        "read"
+      ],
+      "startedAt": "2026-10-14T04:04:49.327Z",
+      "processId": 13036,
+      "exitCode": 0,
+      "signal": null,
+      "stdout": "{\"qa\":\"\\\"D:\\\\lxWorkspace\\\\.qa\\\\startup-install-1791950680529\\\\中文 空格目录\\\\shiye-startup-qa.exe\\\" --autostart\",\"formal\":null,\"formalKind\":null,\"qaKind\":\"String\"}\r\n",
+      "stderr": "",
+      "endedAt": "2026-10-14T04:04:49.686Z"
+    },
+    {
+      "name": "enabled install-directory migration",
+      "executable": "pwsh.exe",
+      "args": [
+        "D:\\lxWorkspace\\.qa\\startup-install-1791950680529\\installer-runner.ps1",
+        "-Action",
+        "install",
+        "-Executable",
+        "D:\\lxWorkspace\\src-tauri\\target\\startup\\qa\\bundle\\nsis\\拾页自启动验收_0.1.0_x64-setup.exe",
+        "-Directory",
+        "D:\\lxWorkspace\\.qa\\startup-install-1791950680529\\迁移 中文目录"
+      ],
+      "startedAt": "2026-10-14T04:04:49.689Z",
+      "processId": 14912,
+      "exitCode": 0,
+      "signal": null,
+      "stdout": "{\"arguments\":\"/S /D=D:\\\\lxWorkspace\\\\.qa\\\\startup-install-1791950680529\\\\迁移 中文目录\",\"processId\":17028,\"exitCode\":0}\r\n",
+      "stderr": "",
+      "endedAt": "2026-10-14T04:04:50.446Z",
+      "nativeProcessId": 17028,
+      "nativeExitCode": 0,
+      "nativeArguments": "/S /D=D:\\lxWorkspace\\.qa\\startup-install-1791950680529\\迁移 中文目录"
+    },
+    {
+      "name": "migration points autostart to the new quoted absolute path",
+      "executable": "pwsh.exe",
+      "args": [
+        "D:\\lxWorkspace\\scripts\\startup-native-probe.ps1",
+        "-Action",
+        "read"
+      ],
+      "startedAt": "2026-10-14T04:04:50.459Z",
+      "processId": 13992,
+      "exitCode": 0,
+      "signal": null,
+      "stdout": "{\"formalKind\":null,\"formal\":null,\"qaKind\":\"String\",\"qa\":\"\\\"D:\\\\lxWorkspace\\\\.qa\\\\startup-install-1791950680529\\\\迁移 中文目录\\\\shiye-startup-qa.exe\\\" --autostart\"}\r\n",
+      "stderr": "",
+      "endedAt": "2026-10-14T04:04:50.831Z"
+    },
+    {
+      "name": "uninstall earlier copy after migration",
+      "executable": "pwsh.exe",
+      "args": [
+        "D:\\lxWorkspace\\.qa\\startup-install-1791950680529\\installer-runner.ps1",
+        "-Action",
+        "uninstall",
+        "-Executable",
+        "D:\\lxWorkspace\\.qa\\startup-install-1791950680529\\中文 空格目录\\uninstall.exe",
+        "-Directory",
+        "D:\\lxWorkspace\\.qa\\startup-install-1791950680529\\中文 空格目录"
+      ],
+      "startedAt": "2026-10-14T04:04:50.831Z",
+      "processId": 33988,
+      "exitCode": 0,
+      "signal": null,
+      "stdout": "{\"arguments\":\"/S _?=D:\\\\lxWorkspace\\\\.qa\\\\startup-install-1791950680529\\\\中文 空格目录\",\"processId\":25968,\"exitCode\":0}\r\n",
+      "stderr": "",
+      "endedAt": "2026-10-14T04:04:51.395Z",
+      "nativeProcessId": 25968,
+      "nativeExitCode": 0,
+      "nativeArguments": "/S _?=D:\\lxWorkspace\\.qa\\startup-install-1791950680529\\中文 空格目录"
+    },
+    {
+      "name": "earlier-copy uninstall preserves newer-copy Run value",
+      "executable": "pwsh.exe",
+      "args": [
+        "D:\\lxWorkspace\\scripts\\startup-native-probe.ps1",
+        "-Action",
+        "read"
+      ],
+      "startedAt": "2026-10-14T04:04:51.395Z",
+      "processId": 37216,
+      "exitCode": 0,
+      "signal": null,
+      "stdout": "{\"formalKind\":null,\"qaKind\":\"String\",\"formal\":null,\"qa\":\"\\\"D:\\\\lxWorkspace\\\\.qa\\\\startup-install-1791950680529\\\\迁移 中文目录\\\\shiye-startup-qa.exe\\\" --autostart\"}\r\n",
+      "stderr": "",
+      "endedAt": "2026-10-14T04:04:51.756Z"
+    },
+    {
+      "name": "point isolated Run value to standalone fixture: before fixture write",
+      "executable": "pwsh.exe",
+      "args": [
+        "D:\\lxWorkspace\\scripts\\startup-native-probe.ps1",
+        "-Action",
+        "read"
+      ],
+      "startedAt": "2026-10-14T04:04:51.760Z",
+      "processId": 464,
+      "exitCode": 0,
+      "signal": null,
+      "stdout": "{\"formalKind\":null,\"qaKind\":\"String\",\"qa\":\"\\\"D:\\\\lxWorkspace\\\\.qa\\\\startup-install-1791950680529\\\\迁移 中文目录\\\\shiye-startup-qa.exe\\\" --autostart\",\"formal\":null}\r\n",
+      "stderr": "",
+      "endedAt": "2026-10-14T04:04:52.139Z"
+    },
+    {
+      "name": "point isolated Run value to standalone fixture",
+      "executable": "pwsh.exe",
+      "args": [
+        "D:\\lxWorkspace\\scripts\\startup-native-probe.ps1",
+        "-Action",
+        "write",
+        "-Value",
+        "\"D:\\lxWorkspace\\.qa\\startup-install-1791950680529\\另一独立副本\\shiye-startup-qa.exe\" --autostart"
+      ],
+      "startedAt": "2026-10-14T04:04:52.139Z",
+      "processId": 38360,
+      "exitCode": 0,
+      "signal": null,
+      "stdout": "",
+      "stderr": "",
+      "endedAt": "2026-10-14T04:04:52.409Z"
+    },
+    {
+      "name": "point isolated Run value to standalone fixture: after fixture write",
+      "executable": "pwsh.exe",
+      "args": [
+        "D:\\lxWorkspace\\scripts\\startup-native-probe.ps1",
+        "-Action",
+        "read"
+      ],
+      "startedAt": "2026-10-14T04:04:52.409Z",
+      "processId": 27248,
+      "exitCode": 0,
+      "signal": null,
+      "stdout": "{\"qa\":\"\\\"D:\\\\lxWorkspace\\\\.qa\\\\startup-install-1791950680529\\\\另一独立副本\\\\shiye-startup-qa.exe\\\" --autostart\",\"qaKind\":\"String\",\"formal\":null,\"formalKind\":null}\r\n",
+      "stderr": "",
+      "endedAt": "2026-10-14T04:04:52.799Z"
+    },
+    {
+      "name": "uninstall while another copy owns Run value",
+      "executable": "pwsh.exe",
+      "args": [
+        "D:\\lxWorkspace\\.qa\\startup-install-1791950680529\\installer-runner.ps1",
+        "-Action",
+        "uninstall",
+        "-Executable",
+        "D:\\lxWorkspace\\.qa\\startup-install-1791950680529\\迁移 中文目录\\uninstall.exe",
+        "-Directory",
+        "D:\\lxWorkspace\\.qa\\startup-install-1791950680529\\迁移 中文目录"
+      ],
+      "startedAt": "2026-10-14T04:04:52.800Z",
+      "processId": 31464,
+      "exitCode": 0,
+      "signal": null,
+      "stdout": "{\"processId\":28780,\"arguments\":\"/S _?=D:\\\\lxWorkspace\\\\.qa\\\\startup-install-1791950680529\\\\迁移 中文目录\",\"exitCode\":0}\r\n",
+      "stderr": "",
+      "endedAt": "2026-10-14T04:04:53.476Z",
+      "nativeProcessId": 28780,
+      "nativeExitCode": 0,
+      "nativeArguments": "/S _?=D:\\lxWorkspace\\.qa\\startup-install-1791950680529\\迁移 中文目录"
+    },
+    {
+      "name": "other-copy Run command survives normal uninstall",
+      "executable": "pwsh.exe",
+      "args": [
+        "D:\\lxWorkspace\\scripts\\startup-native-probe.ps1",
+        "-Action",
+        "read"
+      ],
+      "startedAt": "2026-10-14T04:04:53.477Z",
+      "processId": 30288,
+      "exitCode": 0,
+      "signal": null,
+      "stdout": "{\"qa\":\"\\\"D:\\\\lxWorkspace\\\\.qa\\\\startup-install-1791950680529\\\\另一独立副本\\\\shiye-startup-qa.exe\\\" --autostart\",\"formal\":null,\"qaKind\":\"String\",\"formalKind\":null}\r\n",
+      "stderr": "",
+      "endedAt": "2026-10-14T04:04:53.835Z"
+    },
+    {
+      "name": "remove standalone QA fixture registration",
+      "executable": "pwsh.exe",
+      "args": [
+        "D:\\lxWorkspace\\scripts\\startup-native-probe.ps1",
+        "-Action",
+        "delete"
+      ],
+      "startedAt": "2026-10-14T04:04:53.835Z",
+      "processId": 24208,
+      "exitCode": 0,
+      "signal": null,
+      "stdout": "",
+      "stderr": "",
+      "endedAt": "2026-10-14T04:04:54.109Z"
+    },
+    {
+      "name": "install for final own-copy cleanup",
+      "executable": "pwsh.exe",
+      "args": [
+        "D:\\lxWorkspace\\.qa\\startup-install-1791950680529\\installer-runner.ps1",
+        "-Action",
+        "install",
+        "-Executable",
+        "D:\\lxWorkspace\\src-tauri\\target\\startup\\qa\\bundle\\nsis\\拾页自启动验收_0.1.0_x64-setup.exe",
+        "-Directory",
+        "D:\\lxWorkspace\\.qa\\startup-install-1791950680529\\中文 空格目录"
+      ],
+      "startedAt": "2026-10-14T04:04:54.111Z",
+      "processId": 33148,
+      "exitCode": 0,
+      "signal": null,
+      "stdout": "{\"arguments\":\"/S /D=D:\\\\lxWorkspace\\\\.qa\\\\startup-install-1791950680529\\\\中文 空格目录\",\"exitCode\":0,\"processId\":38384}\r\n",
+      "stderr": "",
+      "endedAt": "2026-10-14T04:04:54.871Z",
+      "nativeProcessId": 38384,
+      "nativeExitCode": 0,
+      "nativeArguments": "/S /D=D:\\lxWorkspace\\.qa\\startup-install-1791950680529\\中文 空格目录"
+    },
+    {
+      "name": "final fresh install is still off",
+      "executable": "pwsh.exe",
+      "args": [
+        "D:\\lxWorkspace\\scripts\\startup-native-probe.ps1",
+        "-Action",
+        "read"
+      ],
+      "startedAt": "2026-10-14T04:04:54.886Z",
+      "processId": 17560,
+      "exitCode": 0,
+      "signal": null,
+      "stdout": "{\"formalKind\":null,\"formal\":null,\"qaKind\":null,\"qa\":null}\r\n",
+      "stderr": "",
+      "endedAt": "2026-10-14T04:04:55.248Z"
+    },
+    {
+      "name": "enable final current-copy fixture: before fixture write",
+      "executable": "pwsh.exe",
+      "args": [
+        "D:\\lxWorkspace\\scripts\\startup-native-probe.ps1",
+        "-Action",
+        "read"
+      ],
+      "startedAt": "2026-10-14T04:04:55.249Z",
+      "processId": 38140,
+      "exitCode": 0,
+      "signal": null,
+      "stdout": "{\"qa\":null,\"qaKind\":null,\"formal\":null,\"formalKind\":null}\r\n",
+      "stderr": "",
+      "endedAt": "2026-10-14T04:04:55.619Z"
+    },
+    {
+      "name": "enable final current-copy fixture",
+      "executable": "pwsh.exe",
+      "args": [
+        "D:\\lxWorkspace\\scripts\\startup-native-probe.ps1",
+        "-Action",
+        "write",
+        "-Value",
+        "\"D:\\lxWorkspace\\.qa\\startup-install-1791950680529\\中文 空格目录\\shiye-startup-qa.exe\" --autostart"
+      ],
+      "startedAt": "2026-10-14T04:04:55.619Z",
+      "processId": 25556,
+      "exitCode": 0,
+      "signal": null,
+      "stdout": "",
+      "stderr": "",
+      "endedAt": "2026-10-14T04:04:55.902Z"
+    },
+    {
+      "name": "enable final current-copy fixture: after fixture write",
+      "executable": "pwsh.exe",
+      "args": [
+        "D:\\lxWorkspace\\scripts\\startup-native-probe.ps1",
+        "-Action",
+        "read"
+      ],
+      "startedAt": "2026-10-14T04:04:55.902Z",
+      "processId": 26684,
+      "exitCode": 0,
+      "signal": null,
+      "stdout": "{\"qaKind\":\"String\",\"formal\":null,\"qa\":\"\\\"D:\\\\lxWorkspace\\\\.qa\\\\startup-install-1791950680529\\\\中文 空格目录\\\\shiye-startup-qa.exe\\\" --autostart\",\"formalKind\":null}\r\n",
+      "stderr": "",
+      "endedAt": "2026-10-14T04:04:56.288Z"
+    },
+    {
+      "name": "normal uninstall cleans own-copy Run value",
+      "executable": "pwsh.exe",
+      "args": [
+        "D:\\lxWorkspace\\.qa\\startup-install-1791950680529\\installer-runner.ps1",
+        "-Action",
+        "uninstall",
+        "-Executable",
+        "D:\\lxWorkspace\\.qa\\startup-install-1791950680529\\中文 空格目录\\uninstall.exe",
+        "-Directory",
+        "D:\\lxWorkspace\\.qa\\startup-install-1791950680529\\中文 空格目录"
+      ],
+      "startedAt": "2026-10-14T04:04:56.289Z",
+      "processId": 44352,
+      "exitCode": 0,
+      "signal": null,
+      "stdout": "{\"processId\":32524,\"arguments\":\"/S _?=D:\\\\lxWorkspace\\\\.qa\\\\startup-install-1791950680529\\\\中文 空格目录\",\"exitCode\":0}\r\n",
+      "stderr": "",
+      "endedAt": "2026-10-14T04:04:56.951Z",
+      "nativeProcessId": 32524,
+      "nativeExitCode": 0,
+      "nativeArguments": "/S _?=D:\\lxWorkspace\\.qa\\startup-install-1791950680529\\中文 空格目录"
+    },
+    {
+      "name": "normal uninstall removed own-copy Run value",
+      "executable": "pwsh.exe",
+      "args": [
+        "D:\\lxWorkspace\\scripts\\startup-native-probe.ps1",
+        "-Action",
+        "read"
+      ],
+      "startedAt": "2026-10-14T04:04:56.952Z",
+      "processId": 40536,
+      "exitCode": 0,
+      "signal": null,
+      "stdout": "{\"qa\":null,\"qaKind\":null,\"formalKind\":null,\"formal\":null}\r\n",
+      "stderr": "",
+      "endedAt": "2026-10-14T04:04:57.315Z"
+    },
+    {
+      "name": "final process inspection",
+      "executable": "pwsh.exe",
+      "args": [
+        "D:\\lxWorkspace\\.qa\\startup-install-1791950680529\\installer-runner.ps1",
+        "-Action",
+        "inspect",
+        "-Executable",
+        "D:\\lxWorkspace\\src-tauri\\target\\startup\\qa\\bundle\\nsis\\拾页自启动验收_0.1.0_x64-setup.exe"
+      ],
+      "startedAt": "2026-10-14T04:04:57.315Z",
+      "processId": 35704,
+      "exitCode": 0,
+      "signal": null,
+      "stdout": "{\"metadataExists\":true,\"formalProcesses\":[{\"path\":\"D:\\\\lxWorkspace\\\\src-tauri\\\\target\\\\note-moves\\\\release\\\\shiye.exe\",\"processId\":37572}],\"productName\":\"拾页自启动验收\",\"qaProcesses\":[],\"uninstallEntryExists\":false}\r\n",
+      "stderr": "",
+      "endedAt": "2026-10-14T04:04:57.710Z"
+    },
+    {
+      "name": "final cleanup registration snapshot",
+      "executable": "pwsh.exe",
+      "args": [
+        "D:\\lxWorkspace\\scripts\\startup-native-probe.ps1",
+        "-Action",
+        "read"
+      ],
+      "startedAt": "2026-10-14T04:04:57.710Z",
+      "processId": 40732,
+      "exitCode": 0,
+      "signal": null,
+      "stdout": "{\"qaKind\":null,\"qa\":null,\"formal\":null,\"formalKind\":null}\r\n",
+      "stderr": "",
+      "endedAt": "2026-10-14T04:04:58.063Z"
+    },
+    {
+      "name": "after cleanup Run values",
+      "executable": "pwsh.exe",
+      "args": [
+        "D:\\lxWorkspace\\scripts\\startup-native-probe.ps1",
+        "-Action",
+        "read"
+      ],
+      "startedAt": "2026-10-14T04:04:58.063Z",
+      "processId": 45848,
+      "exitCode": 0,
+      "signal": null,
+      "stdout": "{\"qaKind\":null,\"formal\":null,\"formalKind\":null,\"qa\":null}\r\n",
+      "stderr": "",
+      "endedAt": "2026-10-14T04:04:58.426Z"
+    },
+    {
+      "name": "remove fixture-owned QA installer metadata",
+      "executable": "pwsh.exe",
+      "args": [
+        "D:\\lxWorkspace\\.qa\\startup-install-1791950680529\\installer-runner.ps1",
+        "-Action",
+        "cleanup"
+      ],
+      "startedAt": "2026-10-14T04:04:58.426Z",
+      "processId": 5472,
+      "exitCode": 0,
+      "signal": null,
+      "stdout": "{\"metadataCleaned\":true}\r\n",
+      "stderr": "",
+      "endedAt": "2026-10-14T04:04:58.791Z"
+    }
+  ],
+  "checks": [
+    {
+      "name": "Fresh Unicode/space installation does not register autostart",
+      "pass": true
+    },
+    {
+      "name": "Disabled silent replacement and update-mode uninstall/reinstall remain disabled",
+      "pass": true
+    },
+    {
+      "name": "Enabled same-version replacement and explicit old-uninstaller /UPDATE preserve autostart",
+      "pass": true
+    },
+    {
+      "name": "Enabled installation path migrates between Unicode/space directories",
+      "pass": true
+    },
+    {
+      "name": "Uninstalling the earlier installation preserves a newer registered copy",
+      "pass": true
+    },
+    {
+      "name": "Normal uninstall preserves a Run value pointing to a standalone copy",
+      "pass": true
+    },
+    {
+      "name": "Normal uninstall removes only its own fixed QA Run value",
+      "pass": true
+    },
+    {
+      "name": "No QA application was launched; the existing formal process and Run snapshot remain unchanged",
+      "pass": true
+    }
+  ],
+  "registry": [
+    {
+      "name": "initial Run values",
+      "time": "2026-10-14T04:04:40.922Z",
+      "formalKind": null,
+      "formal": null,
+      "qaKind": null,
+      "qa": null
+    },
+    {
+      "name": "fresh installation leaves startup off",
+      "time": "2026-10-14T04:04:42.443Z",
+      "qa": null,
+      "formalKind": null,
+      "formal": null,
+      "qaKind": null
+    },
+    {
+      "name": "disabled replacement remains off",
+      "time": "2026-10-14T04:04:43.551Z",
+      "qa": null,
+      "formalKind": null,
+      "qaKind": null,
+      "formal": null
+    },
+    {
+      "name": "disabled update uninstall remains off",
+      "time": "2026-10-14T04:04:44.446Z",
+      "formal": null,
+      "qa": null,
+      "formalKind": null,
+      "qaKind": null
+    },
+    {
+      "name": "disabled update reinstall remains off",
+      "time": "2026-10-14T04:04:45.553Z",
+      "formalKind": null,
+      "formal": null,
+      "qa": null,
+      "qaKind": null
+    },
+    {
+      "name": "enable isolated current-copy fixture: before fixture write",
+      "time": "2026-10-14T04:04:45.915Z",
+      "formalKind": null,
+      "qaKind": null,
+      "formal": null,
+      "qa": null
+    },
+    {
+      "name": "enable isolated current-copy fixture: after fixture write",
+      "time": "2026-10-14T04:04:46.591Z",
+      "qaKind": "String",
+      "qa": "\"D:\\lxWorkspace\\.qa\\startup-install-1791950680529\\中文 空格目录\\shiye-startup-qa.exe\" --autostart",
+      "formal": null,
+      "formalKind": null
+    },
+    {
+      "name": "enabled silent replacement retains original command",
+      "time": "2026-10-14T04:04:47.694Z",
+      "formal": null,
+      "qa": "\"D:\\lxWorkspace\\.qa\\startup-install-1791950680529\\中文 空格目录\\shiye-startup-qa.exe\" --autostart",
+      "qaKind": "String",
+      "formalKind": null
+    },
+    {
+      "name": "enabled update uninstall preserves Run value",
+      "time": "2026-10-14T04:04:48.581Z",
+      "formal": null,
+      "formalKind": null,
+      "qa": "\"D:\\lxWorkspace\\.qa\\startup-install-1791950680529\\中文 空格目录\\shiye-startup-qa.exe\" --autostart",
+      "qaKind": "String"
+    },
+    {
+      "name": "enabled update reinstall preserves Run value",
+      "time": "2026-10-14T04:04:49.686Z",
+      "qa": "\"D:\\lxWorkspace\\.qa\\startup-install-1791950680529\\中文 空格目录\\shiye-startup-qa.exe\" --autostart",
+      "formal": null,
+      "formalKind": null,
+      "qaKind": "String"
+    },
+    {
+      "name": "migration points autostart to the new quoted absolute path",
+      "time": "2026-10-14T04:04:50.831Z",
+      "formalKind": null,
+      "formal": null,
+      "qaKind": "String",
+      "qa": "\"D:\\lxWorkspace\\.qa\\startup-install-1791950680529\\迁移 中文目录\\shiye-startup-qa.exe\" --autostart"
+    },
+    {
+      "name": "earlier-copy uninstall preserves newer-copy Run value",
+      "time": "2026-10-14T04:04:51.756Z",
+      "formalKind": null,
+      "qaKind": "String",
+      "formal": null,
+      "qa": "\"D:\\lxWorkspace\\.qa\\startup-install-1791950680529\\迁移 中文目录\\shiye-startup-qa.exe\" --autostart"
+    },
+    {
+      "name": "point isolated Run value to standalone fixture: before fixture write",
+      "time": "2026-10-14T04:04:52.139Z",
+      "formalKind": null,
+      "qaKind": "String",
+      "qa": "\"D:\\lxWorkspace\\.qa\\startup-install-1791950680529\\迁移 中文目录\\shiye-startup-qa.exe\" --autostart",
+      "formal": null
+    },
+    {
+      "name": "point isolated Run value to standalone fixture: after fixture write",
+      "time": "2026-10-14T04:04:52.799Z",
+      "qa": "\"D:\\lxWorkspace\\.qa\\startup-install-1791950680529\\另一独立副本\\shiye-startup-qa.exe\" --autostart",
+      "qaKind": "String",
+      "formal": null,
+      "formalKind": null
+    },
+    {
+      "name": "other-copy Run command survives normal uninstall",
+      "time": "2026-10-14T04:04:53.835Z",
+      "qa": "\"D:\\lxWorkspace\\.qa\\startup-install-1791950680529\\另一独立副本\\shiye-startup-qa.exe\" --autostart",
+      "formal": null,
+      "qaKind": "String",
+      "formalKind": null
+    },
+    {
+      "name": "final fresh install is still off",
+      "time": "2026-10-14T04:04:55.248Z",
+      "formalKind": null,
+      "formal": null,
+      "qaKind": null,
+      "qa": null
+    },
+    {
+      "name": "enable final current-copy fixture: before fixture write",
+      "time": "2026-10-14T04:04:55.619Z",
+      "qa": null,
+      "qaKind": null,
+      "formal": null,
+      "formalKind": null
+    },
+    {
+      "name": "enable final current-copy fixture: after fixture write",
+      "time": "2026-10-14T04:04:56.288Z",
+      "qaKind": "String",
+      "formal": null,
+      "qa": "\"D:\\lxWorkspace\\.qa\\startup-install-1791950680529\\中文 空格目录\\shiye-startup-qa.exe\" --autostart",
+      "formalKind": null
+    },
+    {
+      "name": "normal uninstall removed own-copy Run value",
+      "time": "2026-10-14T04:04:57.315Z",
+      "qa": null,
+      "qaKind": null,
+      "formalKind": null,
+      "formal": null
+    },
+    {
+      "name": "final cleanup registration snapshot",
+      "time": "2026-10-14T04:04:58.063Z",
+      "qaKind": null,
+      "qa": null,
+      "formal": null,
+      "formalKind": null
+    },
+    {
+      "name": "after cleanup Run values",
+      "time": "2026-10-14T04:04:58.426Z",
+      "qaKind": null,
+      "formal": null,
+      "formalKind": null,
+      "qa": null
+    }
+  ],
+  "hashes": {
+    "D:\\lxWorkspace\\src-tauri\\target\\startup\\qa\\bundle\\nsis\\拾页自启动验收_0.1.0_x64-setup.exe": "c1e8cd69c62e743e776f38cdb61d9a0f8f620eb4b44a7c7cf25c85ce1442df42",
+    "D:\\lxWorkspace\\src-tauri\\target\\startup\\qa\\shiye-startup-qa.exe": "4f370c9303adc4a31996fe2b3e6112ec64104aef8fad0e088a6494e13b5dfe0e",
+    "D:\\lxWorkspace\\src-tauri\\target\\startup\\qa\\nsis\\x64\\installer.nsi": "aa57afdc4db657fb8aeca461c6d7412031b9765ff728dc6fc531f439566a0d91",
+    "D:\\lxWorkspace\\scripts\\startup-native-probe.ps1": "9c81c0a08b02b837759f244b7d4995e8f0c499605b1c642a2d6edc6222bcac32",
+    "startup-hooks.nsh": "b939733e44fce06bf0da835d5859c772ab241c2ccb87dafa51d387383c82f04a",
+    "D:\\lxWorkspace\\.qa\\startup-install-1791950680529\\中文 空格目录\\shiye-startup-qa.exe": "316575470fc82161addc3dda793e7f51eb1725e45021caf093e09bdcd8aa2477",
+    "D:\\lxWorkspace\\.qa\\startup-install-1791950680529\\中文 空格目录\\uninstall.exe": "acf7abc05a14d9b93a097820cf141c1a4fde8536bf3d4c5fe13fd48cb6115da7",
+    "D:\\lxWorkspace\\.qa\\startup-install-1791950680529\\迁移 中文目录\\shiye-startup-qa.exe": "316575470fc82161addc3dda793e7f51eb1725e45021caf093e09bdcd8aa2477",
+    "D:\\lxWorkspace\\.qa\\startup-install-1791950680529\\迁移 中文目录\\uninstall.exe": "acf7abc05a14d9b93a097820cf141c1a4fde8536bf3d4c5fe13fd48cb6115da7"
+  },
+  "cleanup": [
+    {
+      "directory": "D:\\lxWorkspace\\.qa\\startup-install-1791950680529\\中文 空格目录",
+      "appRemoved": true
+    },
+    {
+      "directory": "D:\\lxWorkspace\\.qa\\startup-install-1791950680529\\迁移 中文目录",
+      "appRemoved": true
+    },
+    {
+      "qaRunRemoved": true,
+      "formalRunUnchanged": true
+    },
+    {
+      "installerMetadataRemoved": true
+    }
+  ],
+  "bundledSourcePath": "D:\\lxWorkspace\\src-tauri\\target\\startup\\release\\shiye-startup-qa.exe",
+  "binaryNormalization": {
+    "source": "https://raw.githubusercontent.com/tauri-apps/tauri/tauri-cli-v2.11.4/crates/tauri-bundler/src/bundle.rs",
+    "explanation": "tauri-bundler 2.9.4 patch_binary changes the unique bundle marker for NSIS, then bundle_project restores the original standalone binary.",
+    "markerOffset": 6121255,
+    "standaloneMarker": "__TAURI_BUNDLE_TYPE_VAR_UNK",
+    "installedMarker": "__TAURI_BUNDLE_TYPE_VAR_NSS",
+    "sourceBytes": 6372864,
+    "installedBytes": 6372864,
+    "standaloneSha256": "4f370c9303adc4a31996fe2b3e6112ec64104aef8fad0e088a6494e13b5dfe0e",
+    "installedSha256": "316575470fc82161addc3dda793e7f51eb1725e45021caf093e09bdcd8aa2477",
+    "normalizedSha256": "4f370c9303adc4a31996fe2b3e6112ec64104aef8fad0e088a6494e13b5dfe0e",
+    "inspectionPath": "D:\\lxWorkspace\\.qa\\startup-install-1791950680529\\installed-inspection.exe",
+    "differences": [
+      {
+        "offset": 6121279,
+        "standalone": 85,
+        "installed": 78
+      },
+      {
+        "offset": 6121280,
+        "standalone": 78,
+        "installed": 83
+      },
+      {
+        "offset": 6121281,
+        "standalone": 75,
+        "installed": 83
+      }
+    ],
+    "allOtherBytesIdentical": true
+  },
+  "pass": true,
+  "finishedAt": "2026-10-14T04:04:58.791Z"
+}

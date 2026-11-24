@@ -1,0 +1,59 @@
+{
+  "startedAt": "2026-10-26T10:32:42.837Z",
+  "source": "D:\\lxWorkspace\\src-tauri\\target\\text-editor\\qa\\shiye-text-qa.exe",
+  "sha256": "8d0066c1b881538985f1b5a347a92b2dfd876e6793814b5cc76ccc6cd877172f",
+  "executable": "D:\\lxWorkspace\\.qa\\text-editor-native-1793010762829\\app\\shiye-text-qa.exe",
+  "data": "D:\\lxWorkspace\\.qa\\text-editor-native-1793010762829",
+  "fixtures": "D:\\lxWorkspace\\.qa\\text-editor-native-1793010762829\\empty-file-fixtures",
+  "port": 2681,
+  "scope": "Isolated textqa release WebView2, genuine keyboard/mouse editing, code menus and keyboard-operated tab ordering with two untitled drafts. No file picker, original file, user notes or system clipboard mutation.",
+  "checks": [
+    {
+      "name": "Real Alt+mouse adds two editable cursors and one undo restores both simultaneous insertions",
+      "pass": true
+    },
+    {
+      "name": "A captured continuous selection alone is batch-replaced and one undo restores all replacements without changing outside text",
+      "pass": true
+    },
+    {
+      "name": "Unicode line/column navigation counts emoji and Tab as one character each and inserts at the expected position",
+      "pass": true
+    },
+    {
+      "name": "Encoding and EOL metadata undo/redo independently while preserving exact Unicode body and a recoverable untitled-only draft",
+      "pass": true,
+      "details": {
+        "documentId": "cd825f3e-c01a-4e50-b257-230cdb1dfefa",
+        "bodySha256": "c1c68a6bc7d787ca27da97bfe417e60e95404273b9142ac9625cbc6af908c205",
+        "encoding": "utf16be",
+        "eol": "lf"
+      }
+    },
+    {
+      "name": "Actual code menus indent/outdent, comment with undo, and fold/unfold JavaScript while preserving its complete body",
+      "pass": true
+    },
+    {
+      "name": "Keyboard-operated real tab-order menu reorders two drafts; Ctrl+Tab and Ctrl+Shift+Tab preserve both exact bodies and per-document settings",
+      "pass": true,
+      "details": {
+        "documentIds": [
+          "ab0d40a3-e22c-4fef-9a76-19b59e591c11",
+          "cd825f3e-c01a-4e50-b257-230cdb1dfefa"
+        ],
+        "bodySha256": {
+          "cd825f3e-c01a-4e50-b257-230cdb1dfefa": "c1c68a6bc7d787ca27da97bfe417e60e95404273b9142ac9625cbc6af908c205",
+          "ab0d40a3-e22c-4fef-9a76-19b59e591c11": "937c78abc80775cda05d66d16af6d64e48ca039255d1746350eedc5c0126ae66"
+        }
+      }
+    }
+  ],
+  "pageErrors": [],
+  "ownerPid": 44036,
+  "status": "passed",
+  "exitMode": "normal",
+  "ownerExited": true,
+  "ownerExitCode": 0,
+  "completedAt": "2026-10-26T10:32:50.601Z"
+}

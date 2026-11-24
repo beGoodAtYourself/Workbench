@@ -1,0 +1,2 @@
+# 安装器回归检查逐字节校验上游模板。
+src-tauri/windows/installer.upstream.nsi text eol=lf

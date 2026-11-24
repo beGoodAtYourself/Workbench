@@ -1,0 +1,198 @@
+{
+  "date": "2026-09-14T07:32:08.739Z",
+  "executable": "D:\\lxWorkspace\\src-tauri\\target\\note-moves\\qa\\shiye.exe",
+  "sha256": "61ec3b92d3ce60f8cc275f824507bab39047854c88ad6198a3b768eb40d0356b",
+  "assets": {
+    "assets/clike-B9uivgTg.js": "362289d801a4f7b5abb548e9220660731b08cf3e00989bb8462ebed73bf28e96",
+    "assets/code-languages-DJPva1pW.js": "6cf4a1a924fe414ba0b6863fd00e28010177d6fbb9b2f03a6f1da5a765940c37",
+    "assets/core-BEOw45JP.js": "ce1a9e1aa11d35b33569adfaed564e5f21120d27335edcf8415394a497c04a8d",
+    "assets/demo-DsXj6Xpb.js": "002888d4164441b3c85ea23e24bb836153837b79240de28566632b0c67e394af",
+    "assets/editor-BcY6yO7Y.js": "f79f335e97894c014df15d58f1f37aefbf4c70b7fefaa62a72df5715ba78fd4e",
+    "assets/event-Gip4rtXm.js": "b8e37f04ff5b51d8ac237ce58d676fd8a12302cc987c45b37888a1919972ba9c",
+    "assets/index-B9zDu7K0.js": "0615188a745efadfaa7d45031bfe413b956f02298812d530caea2af545b9e1b0",
+    "assets/index-BUgZWMyZ.js": "03d2d4c4b09e0889fa6f449635ce01db02028691c13218bc55a4d8aed253e4ec",
+    "assets/index-CU_haXI-.js": "bef121e587d33676b2c96a74bf6b51dddf34df4333f4ee7a770a7934d8969e4e",
+    "assets/index-CYrg4Tgh.js": "987b70271abf5260d841a7cd44e06625128d196b618b5de2f8ef4ec3e18bd0c4",
+    "assets/index-CaDebdIC.js": "52429a3ab08d2f40e98ca401d174ec2aabf79e4671912b865ce7d582e2b6fa21",
+    "assets/index-CchofU5o.js": "d9937ba063987b5f1ed4d9d9cc2a3dd287fb935f2c1325437f33800881f69cfd",
+    "assets/index-CjcFqi9o.js": "f1e98bdfd04236b4c29cbb5f2754bf992936269f0a8f8d2c83a5a21e30b39256",
+    "assets/index-D2AXkcVA.js": "ca741022972794ef3557d8fdc13e8ef3639fb4e61946f60d61202a9a152a8a4e",
+    "assets/index-DY6PYGzo.js": "ba2415ea7ba35ddef53b66a43524be59f9b60d976485ff9241aefe38f7088660",
+    "assets/index-Dn3_yUpV.js": "24eb0d5f79eed97905f2526c03dc788fbcaec3fb93064620597a543b9b4ada6a",
+    "assets/index-DqRzgQ0U.js": "ac81b2cb349a5519eb13489af3ab28a136fa0d9399d5e195a13af4b76fc0f792",
+    "assets/index-Dxn3BUwI.js": "2ed90239d126e2dfb50028151c14272fd06cec641ea5fd2a0c824aa58020f547",
+    "assets/index-GfFQBSl9.js": "4ad7e0ebd8c02c94a81be6148f1ecd835f904761feea6fd23a8a960c572383cb",
+    "assets/index-Nc_hsWoI.js": "9179ef716c40edab9072a0e694167c65d2449258caae05706466964a74203ab4",
+    "assets/index-YOAOn7cO.js": "5bd40d7501af5d383cf3b290ad93b3cb7c0c2a4e7a160d79332659a5c96b73e1",
+    "assets/index-oRL3o2tg.css": "e55f125bb83ccbd3b8a6df0b2420d6c8a63dbe7450023588885b4bc0eb28245e",
+    "assets/powershell-CFHJl5sT.js": "5eef7d073bc36b86d7cfd0804c38c091931f20dadc61b176ca2d70ce6bb488d2",
+    "assets/shell-CjFT_Tl9.js": "b4da8a11db1127e003f10a94ff707474af1392051c41f1e0ef78152e9bd0ea95",
+    "index.html": "f453e2b28ddc65e395d276954ecc960707e57cfba3e2c5ddc8e94107e818045d"
+  },
+  "data": "D:\\lxWorkspace\\.qa\\note-moves-native-1789371128702",
+  "configuration": "Production code/assets with isolated identifier local.shiye.workbench.noteqa; isolated SHIYE_DATA_DIR and fixtures; WebView2 CDP automation, not physical input.",
+  "checks": [
+    {
+      "name": "Native folder and Markdown groups sort independently; insertion feedback is visible and persisted order leaves all bytes unchanged",
+      "pass": true
+    },
+    {
+      "name": "A single Markdown file moves without changing its bytes; both pane histories survive and later saves preserve BOM/CRLF at the correct independent paths",
+      "pass": true
+    },
+    {
+      "name": "Notes move into folders, back to root, and before a cross-parent note anchor; native restart restores ordering and both session paths",
+      "pass": true
+    },
+    {
+      "name": "Cancelled note moves do nothing, and a real competing filename created during confirmation cannot overwrite either note",
+      "pass": true
+    },
+    {
+      "name": "A real external save conflict blocks note movement and preserves the dirty buffer until explicit disk reload",
+      "pass": true
+    },
+    {
+      "name": "Real roots isolate note preferences; backend rejects removed note anchors, cross-kind sorting anchors and non-Markdown file sources",
+      "pass": true
+    },
+    {
+      "name": "Read-only preferences reject pure note sorting but preserve a completed file move and allow metadata retry without reversing the move",
+      "pass": true
+    }
+  ],
+  "screenshots": [
+    "note-native-insert.png",
+    "note-native-inside.png",
+    "note-native-split.png",
+    "note-native-partial.png"
+  ],
+  "hashes": {
+    "initial": {
+      "附件.dat": {
+        "bytes": 8,
+        "sha256": "a8a3eb3233d3727f60d5be0a4985118363f70157f0cc6b68a26fe6229ed53f72"
+      },
+      "归档/X.md": {
+        "bytes": 11,
+        "sha256": "4b82e0fe32354e7c59b04456bb2cc42c4c1b705c212aa5a68b88319395814e24"
+      },
+      "入口.md": {
+        "bytes": 24,
+        "sha256": "bb599dabbb4ed86d28378e4c58d10a97c358231fb6e71b6b824bdf4658ee9aa0"
+      },
+      "项目/M.md": {
+        "bytes": 31,
+        "sha256": "8e25d1fbc40c4e025722f7f08f624e4ddd585059b66ab171526630a3e1da072b"
+      },
+      "项目/N.md": {
+        "bytes": 11,
+        "sha256": "5a9e455d19e7eef864f974cc3c372cb8870a2fad5c855ca45c8d579bee3bcfed"
+      },
+      "A.md": {
+        "bytes": 66,
+        "sha256": "b149ec5c2f867cb9a3c36daa9c437e3715ab9b141c185f38efa9d810c011cc50"
+      },
+      "B.md": {
+        "bytes": 31,
+        "sha256": "1ec914d352c8fab535fccc3e7df29b49edddb5fc06c2c07cc8bfdd23bc140c50"
+      },
+      "C.md": {
+        "bytes": 45,
+        "sha256": "d475930c27e64ea24428bfaa3d9818c6aa430cc3e4f17c68251575cd53487b6d"
+      }
+    },
+    "beforeMove": {
+      "附件.dat": {
+        "bytes": 8,
+        "sha256": "a8a3eb3233d3727f60d5be0a4985118363f70157f0cc6b68a26fe6229ed53f72"
+      },
+      "归档/X.md": {
+        "bytes": 11,
+        "sha256": "4b82e0fe32354e7c59b04456bb2cc42c4c1b705c212aa5a68b88319395814e24"
+      },
+      "入口.md": {
+        "bytes": 24,
+        "sha256": "bb599dabbb4ed86d28378e4c58d10a97c358231fb6e71b6b824bdf4658ee9aa0"
+      },
+      "项目/M.md": {
+        "bytes": 31,
+        "sha256": "8e25d1fbc40c4e025722f7f08f624e4ddd585059b66ab171526630a3e1da072b"
+      },
+      "项目/N.md": {
+        "bytes": 11,
+        "sha256": "5a9e455d19e7eef864f974cc3c372cb8870a2fad5c855ca45c8d579bee3bcfed"
+      },
+      "A.md": {
+        "bytes": 79,
+        "sha256": "fe27fa1a956b6b7b8dba1e6857d9dd6efc596a53b905ce2ce3addb7e279df566"
+      },
+      "B.md": {
+        "bytes": 44,
+        "sha256": "684ea5188e42fc2618b8c00e6440e32d77ec7fdb5a88b543e5191f8ee5161253"
+      },
+      "C.md": {
+        "bytes": 45,
+        "sha256": "d475930c27e64ea24428bfaa3d9818c6aa430cc3e4f17c68251575cd53487b6d"
+      }
+    },
+    "final": {
+      "附件.dat": {
+        "bytes": 8,
+        "sha256": "a8a3eb3233d3727f60d5be0a4985118363f70157f0cc6b68a26fe6229ed53f72"
+      },
+      "故障/目标/A.md": {
+        "bytes": 1,
+        "sha256": "559aead08264d5795d3909718cdd05abd49572e84fe55590eef31a88a08fdffd"
+      },
+      "故障/C.md": {
+        "bytes": 1,
+        "sha256": "6b23c0d5f35d1b11f9b683f0b0a617355deb11277d91ae091d399c655b87940d"
+      },
+      "故障/plain.txt": {
+        "bytes": 15,
+        "sha256": "982a86c690eeac0548360544c4203eb7d601462bc05ffdb8651d9751444fe313"
+      },
+      "归档/A.md": {
+        "bytes": 91,
+        "sha256": "fa418cd748da2bb40fe41c3de20b65d4cb97fb61c3d1f5b652728e5bd66c0594"
+      },
+      "归档/C.md": {
+        "bytes": 18,
+        "sha256": "3658e263dca875204416a815a6d1891eb50c1eea90ada3b82426cf002f2257e4"
+      },
+      "归档/X.md": {
+        "bytes": 11,
+        "sha256": "4b82e0fe32354e7c59b04456bb2cc42c4c1b705c212aa5a68b88319395814e24"
+      },
+      "入口.md": {
+        "bytes": 24,
+        "sha256": "bb599dabbb4ed86d28378e4c58d10a97c358231fb6e71b6b824bdf4658ee9aa0"
+      },
+      "项目/N.md": {
+        "bytes": 11,
+        "sha256": "5a9e455d19e7eef864f974cc3c372cb8870a2fad5c855ca45c8d579bee3bcfed"
+      },
+      "B.md": {
+        "bytes": 12,
+        "sha256": "177dd77c63426f2a90afe381b851d2496b02241c29da8efb95d24565e9f08be2"
+      },
+      "C.md": {
+        "bytes": 45,
+        "sha256": "d475930c27e64ea24428bfaa3d9818c6aa430cc3e4f17c68251575cd53487b6d"
+      },
+      "M.md": {
+        "bytes": 31,
+        "sha256": "8e25d1fbc40c4e025722f7f08f624e4ddd585059b66ab171526630a3e1da072b"
+      }
+    }
+  },
+  "pid": 12028,
+  "partialSuccess": {
+    "path": "故障/目标/A.md",
+    "warning": "磁盘操作已完成，但列表顺序未保存：文件操作失败：拒绝访问。 (os error 5) 可重试保存顺序。",
+    "retrySaved": true,
+    "sha256": "559aead08264d5795d3909718cdd05abd49572e84fe55590eef31a88a08fdffd"
+  },
+  "status": "passed"
+}

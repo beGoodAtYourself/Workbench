@@ -1,0 +1,339 @@
+{
+  "startedAt": "2026-10-26T10:33:15.496Z",
+  "source": "D:\\lxWorkspace\\src-tauri\\target\\text-editor\\qa\\shiye-text-qa.exe",
+  "sha256": "8d0066c1b881538985f1b5a347a92b2dfd876e6793814b5cc76ccc6cd877172f",
+  "executable": "D:\\lxWorkspace\\.qa\\text-recovery-native-1793010795493\\app\\shiye-text-qa.exe",
+  "base": "D:\\lxWorkspace\\.qa\\text-recovery-native-1793010795493",
+  "configuration": "Isolated textqa release identity, synthetic notes, SHIYE_DATA_DIR and both SHIYE_PROFILE / SHIYE_TEXT_TEST_ROOT gates. Forces only this harness-owned process tree. Quota uses one bounded synthetic file, not real disk exhaustion.",
+  "clipboardIsolation": "The harness returns synthetic empty content for read_clipboard and suppresses watch_clipboard(true), so it neither reads nor writes the user clipboard. Clipboard assertions cover module-shell availability, not the native listener.",
+  "checks": [
+    {
+      "name": "Forced termination restores only the last fully committed generation, without claiming unsaved keystrokes are durable",
+      "pass": true,
+      "details": {
+        "generation": 3,
+        "manifestSha256": "ec2b45c4169fc1387f5ae0308584418051313545d2f8e217a5651938a22642e2"
+      }
+    },
+    {
+      "name": "FileShare.None manifest failure preserves memory and prior manifest, blocks hide, and succeeds after release",
+      "pass": true,
+      "details": {
+        "beforeSha256": "adef9181cb3613ad50b444848f06db02c7bf9590b22f001d4b63e864212037b7",
+        "afterRetrySha256": "2b657867ebe62e0457eef9a1bff49e0cc3fe8e7871a6112359bf50bd9eb39c41"
+      }
+    },
+    {
+      "name": "Unknown retained padding participates in quota; reservation rejects atomically below 128 MiB and succeeds after removing only harness padding",
+      "pass": true,
+      "details": {
+        "limit": 134217728,
+        "paddingBytes": 134212908,
+        "peakBytes": 134213632,
+        "beforeManifestSha256": "380d57e847002be2c8bad56a36d01fef788fc9a7e7ea86418d1cb8d3ef1bc6b0",
+        "samples": [
+          {
+            "at": "2026-10-26T10:33:27.192Z",
+            "bytes": 134213632
+          },
+          {
+            "at": "2026-10-26T10:33:27.218Z",
+            "bytes": 134213632
+          },
+          {
+            "at": "2026-10-26T10:33:27.238Z",
+            "bytes": 134213632
+          },
+          {
+            "at": "2026-10-26T10:33:27.272Z",
+            "bytes": 134213632
+          },
+          {
+            "at": "2026-10-26T10:33:27.369Z",
+            "bytes": 134213632
+          },
+          {
+            "at": "2026-10-26T10:33:27.400Z",
+            "bytes": 134213632
+          },
+          {
+            "at": "2026-10-26T10:33:27.430Z",
+            "bytes": 134213632
+          },
+          {
+            "at": "2026-10-26T10:33:27.461Z",
+            "bytes": 134213632
+          },
+          {
+            "at": "2026-10-26T10:33:27.490Z",
+            "bytes": 134213632
+          },
+          {
+            "at": "2026-10-26T10:33:27.523Z",
+            "bytes": 134213632
+          },
+          {
+            "at": "2026-10-26T10:33:27.557Z",
+            "bytes": 134213632
+          },
+          {
+            "at": "2026-10-26T10:33:27.588Z",
+            "bytes": 134213632
+          },
+          {
+            "at": "2026-10-26T10:33:27.611Z",
+            "bytes": 134213632
+          },
+          {
+            "at": "2026-10-26T10:33:27.632Z",
+            "bytes": 134213632
+          },
+          {
+            "at": "2026-10-26T10:33:27.664Z",
+            "bytes": 134213632
+          },
+          {
+            "at": "2026-10-26T10:33:27.697Z",
+            "bytes": 134213632
+          },
+          {
+            "at": "2026-10-26T10:33:27.728Z",
+            "bytes": 134213632
+          },
+          {
+            "at": "2026-10-26T10:33:27.768Z",
+            "bytes": 134213632
+          },
+          {
+            "at": "2026-10-26T10:33:27.802Z",
+            "bytes": 134213632
+          },
+          {
+            "at": "2026-10-26T10:33:27.835Z",
+            "bytes": 134213632
+          },
+          {
+            "at": "2026-10-26T10:33:27.866Z",
+            "bytes": 134213632
+          },
+          {
+            "at": "2026-10-26T10:33:27.898Z",
+            "bytes": 134213632
+          },
+          {
+            "at": "2026-10-26T10:33:27.929Z",
+            "bytes": 134213632
+          },
+          {
+            "at": "2026-10-26T10:33:27.959Z",
+            "bytes": 134213632
+          },
+          {
+            "at": "2026-10-26T10:33:27.991Z",
+            "bytes": 134213632
+          },
+          {
+            "at": "2026-10-26T10:33:28.024Z",
+            "bytes": 134213632
+          },
+          {
+            "at": "2026-10-26T10:33:28.052Z",
+            "bytes": 134213632
+          },
+          {
+            "at": "2026-10-26T10:33:28.085Z",
+            "bytes": 134213632
+          },
+          {
+            "at": "2026-10-26T10:33:28.122Z",
+            "bytes": 134213632
+          },
+          {
+            "at": "2026-10-26T10:33:28.147Z",
+            "bytes": 134213632
+          },
+          {
+            "at": "2026-10-26T10:33:28.177Z",
+            "bytes": 134213632
+          },
+          {
+            "at": "2026-10-26T10:33:28.209Z",
+            "bytes": 134213632
+          },
+          {
+            "at": "2026-10-26T10:33:28.234Z",
+            "bytes": 134213632
+          },
+          {
+            "at": "2026-10-26T10:33:28.257Z",
+            "bytes": 134213632
+          },
+          {
+            "at": "2026-10-26T10:33:28.289Z",
+            "bytes": 134213632
+          },
+          {
+            "at": "2026-10-26T10:33:28.323Z",
+            "bytes": 134213632
+          },
+          {
+            "at": "2026-10-26T10:33:28.353Z",
+            "bytes": 134213632
+          },
+          {
+            "at": "2026-10-26T10:33:28.384Z",
+            "bytes": 134213632
+          },
+          {
+            "at": "2026-10-26T10:33:28.421Z",
+            "bytes": 134213632
+          },
+          {
+            "at": "2026-10-26T10:33:28.443Z",
+            "bytes": 134213632
+          },
+          {
+            "at": "2026-10-26T10:33:28.478Z",
+            "bytes": 134213632
+          },
+          {
+            "at": "2026-10-26T10:33:28.509Z",
+            "bytes": 134213632
+          },
+          {
+            "at": "2026-10-26T10:33:28.549Z",
+            "bytes": 134213632
+          },
+          {
+            "at": "2026-10-26T10:33:28.573Z",
+            "bytes": 134213632
+          },
+          {
+            "at": "2026-10-26T10:33:28.603Z",
+            "bytes": 134213632
+          },
+          {
+            "at": "2026-10-26T10:33:28.640Z",
+            "bytes": 134213632
+          },
+          {
+            "at": "2026-10-26T10:33:28.661Z",
+            "bytes": 134213632
+          },
+          {
+            "at": "2026-10-26T10:33:28.682Z",
+            "bytes": 134213632
+          }
+        ]
+      }
+    },
+    {
+      "name": "Aggregate metadata over 128 KiB is rejected before authorization or generation mutation and preserves the committed manifest",
+      "pass": true,
+      "details": {
+        "metadataBytes": 165275,
+        "perPathBytes": 32760,
+        "documents": 5,
+        "manifestSha256": "214f79f9c097a8867d76926509473e973301349896f4ac5eb717eee92806fa7c",
+        "generation": 7,
+        "confirmedGeneration": 7
+      }
+    },
+    {
+      "name": "Corrupt manifest shows a recoverable error, preserves original broken records, and leaves notes and the synthetic-empty clipboard shell usable",
+      "pass": true,
+      "details": {
+        "brokenPath": "D:\\lxWorkspace\\.qa\\text-recovery-native-1793010795493\\corrupt-manifest\\text-recovery\\manifest.json",
+        "brokenSha256": "936663edaaed7dce42bfdec05f31330084558d9c07562f4805db439f73ac6aa9",
+        "manifestSha256": "936663edaaed7dce42bfdec05f31330084558d9c07562f4805db439f73ac6aa9"
+      }
+    },
+    {
+      "name": "Corrupt body shows a recoverable error, preserves original broken records, and leaves notes and the synthetic-empty clipboard shell usable",
+      "pass": true,
+      "details": {
+        "brokenPath": "D:\\lxWorkspace\\.qa\\text-recovery-native-1793010795493\\corrupt-body\\text-recovery\\6bb2db2a99b85c06e96b4d4d7f618e18cd730696a90042ab24cc0d0425c9c327.txt",
+        "brokenSha256": "69a5c29a133d7231e5734066e0833eedcb23789be7f8c04e2afb49eb04f1c4df",
+        "manifestSha256": "8403c5e07e9f82cc463f2cece786b5ccd5cebc8ffb42903e0921f9b410b4420c"
+      }
+    },
+    {
+      "name": "Repairing only the exact original body and retrying recovers in the same owner and confirms the latest lifecycle generation",
+      "pass": true,
+      "details": {
+        "ownerPid": 45736,
+        "generation": 4,
+        "confirmedGeneration": 4,
+        "bodySha256": "6bb2db2a99b85c06e96b4d4d7f618e18cd730696a90042ab24cc0d0425c9c327"
+      }
+    }
+  ],
+  "pageErrors": [],
+  "scenarios": [
+    {
+      "name": "committed-crash",
+      "data": "D:\\lxWorkspace\\.qa\\text-recovery-native-1793010795493\\committed-crash",
+      "fixtures": "D:\\lxWorkspace\\.qa\\text-recovery-native-1793010795493\\committed-crash\\files",
+      "recovery": "D:\\lxWorkspace\\.qa\\text-recovery-native-1793010795493\\committed-crash\\text-recovery",
+      "port": 41307,
+      "manifest": "D:\\lxWorkspace\\.qa\\text-recovery-native-1793010795493\\committed-crash\\text-recovery\\manifest.json",
+      "pids": [
+        25516,
+        33404
+      ]
+    },
+    {
+      "name": "locked-manifest",
+      "data": "D:\\lxWorkspace\\.qa\\text-recovery-native-1793010795493\\locked-manifest",
+      "fixtures": "D:\\lxWorkspace\\.qa\\text-recovery-native-1793010795493\\locked-manifest\\files",
+      "recovery": "D:\\lxWorkspace\\.qa\\text-recovery-native-1793010795493\\locked-manifest\\text-recovery",
+      "port": 27283,
+      "manifest": "D:\\lxWorkspace\\.qa\\text-recovery-native-1793010795493\\locked-manifest\\text-recovery\\manifest.json",
+      "pids": [
+        21636
+      ]
+    },
+    {
+      "name": "quota-reservation",
+      "data": "D:\\lxWorkspace\\.qa\\text-recovery-native-1793010795493\\quota-reservation",
+      "fixtures": "D:\\lxWorkspace\\.qa\\text-recovery-native-1793010795493\\quota-reservation\\files",
+      "recovery": "D:\\lxWorkspace\\.qa\\text-recovery-native-1793010795493\\quota-reservation\\text-recovery",
+      "port": 8585,
+      "manifest": "D:\\lxWorkspace\\.qa\\text-recovery-native-1793010795493\\quota-reservation\\text-recovery\\manifest.json",
+      "pids": [
+        4892
+      ]
+    },
+    {
+      "name": "corrupt-manifest",
+      "data": "D:\\lxWorkspace\\.qa\\text-recovery-native-1793010795493\\corrupt-manifest",
+      "fixtures": "D:\\lxWorkspace\\.qa\\text-recovery-native-1793010795493\\corrupt-manifest\\files",
+      "recovery": "D:\\lxWorkspace\\.qa\\text-recovery-native-1793010795493\\corrupt-manifest\\text-recovery",
+      "port": 13587,
+      "manifest": "D:\\lxWorkspace\\.qa\\text-recovery-native-1793010795493\\corrupt-manifest\\text-recovery\\manifest.json",
+      "pids": [
+        18772,
+        42776
+      ]
+    },
+    {
+      "name": "corrupt-body",
+      "data": "D:\\lxWorkspace\\.qa\\text-recovery-native-1793010795493\\corrupt-body",
+      "fixtures": "D:\\lxWorkspace\\.qa\\text-recovery-native-1793010795493\\corrupt-body\\files",
+      "recovery": "D:\\lxWorkspace\\.qa\\text-recovery-native-1793010795493\\corrupt-body\\text-recovery",
+      "port": 4317,
+      "manifest": "D:\\lxWorkspace\\.qa\\text-recovery-native-1793010795493\\corrupt-body\\text-recovery\\manifest.json",
+      "pids": [
+        41356,
+        45736
+      ]
+    }
+  ],
+  "secondaryBodyLimit": {
+    "limitBytes": 67108864,
+    "measured": false,
+    "reason": "The stronger 16 Mi UTF-16 aggregate input limit allows at most 48 MiB UTF-8 for valid text. A 64 MiB recovery-body generation is therefore unreachable through a valid current session; this run does not claim a measured 64 MiB boundary."
+  },
+  "status": "passed",
+  "completedAt": "2026-10-26T10:33:36.245Z"
+}

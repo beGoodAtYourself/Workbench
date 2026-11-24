@@ -1,0 +1,90 @@
+{
+  "date": "2026-11-16",
+  "status": "native-file-open-and-real-drag-retest-passed",
+  "binary": "D:\\拾页\\shiye.exe",
+  "sourceChangesMade": true,
+  "originalSessionUsed": true,
+  "passed": [
+    "启动现有安装版并从原会话切换到文本模块，恢复日志标签及正文",
+    "Ctrl+O 调用真实 Windows 文件选择框，重复打开原日志保持单标签",
+    "关闭已保存标签后，从空文本工作区经真实文件选择框重新打开原日志",
+    "编辑器显示首行和末尾第 692 行，末尾空行为第 693 行",
+    "原生界面显示 GBK / GB2312 / CP936 及 CRLF",
+    "重新打开后的完整恢复正文与原日志 GBK 解码并规范化换行后的正文逐字一致"
+  ],
+  "fullContentCheck": {
+    "normalizedLength": 98629,
+    "lineBreaks": 692,
+    "fullwidthColons": 2,
+    "targetTabs": 1,
+    "revision": 0,
+    "savedRevision": 0,
+    "fullDraftEqualsOriginal": true
+  },
+  "originalLog": {
+    "bytes": 99323,
+    "sha256": "76e4271152311e656d48f30b5ca8d54655eb311b88ea0d72d62bd0cd2c22ee6b",
+    "unchanged": true
+  },
+  "drag": {
+    "automatedCrossWindowAttempt": "工具在输入前拒绝：point (-1820, 511) is outside window bounds { originX: 0, originY: 0, width: 1170, height: 838 }",
+    "userReported": "已拖入",
+    "lastObserved": "文本模块已显示，但无标签；恢复代次从 839 变为 841，documents 为空",
+    "conclusion": "旧构建真实拖放失败；修正主窗口原生事件通道后，用户确认两次拖入成功、正文正常；恢复记录证实完整正文和单标签。",
+    "userClarification": "先关闭已有日志标签，再拖入；没有显示提示或短暂出现正文。",
+    "rootCause": "Tauri 2.11.5 / tauri-runtime-wry 2.11.4: WebviewKind::WindowContent 将拖放派发为 SynthesizedWindowEvent::DragDrop；app.rs 原来只在 on_webview_event 中接收。",
+    "fix": "改为 on_window_event + tauri::WindowEvent::DragDrop，沿用原路径令牌及文件校验流程。",
+    "afterFix": {
+      "before": "新程序已启动并核验进程路径；文本标签为空，界面停在笔记管理",
+      "userResult": "两次拖入成功，正文正常",
+      "targetTabs": 1,
+      "totalTabs": 1,
+      "generation": 845,
+      "encoding": "gbk",
+      "eol": "crlf",
+      "revision": 0,
+      "savedRevision": 0,
+      "normalizedLength": 98629,
+      "lineBreaks": 692,
+      "fullwidthColons": 2,
+      "fullDraftEqualsOriginal": true,
+      "originalLogUnchanged": true,
+      "evidence": "用户完成真实操作系统拖放并确认；助手读取实际运行程序的恢复记录，逐字比对原日志。未使用合成 DOM 拖放或 IPC 注入代替。",
+      "postDropScreenshot": "窗口已最小化；桌面工具报告 user input was detected / window is minimized，未强行继续控制。"
+    }
+  },
+  "remaining": [],
+  "checksAfterFix": {
+    "rustfmt": "passed",
+    "rustTests": 93,
+    "localLogReadOnlyRegression": "passed",
+    "nativeDragAfterFix": "passed with user-performed real OS drag and persisted content verification",
+    "productionBuild": "passed; release optimized build 4m22s and NSIS installer produced",
+    "changedSourcesSincePreviousDelivery": [
+      "src-tauri/src/app.rs"
+    ]
+  },
+  "fixedBinary": "D:\\lxWorkspace\\src-tauri\\target\\text-open-drop\\release\\shiye.exe",
+  "fixedRunningProcessVerified": {
+    "pid": 25868,
+    "path": "D:\\lxWorkspace\\src-tauri\\target\\text-open-drop\\release\\shiye.exe"
+  },
+  "artifactsAfterFix": [
+    {
+      "path": "D:\\lxWorkspace\\src-tauri\\target\\text-open-drop\\release\\shiye.exe",
+      "bytes": 7275008,
+      "sha256": "dab3ec3f97ded20909ff11ab891febdd6bc58ce5193080f9ddd966dacaadf966"
+    },
+    {
+      "path": "D:\\lxWorkspace\\src-tauri\\target\\text-open-drop\\release\\bundle\\nsis\\拾页_0.1.0_x64-setup.exe",
+      "bytes": 2553690,
+      "sha256": "1cbb65c5294ac77cc8bab377ca52e76c78b629f764992530af250363d2135fed"
+    }
+  ],
+  "fixedSourceHash": "a05920953f5da282894fd474b9d7f6b4da0325513cd5fd72cd9498083084f60c",
+  "limitations": [
+    "最初文件对话框无错误提示问题的精确历史触发条件未复现；11月16日原会话恢复、真实文件选择框首次打开及重复打开已通过。",
+    "本轮真实拖放覆盖原日志首次拖入、跨模块进入文本、重复拖入单标签；未将其他未实测场景计为通过。",
+    "当前运行修复版位于工程构建目录；D:\\拾页\\shiye.exe 的已安装旧程序未被覆盖。"
+  ]
+}
